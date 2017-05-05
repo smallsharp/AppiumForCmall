@@ -13,6 +13,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ * 一个完整的例子，只做参考
+ * @author Administrator
+ *
+ */
+
 public class SimpleDemo {
 	
 	private static AndroidDriver<WebElement> driver;

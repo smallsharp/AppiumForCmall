@@ -1,11 +1,12 @@
 package top.cases;
 
 import static org.testng.Assert.assertTrue;
-import org.testng.annotations.Listeners;
+
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
-import top.baseutils.MyTestCase;
-import top.baseutils.TestNGListener;
+import top.base.utils.MyTestCase;
+import top.base.utils.WaitUtils;
 import top.biz.Biz_login;
 
 /**
@@ -14,26 +15,32 @@ import top.biz.Biz_login;
  * @author tester_lee
  *
  */
-@Listeners(TestNGListener.class)
-public class Case_login extends MyTestCase{
+
+public class Case_login extends MyTestCase {
 	
+	Logger logger = Logger.getLogger(Case_login.class);
+
 	@Test
-	public void testMethod01(){		
-		Biz_login.login(Constant.MOBILE_VALUE, Constant.CODE_VALUE_ERROR);
-		boolean result = mdriver.findElementByName("验证码错误，请重新填写").isDisplayed();
-		mdriver.findElementById("com.lifang.agent:id/ok_btn").click();
-		assertTrue(result, "验证码输入错误，没有弹窗提示");
+	public void testLogin() throws InterruptedException {
+		
+		logger.debug(mdriver.currentActivity());
+		
+		if (WaitUtils.waitForActivity(".activity.main.NativeVideoActivity")) {
+			WaitUtils.findElementById("com.tude.android:id/btn_jump").click();
+		}
+		// 点击：我的
+//		mdriver.findElementById("com.tude.android:id/btn_profile").click();
+		WaitUtils.findElementById("com.tude.android:id/btn_profile").click();
+		
+		// 点击：账号密码登录
+//		mdriver.findElementById("com.tude.android:id/tv_account").click();
+		WaitUtils.findElementById("com.tude.android:id/tv_account").click();
+
+		Biz_login.login("185210351334", "111111");
+		
+		// 检查是否登录成功com.tude.android:id/btn_diy
+		assertTrue(false);
+
 	}
-	
-	
-	@Test
-	public void testMethod02(){		
-		Biz_login.login(Constant.MOBILE_VALUE2, Constant.CODE_VALUE_RIGHT);
-		boolean result = mdriver.findElementByName("验证码错误，请重新填写").isDisplayed();
-		mdriver.findElementById("com.lifang.agent:id/ok_btn").click();
-		assertTrue(result, "验证码输入错误，没有弹窗提示");
-	}
-	
-	
-	
+
 }

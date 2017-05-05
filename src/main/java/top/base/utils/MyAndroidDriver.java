@@ -1,4 +1,4 @@
-package top.baseutils;
+package top.base.utils;
 
 import java.net.URL;
 import org.openqa.selenium.Capabilities;

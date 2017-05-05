@@ -3,6 +3,13 @@ package top.temp;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
 
+/**
+ * 需要ddmlib.jar
+ * 
+ * @author Administrator
+ *
+ */
+
 public class Android {
 
 	public static IDevice device;

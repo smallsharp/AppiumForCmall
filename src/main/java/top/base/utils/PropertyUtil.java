@@ -1,4 +1,4 @@
-package top.baseutils;
+package top.base.utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
