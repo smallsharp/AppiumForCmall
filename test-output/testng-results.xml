@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<img src=./img/D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170505_115614.png /img>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=./img/D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170505_115618.png /img>]]>
+    </line>
+  </reporter-output>
+  <suite name="PlaySuite" duration-ms="21869" started-at="2017-05-05T03:56:08Z" finished-at="2017-05-05T03:56:30Z">
+    <groups>
+    </groups>
+    <test name="Case_login" duration-ms="21869" started-at="2017-05-05T03:56:08Z" finished-at="2017-05-05T03:56:30Z">
+      <class name="top.cases.Case_login">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Case_login@5cc69cfe]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-05-05T11:56:08Z" finished-at="2017-05-05T11:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="testLogin()[pri:0, instance:top.cases.Case_login@5cc69cfe]" name="testLogin" duration-ms="5882" started-at="2017-05-05T11:56:08Z" finished-at="2017-05-05T11:56:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at top.cases.Case_login.testLogin(Case_login.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[<img src=./img/D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170505_115614.png /img>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=./img/D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170505_115618.png /img>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Case_login@5cc69cfe]" name="afterClass" is-config="true" duration-ms="6706" started-at="2017-05-05T11:56:23Z" finished-at="2017-05-05T11:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- top.cases.Case_login -->
+    </test> <!-- Case_login -->
+  </suite> <!-- PlaySuite -->
+</testng-results>
