@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="PlaySuite" duration-ms="17868" started-at="2017-05-08T08:53:08Z" finished-at="2017-05-08T08:53:26Z">
+    <groups>
+    </groups>
+    <test name="Case_login" duration-ms="17868" started-at="2017-05-08T08:53:08Z" finished-at="2017-05-08T08:53:26Z">
+      <class name="top.cases.Login_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="beforeClass" is-config="true" duration-ms="16" started-at="2017-05-08T16:53:08Z" finished-at="2017-05-08T16:53:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="testLogin" duration-ms="16396" started-at="2017-05-08T16:53:08Z" finished-at="2017-05-08T16:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="afterClass" is-config="true" duration-ms="1456" started-at="2017-05-08T16:53:25Z" finished-at="2017-05-08T16:53:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- top.cases.Login_Test -->
+    </test> <!-- Case_login -->
+  </suite> <!-- PlaySuite -->
+</testng-results>

@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +13,7 @@
 	</properties>
 
 	<dependencies>
-
+		<!-- appium 依赖的jar -->
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
@@ -53,6 +53,15 @@
 			<artifactId>velocity-dep</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.google.android.tools/ddmlib 
+			A ddmlib jar that provides APIs for talking with Dalvik VM (both on Android phones and emulators).		
+		-->
+		<dependency>
+    		<groupId>com.google.android.tools</groupId>
+    		<artifactId>ddmlib</artifactId>
+    		<version>r13</version>
+		</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -63,7 +72,6 @@
 
 	<build>
 		<plugins>
-
 			<!-- 添加插件 关联testNg.xml -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -71,13 +79,13 @@
 				<version>2.17</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>res/${xmlFileName}</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 
 			<!-- 添加插件,添加ReportNg的监听器，修改最后的TestNg的报告 -->
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.5</version>
@@ -96,8 +104,7 @@
 					<workingDirectory>target/</workingDirectory>
 					<forkMode>always</forkMode>
 				</configuration>
-			</plugin>
-
+			</plugin> -->
 		</plugins>
 
 	</build>

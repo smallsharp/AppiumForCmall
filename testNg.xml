@@ -12,7 +12,7 @@
     <test name="Case_login" preserver-order="true" >
 
         <classes>
-            <class name="top.cases.Case_login" >
+            <class name="top.cases.Login_Test" >
                 <methods>
                 </methods>
             </class>
