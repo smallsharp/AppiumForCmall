@@ -14,7 +14,6 @@ import top.base.listener.MyElementEventListener;
 
 /**
  * Driver的初始化工具类
- * 
  * @author lee
  *
  */
@@ -32,7 +31,7 @@ public class Driver {
 	public static MyAndroidDriver<WebElement> newInstance() {
 
 		if (mdriver == null) {
-			initAndroidDriver("06694a9b006097fb", "com.tude.android", ".activity.SplashActivity");
+			initAndroidDriver("NFNNP78T99999999", "com.tude.android", ".activity.SplashActivity");
 			if (mdriver == null) {
 				logger.info("driver is null");
 			}

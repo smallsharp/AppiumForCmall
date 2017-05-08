@@ -18,46 +18,41 @@ import top.base.utils.MyAndroidDriver;
 
 public class TestNGListener extends TestListenerAdapter {
 
-	private static Logger logger = Logger.getLogger(TestNGListener.class);
+	private static Logger log = Logger.getLogger(TestNGListener.class);
 
 	@Override
 	public void onTestStart(ITestResult tr) {
 		super.onTestStart(tr);
-		logger.info(tr.getName() + " Start");
+		log.info(tr.getName() + " Start");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
-		logger.info(tr.getName() + " Failure");
+		log.info(tr.getName() + " Failure");
 		takeScreenShot(tr);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult tr) {
 		super.onTestSuccess(tr);
-		logger.info(tr.getName() + " Success");
+		log.info(tr.getName() + " Success");
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult tr) {
 		super.onTestSkipped(tr);
-		logger.info(tr.getName() + " Skipped");
-		takeScreenShot(tr);
+		log.info(tr.getName() + " Skipped");
 	}
 
 	@Override
 	public void onStart(ITestContext testContext) {
-		// TODO Auto-generated method stub
 		super.onStart(testContext);
-		logger.info(testContext.getName() + " Start");
 	}
 
 	@Override
 	public void onFinish(ITestContext testContext) {
 		super.onFinish(testContext);
-		logger.info(testContext.getName() + " Finish");
-
 	}
 
 	private static MyAndroidDriver<WebElement> mDriver = Driver.newInstance();
@@ -71,8 +66,10 @@ public class TestNGListener extends TestListenerAdapter {
 	 * @Data 2017年5月3日
 	 */
 	private void takeScreenShot(ITestResult tr) {
-		//	 System.setProperty(ESCAPE_PROPERTY, "false"); 
-		 System.setProperty(ESCAPE_PROPERTY, "false"); 
+		// 代码设置关闭escape-output
+		System.setProperty(ESCAPE_PROPERTY, "false"); 
+//		Reporter.log("<br>",true);
+
 		// 在默认的工作目录下面创建一个名字叫screenshots1的文件夹，用来存放图片的
 		File location = new File("screenshots"); 
 		String screenShotName = location.getAbsolutePath() + File.separator + tr.getMethod().getMethodName() + "_"
@@ -83,12 +80,12 @@ public class TestNGListener extends TestListenerAdapter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally{
-			Reporter.log("<img src=./img/" + screenShotName + " /img>", true);
-			
+			// 将截图显示在报告当中
+			Reporter.log("<img src="+screenShotName + " width='425px' height='875px' /img>", true);
 		}
 	}
 
-	public static String getCurrentDateTime() {
+	private static String getCurrentDateTime() {
 		// 设置日期格式
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
 		return df.format(new Date());

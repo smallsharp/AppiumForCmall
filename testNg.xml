@@ -8,10 +8,6 @@
     3、methods 写方法名称即可,代码中填写@test，但是这里不添加的话，仍然不会执行
     4、执行需要run testNG.xml
     -->
-    <parameter
-        name="appActivity"
-        value=".business.MainActivity_" >
-    </parameter>
 
     <test name="Case_login" preserver-order="true" >
 
@@ -25,7 +21,7 @@
         <!-- 监听器配置 -->
         <listeners>
             <!-- 监听用例的执行动作 -->
-            <listener class-name="top.base.listener.TestNGListener" />
+             <listener class-name="top.base.listener.TestNGListener" />
             <!-- 生成reporterNg 测试报告，需要添加的监听 -->
             <listener class-name="org.uncommons.reportng.HTMLReporter" />
             <!-- 这个暂时不需要 -->

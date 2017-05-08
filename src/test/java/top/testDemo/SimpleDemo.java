@@ -10,7 +10,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
@@ -30,9 +29,6 @@ public class SimpleDemo {
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps/");
 		File app = new File(appDir, "YFYK2_3.0_Test.apk");
-		if (!app.exists()) {
-			System.out.println("apk不存在");
-		}
 
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -53,7 +49,7 @@ public class SimpleDemo {
 	}
 
 	
-	@Test
+//	@Test
 	public void testLogin() throws InterruptedException {
 		System.out.println("Test------------->:ok");
 		WebElement element = driver.findElementById("com.lifang.agent:id/get_verify_tv");

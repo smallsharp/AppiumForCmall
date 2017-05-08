@@ -1,36 +1,35 @@
 package top.base.listener;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.events.api.general.ElementEventListener;
 
 public class MyElementEventListener implements ElementEventListener {
+	
+	Logger log = Logger.getLogger(MyElementEventListener.class);
 
 	@Override
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-
-		System.out.println("准备点击:" + splitElement(element));
-
+		log.info("准备点击:" + splitElement(element));
 	}
 
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-		System.out.println("开始点击:" + splitElement(element));
-
+		log.info("开始点击:" + splitElement(element));
 	}
 
 	@Override
 	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-        System.out.println("准备改变控件:" +splitElement(element)+"数值");  
-
+		log.info("准备改变控件:" +splitElement(element)+"数值");
 	}
 
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-        System.out.println("控件:" + splitElement(element) + "数值已改变");  
+		log.info("控件:" + splitElement(element) + "数值已改变");
 	}
 
 	// 获取操作的控件字符串

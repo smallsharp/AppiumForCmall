@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="5.882">
+           time="26.435">
   <properties />
-            <testcase name="testLogin" time="5.882" classname="top.cases.Case_login">
+            <testcase name="testLogin" time="26.435" classname="top.cases.Case_login">
                 <failure type="java.lang.AssertionError"
                   message="expected [true] but found [false]"
               >
@@ -15,7 +15,7 @@
   org.testng.Assert.failNotEquals(Assert.java:496)
   org.testng.Assert.assertTrue(Assert.java:42)
   org.testng.Assert.assertTrue(Assert.java:52)
-  top.cases.Case_login.testLogin(Case_login.java:31)
+  top.cases.Case_login.testLogin(Case_login.java:33)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
