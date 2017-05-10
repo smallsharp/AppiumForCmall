@@ -3,6 +3,8 @@ package top.base.listener;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
+
 import io.appium.java_client.events.api.general.ElementEventListener;
 
 public class MyElementEventListener implements ElementEventListener {
@@ -11,25 +13,27 @@ public class MyElementEventListener implements ElementEventListener {
 
 	@Override
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-		log.info("准备点击:" + splitElement(element));
+		Reporter.log("【准备点击】:" + splitElement(element),true);
+		Reporter.log("<br>",false);
 	}
 
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		log.info("开始点击:" + splitElement(element));
+		Reporter.log("【开始点击】:" + splitElement(element),true);
+		Reporter.log("<br>",false);
 	}
 
 	@Override
 	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		log.info("准备改变控件:" +splitElement(element)+"数值");
+		Reporter.log("【准备改变】:" +splitElement(element)+"的数值",true);
+		Reporter.log("<br>",false);
 	}
 
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		log.info("控件:" + splitElement(element) + "数值已改变");
+		Reporter.log("【控件】" + splitElement(element) + "的数值已改变",true);
+		Reporter.log("<br>",false);
+
 	}
 
 	// 获取操作的控件字符串

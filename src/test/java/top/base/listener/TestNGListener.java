@@ -7,12 +7,12 @@ import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
-
 import top.base.utils.Driver;
 import top.base.utils.MyAndroidDriver;
 
@@ -30,7 +30,12 @@ public class TestNGListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
 		log.info(tr.getName() + " Failure");
-		takeScreenShot(tr);
+		try {
+			takeScreenShot(tr);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -61,30 +66,34 @@ public class TestNGListener extends TestListenerAdapter {
 	  
 	/**
 	 * 
-	 * 
+	 * @throws InterruptedException 
 	 * @Description 获取截图，存在/screenshots目录下
 	 * @Data 2017年5月3日
 	 */
-	private void takeScreenShot(ITestResult tr) {
-		// 代码设置关闭escape-output
-		System.setProperty(ESCAPE_PROPERTY, "false"); 
-//		Reporter.log("<br>",true);
+	private void takeScreenShot(ITestResult tr) throws InterruptedException {
+		
+		System.setProperty(ESCAPE_PROPERTY, "false");  		// 代码设置关闭escape-output
 
-		// 在默认的工作目录下面创建一个名字叫screenshots1的文件夹，用来存放图片的
+		// 在工作目录下创建文件夹，用来存放图片的
 		File location = new File("screenshots"); 
 		String screenShotName = location.getAbsolutePath() + File.separator + tr.getMethod().getMethodName() + "_"
-				+ getCurrentDateTime() + ".png";
+				+ getCurrentDateTime() + ".jpg";
 		File screenShot = mDriver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File(screenShotName));
+			// width='425px' height='875px'
+//			Reporter.log("<img src="+screenShotName + " width='360px' height='640px'"+ "/img>", true);
 		} catch (IOException e) {
+			System.out.println("截图失败了…");
 			e.printStackTrace();
 		} finally{
 			// 将截图显示在报告当中
-			Reporter.log("<img src="+screenShotName + " width='425px' height='875px' /img>", true);
-		}
-	}
+			Reporter.log("<img src="+screenShotName + " width='360px' height='640px' /img>", true);		
+			}
 
+
+	}
+	
 	private static String getCurrentDateTime() {
 		// 设置日期格式
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");

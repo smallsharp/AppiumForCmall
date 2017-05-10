@@ -11,6 +11,11 @@ public class MyAndroidDriver<T> extends AndroidDriver<WebElement> {
 		super(remoteAddress, desiredCapabilities);
 		// TODO Auto-generated constructor stub
 	}
+
+	public String getScreenshotAs(String fileName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

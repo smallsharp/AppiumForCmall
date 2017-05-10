@@ -1,18 +1,16 @@
 package top.base.utils;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class Locator {
 
 	private static final Logger log = Logger.getLogger(Locator.class);
 	private static MyAndroidDriver<WebElement> mdriver = Driver.newInstance();
-	private static WebElement element = null;
 
 	/**
 	 * 
-	 * @Description:动态等待activity出现
+	 * @Description 动态等待activity出现
 	 * @Data 2017年5月3日
 	 * @return true or false
 	 */
@@ -44,12 +42,15 @@ public class Locator {
 	 * @Data 2017年5月3日
 	 * @return WebElement
 	 */
-	public static WebElement findElementById(String resourceId) throws InterruptedException {
+	
+	static WebElement element = null;
 
+	public static WebElement findElementById(String resourceId) throws InterruptedException {
 		int i = 0;
 		while (i < 3) {
 			try {
-				if ((element = mdriver.findElement(By.id(resourceId))).isDisplayed()) {
+				// 如果找不到，会抛出异常
+				if ((element = mdriver.findElementById(resourceId)).isDisplayed()) {
 					log.info(resourceId + ",控件 found！");
 					break;
 				}

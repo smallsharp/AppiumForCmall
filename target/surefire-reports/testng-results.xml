@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="PlaySuite" duration-ms="17868" started-at="2017-05-08T08:53:08Z" finished-at="2017-05-08T08:53:26Z">
+  <suite name="PlaySuite" duration-ms="36681" started-at="2017-05-10T06:19:39Z" finished-at="2017-05-10T06:20:15Z">
     <groups>
     </groups>
-    <test name="Case_login" duration-ms="17868" started-at="2017-05-08T08:53:08Z" finished-at="2017-05-08T08:53:26Z">
+    <test name="Case_login" duration-ms="36681" started-at="2017-05-10T06:19:39Z" finished-at="2017-05-10T06:20:15Z">
       <class name="top.cases.Login_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="beforeClass" is-config="true" duration-ms="16" started-at="2017-05-08T16:53:08Z" finished-at="2017-05-08T16:53:08Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="beforeClass" is-config="true" duration-ms="10" started-at="2017-05-10T14:19:39Z" finished-at="2017-05-10T14:19:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="testLogin" duration-ms="16396" started-at="2017-05-08T16:53:08Z" finished-at="2017-05-08T16:53:25Z">
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="testLogin" duration-ms="30000" started-at="2017-05-10T14:19:39Z" finished-at="2017-05-10T14:20:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Login_Test@52b56a3e]" name="afterClass" is-config="true" duration-ms="1456" started-at="2017-05-08T16:53:25Z" finished-at="2017-05-08T16:53:26Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="afterClass" is-config="true" duration-ms="1500" started-at="2017-05-10T14:20:15Z" finished-at="2017-05-10T14:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- top.cases.Login_Test -->
+      <class name="top.cases.ProfileSetting_Test">
+        <test-method status="PASS" signature="testSetting()[pri:0, instance:top.cases.ProfileSetting_Test@4eed46ee]" name="testSetting" duration-ms="6665" started-at="2017-05-10T14:20:09Z" finished-at="2017-05-10T14:20:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetting -->
+      </class> <!-- top.cases.ProfileSetting_Test -->
     </test> <!-- Case_login -->
   </suite> <!-- PlaySuite -->
 </testng-results>

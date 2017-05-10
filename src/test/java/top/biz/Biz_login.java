@@ -1,8 +1,7 @@
 package top.biz;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
-
+import org.testng.Reporter;
 import top.base.utils.Driver;
 import top.base.utils.MyAndroidDriver;
 
@@ -16,7 +15,7 @@ public class Biz_login {
 	 * 通过账号、密码登录
 	 * @author lee
 	 * @param mobile
-	 * @param code
+	 * @param pwd
 	 */
 	public static void login(String mobile, String pwd) {
 		
