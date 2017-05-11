@@ -1,11 +1,12 @@
 package top.biz;
 import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.android.AndroidDriver;
 import top.base.utils.Driver;
-import top.base.utils.MyAndroidDriver;
 
 public class Biz_login {
 
-	public static MyAndroidDriver<WebElement> mDriver = Driver.newInstance();
+	public static AndroidDriver<WebElement> mDriver = Driver.newInstance();
 
 	/**
 	 * 通过账号、密码登录

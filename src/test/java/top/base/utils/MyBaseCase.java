@@ -5,6 +5,8 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import io.appium.java_client.android.AndroidDriver;
+
 /**
  *  该类主要作用
  * 	1.测试开始前，初始化执行环境，初始化driver，给子类调用
@@ -13,15 +15,12 @@ import org.testng.annotations.BeforeSuite;
  */
 public class MyBaseCase {
 
-	protected MyAndroidDriver<WebElement> mdriver;
+	protected AndroidDriver<WebElement> mdriver;
 	
 	@BeforeSuite
 	public void setup() {
-		Reporter.log("111",true);
-		mdriver = Driver.newInstance();
 		if(mdriver==null){
-			Reporter.log("driver is still null"+true);
-
+			mdriver = Driver.newInstance();
 		}
 	}
 

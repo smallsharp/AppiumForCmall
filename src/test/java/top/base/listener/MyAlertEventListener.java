@@ -3,7 +3,6 @@ package top.base.listener;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.security.Credentials;
-
 import io.appium.java_client.events.api.general.AlertEventListener;
 
 public class MyAlertEventListener implements AlertEventListener {

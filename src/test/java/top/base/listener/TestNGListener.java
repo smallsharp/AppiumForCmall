@@ -12,8 +12,8 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
+import io.appium.java_client.android.AndroidDriver;
 import top.base.utils.Driver;
-import top.base.utils.MyAndroidDriver;
 
 public class TestNGListener extends TestListenerAdapter {
 
@@ -59,7 +59,7 @@ public class TestNGListener extends TestListenerAdapter {
 		super.onFinish(testContext);
 	}
 
-	private static MyAndroidDriver<WebElement> mDriver = Driver.newInstance();
+	private static AndroidDriver<WebElement> mDriver = Driver.newInstance();
 	
 	private static final String ESCAPE_PROPERTY = "org.uncommons.reportng.escape-output";  
 	  
