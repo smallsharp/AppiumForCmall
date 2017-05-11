@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
-
 import io.appium.java_client.events.api.general.ElementEventListener;
 
 public class MyElementEventListener implements ElementEventListener {
@@ -42,5 +41,15 @@ public class MyElementEventListener implements ElementEventListener {
 		// [[MyAndroidDriver:  on LINUX (750e968d-5203-408c-9407-cf695a5eb436)] -> id: com.tude.android:id/btn_jump]
 		String str = element.toString().split("-> ")[1];
 		return str.substring(0, str.length() - 1);
+	}
+
+	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		// TODO Auto-generated method stub
+		
 	}
 }

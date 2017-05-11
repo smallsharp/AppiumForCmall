@@ -1,15 +1,11 @@
 package top.biz;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.testng.Reporter;
 import top.base.utils.Driver;
 import top.base.utils.MyAndroidDriver;
 
 public class Biz_login {
 
 	public static MyAndroidDriver<WebElement> mDriver = Driver.newInstance();
-
-	static Logger logger = Logger.getLogger(Biz_login.class);
 
 	/**
 	 * 通过账号、密码登录

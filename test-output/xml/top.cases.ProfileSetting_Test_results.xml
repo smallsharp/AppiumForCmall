@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="login"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.001">
+  <properties />
+  
+  
+            <testcase name="testSetting" time="7.001" classname="top.cases.ProfileSetting_Test" />
+      
+</testsuite>

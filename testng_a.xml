@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PlaySuite_1" preserve-order="true" >
+    <!--
+    1、suite名称、test名称可以随便写
+    2、class name需写全路径
+    3、methods 写方法名称即可,代码中填写@test，但是这里不添加的话，仍然不会执行
+    4、执行需要run testNG.xml
+    -->
+    <test name="login" preserver-order="true" >
+
+        <classes>
+            <!-- 登录 -->
+            <class name="top.cases.Login_Test"> 
+                <parameter name="mobile" value="18521035133"></parameter>
+                <parameter name="pwd" value="111111"></parameter>
+                <methods>
+                    <include name="testLogin"></include>
+                </methods>
+             </class>
+             <class name="top.cases.ProfileSetting_Test">
+                 <methods>
+                     <include name="testSetting"></include>
+                 </methods>
+             </class>
+             
+        </classes>
+        
+    </test>
+</suite>

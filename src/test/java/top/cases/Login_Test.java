@@ -23,13 +23,11 @@ public class Login_Test extends MyBaseCase {
 	public void testLogin(String moblie ,String pwd) throws InterruptedException {
 				
 		if (Locator.waitForActivity(".activity.main.NativeVideoActivity")) {
-			assertFalse(true);		
-
 			Locator.findElementById("com.tude.android:id/btn_jump").click();
 		}
 		// 点击：我的
 		Locator.findElementById("com.tude.android:id/btn_profile").click();
-		assertFalse(true);		
+		
 		boolean result = false;
 
 		if (Locator.waitForActivity("com.tude.android.activity.member.LoginActivity")) {

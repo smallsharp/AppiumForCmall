@@ -1,31 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[========== 正在准备测试环境，请稍后 ==========]]>
+    </line>
+    <line>
+      <![CDATA[========== 环境准备完毕，测试即将开始 ==========]]>
+    </line>
+    <line>
+      <![CDATA[【准备点击】:id: com.tude.android:id/btn_jump]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【开始点击】:id: com.tude.android:id/btn_jump]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【准备点击】:id: com.tude.android:id/btn_profile]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【开始点击】:id: com.tude.android:id/btn_profile]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【准备点击】:id: com.tude.android:id/tv_account]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【开始点击】:id: com.tude.android:id/tv_account]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【准备改变】:id: com.tude.android:id/et_account的数值]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【控件】id: com.tude.android:id/et_account的数值已改变]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【准备改变】:id: com.tude.android:id/et_password的数值]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【控件】id: com.tude.android:id/et_password的数值已改变]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【准备点击】:id: com.tude.android:id/btn_login]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[【开始点击】:id: com.tude.android:id/btn_login]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170511_144300.jpg width='360px' height='640px' /img>]]>
+    </line>
+    <line>
+      <![CDATA[========== 测试完成，清理测试环境 ==========]]>
+    </line>
   </reporter-output>
-  <suite name="PlaySuite" duration-ms="36681" started-at="2017-05-10T06:19:39Z" finished-at="2017-05-10T06:20:15Z">
+  <suite name="PlaySuite" duration-ms="35628" started-at="2017-05-11T06:42:31Z" finished-at="2017-05-11T06:43:07Z">
     <groups>
     </groups>
-    <test name="Case_login" duration-ms="36681" started-at="2017-05-10T06:19:39Z" finished-at="2017-05-10T06:20:15Z">
+    <test name="login" duration-ms="35628" started-at="2017-05-11T06:42:31Z" finished-at="2017-05-11T06:43:07Z">
       <class name="top.cases.Login_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="beforeClass" is-config="true" duration-ms="10" started-at="2017-05-10T14:19:39Z" finished-at="2017-05-10T14:19:39Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:top.cases.Login_Test@185d8b6]" name="beforeClass" is-config="true" duration-ms="11" started-at="2017-05-11T14:42:31Z" finished-at="2017-05-11T14:42:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="testLogin" duration-ms="30000" started-at="2017-05-10T14:19:39Z" finished-at="2017-05-10T14:20:09Z">
+        <test-method status="FAIL" signature="testLogin(java.lang.String, java.lang.String)[pri:0, instance:top.cases.Login_Test@185d8b6]" name="testLogin" duration-ms="29234" started-at="2017-05-11T14:42:31Z" finished-at="2017-05-11T14:43:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18521035133]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[111111]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at top.cases.Login_Test.testLogin(Login_Test.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[【准备点击】:id: com.tude.android:id/btn_jump]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【开始点击】:id: com.tude.android:id/btn_jump]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【准备点击】:id: com.tude.android:id/btn_profile]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【开始点击】:id: com.tude.android:id/btn_profile]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【准备点击】:id: com.tude.android:id/tv_account]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【开始点击】:id: com.tude.android:id/tv_account]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【准备改变】:id: com.tude.android:id/et_account的数值]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【控件】id: com.tude.android:id/et_account的数值已改变]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【准备改变】:id: com.tude.android:id/et_password的数值]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【控件】id: com.tude.android:id/et_password的数值已改变]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【准备点击】:id: com.tude.android:id/btn_login]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[【开始点击】:id: com.tude.android:id/btn_login]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\workSpace\EclipseProjects\AppiumForEclipse\screenshots\testLogin_20170511_144300.jpg width='360px' height='640px' /img>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Login_Test@fd0e5b6]" name="afterClass" is-config="true" duration-ms="1500" started-at="2017-05-10T14:20:15Z" finished-at="2017-05-10T14:20:17Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:top.cases.Login_Test@185d8b6]" name="afterClass" is-config="true" duration-ms="2138" started-at="2017-05-11T14:43:07Z" finished-at="2017-05-11T14:43:09Z">
           <reporter-output>
+            <line>
+              <![CDATA[========== 测试完成，清理测试环境 ==========]]>
+            </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- top.cases.Login_Test -->
       <class name="top.cases.ProfileSetting_Test">
-        <test-method status="PASS" signature="testSetting()[pri:0, instance:top.cases.ProfileSetting_Test@4eed46ee]" name="testSetting" duration-ms="6665" started-at="2017-05-10T14:20:09Z" finished-at="2017-05-10T14:20:15Z">
+        <test-method status="PASS" signature="testSetting()[pri:0, instance:top.cases.ProfileSetting_Test@67784306]" name="testSetting" duration-ms="5536" started-at="2017-05-11T14:43:01Z" finished-at="2017-05-11T14:43:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetting -->
       </class> <!-- top.cases.ProfileSetting_Test -->
-    </test> <!-- Case_login -->
+    </test> <!-- login -->
   </suite> <!-- PlaySuite -->
 </testng-results>

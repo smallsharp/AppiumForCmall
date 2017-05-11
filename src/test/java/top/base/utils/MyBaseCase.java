@@ -1,7 +1,7 @@
 package top.base.utils;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -14,21 +14,24 @@ import org.testng.annotations.BeforeSuite;
 public class MyBaseCase {
 
 	protected MyAndroidDriver<WebElement> mdriver;
-	Logger logger = Logger.getLogger(MyBaseCase.class);
-
+	
 	@BeforeSuite
-	public void beforeClass() {
-		
+	public void setup() {
+		Reporter.log("111",true);
+		mdriver = Driver.newInstance();
 		if(mdriver==null){
-			mdriver = Driver.newInstance();
+			Reporter.log("driver is still null"+true);
+
 		}
 	}
 
 	@AfterSuite
-	public void afterClass() {
+	public void teardown() {
 		
 		if (mdriver != null) {
-			mdriver.quit();
+//			mdriver.quit();
+			mdriver.resetApp();
+			Reporter.log("========== 测试完成，清理测试环境 ==========",true);
 		}
 	}
 
