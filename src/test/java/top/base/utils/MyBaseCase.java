@@ -2,9 +2,10 @@ package top.base.utils;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-
 import io.appium.java_client.android.AndroidDriver;
 
 /**
@@ -17,20 +18,20 @@ public class MyBaseCase {
 
 	protected AndroidDriver<WebElement> mdriver;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void setup() {
 		if(mdriver==null){
 			mdriver = Driver.newInstance();
 		}
 	}
 
-	@AfterSuite
-	public void teardown() {
+	@AfterClass
+	public void teardown() throws InterruptedException {
 		
 		if (mdriver != null) {
-//			mdriver.quit();
-			mdriver.resetApp();
-			Reporter.log("========== 测试完成，清理测试环境 ==========",true);
+			CommandUtils.exec_shell("pm clear com.tude.android");
+			CommandUtils.exec_shell("am start -n com.tude.android/.activity.SplashActivity");
+			Thread.sleep(1000);
 		}
 	}
 

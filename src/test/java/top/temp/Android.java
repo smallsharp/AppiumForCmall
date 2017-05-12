@@ -18,22 +18,31 @@ public class Android {
 
 		AndroidDebugBridge.init(false); // 很重要
 		device = getDevice();
-		System.out.println(device.getFileListingService().getRoot());
-		System.out.println(device.getAvdName());
+		System.out.println(device.getSerialNumber());
+		System.out.println(device.isOnline());
+		System.out.println(device.isOffline());
+
+
 	}
 
 	private static IDevice getDevice() {
 		IDevice device = null;
 		AndroidDebugBridge bridge = AndroidDebugBridge.createBridge();
 		waitDevicesList(bridge);
-		IDevice devices[] = bridge.getDevices();
-		if (devices.length < 0) {
-			System.err.print("没有检测到 个设备");
+		try {
+			
+			IDevice devices[] = bridge.getDevices();
+			if (devices.length>=0) {
+				device = devices[0];
+			}
+
+		} catch (Exception e) {
+			System.out.println("没有检测到Android设备");
 		}
-		else {
-			device = devices[0];
-		}
+		
 		return device;
+
+		
 	}
 
 	private static void waitDevicesList(AndroidDebugBridge bridge) {

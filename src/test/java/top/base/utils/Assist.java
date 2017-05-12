@@ -24,7 +24,7 @@ public class Assist {
 	 * @Data 2017年5月3日
 	 * @return true or false
 	 */
-	public static boolean waitForActivity(String activityName) {
+	public static boolean waitActivity(String activityName) {
 		boolean flag = false;
 		int i = 1;
 		while (i <= 10) {
@@ -246,9 +246,32 @@ public class Assist {
 		int y = driver.manage().window().getSize().height;
 		driver.swipe(x / 4 * 2, y / 10 * i, x / 4 * 3, y / 10 * i, 0);
 	}
-	
-	
-	
-	
+
+	// 向左滑动
+	public static void swipeToLeft(int times) throws InterruptedException {
+
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+
+		for (int i = 1; i <= times; i++) {
+			driver.swipe(width * 9 / 10, height / 2, width / 10, height / 2, 500);
+			System.out.println("向左滑动次数：" + i);
+			Thread.sleep(1000);
+		}
+	}
+
+	public static void swipeUpUntilFind(String str){
+
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+
+		for (int i = 0; i < 5; i++) {
+			driver.swipe(width / 2, height * 7 / 10, width / 2, height * 3 / 10, 500);
+			if (driver.getPageSource().contains(str)) {
+				break;
+			}
+		}
+
+	}
 
 }

@@ -22,22 +22,15 @@ import top.base.listener.MyElementEventListener;
  */
 public class Driver {
 
-	// private static AndroidDriver<WebElement> driver;
 	private static AndroidDriver<WebElement> mdriver;
 
 	public static AndroidDriver<WebElement> newInstance() {
 
 		if (mdriver == null) {
-			/*
-			 * String deviceName = "85GBBMA2353T"; String appPackage =
-			 * "com.tude.android"; String appActivity =
-			 * ".activity.SplashActivity";
-			 */
-
 			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
 			String deviceName = pro.getValue("deviceName_huawei");
-			String appPackage = "com.tude.android";
-			String appActivity = ".activity.SplashActivity";
+			String appPackage = pro.getValue("appPackage");
+			String appActivity = pro.getValue("appActivity");
 			initAndroidDriver(deviceName, appPackage, appActivity);
 		}
 		return mdriver;
@@ -52,16 +45,14 @@ public class Driver {
 		File app = new File(appDir, "play.apk");
 
 		DesiredCapabilities dc = new DesiredCapabilities();
-		dc.setCapability(CapabilityType.BROWSER_NAME, "");
 		// 支持中文输入
 		dc.setCapability("unicodeKeyboard", "True");
 		// 重置输入法
 		dc.setCapability("resetKeyboard", "True");
 		// 不需要再次安装
 		// dc.setCapability("noReset", true);
-//		dc.setCapability("fullReset", "True");
-        dc.setCapability("autoAcceptAlerts", true);// 自动接受提示信息
 		// 不对应用重签名
+//		dc.setCapability("stopAppOnReset", false);
 		dc.setCapability("noSign", "True");
 		dc.setCapability("platformName", "Android");
 		dc.setCapability("deviceName", deviceName);
@@ -72,7 +63,7 @@ public class Driver {
 
 		try {
 
-			mdriver = new AndroidDriver<WebElement>(new URL("http://192.168.101.201:4723/wd/hub"), dc);
+			mdriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), dc);
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyElementEventListener(),
 					new MyAlertEventListener());
