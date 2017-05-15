@@ -5,10 +5,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.events.EventFiringWebDriverFactory;
 import top.base.listener.MyAlertEventListener;
@@ -16,8 +14,7 @@ import top.base.listener.MyElementEventListener;
 
 /**
  * 初始化driver
- * 
- * @author Administrator
+ * @author lee
  *
  */
 public class Driver {
@@ -28,7 +25,7 @@ public class Driver {
 
 		if (mdriver == null) {
 			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
-			String deviceName = pro.getValue("deviceName_huawei");
+			String deviceName = pro.getValue("deviceName_redmi");
 			String appPackage = pro.getValue("appPackage");
 			String appActivity = pro.getValue("appActivity");
 			initAndroidDriver(deviceName, appPackage, appActivity);
@@ -38,7 +35,7 @@ public class Driver {
 
 	private static void initAndroidDriver(String deviceName, String appPackage, String appActivity) {
 
-		Reporter.log("========== 正在准备测试环境，请稍后 ==========", true);
+		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		// 指定app的存放目录
 		File appDir = new File(classpathRoot, "apps");

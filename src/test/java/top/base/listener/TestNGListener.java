@@ -29,12 +29,7 @@ public class TestNGListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
 		log.info(tr.getName() + " Failure");
-		try {
-			takeScreenShot(tr);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		takeScreenShot(tr);
 	}
 
 	@Override
@@ -65,23 +60,23 @@ public class TestNGListener extends TestListenerAdapter {
 	  
 	/**
 	 * 
-	 * @throws InterruptedException 
 	 * @Description 获取截图，存在/screenshots目录下
 	 * @Data 2017年5月3日
 	 */
-	private void takeScreenShot(ITestResult tr) throws InterruptedException {
+	private void takeScreenShot(ITestResult tr) {
 		
 		System.setProperty(ESCAPE_PROPERTY, "false");  		// 代码设置关闭escape-output
 
-		// 在工作目录下创建文件夹，用来存放图片的
-		File location = new File("screenshots"); 
+		// 在工作目录下创建文件夹，用来存放图片的		
+		File classpathRoot = new File(System.getProperty("user.dir"));
+		File appDir = new File(classpathRoot, "test-output");
+		File location = new File(appDir, "screenshots");
+
 		String screenShotName = location.getAbsolutePath() + File.separator + tr.getMethod().getMethodName() + "_"
 				+ getCurrentDateTime() + ".jpg";
 		File screenShot = mDriver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File(screenShotName));
-			// width='425px' height='875px'
-//			Reporter.log("<img src="+screenShotName + " width='360px' height='640px'"+ "/img>", true);
 		} catch (IOException e) {
 			System.out.println("截图失败了…");
 			e.printStackTrace();
@@ -89,8 +84,6 @@ public class TestNGListener extends TestListenerAdapter {
 			// 将截图显示在报告当中
 			Reporter.log("<img src="+screenShotName + " width='360px' height='640px' /img>", true);		
 			}
-
-
 	}
 	
 	private static String getCurrentDateTime() {

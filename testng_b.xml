@@ -12,20 +12,19 @@
 
         <classes>
             <!-- 登录 -->
-            <class name="top.cases.Login_Test"> 
+            <class name="top.cases.LoginCase"> 
                 <parameter name="mobile" value="18521035133"></parameter>
                 <parameter name="pwd" value="111111"></parameter>
                 <methods>
                     <include name="testLogin"></include>
                 </methods>
              </class>
-             <class name="top.cases.ProfileSetting_Test">
-                 <methods>
-                     <include name="testSetting"></include>
-                 </methods>
-             </class>
              
         </classes>
         
     </test>
+    
+        <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    </listeners>
 </suite>

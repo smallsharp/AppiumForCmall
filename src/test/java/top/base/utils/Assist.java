@@ -36,7 +36,7 @@ public class Assist {
 				} else {
 					log.info(activityName + ",第" + i + "次等待，Not Found!");
 					i++;
-					Thread.sleep(1000);
+					Thread.sleep(2000);
 				}
 			} catch (Exception e) {
 				i++;
@@ -73,6 +73,7 @@ public class Assist {
 
 	// webview页面切换时，需要加这个方法
 	public String pageShift() {
+		
 		String currentHandle = driver.getWindowHandle();
 		Set<String> allHandles = driver.getWindowHandles();
 
