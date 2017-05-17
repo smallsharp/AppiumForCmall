@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="PlaySuite_2" preserve-order="true" >
-    <!--
-    1、suite名称、test名称可以随便写
-    2、class name需写全路径
-    3、methods 写方法名称即可,代码中填写@test，但是这里不添加的话，仍然不会执行
-    4、执行需要run testNG.xml
-    -->
-    <test name="login" preserver-order="true" >
-
+<suite name="PlaySuite_2" thread-count="2">
+	
+    <test name="红米" preserver-order="true" >
+	<parameter name="deviceName" value="fd327d02"></parameter>
+	<parameter name="udid" value="fd327d02"></parameter>
+	<parameter name="port" value="4723"></parameter>
         <classes>
             <!-- 登录 -->
-            <class name="top.cases.LoginCase"> 
+            <class name="top.cases.TestSuite"> 
                 <parameter name="mobile" value="18521035133"></parameter>
-                <parameter name="pwd" value="111111"></parameter>
+                <parameter name="password" value="111111"></parameter>
+                <methods>
+                    <include name="testLogin"></include>
+                </methods>
+             </class>
+             
+        </classes>
+        
+    </test>
+    
+        <test name="魅族" preserver-order="true" >
+		<parameter name="deviceName" value="85GBBMA2353T"></parameter>
+		<parameter name="udid" value="85GBBMA2353T"></parameter>
+		<parameter name="port" value="4725"></parameter>
+        <classes>
+            <class name="top.cases.TestSuite"> 
+                <parameter name="mobile" value="18521035133"></parameter>
+                <parameter name="password" value="111111"></parameter>
                 <methods>
                     <include name="testLogin"></include>
                 </methods>

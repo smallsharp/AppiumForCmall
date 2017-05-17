@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TudeSuite" preserve-order="true" >
+    
+    <test name="测试登录退出" preserver-order="true" >
+
+        <classes>
+            <class name="top.tude.pages.TestSuite_Tude"> 
+                <parameter name="mobile" value="18521035133"></parameter>
+                <parameter name="password" value="111111"></parameter>
+                <methods>
+                   <!--  <include name="testLogin"/> -->
+                    <include name="testBuyMenWear"/>
+                </methods>
+             </class>      
+        </classes>
+        
+    </test>
+    <listeners>
+    	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+    </listeners>
+</suite>

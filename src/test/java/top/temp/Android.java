@@ -21,6 +21,7 @@ public class Android {
 		System.out.println(device.getSerialNumber());
 		System.out.println(device.isOnline());
 		System.out.println(device.isOffline());
+		
 
 
 	}

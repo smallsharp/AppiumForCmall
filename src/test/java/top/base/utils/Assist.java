@@ -24,10 +24,10 @@ public class Assist {
 	 * @Data 2017年5月3日
 	 * @return true or false
 	 */
-	public static boolean waitActivity(String activityName) {
+	public static boolean isActivityDisplayed(String activityName) {
 		boolean flag = false;
 		int i = 1;
-		while (i <= 10) {
+		while (i <= 5) {
 			try {
 				if (activityName.contains(driver.currentActivity())) {
 					log.info(activityName + " Found!");
@@ -70,36 +70,68 @@ public class Assist {
 		}
 		return element;
 	}
+	
+	public static boolean isElementDisplayed(WebElement webElement) throws InterruptedException {
+		
+		boolean flag = false;
+		int i = 1;
+		while (i <= 3) {
+				if (webElement.isDisplayed()) {
+					log.info(webElement + ",控件 found！");
+					flag = true;
+					break;
+				} else{
+					log.info(webElement + ",控件 found！");
+					i++;
+				}
+		}
+		return flag;
+	}
 
 	// webview页面切换时，需要加这个方法
-	public String pageShift() {
+	public static String pageShift() {
 		
 		String currentHandle = driver.getWindowHandle();
 		Set<String> allHandles = driver.getWindowHandles();
-
+		
 		for (String s : allHandles) {
+			System.out.println(s);
 			if (!s.equals(currentHandle)) {
 				driver.switchTo().window(s);
 			}
 		}
 		return currentHandle;
 	}
-
+	
 	/***
-	 * 切换WEB页面查找元素
-	 */
-	public static void switchtoWeb() {
+	* 切换WEB页面查找元素
+	*/
+	public static void switchToWebView() {
+		
 		try {
 			Set<String> contextNames = driver.getContextHandles();
 			for (String contextName : contextNames) {
-				// 用于返回被测app是NATIVE_APP还是WEBVIEW，如果两者都有就是混合型App
 				if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 					driver.context(contextName);
-					System.out.println("跳转到web页 开始操作web页面");
+					System.out.println("切换到Webview页面成功");
+					break;
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void switchToNative() {
+		
+		Set<String> ContextHandles = driver.getContextHandles();
+		for (String contextHandle:ContextHandles) {
+			if (contextHandle.contains("NATIVE_APP")) {
+				driver.context(contextHandle);
+				System.out.println("切换到Navtive页面成功");
+				break;
+			}
 		}
 	}
 
@@ -167,19 +199,19 @@ public class Assist {
 	/***
 	 * 上滑1/4屏幕
 	 */
-	public void slideUP() {
+	public static void slideUP() {
 		int x = driver.manage().window().getSize().width;
 		int y = driver.manage().window().getSize().height;
-		driver.swipe(x / 2, y / 3 * 2, x / 2, y / 3 * 1, 0);
+		driver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
 	}
 
 	/***
 	 * 下滑1/4屏幕
 	 */
-	public void slideDown() {
+	public static void slideDown() {
 		int x = driver.manage().window().getSize().width;
 		int y = driver.manage().window().getSize().height;
-		driver.swipe(x / 2, y / 3 * 1, x / 2, y / 3 * 2, 0);
+		driver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
 	}
 
 	/***
@@ -209,7 +241,7 @@ public class Assist {
 		Assert.assertFalse(i <= 0 || i >= 100, "上滑宽度传入错误");
 		int x = driver.manage().window().getSize().width;
 		int y = driver.manage().window().getSize().height;
-		driver.swipe(x / 10 * i, y / 3 * 2, x / 10 * i, y / 3 * 1, 0);
+		driver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
 	}
 
 	/***
@@ -221,7 +253,7 @@ public class Assist {
 		Assert.assertFalse(i <= 0 || i >= 100, "下滑宽度传入错误");
 		int x = driver.manage().window().getSize().width;
 		int y = driver.manage().window().getSize().height;
-		driver.swipe(x / 10 * i, y / 3 * 1, x / 10 * i, y / 3 * 2, 0);
+		driver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
 	}
 
 	/***

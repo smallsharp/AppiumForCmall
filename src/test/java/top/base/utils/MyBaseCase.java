@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
-import top.cases.Constant;
 
 /**
  *  该类主要作用
@@ -18,25 +17,23 @@ public class MyBaseCase {
 	
 	@BeforeClass
 	public void setup() {
+		System.out.println("exec:setup()");
 		if(mdriver==null){
 			mdriver = Driver.newInstance();
 		}
-		System.out.println(mdriver.currentActivity());
-		if (!mdriver.currentActivity().contains(Constant.SPLASH_ACTIVITY)) {
+/*		System.out.println(mdriver.currentActivity());
+		if (!mdriver.currentActivity().contains(Constant.SPLASH_ACTIVITY)||!mdriver.currentActivity().contains(Constant.VIDEO_ACTIVITY)) {
 			CommandUtils.exec_shell("am start -n com.tude.android/.activity.SplashActivity");
-		}
+		}*/
 	}
 
 	@AfterClass
-	public void teardown() {
-		
+	public void teardown() throws InterruptedException {
+
 		if (mdriver != null) {
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			System.out.println("exec:teardown()");
+			Thread.sleep(2000);
+			mdriver.closeApp();
 			CommandUtils.exec_shell("pm clear com.tude.android");
 		}
 	}
