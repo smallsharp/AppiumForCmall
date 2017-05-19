@@ -17,9 +17,6 @@ import io.appium.java_client.android.AndroidDriver;
 public class TestNGListener extends TestListenerAdapter {
 
 	private static Logger log = Logger.getLogger(TestNGListener.class);
-	
-	private static AndroidDriver<WebElement> mDriver = Driver.newInstance();
-
 
 	@Override
 	public void onTestStart(ITestResult tr) {
@@ -56,19 +53,19 @@ public class TestNGListener extends TestListenerAdapter {
 		super.onFinish(testContext);
 	}
 
+	private static final String ESCAPE_PROPERTY = "org.uncommons.reportng.escape-output";
 	
-	private static final String ESCAPE_PROPERTY = "org.uncommons.reportng.escape-output";  
-	  
+	private AndroidDriver<WebElement> mDriver = Driver.newInstance();
+
 	/**
 	 * 
 	 * @Description 获取截图，存在/screenshots目录下
 	 * @Data 2017年5月3日
 	 */
 	private void takeScreenShot(ITestResult tr) {
-		
-		System.setProperty(ESCAPE_PROPERTY, "false");  		// 代码设置关闭escape-output
-
-		// 在工作目录下创建文件夹，用来存放图片的		
+		// 代码设置关闭escape-output
+		System.setProperty(ESCAPE_PROPERTY, "false");
+		// 在工作目录下创建文件夹，用来存放图片的
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "test-output");
 		File location = new File(appDir, "screenshots");
@@ -81,16 +78,15 @@ public class TestNGListener extends TestListenerAdapter {
 		} catch (IOException e) {
 			System.out.println("截图失败了…");
 			e.printStackTrace();
-		} finally{
-			// 将截图显示在报告当中
-			Reporter.log("<img src="+screenShotName + " width='360px' height='640px' /img>", true);		
-			}
+		} finally {
+			Reporter.log("<img src=" + screenShotName + " width='360px' height='640px' /img>", true);// 将截图显示在报告中
+		}
 	}
-	
+
 	private static String getCurrentDateTime() {
 		// 设置日期格式
-		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
-		return df.format(new Date());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+		return sdf.format(new Date());
 	}
 
 }

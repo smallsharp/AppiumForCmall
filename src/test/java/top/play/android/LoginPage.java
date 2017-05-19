@@ -1,9 +1,18 @@
 package top.play.android;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import top.base.utils.Assist;
+
+import io.appium.java_client.android.AndroidDriver;
+import top.base.utils.Helper;
+import top.base.utils.ImageUtil;
+import top.temp.Android;
 
 /**
  * PO模式
@@ -30,6 +39,9 @@ public class LoginPage {
 	// 登录
 	@FindBy(id = "com.tude.android:id/btn_login")
 	private WebElement e_login;
+	
+	
+	private AndroidDriver<WebElement> mDriver;
 
 	/**
 	 * 通过：手机号，密码登录
@@ -38,27 +50,49 @@ public class LoginPage {
 	 * @param password
 	 */
 	public void login(String mobile, String password) {
-		// 如果页面是在视频页面，则点击"跳过"
-		if (Assist.isActivityDisplayed(Constant.VIDEO_ACTIVITY)) {
-			e_skipVideo.click();
-		}
-		// 如果当前页面不在HOME_ACTIVITY，则测试失败
-		if (!Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
-			assertTrue(false, "HOME_ACTIVITY is not found");
-		}
 
-		e_my.click();// 点击：我的
-		if (!Assist.isActivityDisplayed(Constant.LOGIN_ACTIVITY)) {
-			assertTrue(false, "LOGIN_ACTIVITY is not found");
-		}
-		// 点击：账号密码登录
-		e_account.click();
-		e_molibe.sendKeys(mobile);
-		e_password.sendKeys(password);
-		e_login.click();
-		// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
-		if (!Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
-			assertTrue(false, "登录后，没有回到：HOME_ACTIVITY");
+		try {
+
+			// 如果页面是在视频页面，则点击"跳过"
+			if (Helper.isActivityDisplayed(ActivityList.VIDEO_ACTIVITY)) {
+				e_skipVideo.click();
+			}
+			
+			// 如果当前页面不在HOME_ACTIVITY，则测试失败
+			if (!Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
+				assertEquals(mDriver.currentActivity(), ActivityList.HOME_ACTIVITY);
+			}
+
+			e_my.click();// 点击：我的
+			
+			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(mDriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+			}
+			Thread.sleep(2000);
+			
+			String screenName = "login_actul";
+			Helper.takeScreenShot(screenName);
+			
+			String pics_expected = System.getProperty("user.dir")+"\\test-output\\pics_expected";
+			String pics_actul = System.getProperty("user.dir")+"\\test-output\\pics_actul";
+
+			File imgA = new File(pics_expected,"login_exp.jpg");
+			File imgB = new File(pics_actul,screenName+".jpg");
+
+			ImageUtil.getSamePercentFrom(imgA, imgB);
+			
+			// 点击：账号密码登录
+			e_account.click();
+			e_molibe.sendKeys(mobile);
+			e_password.sendKeys(password);
+			e_login.click();
+			// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
+			if (!Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
+				assertEquals(mDriver.currentActivity(), ActivityList.HOME_ACTIVITY,"登录成功后，应该返回:HOME_ACTIVITY");
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 
 	}

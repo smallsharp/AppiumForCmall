@@ -4,9 +4,9 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.Assist;
+import top.base.utils.Helper;
 import top.base.utils.Driver;
-import top.play.android.Constant;
+import top.play.android.ActivityList;
 
 public class DIYPage {
 	
@@ -44,15 +44,15 @@ public class DIYPage {
 	private WebElement m_thirt;// 短袖
 	
 	public void buyMenWear(){
-		if (Assist.isActivityDisplayed(Constant.VIDEO_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
-		if(Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)){
+		if(Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)){
 			m_productlist.get(m_productlist.size()-1).click();
 			
-			if (Assist.isActivityDisplayed(Constant.PRODUCT_CLASSIFITION_ACTIVITY)) {
-		        Assist.slideUP();
-		        Assist.slideDown();
+			if (Helper.isActivityDisplayed(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+		        Helper.slideUP();
+		        Helper.slideDown();
 				
 				m_tee.click();
 				

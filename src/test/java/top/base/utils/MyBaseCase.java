@@ -21,10 +21,6 @@ public class MyBaseCase {
 		if(mdriver==null){
 			mdriver = Driver.newInstance();
 		}
-/*		System.out.println(mdriver.currentActivity());
-		if (!mdriver.currentActivity().contains(Constant.SPLASH_ACTIVITY)||!mdriver.currentActivity().contains(Constant.VIDEO_ACTIVITY)) {
-			CommandUtils.exec_shell("am start -n com.tude.android/.activity.SplashActivity");
-		}*/
 	}
 
 	@AfterClass

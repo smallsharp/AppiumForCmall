@@ -3,7 +3,7 @@ package top.play.android;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import top.base.utils.Assist;
+import top.base.utils.Helper;
 
 public class PersonModifyPage {
 	
@@ -39,14 +39,14 @@ public class PersonModifyPage {
 	public void modifyPersonInfo(){
 		boolean result = false;
 
-		if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_profile_setting.click();
-			if (Assist.isActivityDisplayed(Constant.MODIFY_USER_INFO_ACTIVITY)) {
+			if (Helper.isActivityDisplayed(ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
 				e_gender.click();
 				e_male.click();
 				e_save.click();
-				if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+				if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

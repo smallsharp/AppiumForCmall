@@ -1,5 +1,6 @@
 package top.base.utils;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -22,21 +23,28 @@ public class Driver {
 
 		if (mdriver == null) {
 			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
-			String udid1 = pro.getValue("deviceName_meizu");
+			String udid1 = pro.getValue("meizu");
 			String appPackage = pro.getValue("appPackage");
 			String appActivity = pro.getValue("appActivity");
 			initAndroidDriver(udid1,udid1,"4723", appPackage, appActivity);
 		}
 		return mdriver;
 	}
+	
+	public static AndroidDriver<WebElement> getMdriver() {
+		return mdriver;
+	}
+
+	public static void setMdriver(AndroidDriver<WebElement> mdriver) {
+		Driver.mdriver = mdriver;
+	}
 
 	private static void initAndroidDriver(String deviceName,String udid,String port, String appPackage, String appActivity) {
 
-		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
-/*		File classpathRoot = new File(System.getProperty("user.dir"));
+		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
-		File app = new File(appDir, "play.apk");		// 指定app的存放目录
-*/
+		File app = new File(appDir, "play_debug.apk");		// 指定app的存放目录
+
 		DesiredCapabilities dc1 = new DesiredCapabilities();
 		dc1.setCapability("unicodeKeyboard", "True");		// 支持中文输入
 		dc1.setCapability("resetKeyboard", "True");		// 重置输入法
@@ -48,7 +56,7 @@ public class Driver {
 		dc1.setCapability("platformVersion", "5.0");
 		dc1.setCapability("appPackage", appPackage);
 		dc1.setCapability("appActivity", appActivity);
-//		dc1.setCapability("app", app.getAbsolutePath());
+		dc1.setCapability("app", app.getAbsolutePath());
 
 		try {
 
@@ -60,8 +68,8 @@ public class Driver {
 			Reporter.log("========== 测试环境启动失败，请重试 ==========", true);
 			e.printStackTrace();
 		}
-		// 全局等待10秒
-		mdriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		// 全局等待20秒
+		mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
 	}
 

@@ -19,5 +19,6 @@
     </test>
     <listeners>
     	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+    	<listener class-name="top.base.utils.TestNGListener" />
     </listeners>
 </suite>

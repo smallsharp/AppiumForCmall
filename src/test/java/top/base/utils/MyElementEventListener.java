@@ -10,25 +10,21 @@ public class MyElementEventListener implements ElementEventListener {
 	
 	Logger log = Logger.getLogger(MyElementEventListener.class);
 
-	@Override
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-		Reporter.log("@准备点击:" + splitElement(element),true);
-		Reporter.log("<br>",false);
+//		Reporter.log("@准备点击:" + splitElement(element),true);
+//		Reporter.log("<br>",false);
 	}
 
-	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		Reporter.log("@开始点击:" + splitElement(element),true);
 		Reporter.log("<br>",false);
 	}
 
-	@Override
 	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
-		Reporter.log("@准备改变:" +splitElement(element)+"的数值",true);
-		Reporter.log("<br>",false);
+//		Reporter.log("@准备改变:" +splitElement(element)+"的数值",true);
+//		Reporter.log("<br>",false);
 	}
 
-	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver) {
 		Reporter.log("@控件" + splitElement(element) + "的数值已改变",true);
 		Reporter.log("<br>",false);

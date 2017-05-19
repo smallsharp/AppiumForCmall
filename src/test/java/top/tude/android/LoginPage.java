@@ -3,8 +3,8 @@ package top.tude.android;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import top.base.utils.Assist;
-import top.play.android.Constant;
+import top.base.utils.Helper;
+import top.play.android.ActivityList;
 
 /**
  * PO模式
@@ -40,20 +40,20 @@ public class LoginPage {
 
 		boolean result = false;
 
-		if (Assist.isActivityDisplayed(Constant.VIDEO_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
 
-		if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
-			if (Assist.isActivityDisplayed(Constant.LOGIN_ACTIVITY)) {
+			if (Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
 				// 点击：账号密码登录
 				e_account.click();
 				e_molibe.sendKeys(mobile);
 				e_password.sendKeys(password);
 				e_login.click();
 				// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
-				if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+				if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

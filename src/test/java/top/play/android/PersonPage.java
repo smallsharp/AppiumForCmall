@@ -4,7 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import top.base.utils.Assist;
+import top.base.utils.Helper;
 
 /**
  * 个人页面
@@ -36,13 +36,13 @@ public class PersonPage {
 		
 		boolean result = false;
 
-		if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
-			Assist.swipeUpUntilFind("退出登录");
+			Helper.swipeUpUntilFind("退出登录");
 			e_logout.click();
 			e_quit_yes.click();
 			e_my.click();
-			if (Assist.isActivityDisplayed(Constant.LOGIN_ACTIVITY)) {
+			if (Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
 				result = true;
 			}
 		}
@@ -55,7 +55,7 @@ public class PersonPage {
 	public void add_Delivery_Address(){
 		boolean result = false;
 
-		if (Assist.isActivityDisplayed(Constant.HOME_ACTIVITY)) {
+		if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_btn_address.click();
 		}

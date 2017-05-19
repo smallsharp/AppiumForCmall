@@ -28,9 +28,11 @@
 		</dependency>
 		<!-- reportng 关联 testng -->
 		<dependency>
-			<groupId>org.uncommons</groupId>
+<!-- 		<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId> -->
+			<groupId>lee.test</groupId><!-- 表示文件件lee/test/reportng/… -->
 			<artifactId>reportng</artifactId>
-			<version>1.1.4</version>
+			<version>1.1.5</version>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
