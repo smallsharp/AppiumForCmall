@@ -18,6 +18,10 @@ import io.appium.java_client.events.EventFiringWebDriverFactory;
 public class Driver {
 
 	private static AndroidDriver<WebElement> mdriver;
+	
+	public Driver() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public static AndroidDriver<WebElement> newInstance() {
 

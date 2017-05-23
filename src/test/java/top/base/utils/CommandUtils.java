@@ -13,7 +13,8 @@ import java.io.InputStreamReader;
 public class CommandUtils {
 	
 	public static Process exec_cmd(String command) {
-		return process("adb " + command);
+//		return process("adb " + command);
+		return process(command);
 	}
 
 	public static Process exec_shell(String command) {

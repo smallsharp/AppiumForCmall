@@ -1,44 +1,37 @@
 package top.play.android;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
-import java.awt.image.BufferedImage;
 import java.io.File;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import io.appium.java_client.android.AndroidDriver;
 import top.base.utils.Helper;
 import top.base.utils.ImageUtil;
-import top.temp.Android;
 
 /**
- * PO模式
+ * PO模式：登录页面
  * 
  * @author lee
- *
  */
 public class LoginPage {
-	// 跳过
+
 	@FindBy(id = "com.tude.android:id/btn_jump")
-	private WebElement e_skipVideo;
-	// 我的
+	private WebElement e_skipVideo; 	// 跳过
+
 	@FindBy(id = "com.tude.android:id/btn_profile")
-	private WebElement e_my;
-	// 账号密码登录
+	private WebElement e_my; 	// 我的
+
 	@FindBy(id = "com.tude.android:id/tv_account")
-	private WebElement e_account;
-	// 手机号
+	private WebElement e_account; 	// 账号密码登录
+
 	@FindBy(id = "com.tude.android:id/et_account")
-	private WebElement e_molibe;
-	// 密码
+	private WebElement e_molibe; 	// 手机号
+
 	@FindBy(id = "com.tude.android:id/et_password")
-	private WebElement e_password;
-	// 登录
+	private WebElement e_password; 	// 密码
+
 	@FindBy(id = "com.tude.android:id/btn_login")
-	private WebElement e_login;
+	private WebElement e_login; 	// 登录
 	
 	
 	private AndroidDriver<WebElement> mDriver;
@@ -70,14 +63,11 @@ public class LoginPage {
 			}
 			Thread.sleep(2000);
 			
-			String screenName = "login_actul";
+			String screenName = "login_actul.jpg";
 			Helper.takeScreenShot(screenName);
-			
-			String pics_expected = System.getProperty("user.dir")+"\\test-output\\pics_expected";
-			String pics_actul = System.getProperty("user.dir")+"\\test-output\\pics_actul";
 
-			File imgA = new File(pics_expected,"login_exp.jpg");
-			File imgB = new File(pics_actul,screenName+".jpg");
+			File imgA = new File(Constant.EXPECTED_PATH,Constant.LOGIN_EXP);
+			File imgB = new File(Constant.ACTUL_PATH,screenName);
 
 			ImageUtil.getSamePercentFrom(imgA, imgB);
 			

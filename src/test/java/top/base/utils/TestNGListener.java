@@ -28,7 +28,7 @@ public class TestNGListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
 		log.info(tr.getName() + " Failure");
-		takeScreenShot(tr);
+//		takeScreenShot(tr);
 	}
 
 	@Override
@@ -66,11 +66,13 @@ public class TestNGListener extends TestListenerAdapter {
 		// 代码设置关闭escape-output
 		System.setProperty(ESCAPE_PROPERTY, "false");
 		// 在工作目录下创建文件夹，用来存放图片的
-		File classpathRoot = new File(System.getProperty("user.dir"));
-		File appDir = new File(classpathRoot, "test-output");
-		File location = new File(appDir, "screenshots");
-
+/*		File classpathRoot = new File(System.getProperty("user.dir"));
+		File location = new File(classpathRoot, "test-output\\screenshots");
 		String screenShotName = location.getAbsolutePath() + File.separator + tr.getMethod().getMethodName() + "_"
+		+ getCurrentDateTime() + ".jpg"; */
+		String location = System.getProperty("user.dir")+"\\test-output\\screenshots";
+
+		String screenShotName = location + File.separator + tr.getMethod().getMethodName() + "_"
 				+ getCurrentDateTime() + ".jpg";
 		File screenShot = mDriver.getScreenshotAs(OutputType.FILE);
 		try {
@@ -79,7 +81,8 @@ public class TestNGListener extends TestListenerAdapter {
 			System.out.println("截图失败了…");
 			e.printStackTrace();
 		} finally {
-			Reporter.log("<img src=" + screenShotName + " width='360px' height='640px' /img>", true);// 将截图显示在报告中
+//			Reporter.log("<img src=" + screenShotName + " width='360px' height='640px' /img>", true);
+			Reporter.log("<img src=" + screenShotName + " /img>", true);// 将截图显示在报告中
 		}
 	}
 

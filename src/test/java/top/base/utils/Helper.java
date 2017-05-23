@@ -11,7 +11,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 
@@ -45,7 +44,6 @@ public class Helper {
 				log.error(activityName + ",第" + i + "次等待，Not Found!");
 			}
 		}
-		log.info(activityName+" Not Found!");
 		return flag;
 	}
 
@@ -313,14 +311,15 @@ public class Helper {
 	public static void takeScreenShot(String screenShotName) {
 
 		String path = System.getProperty("user.dir") + "\\test-output\\pics_actul";
-		System.out.println("path" + path);
 		File screenShot = mDriver.getScreenshotAs(OutputType.FILE);
 
 		try {
-			FileUtils.copyFile(screenShot, new File(path + "\\" + screenShotName + ".jpg"));
+			FileUtils.copyFile(screenShot, new File(path + "\\" + screenShotName));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println("截图成功："+screenShotName);
 	}
 
 }
