@@ -14,7 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.CommandUtils;
+import top.base.utils.CommandUtil;
 import top.base.utils.ImageUtil;
 
 public class ImgCompare {
@@ -35,7 +35,7 @@ public class ImgCompare {
     @After  
     public void tearDown() throws Exception {
     	System.out.println("teardown");
-		CommandUtils.exec_shell("pm clear com.tude.android");
+		CommandUtil.exec_shell("pm clear com.tude.android");
     }  
   
     @Test  

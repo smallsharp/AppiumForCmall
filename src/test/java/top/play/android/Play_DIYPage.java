@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.Helper;
+import top.base.appium.Helper;
 import top.base.utils.ImageUtil;
 public class Play_DIYPage {
 	

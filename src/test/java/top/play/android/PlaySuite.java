@@ -1,6 +1,7 @@
 package top.play.android;
 
-import org.openqa.selenium.WebElement;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -8,21 +9,36 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.CommandUtils;
-import top.base.utils.Driver;
-import top.base.utils.TestNGListener;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import top.base.appium.AppiumServerUtils;
+import top.base.appium.DriverFactory;
+import top.base.appium.TestNGListener;
+import top.base.utils.CommandUtil;
 
 @Listeners(TestNGListener.class)
 public class PlaySuite {
 
-	private AndroidDriver<WebElement> mdriver;
+	private AndroidDriver<MobileElement> mdriver = null;
+	
+	public static URL url;
+	
+	public static URL getUrl() {
+		return url;
+	}
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
+	public void startAppiumServer() {
+//		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+	}
+
+	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		if (mdriver == null) {
-			mdriver = Driver.newInstance();
+			mdriver = DriverFactory.getInstance().initAndroidDriver();
 		}
 	}
 
@@ -32,8 +48,9 @@ public class PlaySuite {
 		if (mdriver != null) {
 			Thread.sleep(2000);
 			mdriver.closeApp();
-			CommandUtils.exec_shell("pm clear com.tude.android");
+			CommandUtil.exec_shell("pm clear com.play.android");
 		}
+		AppiumServerUtils.getInstance().stopServer();
 		Reporter.log("========== 测试执行完成，清理测试环境通过 ==========", true);
 
 	}
@@ -41,8 +58,19 @@ public class PlaySuite {
 	@Test(description = "登录")
 	@Parameters({ "mobile", "password" }) // 参数名称需要和xml中对应
 	public void testLogin(String mobile, String password) throws InterruptedException {
-		LoginPage login = PageFactory.initElements(mdriver, LoginPage.class);
-		login.login(mobile, password);
+		LoginPage loginPage = new LoginPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 5,TimeUnit.SECONDS), loginPage);
+//		PageFactory.initElements(mdriver, LoginPage.class);
+		loginPage.login(mobile, password);
+	}
+	
+	@Test
+	public  void testSignIn() {
+		
+		LoginPage loginPage = new LoginPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 5,TimeUnit.SECONDS), loginPage);
+		loginPage.signIn();
+
 	}
 
 	@Test(description = "购买男装")

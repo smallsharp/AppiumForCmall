@@ -13,11 +13,12 @@ public class PropertyUtil {
 	 * @author tester_lee
 	 * @param file
 	 */
-	public PropertyUtil(String filePath){
+	public PropertyUtil(String filePath) {
 
 		InputStream in = null;
 		try {
-//			in = new BufferedInputStream(new FileInputStream(filePath));//读取工程目录下的文件
+			// in = new BufferedInputStream(new
+			// FileInputStream(filePath));//读取工程目录下的文件
 			in = this.getClass().getResourceAsStream(filePath);
 			prop.load(in);
 		} catch (FileNotFoundException e) {
@@ -37,7 +38,6 @@ public class PropertyUtil {
 			}
 		}
 
-
 	}
 
 	/**
@@ -52,13 +52,12 @@ public class PropertyUtil {
 		return value;
 
 	}
-	
-	
+
 	public static void main(String[] args) {
 
 		PropertyUtil propertyTest = new PropertyUtil("/app.properties");// 这里需要加个/，表示类的根目录
-		
-		String s1 = propertyTest.getValue("deviceName");
+
+		String s1 = propertyTest.getValue("deviceName_meizu");
 		System.out.println(s1);
 
 	}

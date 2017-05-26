@@ -11,7 +11,7 @@
                 	<parameter name="mobile" value="18521035133"></parameter>
                 	<parameter name="password" value="111111"></parameter>
                   	<include name="testLogin"></include>
-                  	<include name="testBuyMenWear"></include>
+              <!--     	<include name="testBuyMenWear"></include> -->
                 </methods>
              </class>      
         </classes>

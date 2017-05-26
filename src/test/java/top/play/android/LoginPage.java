@@ -4,8 +4,11 @@ import static org.testng.Assert.assertEquals;
 import java.io.File;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.Helper;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import top.base.appium.Helper;
 import top.base.utils.ImageUtil;
 
 /**
@@ -14,28 +17,45 @@ import top.base.utils.ImageUtil;
  * @author lee
  */
 public class LoginPage {
+	
+	private AndroidDriver<MobileElement> driver;
+	public LoginPage(AndroidDriver<MobileElement> driver) {
+		this.driver = driver;
+	}
+	
+	public void setDriver(AndroidDriver<MobileElement> driver) {
+		this.driver = driver;
+	}
+	
+	public LoginPage() {
+		// TODO Auto-generated constructor stub
+	}
 
-	@FindBy(id = "com.tude.android:id/btn_jump")
+	@FindBy(id = "com.play.android:id/btn_jump")
 	private WebElement e_skipVideo; 	// 跳过
 
-	@FindBy(id = "com.tude.android:id/btn_profile")
+	@AndroidFindBy(id="com.play.android:id/btn_profile")
 	private WebElement e_my; 	// 我的
 
-	@FindBy(id = "com.tude.android:id/tv_account")
+	@FindBy(id = "com.play.android:id/tv_account")
 	private WebElement e_account; 	// 账号密码登录
 
-	@FindBy(id = "com.tude.android:id/et_account")
+	@FindBy(id = "com.play.android:id/et_account")
 	private WebElement e_molibe; 	// 手机号
 
-	@FindBy(id = "com.tude.android:id/et_password")
+	@FindBy(id = "com.play.android:id/et_password")
 	private WebElement e_password; 	// 密码
 
-	@FindBy(id = "com.tude.android:id/btn_login")
+	@FindBy(id = "com.play.android:id/btn_login")
 	private WebElement e_login; 	// 登录
 	
+	@FindBy(id="com.play.android:id/tv_sign_in")
+	private MobileElement tv_sign_in;
 	
-	private AndroidDriver<WebElement> mDriver;
-
+	@FindBy(id="com.play.android:id/cb_confrim_deal")
+	private MobileElement cb_confrim;
+	
+	
 	/**
 	 * 通过：手机号，密码登录
 	 * 
@@ -45,21 +65,11 @@ public class LoginPage {
 	public void login(String mobile, String password) {
 
 		try {
-
-			// 如果页面是在视频页面，则点击"跳过"
-			if (Helper.isActivityDisplayed(ActivityList.VIDEO_ACTIVITY)) {
-				e_skipVideo.click();
-			}
 			
-			// 如果当前页面不在HOME_ACTIVITY，则测试失败
-			if (!Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
-				assertEquals(mDriver.currentActivity(), ActivityList.HOME_ACTIVITY);
-			}
-
 			e_my.click();// 点击：我的
-			
+			Helper.setDriver(driver);
 			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(mDriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
 			Thread.sleep(2000);
 			
@@ -76,14 +86,44 @@ public class LoginPage {
 			e_molibe.sendKeys(mobile);
 			e_password.sendKeys(password);
 			e_login.click();
+			
 			// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
 			if (!Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
-				assertEquals(mDriver.currentActivity(), ActivityList.HOME_ACTIVITY,"登录成功后，应该返回:HOME_ACTIVITY");
+				assertEquals(driver.currentActivity(), ActivityList.HOME_ACTIVITY,"登录成功后，应该返回:HOME_ACTIVITY");
 			}
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
+	}
+	
+	
+	
+	public void signIn(){
+		
+		try {
+			
+			e_my.click();// 点击：我的
+			Helper.setDriver(driver);
+			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+			}
+			
+			tv_sign_in.click();
+			// 已经勾选，应该为True
+			System.out.println("Shoule be true:"+cb_confrim.getAttribute("checked"));
+
+			cb_confrim.click();
+			// 去掉勾选，应该为False
+			System.out.println("Shoule be false:"+cb_confrim.getAttribute("checked"));
+
+			Thread.sleep(2000);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

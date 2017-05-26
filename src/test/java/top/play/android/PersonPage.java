@@ -4,7 +4,8 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import top.base.utils.Helper;
+
+import top.base.appium.Helper;
 
 /**
  * 个人页面

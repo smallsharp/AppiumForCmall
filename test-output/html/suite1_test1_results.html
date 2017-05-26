@@ -12,53 +12,48 @@
 <body>
 <h1>测试购买男装</h1>
 <p>
-  Test duration: 50.891s
+  Test duration: 0.000s
 </p>
 
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">top.play.android.PlaySuite</td>
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">top.play.android.PlaySuite</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="购买男装">testBuyMenWear</span>
+                  setup
       </td>
   <td class="duration">
-    12.643s
+    0.000s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        @开始点击:id: com.tude.android:id/sdv_image<br />
-                                &lt;br&gt;<br />
-                                @开始点击:xpath: //*[@id=&apos;pageWrap&apos;]/section/div/ul/li[1]/a/img<br />
-                                &lt;br&gt;<br />
+                        ========== 正在准备测试环境，预计20s，请稍后 ==========<br />
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [true] but found [false]</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:94)<br />
-              org.testng.Assert.failNotEquals(Assert.java:496)<br />
-              org.testng.Assert.assertTrue(Assert.java:42)<br />
-              org.testng.Assert.assertTrue(Assert.java:52)<br />
-              top.play.android.Play_DIYPage.buyMenWear(Play_DIYPage.java:155)<br />
-              top.play.android.PlaySuite.testBuyMenWear(PlaySuite.java:51)<br />
+              java.util.Properties$LineReader.readLine(Unknown Source)<br />
+              java.util.Properties.load0(Unknown Source)<br />
+              java.util.Properties.load(Unknown Source)<br />
+              top.base.utils.PropertyUtil.&lt;init&gt;(PropertyUtil.java:22)<br />
+              top.base.appium.DriverFactory.initAndroidDriver(DriverFactory.java:43)<br />
+              top.play.android.PlaySuite.setup(PlaySuite.java:41)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
               java.lang.reflect.Method.invoke(Unknown Source)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:639)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:774)<br />
               org.testng.TestRunner.run(TestRunner.java:624)<br />
               org.testng.SuiteRunner.runTest(SuiteRunner.java:359)<br />
@@ -76,11 +71,33 @@
                 </div>
       </td>
 </tr>
-      </table>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">top.play.android.PlaySuite</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  teardown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+            </table>
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
         <td colspan="3" class="group">top.play.android.PlaySuite</td>
       </tr>
@@ -90,31 +107,18 @@
                   <span class="description" title="登录">testLogin</span>
       </td>
   <td class="duration">
-    34.282s
+    0.000s
   </td>
   <td class="result">
-        
+                               
           <i>Method arguments: </i><span class="arguments">"18521035133", "111111"</span><br />
     
-            <div class="testOutput">
-                        @开始点击:id: com.tude.android:id/btn_jump<br />
-                                &lt;br&gt;<br />
-                                @开始点击:id: com.tude.android:id/btn_profile<br />
-                                &lt;br&gt;<br />
-                                @开始点击:id: com.tude.android:id/tv_account<br />
-                                &lt;br&gt;<br />
-                                @控件id: com.tude.android:id/et_account的数值已改变<br />
-                                &lt;br&gt;<br />
-                                @控件id: com.tude.android:id/et_password的数值已改变<br />
-                                &lt;br&gt;<br />
-                                @开始点击:id: com.tude.android:id/btn_login<br />
-                                &lt;br&gt;<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>

@@ -4,13 +4,13 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import io.appium.java_client.android.AndroidDriver;
-import top.base.utils.Helper;
-import top.base.utils.Driver;
+import top.base.appium.DriverFactory;
+import top.base.appium.Helper;
 import top.play.android.ActivityList;
 
 public class DIYPage {
 	
-	AndroidDriver<WebElement> mdriver = Driver.newInstance();
+	AndroidDriver<WebElement> mdriver;
 	
 	// 跳过
 	@FindBy(id = "com.tude.android:id/btn_jump")
