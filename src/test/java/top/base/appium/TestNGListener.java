@@ -65,11 +65,6 @@ public class TestNGListener extends TestListenerAdapter {
 	private void takeScreenShot(ITestResult tr) {
 		// 代码设置关闭escape-output
 		System.setProperty(ESCAPE_PROPERTY, "false");
-		// 在工作目录下创建文件夹，用来存放图片的
-/*		File classpathRoot = new File(System.getProperty("user.dir"));
-		File location = new File(classpathRoot, "test-output\\screenshots");
-		String screenShotName = location.getAbsolutePath() + File.separator + tr.getMethod().getMethodName() + "_"
-		+ getCurrentDateTime() + ".jpg"; */
 		String location = System.getProperty("user.dir")+"\\test-output\\screenshots";
 
 		String screenShotName = location + File.separator + tr.getMethod().getMethodName() + "_"
@@ -78,7 +73,7 @@ public class TestNGListener extends TestListenerAdapter {
 		try {
 			FileUtils.copyFile(screenShot, new File(screenShotName));
 		} catch (IOException e) {
-			System.out.println("截图失败了…");
+			log.info("执行截图失败！");
 			e.printStackTrace();
 		} finally {
 //			Reporter.log("<img src=" + screenShotName + " width='360px' height='640px' /img>", true);

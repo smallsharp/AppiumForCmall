@@ -22,23 +22,19 @@ public class PlaySuite {
 
 	private AndroidDriver<MobileElement> mdriver = null;
 	
-	public static URL url;
-	
-	public static URL getUrl() {
-		return url;
-	}
+	private URL url;
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() {
-//		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
-//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		url = AppiumServerUtils.getInstance().getService().getUrl();
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		if (mdriver == null) {
-			mdriver = DriverFactory.getInstance().initAndroidDriver();
+			mdriver = DriverFactory.getInstance().initAndroidDriver(url);
 		}
 	}
 
@@ -46,12 +42,11 @@ public class PlaySuite {
 	public void teardown() throws InterruptedException {
 
 		if (mdriver != null) {
-			Thread.sleep(2000);
 			mdriver.closeApp();
 			CommandUtil.exec_shell("pm clear com.play.android");
 		}
 		AppiumServerUtils.getInstance().stopServer();
-		Reporter.log("========== 测试执行完成，清理测试环境通过 ==========", true);
+		Reporter.log("========== 测试用例执行完成，BYE BYE ==========", true);
 
 	}
 

@@ -1,15 +1,14 @@
 package top.play.android;
 
 import static org.testng.Assert.assertEquals;
-import java.io.File;
+import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import org.testng.Reporter;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import top.base.appium.Helper;
-import top.base.utils.ImageUtil;
 
 /**
  * PO模式：登录页面
@@ -19,6 +18,11 @@ import top.base.utils.ImageUtil;
 public class LoginPage {
 	
 	private AndroidDriver<MobileElement> driver;
+	
+	public LoginPage() {
+		// 这个空的构造方式是必须要的,init 页面需要
+	}
+	
 	public LoginPage(AndroidDriver<MobileElement> driver) {
 		this.driver = driver;
 	}
@@ -27,10 +31,6 @@ public class LoginPage {
 		this.driver = driver;
 	}
 	
-	public LoginPage() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@FindBy(id = "com.play.android:id/btn_jump")
 	private WebElement e_skipVideo; 	// 跳过
 
@@ -67,24 +67,17 @@ public class LoginPage {
 		try {
 			
 			e_my.click();// 点击：我的
+			
 			Helper.setDriver(driver);
 			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
 				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
-			Thread.sleep(2000);
 			
-			String screenName = "login_actul.jpg";
-			Helper.takeScreenShot(screenName);
-
-			File imgA = new File(Constant.EXPECTED_PATH,Constant.LOGIN_EXP);
-			File imgB = new File(Constant.ACTUL_PATH,screenName);
-
-			ImageUtil.getSamePercentFrom(imgA, imgB);
-			
-			// 点击：账号密码登录
 			e_account.click();
 			e_molibe.sendKeys(mobile);
+			Reporter.log("输入手机号："+ mobile);
 			e_password.sendKeys(password);
+			Reporter.log("输入密码："+ password);
 			e_login.click();
 			
 			// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
@@ -94,6 +87,7 @@ public class LoginPage {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			assertTrue(false,"登录用例执行失败！");
 		}
 
 	}

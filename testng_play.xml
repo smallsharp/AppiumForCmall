@@ -3,7 +3,7 @@
 
 <suite name="Play" preserve-order="true" >
     
-    <test name="测试购买男装" preserver-order="true" >
+    <test name="测试登录" preserver-order="true" >
 
         <classes>
             <class name="top.play.android.PlaySuite"> 

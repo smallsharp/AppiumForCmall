@@ -1,29 +1,21 @@
 package top.base.appium;
 
 import java.io.File;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
+import java.io.IOException;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.ServerArgument;
 
 /**
- * @author Young
- * @since 2016-11-09
+ * Appium Server 端相关API
+ * @author lee
+ *
  */
 public class AppiumServerUtils {
-	public static AppiumDriverLocalService service;
-	public static AppiumServerUtils appiumServerUtils;
-	public String currentFolder=System.getProperty("user.dir");
-	/**
-	 * @author young
-	 * @return
-	 */
+	
+	private static AppiumServerUtils appiumServerUtils;
+	
 	public static AppiumServerUtils getInstance() {
 		if (appiumServerUtils == null) {
 			synchronized (AppiumServerUtils.class) {
@@ -36,76 +28,75 @@ public class AppiumServerUtils {
 		return appiumServerUtils;
 	}
 
-	/**
-	 * This method is for start appium use default host and IP
-	 * 
-	 * @author young
-	 * @return
-	 */
-	public URL startAppiumServerByDefault() {
-		service = AppiumDriverLocalService.buildDefaultService();
-		service.start();
-		if (service == null || !service.isRunning()) {
-			throw new RuntimeException("An appium server node is not started!");
-		}
-		return service.getUrl();
-	}
 	
-	public URL startAppiumServerNoReset() {
+	private  AppiumDriverLocalService appiumService;
+	
+	public  AppiumDriverLocalService getService() {
+		return appiumService;
+	}
+
+
+	/**
+	 * 开启默认的AppiumServer，默认使用4723端口
+	 */
+	public void startDefaultService() {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
-		service = AppiumDriverLocalService.buildService(builder);
-		service.start();
-		if (service == null || !service.isRunning()) {
+		appiumService = AppiumDriverLocalService.buildService(builder);
+//		appiumService = AppiumDriverLocalService.buildDefaultService(); 通上两行的效果一样，默认使用4723端口
+		appiumService.start();
+		if (appiumService == null || !appiumService.isRunning()) {
 			throw new RuntimeException("An appium server node is not started!");
 		}
-		return service.getUrl();
 	}
 
 	/**
-	 * @author Young
-	 */
-	public void stopServer() {
-		if (service != null) {
-			service.stop();
-		}
-	}
-
-	/**
-	 * @author young
+	 * 启动AppiumServer
 	 * @param ipAddress
 	 * @param port
-	 * @return
 	 */
-	public URL startServer(String ipAddress, int port) {
-		SimpleDateFormat sf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+	public void startServer(String ipAddress, int port) {
 		
-		Calendar cal = Calendar.getInstance();
-		Date date = cal.getTime();
-		String dateStr = sf.format(date);
-		String path = currentFolder+"/logs/"+"appium_default_log_" + dateStr + ".log";
+		File logFile = null;
+		try {
+			File folder = new File("log");
+			folder.mkdir();// 建立目录
+			logFile = new File(folder,System.currentTimeMillis()+".log");
+			logFile.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
 		builder.withIPAddress(ipAddress);
 		builder.usingPort(port);
-		File logFile=new File(path);
 		builder.withLogFile(logFile);
-		service = AppiumDriverLocalService.buildService(builder);
-		service.start();
-		if (service == null || !service.isRunning()) {
+		appiumService = AppiumDriverLocalService.buildService(builder);
+		appiumService.start();
+		if (appiumService == null || !appiumService.isRunning()) {
 			throw new RuntimeException("An appium server node is not started!");
 		}
-		return service.getUrl();
+		
+		System.out.println("AppiumServer has started");
 
 	}
+	
+	public void startServer(String ipAddress, int port, DesiredCapabilities capabilities) {
+		AppiumServiceBuilder builder = new AppiumServiceBuilder();
+		builder.withIPAddress(ipAddress);
+		builder.usingPort(port);
+		if (capabilities != null) {
+			builder.withCapabilities(capabilities);
+		}
+		appiumService = AppiumDriverLocalService.buildService(builder);
+		appiumService.start();
+		if (appiumService == null || !appiumService.isRunning()) {
+			throw new RuntimeException("An appium server node is not started!");
+		}
 
-	/**
-	 * @author young
-	 * @param ipAddress
-	 * @param port
-	 * @param logFile
-	 * @param arguments
-	 * @return
-	 */
-	public URL startServer(String ipAddress, int port, File logFile, ServerArgument... arguments) {
+	}
+	
+	public void startServer(String ipAddress, int port, File logFile, ServerArgument... arguments) {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
 		builder.withIPAddress(ipAddress);
 		builder.usingPort(port);
@@ -113,36 +104,20 @@ public class AppiumServerUtils {
 		for (ServerArgument argument : arguments) {
 			builder.withArgument(argument);
 		}
-		service = AppiumDriverLocalService.buildService(builder);
-		service.start();
-		if (service == null || !service.isRunning()) {
+		appiumService = AppiumDriverLocalService.buildService(builder);
+		appiumService.start();
+		if (appiumService == null || !appiumService.isRunning()) {
 			throw new RuntimeException("An appium server node is not started!");
 		}
-		return service.getUrl();
 
 	}
-
-	/**
-	 * @author young
-	 * @param ipAddress
-	 * @param port
-	 * @param capabilities
-	 * @return
-	 */
-	public URL startServer(String ipAddress, int port, DesiredCapabilities capabilities) {
-		AppiumServiceBuilder builder = new AppiumServiceBuilder();
-		builder.withIPAddress(ipAddress);
-		builder.usingPort(port);
-		if (capabilities != null) {
-			builder.withCapabilities(capabilities);
+	
+	public void stopServer() {
+		
+		if (appiumService != null) {
+			appiumService.stop();
+			System.out.println("AppiumServer has stoped");
 		}
-		service = AppiumDriverLocalService.buildService(builder);
-		service.start();
-		if (service == null || !service.isRunning()) {
-			throw new RuntimeException("An appium server node is not started!");
-		}
-		return service.getUrl();
-
 	}
 
 }

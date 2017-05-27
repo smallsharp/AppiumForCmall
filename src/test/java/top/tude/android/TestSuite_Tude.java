@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import top.base.appium.AppiumServerUtils;
-import top.base.appium.DriverFactory;
 import top.base.appium.TestNGListener;
 import top.base.utils.CommandUtil;
 import top.play.android.LoginPage;
@@ -31,7 +30,7 @@ public class TestSuite_Tude{
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		if (mdriver == null) {
-			mdriver = DriverFactory.getInstance().initAndroidDriver();
+//			mdriver = DriverFactory.getInstance().initAndroidDriver();
 		}
 	}
 
