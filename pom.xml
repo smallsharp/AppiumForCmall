@@ -30,7 +30,7 @@
 		<dependency>
 <!-- 		<groupId>org.uncommons</groupId>
 			<artifactId>reportng</artifactId> -->
-			<groupId>lee.test</groupId><!-- 表示文件件lee/test/reportng/… -->
+			<groupId>lee.test</groupId><!-- 表示文件在lee/test/reportng/… -->
 			<artifactId>reportng</artifactId>
 			<version>1.1.5</version>
 			<scope>test</scope>
