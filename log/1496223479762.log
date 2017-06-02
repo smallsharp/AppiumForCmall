@@ -1,0 +1,391 @@
+2017-05-31 09:38:05:996 - info: [Appium] Welcome to Appium v1.6.5
+2017-05-31 09:38:05:998 - info: [Appium] Non-default server args:
+2017-05-31 09:38:06:000 - info: [Appium]   address: 127.0.0.1
+2017-05-31 09:38:06:000 - info: [Appium]   log: D:\workSpace\EclipseProjects\AppiumForEclipse\log\1496223479762.log
+2017-05-31 09:38:06:062 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2017-05-31 09:38:06:433 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 09:38:06:440 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 09:38:06:492 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 09:38:06:499 - info: [HTTP] <-- GET /wd/hub/status 200 63 ms - 83 
+2017-05-31 09:38:06:504 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 09:38:06:504 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 09:38:06:543 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 09:38:06:545 - info: [HTTP] <-- GET /wd/hub/status 200 41 ms - 83 
+2017-05-31 09:38:07:165 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","browserName":"","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"}}
+2017-05-31 09:38:07:166 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","browserName":"","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"},null,null]
+2017-05-31 09:38:07:167 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1496223487166 (17:38:07 GMT+0800 (中国标准时间))
+2017-05-31 09:38:07:169 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-05-31 09:38:07:169 - info: [Appium] Capabilities:
+2017-05-31 09:38:07:172 - info: [Appium]   app: 'D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk'
+2017-05-31 09:38:07:173 - info: [Appium]   noSign: 'True'
+2017-05-31 09:38:07:173 - info: [Appium]   browserName: ''
+2017-05-31 09:38:07:173 - info: [Appium]   unicodeKeyboard: 'True'
+2017-05-31 09:38:07:173 - info: [Appium]   platformName: 'Android'
+2017-05-31 09:38:07:174 - info: [Appium]   deviceName: '022TAS7N51009853'
+2017-05-31 09:38:07:174 - info: [Appium]   resetKeyboard: 'True'
+2017-05-31 09:38:07:176 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-05-31 09:38:07:182 - warn: [BaseDriver] Capability 'unicodeKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 09:38:07:182 - warn: [BaseDriver] Capability 'resetKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 09:38:07:183 - warn: [BaseDriver] Capability 'noSign' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 09:38:07:192 - info: [BaseDriver] Session created with session id: 7a725e5d-ee52-41e8-9873-ac05bce87c80
+2017-05-31 09:38:07:194 - info: [debug] [AndroidDriver] Getting Java version
+2017-05-31 09:38:07:304 - info: [AndroidDriver] Java version is: 1.8.0_121
+2017-05-31 09:38:07:308 - info: [ADB] Checking whether adb is present
+2017-05-31 09:38:07:311 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 09:38:07:312 - info: [AndroidDriver] Retrieving device list
+2017-05-31 09:38:07:312 - info: [debug] [ADB] Trying to find a connected android device
+2017-05-31 09:38:07:313 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:07:337 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:07:337 - info: [AndroidDriver] Using device: 85GBBMA2353T
+2017-05-31 09:38:07:338 - info: [ADB] Checking whether adb is present
+2017-05-31 09:38:07:342 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 09:38:07:342 - info: [debug] [ADB] Setting device id to 85GBBMA2353T
+2017-05-31 09:38:07:343 - info: [BaseDriver] Using local app 'D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk'
+2017-05-31 09:38:07:344 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-05-31 09:38:07:345 - info: [AndroidDriver] Starting Android session
+2017-05-31 09:38:07:349 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","wait-for-device"]
+2017-05-31 09:38:07:377 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:07:402 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:07:403 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","echo","ping"]
+2017-05-31 09:38:07:444 - info: [debug] [Logcat] Starting logcat capture
+2017-05-31 09:38:07:484 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-05-31 09:38:07:485 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-05-31 09:38:07:485 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-05-31 09:38:08:314 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:08:350 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:08:351 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","get","secure","default_input_method"]
+2017-05-31 09:38:09:123 - info: [debug] [AndroidDriver] Unsetting previous IME com.iflytek.inputmethod/.FlyIME
+2017-05-31 09:38:09:126 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-05-31 09:38:09:127 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:09:163 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:09:163 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 09:38:09:842 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:09:880 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:09:880 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 09:38:10:582 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-05-31 09:38:10:587 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-05-31 09:38:10:588 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:10:623 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:10:624 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","io.appium.settings"]
+2017-05-31 09:38:11:474 - info: [debug] [ADB] App is not installed
+2017-05-31 09:38:11:475 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\io.appium.settings\\app\\build\\outputs\\apk\\settings_apk-debug.apk"]
+2017-05-31 09:38:12:282 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:12:315 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:12:316 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.sdk"]
+2017-05-31 09:38:12:355 - info: [debug] [ADB] Device API level: 22
+2017-05-31 09:38:12:356 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:12:381 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:12:382 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","package","io.appium.settings"]
+2017-05-31 09:38:12:427 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-05-31 09:38:12:428 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-05-31 09:38:13:097 - info: [debug] [ADB] Device API level: 22
+2017-05-31 09:38:13:098 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:13:132 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:13:133 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","put","secure","mock_location","1"]
+2017-05-31 09:38:13:909 - info: [ADB] Getting device platform version
+2017-05-31 09:38:13:910 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:13:950 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:13:951 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.release"]
+2017-05-31 09:38:13:987 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:14:017 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:14:018 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","wm","size"]
+2017-05-31 09:38:14:710 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:14:748 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:14:749 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.model"]
+2017-05-31 09:38:14:787 - info: [debug] [ADB] Current device property 'ro.product.model': MX5
+2017-05-31 09:38:14:788 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:14:813 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:14:813 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.manufacturer"]
+2017-05-31 09:38:14:851 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Meizu
+2017-05-31 09:38:14:852 - info: [debug] [AndroidDriver] Parsing package and activity from app manifest
+2017-05-31 09:38:14:853 - info: [ADB] Checking whether aapt is present
+2017-05-31 09:38:14:857 - info: [ADB] Using aapt.exe from D:\SoftWare\SDK\build-tools\24.0.3\aapt.exe
+2017-05-31 09:38:14:858 - info: [ADB] Extracting package and launch activity from manifest
+2017-05-31 09:38:14:882 - info: [debug] [ADB] badging package: com.play.android
+2017-05-31 09:38:14:883 - info: [debug] [ADB] badging act: com.play.android.activity.SplashActivity
+2017-05-31 09:38:14:883 - info: [debug] [AndroidDriver] Parsed package and activity are: com.play.android/com.play.android.activity.SplashActivity
+2017-05-31 09:38:15:018 - info: [AndroidDriver] Remote apk path is /data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk
+2017-05-31 09:38:15:019 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:15:042 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:15:042 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ls","/data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk"]
+2017-05-31 09:38:15:079 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-05-31 09:38:15:080 - info: [debug] [ADB] Getting install status for com.play.android
+2017-05-31 09:38:15:080 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:15:102 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:15:102 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","com.play.android"]
+2017-05-31 09:38:15:509 - info: [debug] [ADB] App is installed
+2017-05-31 09:38:15:509 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-05-31 09:38:15:509 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-05-31 09:38:15:509 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:15:540 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:15:540 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-05-31 09:38:16:367 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:16:399 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:16:399 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","clear","com.play.android"]
+2017-05-31 09:38:17:023 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk null C:\Users\ADMINI~1\AppData\Local\Temp\com.play.android
+2017-05-31 09:38:17:023 - info: [debug] [ADB] Extracting strings for language: default
+2017-05-31 09:38:17:023 - info: [debug] [ADB] Device API level: 22
+2017-05-31 09:38:17:023 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:17:070 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:17:086 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","persist.sys.language"]
+2017-05-31 09:38:17:117 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-05-31 09:38:18:274 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-05-31 09:38:18:274 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-05-31 09:38:18:322 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-05-31 09:38:18:322 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-05-31 09:38:18:322 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","forward","tcp:4724","tcp:4724"]
+2017-05-31 09:38:18:322 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-05-31 09:38:18:322 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-05-31 09:38:18:322 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-05-31 09:38:18:322 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-05-31 09:38:18:322 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-05-31 09:38:18:369 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-05-31 09:38:18:369 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-05-31 09:38:18:369 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:18:400 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:18:400 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ps"]
+2017-05-31 09:38:18:540 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-05-31 09:38:18:540 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-05-31 09:38:18:540 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","85GBBMA2353T","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-05-31 09:38:19:102 - info: [debug] [UiAutomator] Moving to state 'online'
+2017-05-31 09:38:19:102 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-05-31 09:38:19:102 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-05-31 09:38:19:118 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:19:133 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-05-31 09:38:19:133 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-05-31 09:38:19:149 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:19:149 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window"]
+2017-05-31 09:38:19:196 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-05-31 09:38:19:211 - info: [debug] [ADB] Device API level: 22
+2017-05-31 09:38:19:211 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:19:227 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:19:227 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","start","-W","-n","com.play.android/com.play.android.activity.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-05-31 09:38:20:943 - info: [debug] [ADB] Waiting for activity matching pkg: 'com.play.android' and activity: 'com.play.android.activity.SplashActivity' to be focused
+2017-05-31 09:38:20:943 - info: [debug] [ADB] Possible activities, to be checked: com.play.android.activity.SplashActivity, com.play.android.com.play.android.activity.SplashActivity
+2017-05-31 09:38:20:943 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:20:943 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:20:975 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:20:975 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:21:022 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:21:022 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:21:786 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:21:786 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:21:833 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:21:833 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:21:927 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:21:927 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:22:675 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:22:691 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:22:723 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:22:723 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:22:801 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:22:801 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:23:550 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:23:550 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:23:581 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:23:581 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:23:628 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:23:628 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:24:392 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:24:392 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:24:425 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:24:425 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:24:487 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:24:487 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:25:251 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:25:251 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:25:283 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:25:283 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:25:345 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:25:345 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:26:110 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:26:110 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:26:158 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:26:158 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:26:221 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:26:221 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:26:985 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:26:985 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:27:032 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:27:032 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:27:125 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:27:125 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:27:876 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:27:892 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:27:923 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:27:923 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:28:032 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:28:032 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:28:781 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:28:781 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:28:829 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:28:829 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:28:891 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:28:891 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:29:657 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:29:657 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:29:688 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:29:688 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:29:750 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:29:750 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:30:515 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:30:515 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:30:547 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:30:547 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:30:609 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:30:609 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:31:358 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:31:358 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:31:405 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:31:405 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:31:467 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:31:467 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:32:232 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:32:232 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:32:280 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:32:280 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:32:342 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:32:342 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:33:092 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:33:092 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:33:139 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:33:139 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:33:185 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:33:185 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:33:951 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:33:951 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:33:983 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:33:983 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:34:045 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:34:045 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:34:794 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:34:810 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:34:841 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:34:841 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:34:919 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:34:919 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:35:683 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:35:683 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:35:716 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:35:716 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:35:794 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:35:794 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:36:542 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:36:542 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:36:574 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:36:574 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:36:636 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:36:636 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:37:400 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:37:400 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:37:433 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:37:433 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:37:496 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:37:496 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:38:247 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:38:247 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:38:294 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:38:294 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:38:356 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:38:356 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:39:105 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:39:105 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:39:153 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:39:153 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:39:215 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:39:215 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:39:964 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:39:964 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:40:011 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:40:011 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:40:073 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:40:073 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:40:822 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 09:38:40:822 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:40:870 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:40:870 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 09:38:40:932 - info: [debug] [ADB] Found package: 'com.play.android' and fully qualified activity name : 'com.play.android.activity.main.HomeActivity'
+2017-05-31 09:38:40:932 - info: [debug] [ADB] Incorrect package and activity. Retrying.
+2017-05-31 09:38:41:728 - error: [ADB] Error: com.play.android.activity.SplashActivity or com.play.android.com.play.android.activity.SplashActivity never started
+    at Object.wrappedLogger.errorAndThrow (../../lib/logging.js:63:13)
+    at ADB.callee$0$0$ (../../../lib/tools/apk-utils.js:153:7)
+    at tryCatch (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+ Error: com.play.android.activity.SplashActivity or com.play.android.com.play.android.activity.SplashActivity never started
+    at Object.wrappedLogger.errorAndThrow (../../lib/logging.js:63:13)
+    at ADB.callee$0$0$ (../../../lib/tools/apk-utils.js:153:7)
+    at tryCatch (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+2017-05-31 09:38:41:728 - error: [ADB] Error: Error occured while starting App. Original error: com.play.android.activity.SplashActivity or com.play.android.com.play.android.activity.SplashActivity never started
+    at Object.wrappedLogger.errorAndThrow (../../lib/logging.js:63:13)
+    at ADB.callee$0$0$ (../../../lib/tools/apk-utils.js:79:9)
+    at tryCatch (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+ Error: Error occured while starting App. Original error: com.play.android.activity.SplashActivity or com.play.android.com.play.android.activity.SplashActivity never started
+    at Object.wrappedLogger.errorAndThrow (../../lib/logging.js:63:13)
+    at ADB.callee$0$0$ (../../../lib/tools/apk-utils.js:79:9)
+    at tryCatch (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+2017-05-31 09:38:41:728 - info: [debug] [AndroidDriver] Shutting down Android driver
+2017-05-31 09:38:41:728 - info: [debug] [AndroidDriver] Resetting IME to com.iflytek.inputmethod/.FlyIME
+2017-05-31 09:38:41:728 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:41:759 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:41:759 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","set","com.iflytek.inputmethod/.FlyIME"]
+2017-05-31 09:38:42:492 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:42:540 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:42:540 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-05-31 09:38:43:413 - info: [debug] [ADB] Pressing the HOME button
+2017-05-31 09:38:43:413 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:43:460 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:43:460 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","input","keyevent",3]
+2017-05-31 09:38:44:193 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
+2017-05-31 09:38:44:209 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+2017-05-31 09:38:44:209 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+2017-05-31 09:38:44:209 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] [CDS]close[4724]
+2017-05-31 09:38:44:209 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] Test results for WatcherResultPrinter=.
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] Time: 25.179
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] OK (1 test)
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: -1
+2017-05-31 09:38:44:209 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 09:38:44:225 - info: [debug] [UiAutomator] Shutting down UiAutomator
+2017-05-31 09:38:44:225 - info: [debug] [UiAutomator] Moving to state 'stopping'
+2017-05-31 09:38:44:226 - info: [debug] [UiAutomator] UiAutomator shut down normally
+2017-05-31 09:38:44:226 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2017-05-31 09:38:44:226 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-05-31 09:38:44:226 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-05-31 09:38:44:226 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:44:257 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:44:257 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ps"]
+2017-05-31 09:38:44:319 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-05-31 09:38:44:319 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2017-05-31 09:38:44:319 - info: [debug] [Logcat] Stopping logcat capture
+2017-05-31 09:38:44:335 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 09:38:44:350 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 09:38:44:350 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","io.appium.unlock"]
+2017-05-31 09:38:44:991 - info: [debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2017-05-31 09:38:44:991 - error: [MJSONWP] Encountered internal error running command: Error: Error occured while starting App. Original error: com.play.android.activity.SplashActivity or com.play.android.com.play.android.activity.SplashActivity never started
+    at Object.wrappedLogger.errorAndThrow (../../lib/logging.js:63:13)
+    at ADB.callee$0$0$ (../../../lib/tools/apk-utils.js:79:9)
+    at tryCatch (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (D:\MyProgram\nodejs\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+2017-05-31 09:38:44:991 - info: [HTTP] <-- POST /wd/hub/session 500 37828 ms - 302 

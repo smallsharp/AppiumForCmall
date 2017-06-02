@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import io.appium.java_client.android.AndroidDriver;
 import top.base.appium.DriverFactory;
 import top.base.appium.Helper;
-import top.play.android.ActivityList;
+import top.play.pages.ActivityList;
 
 public class DIYPage {
 	

@@ -3,47 +3,43 @@ package top.temp;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 
 public class SimpleDemo {
 
-	private AndroidDriver<WebElement> driver;
+	private AndroidDriver<MobileElement> driver;
 
 	@Test
-	@Parameters({ "deviceName", "udid", "port" })
-	public void setup(String deviceName, String udid, String port) {
+	public void testdemo() {
 		
-		System.out.println(deviceName+" init...");
+		System.out.println("测试开始");
 
 		DesiredCapabilities dc = new DesiredCapabilities();
-		dc.setCapability(CapabilityType.BROWSER_NAME, "");
+		dc.setCapability("browserName", "Browser");
 		dc.setCapability("unicodeKeyboard", "True");
 		dc.setCapability("resetKeyboard", "True");
 		dc.setCapability("platformName", "Android");
-		dc.setCapability("deviceName", deviceName);
-		dc.setCapability("udid", deviceName);
-		dc.setCapability("appPackage", "com.tude.android");
-		dc.setCapability("appActivity", "com.tude.android.activity.SplashActivity");
+		dc.setCapability("deviceName", "85GBBMA2353T");
+
 		try {
-			driver = new AndroidDriver<WebElement>(new URL("http://192.168.101.201:" + port + "/wd/hub"), dc);
+			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723"+"/wd/hub"), dc);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		System.out.println(deviceName + " init ok...");
 
-		driver.findElementById("com.tude.android:id/btn_jump").click();
+/*		driver.findElementById("控件ID").click();
 
-		driver.findElementById("com.tude.android:id/btn_profile").click();
+		driver.findElementById("控件ID").click();*/
 		
-		System.out.println(deviceName + " 测试完成");
+		driver.findElement(By.id("com.android.browser:id/search_hint")).click();
+		System.out.println("测试完成");
+		
 	}
 
 }

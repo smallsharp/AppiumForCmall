@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import top.base.appium.Helper;
-import top.play.android.ActivityList;
+import top.play.pages.ActivityList;
 
 /**
  * PO模式

@@ -1,6 +1,7 @@
 package top.base.appium;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -43,13 +44,53 @@ public class DriverFactory {
 		
 		if (mdriver == null) {
 			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
-			appPackage = pro.getValue("appPackage");
-			appActivity = pro.getValue("appActivity");
-			deviceName = pro.getValue("deviceName_huawei");
+/*			appPackage = pro.getValue("appPackage");
+			appActivity = pro.getValue("appActivity");*/
+			deviceName = pro.getValue("deviceName_meizu");
 			
 			File classpathRoot = new File(System.getProperty("user.dir"));
 			File appDir = new File(classpathRoot, "apps");
-			File app = new File(appDir, "play.apk"); // 指定app的存放目录
+			File app = new File(appDir, "play-debug.apk"); // 指定app的存放目录
+
+			DesiredCapabilities dc = new DesiredCapabilities();
+			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
+			dc.setCapability("resetKeyboard", "True"); // 重置输入法
+			dc.setCapability("browserName", "");
+			// dc.setCapability("noReset", true); // 不需要再次安装
+			dc.setCapability("noSign", "True");
+			dc.setCapability("platformName", "Android");
+			dc.setCapability("deviceName", deviceName);
+//			dc1.setCapability("platformVersion", "5.0");
+			dc.setCapability("appPackage", "com.play.android");
+			dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
+			dc.setCapability("app", app.getAbsolutePath());
+
+//			mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:"+port+"/wd/hub"), dc1);
+			mdriver = new AndroidDriver<>(url, dc);
+
+			// 注册MyDriverListener监听事件
+			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
+			// 全局等待20秒
+			mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
+		}
+		return mdriver;
+	}
+	
+	
+	public AndroidDriver<MobileElement> initAndroidDriver() {
+		
+		String deviceName = null;
+		
+		if (mdriver == null) {
+			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
+/*			appPackage = pro.getValue("appPackage");
+			appActivity = pro.getValue("appActivity");*/
+			deviceName = pro.getValue("deviceName_meizu");
+			
+			File classpathRoot = new File(System.getProperty("user.dir"));
+			File appDir = new File(classpathRoot, "apps");
+			File app = new File(appDir, "play-debug.apk"); // 指定app的存放目录
 
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
@@ -58,13 +99,16 @@ public class DriverFactory {
 			dc.setCapability("noSign", "True");
 			dc.setCapability("platformName", "Android");
 			dc.setCapability("deviceName", deviceName);
-//			dc1.setCapability("platformVersion", "5.0");
-			dc.setCapability("appPackage", appPackage);
-			dc.setCapability("appActivity", appActivity);
+			dc.setCapability("appPackage", "com.play.android");
+			dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
 			dc.setCapability("app", app.getAbsolutePath());
 
-//			mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:"+port+"/wd/hub"), dc1);
-			mdriver = new AndroidDriver<>(url, dc);
+			try {
+				mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723"+"/wd/hub"), dc);
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());

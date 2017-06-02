@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Play" preserve-order="true" >
+<suite name="Play测试" preserve-order="true" >
     
-    <test name="测试登录" preserver-order="true" >
+    <test name="测试登录和3D模型展示" preserver-order="true" >
 
         <classes>
-            <class name="top.play.android.PlaySuite"> 
+            <class name="top.testsuite.PlaySuite" > 
                 <methods>
                 	<parameter name="mobile" value="18521035133"></parameter>
                 	<parameter name="password" value="111111"></parameter>
-                  	<include name="testLogin"></include>
-              <!--     	<include name="testBuyMenWear"></include> -->
+                  	<include name="testLogin" description="测试登录"></include>
+                  	<include name="testCheckWeb3DView" description="测试3d模型展示情况" ></include>
                 </methods>
              </class>      
         </classes>

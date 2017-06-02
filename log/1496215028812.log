@@ -1,0 +1,603 @@
+2017-05-31 07:17:14:944 - info: [Appium] Welcome to Appium v1.6.5
+2017-05-31 07:17:14:944 - info: [Appium] Non-default server args:
+2017-05-31 07:17:14:944 - info: [Appium]   address: 127.0.0.1
+2017-05-31 07:17:14:944 - info: [Appium]   log: D:\workSpace\EclipseProjects\AppiumForEclipse\log\1496215028812.log
+2017-05-31 07:17:15:007 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2017-05-31 07:17:15:507 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 07:17:15:507 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 07:17:15:538 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 07:17:15:553 - info: [HTTP] <-- GET /wd/hub/status 200 48 ms - 83 
+2017-05-31 07:17:15:553 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 07:17:15:553 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 07:17:15:600 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 07:17:15:600 - info: [HTTP] <-- GET /wd/hub/status 200 42 ms - 83 
+2017-05-31 07:17:16:193 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"}}
+2017-05-31 07:17:16:193 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"},null,null]
+2017-05-31 07:17:16:193 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1496215036193 (15:17:16 GMT+0800 (中国标准时间))
+2017-05-31 07:17:16:209 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-05-31 07:17:16:209 - info: [Appium] Capabilities:
+2017-05-31 07:17:16:209 - info: [Appium]   appPackage: 'com.play.android'
+2017-05-31 07:17:16:209 - info: [Appium]   appActivity: 'com.play.android.activity.SplashActivity'
+2017-05-31 07:17:16:209 - info: [Appium]   app: 'D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk'
+2017-05-31 07:17:16:209 - info: [Appium]   noSign: 'True'
+2017-05-31 07:17:16:209 - info: [Appium]   unicodeKeyboard: 'True'
+2017-05-31 07:17:16:209 - info: [Appium]   platformName: 'Android'
+2017-05-31 07:17:16:209 - info: [Appium]   deviceName: '022TAS7N51009853'
+2017-05-31 07:17:16:209 - info: [Appium]   resetKeyboard: 'True'
+2017-05-31 07:17:16:209 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-05-31 07:17:16:224 - warn: [BaseDriver] Capability 'unicodeKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 07:17:16:224 - warn: [BaseDriver] Capability 'resetKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 07:17:16:224 - warn: [BaseDriver] Capability 'noSign' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 07:17:16:224 - info: [BaseDriver] Session created with session id: 8ff30936-b89e-4835-a942-ec4590a0cf72
+2017-05-31 07:17:16:224 - info: [debug] [AndroidDriver] Getting Java version
+2017-05-31 07:17:16:369 - info: [AndroidDriver] Java version is: 1.8.0_121
+2017-05-31 07:17:16:384 - info: [ADB] Checking whether adb is present
+2017-05-31 07:17:16:384 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 07:17:16:384 - info: [AndroidDriver] Retrieving device list
+2017-05-31 07:17:16:384 - info: [debug] [ADB] Trying to find a connected android device
+2017-05-31 07:17:16:384 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:16:400 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:16:400 - info: [AndroidDriver] Using device: 022TAS7N51009853
+2017-05-31 07:17:16:400 - info: [ADB] Checking whether adb is present
+2017-05-31 07:17:16:415 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 07:17:16:415 - info: [debug] [ADB] Setting device id to 022TAS7N51009853
+2017-05-31 07:17:16:415 - info: [BaseDriver] Using local app 'D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk'
+2017-05-31 07:17:16:415 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-05-31 07:17:16:415 - info: [AndroidDriver] Starting Android session
+2017-05-31 07:17:16:415 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","wait-for-device"]
+2017-05-31 07:17:16:447 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:16:478 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:16:478 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","echo","ping"]
+2017-05-31 07:17:16:509 - info: [debug] [Logcat] Starting logcat capture
+2017-05-31 07:17:16:556 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-05-31 07:17:16:556 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-05-31 07:17:16:556 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-05-31 07:17:17:585 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:17:631 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:17:631 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","settings","get","secure","default_input_method"]
+2017-05-31 07:17:18:442 - info: [debug] [AndroidDriver] Unsetting previous IME io.appium.android.ime/.UnicodeIME
+2017-05-31 07:17:18:442 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-05-31 07:17:18:457 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:18:489 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:18:489 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 07:17:19:292 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:19:324 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:19:324 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 07:17:20:294 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-05-31 07:17:20:294 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-05-31 07:17:20:294 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:20:309 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:20:309 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","pm","list","packages","io.appium.settings"]
+2017-05-31 07:17:21:200 - info: [debug] [ADB] App is installed
+2017-05-31 07:17:21:200 - info: [debug] [ADB] Getting package info for io.appium.settings
+2017-05-31 07:17:21:200 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:21:216 - info: [ADB] Checking whether aapt is present
+2017-05-31 07:17:21:216 - info: [ADB] Using aapt.exe from D:\SoftWare\SDK\build-tools\24.0.3\aapt.exe
+2017-05-31 07:17:21:232 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:21:232 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","dumpsys","package","io.appium.settings"]
+2017-05-31 07:17:21:247 - warn: [ADB] Cannot read version codes of D:\MyProgram\nodejs\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
+2017-05-31 07:17:21:247 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:21:278 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:21:278 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","getprop","ro.build.version.sdk"]
+2017-05-31 07:17:21:310 - info: [debug] [ADB] Device API level: 19
+2017-05-31 07:17:21:310 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:21:342 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:21:357 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","dumpsys","package","io.appium.settings"]
+2017-05-31 07:17:21:420 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-05-31 07:17:21:420 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-05-31 07:17:22:421 - info: [debug] [ADB] Device API level: 19
+2017-05-31 07:17:22:421 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:22:453 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:22:453 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","settings","put","secure","mock_location","1"]
+2017-05-31 07:17:23:270 - info: [ADB] Getting device platform version
+2017-05-31 07:17:23:270 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:23:301 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:23:301 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","getprop","ro.build.version.release"]
+2017-05-31 07:17:23:348 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:23:380 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:23:380 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","wm","size"]
+2017-05-31 07:17:24:378 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:24:410 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:24:410 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","getprop","ro.product.model"]
+2017-05-31 07:17:24:457 - info: [debug] [ADB] Current device property 'ro.product.model': HUAWEI P6 S-U06
+2017-05-31 07:17:24:457 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:24:488 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:24:488 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","getprop","ro.product.manufacturer"]
+2017-05-31 07:17:24:551 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': HUAWEI
+2017-05-31 07:17:24:676 - info: [AndroidDriver] Remote apk path is /data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk
+2017-05-31 07:17:24:676 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:24:707 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:24:707 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","ls","/data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk"]
+2017-05-31 07:17:24:769 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-05-31 07:17:24:769 - info: [debug] [ADB] Getting install status for com.play.android
+2017-05-31 07:17:24:769 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:24:785 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:24:785 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","pm","list","packages","com.play.android"]
+2017-05-31 07:17:25:831 - info: [debug] [ADB] App is installed
+2017-05-31 07:17:25:831 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-05-31 07:17:25:831 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-05-31 07:17:25:831 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:25:863 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:25:863 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","am","force-stop","com.play.android"]
+2017-05-31 07:17:26:692 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:26:739 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:26:739 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","pm","clear","com.play.android"]
+2017-05-31 07:17:28:457 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk null C:\Users\ADMINI~1\AppData\Local\Temp\com.play.android
+2017-05-31 07:17:28:457 - info: [debug] [ADB] Extracting strings for language: default
+2017-05-31 07:17:28:472 - info: [debug] [ADB] Device API level: 19
+2017-05-31 07:17:28:472 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:28:505 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:28:505 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","getprop","persist.sys.language"]
+2017-05-31 07:17:28:536 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-05-31 07:17:29:684 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-05-31 07:17:29:699 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","push","C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-05-31 07:17:29:731 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-05-31 07:17:29:731 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-05-31 07:17:29:731 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","forward","tcp:4724","tcp:4724"]
+2017-05-31 07:17:29:747 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-05-31 07:17:29:747 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-05-31 07:17:29:747 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-05-31 07:17:29:747 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-05-31 07:17:29:747 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","push","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-05-31 07:17:29:809 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-05-31 07:17:29:809 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-05-31 07:17:29:809 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:29:841 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:29:841 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","ps"]
+2017-05-31 07:17:29:950 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-05-31 07:17:29:950 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-05-31 07:17:29:950 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","022TAS7N51009853","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-05-31 07:17:30:622 - info: [debug] [UiAutomator] Moving to state 'online'
+2017-05-31 07:17:30:637 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-05-31 07:17:30:637 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:30:668 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-05-31 07:17:30:668 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-05-31 07:17:30:668 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-05-31 07:17:30:684 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:30:684 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","dumpsys","window"]
+2017-05-31 07:17:30:746 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-05-31 07:17:30:746 - info: [debug] [ADB] Device API level: 19
+2017-05-31 07:17:30:746 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:30:779 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:30:779 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","am","start","-W","-n","com.play.android/com.play.android.activity.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-05-31 07:17:40:090 - info: [Appium] New AndroidDriver session created successfully, session 8ff30936-b89e-4835-a942-ec4590a0cf72 added to master session list
+2017-05-31 07:17:40:090 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1496215060090 (15:17:40 GMT+0800 (中国标准时间))
+2017-05-31 07:17:40:090 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":true,"unicodeKeyboard":true,"platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":true},"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":true,"unicodeKeyboard":true,"platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":true,"deviceUDID":"022TAS7N51009853","platformVersion":"4.4.2","deviceScreenSize":"720x1280","deviceModel":"HUAWEI P6 S-U06","deviceManufacturer":"HUAWEI"}
+2017-05-31 07:17:40:090 - info: [HTTP] <-- POST /wd/hub/session 200 23890 ms - 983 
+2017-05-31 07:17:42:042 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":20000}
+2017-05-31 07:17:42:042 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:042 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-05-31 07:17:42:042 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:42:042 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 7 ms - 76 
+2017-05-31 07:17:42:356 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":20000}
+2017-05-31 07:17:42:356 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:356 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-05-31 07:17:42:356 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:42:356 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 5 ms - 76 
+2017-05-31 07:17:42:403 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/appium/device/current_activity {}
+2017-05-31 07:17:42:403 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:403 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 07:17:42:403 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:42:450 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:42:450 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","dumpsys","window","windows"]
+2017-05-31 07:17:42:528 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-05-31 07:17:42:528 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/appium/device/current_activity 200 131 ms - 101 
+2017-05-31 07:17:42:621 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":0}
+2017-05-31 07:17:42:621 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:621 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-31 07:17:42:621 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:42:621 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 3 ms - 76 
+2017-05-31 07:17:42:653 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:42:653 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:653 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:42:653 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 3 ms - 84 
+2017-05-31 07:17:42:668 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:42:668 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:42:668 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:42:668 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:42:668 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:42:668 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:42:684 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:43:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:089 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:43:090 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:43:090 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:43:090 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 424 ms - 74 
+2017-05-31 07:17:43:608 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:43:608 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:43:608 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:43:608 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:43:624 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:43:624 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:43:624 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:43:624 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:43:624 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:43:624 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:43:624 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:43:671 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:43:717 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:43:717 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:43:717 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:43:717 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 96 ms - 74 
+2017-05-31 07:17:44:248 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:44:248 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:44:248 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:44:248 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:44:263 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:44:263 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:44:263 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:44:263 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:44:263 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:44:263 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:44:263 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:44:263 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:44:263 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:44:263 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:44:263 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:279 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:280 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:44:280 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:44:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:44:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:44:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:374 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:44:374 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:44:374 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:44:374 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 116 ms - 74 
+2017-05-31 07:17:44:904 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:44:904 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:44:904 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:44:904 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 6 ms - 84 
+2017-05-31 07:17:44:920 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:44:920 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:44:920 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:44:920 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:44:920 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:44:920 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:44:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:44:982 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:154 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:45:154 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:45:154 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:45:154 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 235 ms - 74 
+2017-05-31 07:17:45:684 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:45:684 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:45:684 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:45:684 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:45:700 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:45:700 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:45:700 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:45:700 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:45:700 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:45:700 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:45:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:732 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:45:732 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:45:732 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:747 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:747 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:45:747 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:45:780 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:45:780 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:45:780 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:45:780 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 86 ms - 74 
+2017-05-31 07:17:46:295 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:46:295 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:46:295 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:46:295 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:46:311 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:46:311 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:46:311 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:46:311 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:46:311 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:46:311 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:46:311 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:46:654 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:46:685 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:46:685 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:46:685 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:46:685 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 387 ms - 74 
+2017-05-31 07:17:47:217 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:47:217 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:47:217 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:47:232 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 13 ms - 84 
+2017-05-31 07:17:47:248 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:47:248 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:47:248 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:47:248 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:47:248 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:47:248 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:47:248 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:47:435 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:47:466 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:47:466 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:47:466 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:47:466 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 225 ms - 74 
+2017-05-31 07:17:47:997 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:47:997 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:47:997 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:47:997 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:48:012 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:48:029 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:029 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:029 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:029 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:48:029 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:48:045 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:48:076 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:123 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:48:123 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:48:138 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:48:138 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 126 ms - 74 
+2017-05-31 07:17:48:247 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":5000}
+2017-05-31 07:17:48:247 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:247 - info: [debug] [BaseDriver] Set implicit wait to 5000ms
+2017-05-31 07:17:48:247 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:48:247 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 4 ms - 76 
+2017-05-31 07:17:48:310 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":0}
+2017-05-31 07:17:48:310 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:310 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-31 07:17:48:310 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:48:310 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 3 ms - 76 
+2017-05-31 07:17:48:325 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:48:325 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:325 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:48:325 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 3 ms - 84 
+2017-05-31 07:17:48:341 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:48:341 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:341 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:341 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:341 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:48:341 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:341 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:48:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:48:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:403 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:48:403 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:48:403 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:48:403 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 71 ms - 74 
+2017-05-31 07:17:48:920 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:48:920 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:920 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:48:920 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 5 ms - 84 
+2017-05-31 07:17:48:936 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:48:936 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:48:936 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:936 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:48:936 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:48:936 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:936 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:48:951 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:48:998 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:48:998 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:48:998 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:014 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:014 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:49:014 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:077 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:49:077 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:49:077 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:49:077 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 141 ms - 74 
+2017-05-31 07:17:49:594 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:49:594 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:49:594 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:49:594 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 3 ms - 84 
+2017-05-31 07:17:49:610 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:49:610 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:49:610 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:49:610 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:49:610 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:49:610 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:49:610 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:49:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:49:703 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:49:703 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:49:703 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:49:703 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 98 ms - 74 
+2017-05-31 07:17:50:234 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:50:234 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:50:234 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:50:234 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 11 ms - 84 
+2017-05-31 07:17:50:265 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:50:265 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:50:265 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:50:265 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:50:265 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:50:265 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:50:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:50:297 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:50:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:50:469 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:50:469 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:50:469 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 215 ms - 74 
+2017-05-31 07:17:51:000 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:51:000 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:51:000 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:51:000 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:51:016 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:51:016 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:51:016 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:51:016 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:51:016 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:51:016 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:51:016 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:51:016 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:51:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:52:640 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:52:640 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:52:640 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:52:640 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:52:656 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:52:656 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:52:672 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:52:672 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:52:672 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:52:688 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 1670 ms - 74 
+2017-05-31 07:17:53:218 - info: [HTTP] --> GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context {}
+2017-05-31 07:17:53:218 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:53:218 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 07:17:53:218 - info: [HTTP] <-- GET /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/context 200 4 ms - 84 
+2017-05-31 07:17:53:234 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements {"using":"id","value":"com.tude.android:id/sdv_image"}
+2017-05-31 07:17:53:234 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.tude.android:id/sdv_image","8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:53:234 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:53:234 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 07:17:53:234 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 07:17:53:234 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:53:234 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.tude.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 07:17:53:234 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 07:17:53:234 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 07:17:53:234 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:53:234 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:249 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:249 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:53:249 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:359 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 07:17:53:359 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.tude.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 07:17:53:359 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:359 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:374 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 07:17:53:374 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.tude.android:id/sdv_image]
+2017-05-31 07:17:53:390 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-05-31 07:17:53:405 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 07:17:53:406 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 07:17:53:407 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/elements 200 171 ms - 74 
+2017-05-31 07:17:53:454 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts {"type":"implicit","ms":5000}
+2017-05-31 07:17:53:454 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:53:454 - info: [debug] [BaseDriver] Set implicit wait to 5000ms
+2017-05-31 07:17:53:454 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 07:17:53:454 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/timeouts 200 5 ms - 76 
+2017-05-31 07:17:53:485 - info: [HTTP] --> POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/appium/app/close {}
+2017-05-31 07:17:53:485 - info: [debug] [MJSONWP] Calling AppiumDriver.closeApp() with args: ["8ff30936-b89e-4835-a942-ec4590a0cf72"]
+2017-05-31 07:17:53:485 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 07:17:53:533 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 07:17:53:533 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","022TAS7N51009853","shell","am","force-stop","com.play.android"]
+2017-05-31 07:17:54:519 - info: [debug] [MJSONWP] Responding to client with driver.closeApp() result: null
+2017-05-31 07:17:54:519 - info: [HTTP] <-- POST /wd/hub/session/8ff30936-b89e-4835-a942-ec4590a0cf72/appium/app/close 200 1040 ms - 76 

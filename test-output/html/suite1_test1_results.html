@@ -3,32 +3,68 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - 测试登录</title>
+  <title>Test Results Report - 测试登录和3D模型展示</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>测试登录</h1>
+<h1>测试登录和3D模型展示</h1>
 <p>
-  Test duration: 78.053s
+  Test duration: 98.394s
 </p>
 
 
 
+
+
   <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">top.play.android.PlaySuite</td>
+        <td colspan="3" class="group">top.testsuite.PlaySuite</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="登录">testLogin</span>
+                  <span class="description" title="3d模型展示">testCheckWeb3DView</span>
       </td>
   <td class="duration">
-    44.266s
+    63.681s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        准备点击--&gt; id: com.play.android:id/sdv_image<br />
+                                点击--&gt; id: com.play.android:id/sdv_image<br />
+                                准备点击--&gt; xpath: //*[@id=&apos;pageWrap&apos;]/section/div/ul/li[1]/a/img<br />
+                                点击--&gt; xpath: //*[@id=&apos;pageWrap&apos;]/section/div/ul/li[1]/a/img<br />
+                                实际的图片：<br />
+                                &lt;img src=D:\workSpace\EclipseProjects\AppiumForEclipse\test-output\pics_actul\man_tee_blank.jpg /img&gt;<br />
+                                预期的图片：<br />
+                                &lt;img src=D:\workSpace\EclipseProjects\AppiumForEclipse\test-output\pics_expected\man_tee_blank_exp.jpg /img&gt;<br />
+                                准备点击--&gt; id: com.play.android:id/iv_good<br />
+                                点击--&gt; id: com.play.android:id/iv_good<br />
+                                准备点击--&gt; id: com.play.android:id/iv_good<br />
+                                点击--&gt; id: com.play.android:id/iv_good<br />
+                                准备点击--&gt; id: com.play.android:id/iv_good<br />
+                                点击--&gt; id: com.play.android:id/iv_good<br />
+                                准备点击--&gt; id: com.play.android:id/iv_good<br />
+                                点击--&gt; id: com.play.android:id/iv_good<br />
+                                准备点击--&gt; id: com.play.android:id/iv_good<br />
+                                点击--&gt; id: com.play.android:id/iv_good<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="通过账号密码登录">testLogin</span>
+      </td>
+  <td class="duration">
+    15.744s
   </td>
   <td class="result">
         
@@ -48,44 +84,9 @@
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 登录成功后，应该返回:HOME_ACTIVITY expected [com.tude.android.activity.main.HomeActivity] but found [.activity.member.LoginActivity]</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:94)<br />
-              org.testng.Assert.failNotEquals(Assert.java:496)<br />
-              org.testng.Assert.assertEquals(Assert.java:125)<br />
-              org.testng.Assert.assertEquals(Assert.java:178)<br />
-              top.play.android.LoginPage.login(LoginPage.java:85)<br />
-              top.play.android.PlaySuite.testLogin(PlaySuite.java:59)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:639)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:774)<br />
-              org.testng.TestRunner.run(TestRunner.java:624)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:359)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:261)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1140)<br />
-              org.testng.TestNG.run(TestNG.java:1048)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
-                </div>
       </td>
 </tr>
       </table>
-
-
   
 </body>
 </html>

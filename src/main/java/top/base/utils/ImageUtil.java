@@ -127,7 +127,7 @@ public class ImageUtil {
 		double numberPixels = height * width;
 		double diffPercent = numDiffPixels / numberPixels;
 		double s = 1.0D - diffPercent;
-		System.out.println("相似比例："+s);
+		System.out.println("两张图片的实际相似比例："+s);
 		return 1.0D - diffPercent;
 	}
 	

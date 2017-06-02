@@ -117,8 +117,9 @@ public class Helper {
 	*/
 	public static void switchToWebView() {
 
-		Set<String> contextNames = mDriver.getContextHandles();
-		for (String contextName : contextNames) {
+		Set<String> ContextHandles = mDriver.getContextHandles();
+		System.out.println("ContextHandles:"+ContextHandles);
+		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 				mDriver.context(contextName);
 				System.out.println("切换到Webview页面成功");
@@ -131,6 +132,7 @@ public class Helper {
 	public static void switchToNative() {
 		
 		Set<String> ContextHandles = mDriver.getContextHandles();
+		System.out.println("ContextHandles:"+ContextHandles);
 		for (String contextHandle:ContextHandles) {
 			if (contextHandle.contains("NATIVE_APP")) {
 				mDriver.context(contextHandle);

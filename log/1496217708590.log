@@ -1,0 +1,470 @@
+2017-05-31 08:01:54:911 - info: [Appium] Welcome to Appium v1.6.5
+2017-05-31 08:01:54:911 - info: [Appium] Non-default server args:
+2017-05-31 08:01:54:911 - info: [Appium]   address: 127.0.0.1
+2017-05-31 08:01:54:911 - info: [Appium]   log: D:\workSpace\EclipseProjects\AppiumForEclipse\log\1496217708590.log
+2017-05-31 08:01:54:974 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2017-05-31 08:01:55:600 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 08:01:55:600 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 08:01:55:657 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 08:01:55:663 - info: [HTTP] <-- GET /wd/hub/status 200 59 ms - 83 
+2017-05-31 08:01:55:669 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-31 08:01:55:670 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-31 08:01:55:708 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-05-31 08:01:55:710 - info: [HTTP] <-- GET /wd/hub/status 200 40 ms - 83 
+2017-05-31 08:01:56:351 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"}}
+2017-05-31 08:01:56:352 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":"True","unicodeKeyboard":"True","platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":"True"},null,null]
+2017-05-31 08:01:56:353 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1496217716352 (16:01:56 GMT+0800 (中国标准时间))
+2017-05-31 08:01:56:355 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-05-31 08:01:56:355 - info: [Appium] Capabilities:
+2017-05-31 08:01:56:358 - info: [Appium]   appPackage: 'com.play.android'
+2017-05-31 08:01:56:358 - info: [Appium]   appActivity: 'com.play.android.activity.SplashActivity'
+2017-05-31 08:01:56:358 - info: [Appium]   app: 'D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk'
+2017-05-31 08:01:56:358 - info: [Appium]   noSign: 'True'
+2017-05-31 08:01:56:358 - info: [Appium]   unicodeKeyboard: 'True'
+2017-05-31 08:01:56:359 - info: [Appium]   platformName: 'Android'
+2017-05-31 08:01:56:359 - info: [Appium]   deviceName: '022TAS7N51009853'
+2017-05-31 08:01:56:359 - info: [Appium]   resetKeyboard: 'True'
+2017-05-31 08:01:56:361 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-05-31 08:01:56:366 - warn: [BaseDriver] Capability 'unicodeKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 08:01:56:367 - warn: [BaseDriver] Capability 'resetKeyboard' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 08:01:56:367 - warn: [BaseDriver] Capability 'noSign' changed from string to boolean. This may cause unexpected behavior
+2017-05-31 08:01:56:377 - info: [BaseDriver] Session created with session id: ea5fb67b-9675-43c8-8a13-c0f86ab11220
+2017-05-31 08:01:56:380 - info: [debug] [AndroidDriver] Getting Java version
+2017-05-31 08:01:56:497 - info: [AndroidDriver] Java version is: 1.8.0_121
+2017-05-31 08:01:56:501 - info: [ADB] Checking whether adb is present
+2017-05-31 08:01:56:505 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 08:01:56:505 - info: [AndroidDriver] Retrieving device list
+2017-05-31 08:01:56:506 - info: [debug] [ADB] Trying to find a connected android device
+2017-05-31 08:01:56:507 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:01:56:530 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:01:56:531 - info: [AndroidDriver] Using device: 85GBBMA2353T
+2017-05-31 08:01:56:532 - info: [ADB] Checking whether adb is present
+2017-05-31 08:01:56:537 - info: [ADB] Using adb.exe from D:\SoftWare\SDK\platform-tools\adb.exe
+2017-05-31 08:01:56:538 - info: [debug] [ADB] Setting device id to 85GBBMA2353T
+2017-05-31 08:01:56:539 - info: [BaseDriver] Using local app 'D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk'
+2017-05-31 08:01:56:539 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-05-31 08:01:56:541 - info: [AndroidDriver] Starting Android session
+2017-05-31 08:01:56:544 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","wait-for-device"]
+2017-05-31 08:01:56:570 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:01:56:593 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:01:56:594 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","echo","ping"]
+2017-05-31 08:01:56:659 - info: [debug] [Logcat] Starting logcat capture
+2017-05-31 08:01:56:700 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-05-31 08:01:56:700 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-05-31 08:01:56:701 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-05-31 08:01:58:109 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:01:58:147 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:01:58:147 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","get","secure","default_input_method"]
+2017-05-31 08:01:58:852 - info: [debug] [AndroidDriver] Unsetting previous IME com.iflytek.inputmethod/.FlyIME
+2017-05-31 08:01:58:853 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-05-31 08:01:58:854 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:01:58:896 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:01:58:896 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 08:01:59:640 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:01:59:680 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:01:59:681 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-05-31 08:02:00:471 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-05-31 08:02:00:474 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-05-31 08:02:00:475 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:00:515 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:00:516 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","io.appium.settings"]
+2017-05-31 08:02:00:933 - info: [debug] [ADB] App is not installed
+2017-05-31 08:02:00:934 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\io.appium.settings\\app\\build\\outputs\\apk\\settings_apk-debug.apk"]
+2017-05-31 08:02:01:785 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:01:832 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:01:833 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.sdk"]
+2017-05-31 08:02:01:890 - info: [debug] [ADB] Device API level: 22
+2017-05-31 08:02:01:891 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:01:915 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:01:915 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","package","io.appium.settings"]
+2017-05-31 08:02:02:004 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-05-31 08:02:02:005 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-05-31 08:02:02:941 - info: [debug] [ADB] Device API level: 22
+2017-05-31 08:02:02:942 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:02:980 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:02:981 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","put","secure","mock_location","1"]
+2017-05-31 08:02:03:736 - info: [ADB] Getting device platform version
+2017-05-31 08:02:03:738 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:03:783 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:03:784 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.release"]
+2017-05-31 08:02:03:825 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:03:849 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:03:850 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","wm","size"]
+2017-05-31 08:02:04:678 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:04:717 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:04:718 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.model"]
+2017-05-31 08:02:04:758 - info: [debug] [ADB] Current device property 'ro.product.model': MX5
+2017-05-31 08:02:04:758 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:04:781 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:04:781 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.manufacturer"]
+2017-05-31 08:02:04:830 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Meizu
+2017-05-31 08:02:04:967 - info: [AndroidDriver] Remote apk path is /data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk
+2017-05-31 08:02:04:968 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:04:992 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:04:992 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ls","/data/local/tmp/42e2f15827830994ee5f75a4ff734348.apk"]
+2017-05-31 08:02:05:051 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-05-31 08:02:05:051 - info: [debug] [ADB] Getting install status for com.play.android
+2017-05-31 08:02:05:052 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:05:077 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:05:078 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","com.play.android"]
+2017-05-31 08:02:05:627 - info: [debug] [ADB] App is installed
+2017-05-31 08:02:05:629 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-05-31 08:02:05:630 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-05-31 08:02:05:632 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:05:673 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:05:674 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-05-31 08:02:06:597 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:06:635 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:06:636 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","clear","com.play.android"]
+2017-05-31 08:02:07:270 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workSpace\EclipseProjects\AppiumForEclipse\apps\play.apk null C:\Users\ADMINI~1\AppData\Local\Temp\com.play.android
+2017-05-31 08:02:07:273 - info: [debug] [ADB] Extracting strings for language: default
+2017-05-31 08:02:07:274 - info: [debug] [ADB] Device API level: 22
+2017-05-31 08:02:07:275 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:07:301 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:07:302 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","persist.sys.language"]
+2017-05-31 08:02:07:349 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-05-31 08:02:08:447 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-05-31 08:02:08:463 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-05-31 08:02:08:505 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-05-31 08:02:08:506 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-05-31 08:02:08:507 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","forward","tcp:4724","tcp:4724"]
+2017-05-31 08:02:08:516 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-05-31 08:02:08:519 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-05-31 08:02:08:520 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-05-31 08:02:08:521 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-05-31 08:02:08:522 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","D:\\MyProgram\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-05-31 08:02:08:571 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-05-31 08:02:08:571 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-05-31 08:02:08:572 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:08:594 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:08:594 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ps"]
+2017-05-31 08:02:08:790 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-05-31 08:02:08:790 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-05-31 08:02:08:790 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","85GBBMA2353T","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-05-31 08:02:09:965 - info: [debug] [UiAutomator] Moving to state 'online'
+2017-05-31 08:02:09:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-05-31 08:02:09:976 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-05-31 08:02:09:977 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-05-31 08:02:09:981 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:10:001 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-05-31 08:02:10:025 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:10:026 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window"]
+2017-05-31 08:02:10:090 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-05-31 08:02:10:092 - info: [debug] [ADB] Device API level: 22
+2017-05-31 08:02:10:093 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:10:118 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:10:119 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","start","-W","-n","com.play.android/com.play.android.activity.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-05-31 08:02:12:332 - info: [Appium] New AndroidDriver session created successfully, session ea5fb67b-9675-43c8-8a13-c0f86ab11220 added to master session list
+2017-05-31 08:02:12:334 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1496217732333 (16:02:12 GMT+0800 (中国标准时间))
+2017-05-31 08:02:12:334 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":true,"unicodeKeyboard":true,"platformName":"Android","deviceName":"022TAS7N51009853","resetKeyboard":true},"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workSpace\\EclipseProjects\\AppiumForEclipse\\apps\\play.apk","noSign":true,"unicodeKeyboard":true,"platformName":"Android","deviceName":"85GBBMA2353T","resetKeyboard":true,"deviceUDID":"85GBBMA2353T","platformVersion":"5.1","deviceScreenSize":"1080x1920","deviceModel":"MX5","deviceManufacturer":"Meizu"}
+2017-05-31 08:02:12:339 - info: [HTTP] <-- POST /wd/hub/session 200 15985 ms - 961 
+2017-05-31 08:02:14:255 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":20000}
+2017-05-31 08:02:14:257 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:259 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-05-31 08:02:14:261 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:14:262 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 7 ms - 76 
+2017-05-31 08:02:14:540 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":20000}
+2017-05-31 08:02:14:540 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:541 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-05-31 08:02:14:542 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:14:543 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 3 ms - 76 
+2017-05-31 08:02:14:561 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/device/current_activity {}
+2017-05-31 08:02:14:563 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:565 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 08:02:14:565 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:14:598 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:14:599 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 08:02:14:684 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-05-31 08:02:14:686 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/device/current_activity 200 124 ms - 101 
+2017-05-31 08:02:14:737 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":0}
+2017-05-31 08:02:14:737 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:738 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-31 08:02:14:739 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:14:741 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 3 ms - 76 
+2017-05-31 08:02:14:769 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:14:769 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:772 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:14:773 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 4 ms - 84 
+2017-05-31 08:02:14:777 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"id","value":"com.play.android:id/sdv_image"}
+2017-05-31 08:02:14:778 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/sdv_image","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:14:780 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:14:781 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:14:782 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:14:786 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 08:02:14:795 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 08:02:14:796 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:14:796 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:14:796 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 08:02:14:797 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:14:797 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:14:797 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 08:02:14:797 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:14:818 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-05-31 08:02:14:819 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:14:845 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (2)
+2017-05-31 08:02:14:845 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=2, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:14:919 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"1"},{"ELEMENT":"2"}]}
+2017-05-31 08:02:14:919 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:14:919 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"1"},{"ELEMENT":"2"}]
+2017-05-31 08:02:14:919 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 151 ms - 105 
+2017-05-31 08:02:15:325 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":5000}
+2017-05-31 08:02:15:325 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:325 - info: [debug] [BaseDriver] Set implicit wait to 5000ms
+2017-05-31 08:02:15:325 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:15:325 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 4 ms - 76 
+2017-05-31 08:02:15:387 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":0}
+2017-05-31 08:02:15:387 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:387 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-31 08:02:15:387 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:15:387 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 3 ms - 76 
+2017-05-31 08:02:15:403 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:15:403 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:403 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:15:403 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 3 ms - 84 
+2017-05-31 08:02:15:419 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"id","value":"com.play.android:id/sdv_image"}
+2017-05-31 08:02:15:419 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/sdv_image","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:419 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:15:419 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:15:419 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:15:419 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-05-31 08:02:15:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:15:452 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-05-31 08:02:15:452 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:15:483 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (2)
+2017-05-31 08:02:15:483 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=2, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-05-31 08:02:15:514 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"3"},{"ELEMENT":"4"}]}
+2017-05-31 08:02:15:514 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:15:530 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"3"},{"ELEMENT":"4"}]
+2017-05-31 08:02:15:530 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 111 ms - 105 
+2017-05-31 08:02:15:779 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":5000}
+2017-05-31 08:02:15:779 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:779 - info: [debug] [BaseDriver] Set implicit wait to 5000ms
+2017-05-31 08:02:15:779 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:15:779 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 5 ms - 76 
+2017-05-31 08:02:15:811 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/element/4/click {"id":"4"}
+2017-05-31 08:02:15:811 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:15:811 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-05-31 08:02:15:811 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-05-31 08:02:15:811 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:15:811 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-05-31 08:02:15:998 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-05-31 08:02:15:998 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:15:998 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-05-31 08:02:15:998 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/element/4/click 200 191 ms - 76 
+2017-05-31 08:02:16:013 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/device/current_activity {}
+2017-05-31 08:02:16:013 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:16:013 - info: [debug] [ADB] Getting focused package and activity
+2017-05-31 08:02:16:013 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:16:045 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:16:045 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-05-31 08:02:16:123 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.product.ProductClassifitionActivity"
+2017-05-31 08:02:16:123 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/device/current_activity 200 112 ms - 119 
+2017-05-31 08:02:16:138 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/contexts {}
+2017-05-31 08:02:16:138 - info: [debug] [MJSONWP] Calling AppiumDriver.getContexts() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:16:138 - info: [debug] [AndroidDriver] Getting a list of available webviews
+2017-05-31 08:02:16:138 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:16:169 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:16:169 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","cat","/proc/net/unix"]
+2017-05-31 08:02:16:232 - info: [debug] [AndroidDriver] Found webviews: []
+2017-05-31 08:02:16:232 - info: [debug] [AndroidDriver] Available contexts: ["NATIVE_APP"]
+2017-05-31 08:02:16:232 - info: [debug] [MJSONWP] Responding to client with driver.getContexts() result: ["NATIVE_APP"]
+2017-05-31 08:02:16:232 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/contexts 200 93 ms - 86 
+2017-05-31 08:02:16:247 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/source {}
+2017-05-31 08:02:16:247 - info: [debug] [MJSONWP] Calling AppiumDriver.getPageSource() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:16:247 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"source","params":{}}
+2017-05-31 08:02:16:247 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+2017-05-31 08:02:16:247 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:16:247 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: source
+2017-05-31 08:02:17:137 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1920]\" resource-id=\"com.play.android:id\/action_bar_root\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1920]\" resource-id=\"android:id\/content\" instance=\"2\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1920]\" resource-id=\"com.play.android:id\/activity_home\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1920]\" resource-id=\"\" instance=\"2\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1785]\" resource-id=\"\" instance=\"1\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1785]\" resource-id=\"com.play.android:id\/rl_fragment\" instance=\"2\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\"
+2017-05-31 08:02:17:137 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT]  password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1785]\" resource-id=\"\" instance=\"3\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1785]\" resource-id=\"com.play.android:id\/srf_category\" instance=\"0\"><android.support.v7.widget.RecyclerView index=\"0\" text=\"\" class=\"android.support.v7.widget.RecyclerView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"true\" focused=\"true\" scrollable=\"true\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,1785]\" resource-id=\"com.play.android:id\/rcv_categories\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"\" instance=\"4\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"com.play.android:id\/cb_banner\" instance=\"5\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"\" instance=\"6\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"\" instance=\"3\"><android.support.v4.view.ViewPager index=\"0\" text=\"\" class=\"android.support.v4.view.ViewPager\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"true\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"com.play.android:id\/cbLoopViewPager\" instance=\"0\"><android.widget.ImageView NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,66][1080,786]\" resource-id=\"\" instance=\"0\"\/><\/android.support.v4.view.ViewPager><android.widget.LinearLayout index=\"1\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[524,735][555,756]\" resource-id=\"com.play.android:id\/loPageTurningPoint\" instance=\"7\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\"
+2017-05-31 08:02:17:152 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT]  focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[524,735][555,756]\" resource-id=\"\" instance=\"1\"\/><\/android.widget.LinearLayout><\/android.widget.RelativeLayout><\/android.widget.LinearLayout><\/android.widget.LinearLayout><\/android.widget.LinearLayout><android.widget.RelativeLayout index=\"1\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,786][1080,1434]\" resource-id=\"\" instance=\"4\"><android.widget.ImageView NAF=\"true\" index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,786][1080,1434]\" resource-id=\"com.play.android:id\/sdv_image\" instance=\"2\"\/><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"2\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1434][1080,1785]\" resource-id=\"\" instance=\"5\"><android.widget.ImageView NAF=\"true\" index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1434][1080,1785]\" resource-id=\"com.play.android:id\/sdv_image\" instance=\"3\"\/><\/android.widget.RelativeLayout><\/android.support.v7.widget.RecyclerView><\/android.view.View><\/android.widget.LinearLayout><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"您当前正在使用Wifi\" class=\"android.widget.TextView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[292,1658][788,1755]\" resource-id=\"com.play.android:id\/tv_connect_state\" instance=\"0\"\/><\/android.widget.RelativeLayout><android.widget.LinearLayout index=\"1\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1785][1080,1920]\" resource-id=\"\" instance=\"8\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1785][1080,1920]\" resource-id=\"\" instance=\"9\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1785][108,1920]\" resource-id=\"\" instance=\"1\"\/><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clic
+2017-05-31 08:02:17:152 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:17:152 - info: [debug] [AndroidBootstrap] Stream still not complete, waiting
+2017-05-31 08:02:17:152 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] kable=\"false\" password=\"false\" selected=\"false\" bounds=\"[108,1785][396,1920]\" resource-id=\"com.play.android:id\/btn_diy\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"定 制\" class=\"android.widget.TextView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[218,1880][286,1915]\" resource-id=\"\" instance=\"1\"\/><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[225,1785][279,1907]\" resource-id=\"\" instance=\"4\"\/><\/android.view.View><android.widget.RelativeLayout index=\"2\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,1785][684,1920]\" resource-id=\"\" instance=\"6\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[450,1785][630,1920]\" resource-id=\"\" instance=\"5\"\/><\/android.widget.RelativeLayout><android.view.View index=\"3\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[684,1785][972,1920]\" resource-id=\"com.play.android:id\/btn_profile\" instance=\"3\"><android.widget.TextView index=\"0\" text=\"我 的\" class=\"android.widget.TextView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[794,1880][862,1915]\" resource-id=\"\" instance=\"2\"\/><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[801,1785][855,1907]\" resource-id=\"\" instance=\"6\"\/><\/android.view.View><android.view.View index=\"4\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[972,1785][1080,1920]\" resource-id=\"\" instance=\"4\"\/><\/android.widget.LinearLayout><\/android.widget.LinearLayout><\/android.widget.LinearLayout><android.widget.ImageView NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[450,1740][630,1920]\" resource-id=\"com.play.android:id\/btn_cart\" instance=\"7\"\/><\/android.widget.RelativeLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,70]\" resource-id=\"android:id\/statusBarBackground\" instance=\"5\"\/><\/android.widget.FrameLayout><\/hierarchy>"}[/APPIUM-UIAUTO]
+2017-05-31 08:02:17:152 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:17:152 - info: [debug] [MJSONWP] Responding to client with driver.getPageSource() result: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.play.android\" content-desc=\"\" checkable=\"false\" checked=\"fals...
+2017-05-31 08:02:17:152 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/source 200 911 ms - 16757 
+2017-05-31 08:02:17:231 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":0}
+2017-05-31 08:02:17:231 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:17:231 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-31 08:02:17:231 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:17:231 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 4 ms - 76 
+2017-05-31 08:02:17:247 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:17:247 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:17:247 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:17:247 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 4 ms - 84 
+2017-05-31 08:02:17:262 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:17:262 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:17:262 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:17:262 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:17:262 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:17:262 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:17:262 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:17:262 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:17:262 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:17:262 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:17:340 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:17:340 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:17:418 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:17:418 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:17:418 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:17:418 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 157 ms - 74 
+2017-05-31 08:02:17:934 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:17:934 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:17:934 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:17:934 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 4 ms - 84 
+2017-05-31 08:02:17:950 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:17:950 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:17:950 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:17:950 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:17:950 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:17:950 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:17:965 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:17:965 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:17:965 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:17:965 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:18:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:18:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:18:075 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:18:090 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:18:090 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:18:090 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 144 ms - 74 
+2017-05-31 08:02:18:621 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:18:621 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:18:621 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:18:621 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 3 ms - 84 
+2017-05-31 08:02:18:636 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:18:636 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:18:636 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:18:636 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:18:636 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:18:636 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:18:636 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:18:636 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:18:636 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:18:636 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:18:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:18:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:18:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:18:762 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:18:762 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:18:762 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 129 ms - 74 
+2017-05-31 08:02:19:292 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:19:292 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:19:292 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:19:292 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 3 ms - 84 
+2017-05-31 08:02:19:308 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:19:308 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:19:308 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:19:308 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:19:308 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:19:308 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:19:308 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:19:308 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:19:308 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:19:324 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:19:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:19:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:19:417 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:19:433 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:19:433 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:19:433 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 134 ms - 74 
+2017-05-31 08:02:19:963 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:19:963 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:19:963 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:19:963 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 4 ms - 84 
+2017-05-31 08:02:19:979 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:19:979 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:19:979 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:19:979 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:19:979 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:19:979 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:19:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:19:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:19:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:19:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:20:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:20:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:20:105 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:20:120 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:20:120 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:20:120 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 140 ms - 74 
+2017-05-31 08:02:20:636 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:20:636 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:20:636 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:20:636 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 4 ms - 84 
+2017-05-31 08:02:20:652 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:20:652 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:20:652 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:20:652 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:20:652 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:20:652 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:20:652 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:20:652 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:20:652 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:20:667 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:20:746 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:20:746 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:20:793 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:20:793 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:20:809 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:20:809 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 155 ms - 74 
+2017-05-31 08:02:21:339 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:21:339 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:21:339 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:21:339 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 6 ms - 84 
+2017-05-31 08:02:21:370 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:21:370 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:21:370 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:21:370 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:21:370 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:21:370 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:21:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:21:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:21:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:21:370 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:21:480 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:21:480 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:21:558 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:21:558 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:21:558 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:21:558 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 193 ms - 74 
+2017-05-31 08:02:22:089 - info: [HTTP] --> GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context {}
+2017-05-31 08:02:22:089 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:22:089 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-31 08:02:22:089 - info: [HTTP] <-- GET /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/context 200 6 ms - 84 
+2017-05-31 08:02:22:104 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements {"using":"xpath","value":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img"}
+2017-05-31 08:02:22:104 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["xpath","//*[@id='pageWrap']/section/div/ul/li[1]/a/img","ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:22:104 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:22:104 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-05-31 08:02:22:104 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-31 08:02:22:104 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:22:104 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@id='pageWrap']/section/div/ul/li[1]/a/img","context":"","multiple":true}}
+2017-05-31 08:02:22:104 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-05-31 08:02:22:104 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-05-31 08:02:22:104 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:22:167 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-05-31 08:02:22:167 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//*[@id='pageWrap']/section/div/ul/li[1]/a/img' using 'XPATH' with the contextId: '' multiple: true
+2017-05-31 08:02:22:229 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[]}
+2017-05-31 08:02:22:229 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-05-31 08:02:22:229 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-05-31 08:02:22:245 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/elements 200 138 ms - 74 
+2017-05-31 08:02:22:354 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts {"type":"implicit","ms":5000}
+2017-05-31 08:02:22:354 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",5000,"ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:22:354 - info: [debug] [BaseDriver] Set implicit wait to 5000ms
+2017-05-31 08:02:22:354 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-31 08:02:22:354 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/timeouts 200 3 ms - 76 
+2017-05-31 08:02:22:401 - info: [HTTP] --> POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/app/close {}
+2017-05-31 08:02:22:401 - info: [debug] [MJSONWP] Calling AppiumDriver.closeApp() with args: ["ea5fb67b-9675-43c8-8a13-c0f86ab11220"]
+2017-05-31 08:02:22:401 - info: [debug] [ADB] Getting connected devices...
+2017-05-31 08:02:22:433 - info: [debug] [ADB] 1 device(s) connected
+2017-05-31 08:02:22:433 - info: [debug] [ADB] Running 'D:\SoftWare\SDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-05-31 08:02:23:404 - info: [debug] [MJSONWP] Responding to client with driver.closeApp() result: null
+2017-05-31 08:02:23:404 - info: [HTTP] <-- POST /wd/hub/session/ea5fb67b-9675-43c8-8a13-c0f86ab11220/appium/app/close 200 1011 ms - 76 

@@ -12,8 +12,8 @@ import io.appium.java_client.android.AndroidDriver;
 import top.base.appium.AppiumServerUtils;
 import top.base.appium.TestNGListener;
 import top.base.utils.CommandUtil;
-import top.play.android.LoginPage;
-import top.play.android.PersonPage;
+import top.play.pages.LoginPage;
+import top.play.pages.PersonPage;
 
 
 @Listeners({TestNGListener.class})
