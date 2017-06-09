@@ -3,16 +3,17 @@
 
 <suite name="Play测试" preserve-order="true" >
     
-    <test name="测试登录和3D模型展示" preserver-order="true" >
+    <test name="测试3D模型展示" preserver-order="true" >
 
         <classes>
-            <class name="top.testsuite.PlaySuite" > 
+            <class name="top.play.pages.PlaySuite" > 
                 <methods>
                 	<parameter name="mobile" value="18521035133"></parameter>
                 	<parameter name="password" value="111111"></parameter>
-                  	<include name="testLogin" description="测试登录"></include>
-                  	<include name="testCheckWeb3DView" description="测试3d模型展示情况" ></include>
-                </methods>
+<!--                   	<include name="testLogin" description="测试登录"></include>
+ -->                  	<include name="testCheck3DModelView" description="测试3d模型展示情况" ></include>
+<!--                   	<include name="testEdit3DModelView" description="编辑3d模型"></include>
+ -->                </methods>
              </class>      
         </classes>
     </test>

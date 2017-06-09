@@ -17,14 +17,14 @@ import io.appium.java_client.android.AndroidKeyCode;
 public class Helper {
 
 	private static final Logger log = Logger.getLogger(Helper.class);
-	private static AndroidDriver<MobileElement> mDriver;
+	private static AndroidDriver<MobileElement> mdriver;
 	
 	public static AndroidDriver<MobileElement> getmDriver() {
-		return mDriver;
+		return mdriver;
 	}
 
-	public static void setDriver(AndroidDriver<MobileElement> mDriver) {
-		Helper.mDriver = mDriver;
+	public static void setDriver(AndroidDriver<MobileElement> mdriver) {
+		Helper.mdriver = mdriver;
 	}
 
 	/**
@@ -33,12 +33,12 @@ public class Helper {
 	 * @Data 2017年5月3日
 	 * @return true or false
 	 */
-	public static boolean isActivityDisplayed(String activityName) {
+	public static boolean waitActivity(String activityName) {
 		boolean flag = false;
 		int i = 1;
 		while (i <= 20) {
 			try {
-				if (activityName.contains(mDriver.currentActivity())) {
+				if (activityName.contains(mdriver.currentActivity())) {
 					log.info(activityName + " Found!");
 					flag = true;
 					break;
@@ -68,7 +68,7 @@ public class Helper {
 		while (i <= 3) {
 			try {
 				// 如果找不到，会抛出异常
-				if ((element = mDriver.findElementById(resourceId)).isDisplayed()) {
+				if ((element = mdriver.findElementById(resourceId)).isDisplayed()) {
 					log.info(resourceId + ",控件 found！");
 					break;
 				}
@@ -96,32 +96,17 @@ public class Helper {
 		}
 		return flag;
 	}
-
-	// webview页面切换时，需要加这个方法
-	public static String pageShift() {
-		
-		String currentHandle = mDriver.getWindowHandle();
-		Set<String> allHandles = mDriver.getWindowHandles();
-		
-		for (String s : allHandles) {
-			System.out.println(s);
-			if (!s.equals(currentHandle)) {
-				mDriver.switchTo().window(s);
-			}
-		}
-		return currentHandle;
-	}
 	
 	/***
 	* 切换WEB页面查找元素
 	*/
 	public static void switchToWebView() {
 
-		Set<String> ContextHandles = mDriver.getContextHandles();
+		Set<String> ContextHandles = mdriver.getContextHandles();
 		System.out.println("ContextHandles:"+ContextHandles);
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
-				mDriver.context(contextName);
+				mdriver.context(contextName);
 				System.out.println("切换到Webview页面成功");
 				break;
 			}
@@ -131,11 +116,11 @@ public class Helper {
 	
 	public static void switchToNative() {
 		
-		Set<String> ContextHandles = mDriver.getContextHandles();
+		Set<String> ContextHandles = mdriver.getContextHandles();
 		System.out.println("ContextHandles:"+ContextHandles);
 		for (String contextHandle:ContextHandles) {
 			if (contextHandle.contains("NATIVE_APP")) {
-				mDriver.context(contextHandle);
+				mdriver.context(contextHandle);
 				System.out.println("切换到Navtive页面成功");
 				break;
 			}
@@ -145,10 +130,10 @@ public class Helper {
 	public void clearText(WebElement element) {
 
 		String text = element.getText();
-		mDriver.pressKeyCode(AndroidKeyCode.KEYCODE_MOVE_END);// 123
+		mdriver.pressKeyCode(AndroidKeyCode.KEYCODE_MOVE_END);// 123
 
 		for (int i = 0; i < text.length(); i++) {
-			mDriver.pressKeyCode(AndroidKeyCode.KEYCODE_DEL);// 67
+			mdriver.pressKeyCode(AndroidKeyCode.KEYCODE_DEL);// 67
 		}
 	}
 
@@ -158,7 +143,7 @@ public class Helper {
 	 * @return 是否正常
 	 */
 	public boolean checkNet() {
-		String text = mDriver.getConnection().toString();
+		String text = mdriver.getConnection().toString();
 		if (text.contains("Data: true"))
 			return true;
 		else
@@ -172,7 +157,7 @@ public class Helper {
 	 * @return View
 	 */
 	public static WebElement getViewbyUidesc(String name) {
-		return mDriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
+		return mdriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
 	}
 
 	/***
@@ -182,14 +167,14 @@ public class Helper {
 	 * @return View
 	 */
 	public static WebElement getViewbyUitext(String name) {
-		return mDriver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
+		return mdriver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
 	}
 
 	public static String getScreen() {
 		String fileRoute = "路径";
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmm");
 		String picname = fileRoute + df.format(new Date()).toString() + ".png";
-		File screen = mDriver.getScreenshotAs(OutputType.FILE);
+		File screen = mdriver.getScreenshotAs(OutputType.FILE);
 		System.out.println(picname);
 		File screenFile = new File(picname);
 		try {
@@ -207,36 +192,36 @@ public class Helper {
 	 * 上滑1/4屏幕
 	 */
 	public static void slideUP() {
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
 	}
 
 	/***
 	 * 下滑1/4屏幕
 	 */
 	public static void slideDown() {
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
 	}
 
 	/***
 	 * 左滑1/2屏幕
 	 */
 	public void slideLeft() {
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 4 * 3, y / 2, x / 4 * 1, y / 2, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 4 * 3, y / 2, x / 4 * 1, y / 2, 0);
 	}
 
 	/***
 	 * 右滑1/2屏幕
 	 */
 	public void slideRight() {
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 4 * 1, y / 2, x / 4 * 3, y / 2, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 4 * 1, y / 2, x / 4 * 3, y / 2, 0);
 	}
 
 	/***
@@ -246,9 +231,9 @@ public class Helper {
 	 */
 	public void slideUP(int i) {
 		Assert.assertFalse(i <= 0 || i >= 100, "上滑宽度传入错误");
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 2, y * 7 / 10, x / 2, y * 3 / 10, 0);
 	}
 
 	/***
@@ -258,9 +243,9 @@ public class Helper {
 	 */
 	public void slideDown(int i) {
 		Assert.assertFalse(i <= 0 || i >= 100, "下滑宽度传入错误");
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
 	}
 
 	/***
@@ -270,9 +255,9 @@ public class Helper {
 	 */
 	public void slideLeft(int i) {
 		Assert.assertFalse(i <= 0 || i >= 100, "左滑宽度传入错误");
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 4 * 3, y / 10 * i, x / 4 * 2, y / 10 * i, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 4 * 3, y / 10 * i, x / 4 * 2, y / 10 * i, 0);
 	}
 
 	/***
@@ -282,19 +267,19 @@ public class Helper {
 	 */
 	public void slideRight(int i) {
 		Assert.assertFalse(i <= 0 || i >= 100, "左滑宽度传入错误");
-		int x = mDriver.manage().window().getSize().width;
-		int y = mDriver.manage().window().getSize().height;
-		mDriver.swipe(x / 4 * 2, y / 10 * i, x / 4 * 3, y / 10 * i, 0);
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		mdriver.swipe(x / 4 * 2, y / 10 * i, x / 4 * 3, y / 10 * i, 0);
 	}
 
 	// 向左滑动
 	public static void swipeToLeft(int times) throws InterruptedException {
 
-		int width = mDriver.manage().window().getSize().width;
-		int height = mDriver.manage().window().getSize().height;
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
 
 		for (int i = 1; i <= times; i++) {
-			mDriver.swipe(width * 9 / 10, height / 2, width / 10, height / 2, 500);
+			mdriver.swipe(width * 9 / 10, height / 2, width / 10, height / 2, 500);
 			System.out.println("向左滑动次数：" + i);
 			Thread.sleep(1000);
 		}
@@ -302,12 +287,12 @@ public class Helper {
 
 	public static void swipeUpUntilFind(String str){
 
-		int width = mDriver.manage().window().getSize().width;
-		int height = mDriver.manage().window().getSize().height;
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
 
 		for (int i = 0; i < 5; i++) {
-			mDriver.swipe(width / 2, height * 7 / 10, width / 2, height * 3 / 10, 500);
-			if (mDriver.getPageSource().contains(str)) {
+			mdriver.swipe(width / 2, height * 7 / 10, width / 2, height * 3 / 10, 500);
+			if (mdriver.getPageSource().contains(str)) {
 				break;
 			}
 		}
@@ -321,7 +306,7 @@ public class Helper {
 	public static void takeScreenShot(String screenShotName) {
 
 		String path = System.getProperty("user.dir") + "\\test-output\\pics_actul";
-		File screenShot = mDriver.getScreenshotAs(OutputType.FILE);
+		File screenShot = mdriver.getScreenshotAs(OutputType.FILE);
 
 		try {
 			FileUtils.copyFile(screenShot, new File(path + "\\" + screenShotName));

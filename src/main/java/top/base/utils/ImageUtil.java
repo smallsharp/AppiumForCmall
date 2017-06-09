@@ -1,9 +1,17 @@
 package top.base.utils;
 
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Iterator;
+
 import javax.imageio.ImageIO;
+import javax.imageio.ImageReadParam;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.ImageInputStream;
 
 public class ImageUtil {
 	
@@ -131,11 +139,46 @@ public class ImageUtil {
 		return 1.0D - diffPercent;
 	}
 	
-	
+	/**
+	 * 
+	 * @param image
+	 * @param x 控件的x坐标
+	 * @param y 控件的y坐标
+	 * @param w 截取区域的宽度
+	 * @param h 截取区域的高度
+	 * @return
+	 */
 	public static BufferedImage getSubImage(BufferedImage image, int x, int y, int w, int h) {
 		return image.getSubimage(x, y, w, h);
 	}
+	
+	public static void cutJPG(InputStream input, OutputStream out, int x,
+			int y, int width, int height) throws IOException {
+		ImageInputStream imageStream = null;
+		try {
+			Iterator<ImageReader> readers = ImageIO
+					.getImageReadersByFormatName("jpg");
+			ImageReader reader = readers.next();
+			imageStream = ImageIO.createImageInputStream(input);
+			reader.setInput(imageStream, true);
+			ImageReadParam param = reader.getDefaultReadParam();
 
+			// System.out.println(reader.getWidth(0));
+			// System.out.println(reader.getHeight(0));
+			Rectangle rect = new Rectangle(x, y, width, height);
+			param.setSourceRegion(rect);
+			BufferedImage bi = reader.read(0, param);
+			ImageIO.write(bi, "jpg", out);
+		} finally {
+			imageStream.close();
+		}
+	}
+
+	/**
+	 * File-->BufferedImage
+	 * @param f
+	 * @return
+	 */
 	public static BufferedImage getImageFromFile(File f) {
 
 		BufferedImage img = null;

@@ -40,14 +40,14 @@ public class PersonModifyPage {
 	public void modifyPersonInfo(){
 		boolean result = false;
 
-		if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
+		if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_profile_setting.click();
-			if (Helper.isActivityDisplayed(ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
+			if (Helper.waitActivity(ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
 				e_gender.click();
 				e_male.click();
 				e_save.click();
-				if (Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
+				if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

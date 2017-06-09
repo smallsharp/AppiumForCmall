@@ -28,7 +28,7 @@ public final class ActivityList {
 	/**
 	 * 3D模型界面
 	 */
-	public static final String GOODS_WEB3DVIEW_PAGER_ACTIVITY = "com.play.android.activity.diyedit3d.GoodsWeb3dViewPagerActivity";
+	public static final String GOODS_WEB3DVIEW_ACTIVITY = "com.play.android.activity.diyedit3d.GoodsWeb3dViewPagerActivity";
 	
 	
 	public static final String PRODUCT_LIST_ACTIVITY = "com.play.android.activity.product.ProductListActivity";

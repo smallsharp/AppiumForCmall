@@ -1,4 +1,4 @@
-package top.testsuite;
+package top.play.pages;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -15,10 +15,6 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import top.base.appium.AppiumServerUtils;
 import top.base.appium.DriverFactory;
 import top.base.appium.TestNGListener;
-import top.play.pages.DIYPage;
-import top.play.pages.LoginPage;
-import top.play.pages.PersonModifyPage;
-import top.play.pages.PersonPage;
 
 @Listeners(TestNGListener.class)
 public class PlaySuite {
@@ -54,7 +50,7 @@ public class PlaySuite {
 
 	}
 
-	@Test(description = "通过账号密码登录")
+//	@Test(description = "通过账号密码登录")
 	@Parameters({ "mobile", "password" }) // 参数名称需要和xml中对应
 	public void testLogin(String mobile, String password) throws InterruptedException {
 		LoginPage loginPage = new LoginPage(mdriver);
@@ -63,15 +59,23 @@ public class PlaySuite {
 	}
 
 	@Test(description = "3d模型展示")
-	public void testCheckWeb3DView() throws InterruptedException {
+	public void testCheck3DModelView() throws InterruptedException {
+		DIYPage diyPage = new DIYPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 30 ,TimeUnit.SECONDS),diyPage);
+//		diyPage.check3DModelByColorAndGrade();
+		diyPage.check3DModelByGoodsSelector();
+//		diyPage.showAllGoods();
+	}
+	
+	@Test(description = "编辑3d模型")
+	public void testEdit3DModelView() throws InterruptedException {
 		DIYPage diyPage = new DIYPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
-		diyPage.check3DModelView();
-		diyPage.showAllGoods();
+		diyPage.edit3DModel();
 	}
 	
 	@Test
-	public  void testSignIn() {
+	public void testSignIn() {
 		
 		LoginPage loginPage = new LoginPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20,TimeUnit.SECONDS), loginPage);

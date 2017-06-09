@@ -44,13 +44,13 @@ public class DIYPage {
 	private WebElement m_thirt;// 短袖
 	
 	public void buyMenWear(){
-		if (Helper.isActivityDisplayed(ActivityList.VIDEO_ACTIVITY)) {
+		if (Helper.waitActivity(ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
-		if(Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)){
+		if(Helper.waitActivity(ActivityList.HOME_ACTIVITY)){
 			m_productlist.get(m_productlist.size()-1).click();
 			
-			if (Helper.isActivityDisplayed(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+			if (Helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
 		        Helper.slideUP();
 		        Helper.slideDown();
 				

@@ -71,7 +71,7 @@ public class MyAppiumListener implements AppiumWebDriverEventListener {
 	@Override
 	public void beforeClickOn(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-		Reporter.log("准备点击--> " + splitElement(element),true);
+//		Reporter.log("准备点击--> " + splitElement(element),true);
 
 	}
 

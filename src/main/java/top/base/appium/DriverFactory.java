@@ -8,8 +8,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.events.EventFiringWebDriverFactory;
 import top.base.utils.PropertyUtil;
+import top.play.pages.ActivityList;
 
 
 public class DriverFactory {
@@ -38,8 +40,6 @@ public class DriverFactory {
 
 	public AndroidDriver<MobileElement> initAndroidDriver(URL url) {
 		
-		String appPackage = null;
-		String appActivity = null;
 		String deviceName = null;
 		
 		if (mdriver == null) {
@@ -95,8 +95,7 @@ public class DriverFactory {
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
 			dc.setCapability("resetKeyboard", "True"); // 重置输入法
-			// dc.setCapability("noReset", true); // 不需要再次安装
-			dc.setCapability("noSign", "True");
+			dc.setCapability("noReset", false); // 不需要再次安装
 			dc.setCapability("platformName", "Android");
 			dc.setCapability("deviceName", deviceName);
 			dc.setCapability("appPackage", "com.play.android");
@@ -106,17 +105,32 @@ public class DriverFactory {
 			try {
 				mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723"+"/wd/hub"), dc);
 			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
+//			checkEnvironment();
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
 			// 全局等待20秒
 			mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						
 			Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
 		}
 		return mdriver;
 	}
+	
+	public void checkEnvironment(){
+		
+		mdriver.pressKeyCode(AndroidKeyCode.KEYCODE_POWER); // 按power键锁屏  
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
+		
+		mdriver.swipe(x/2, y/10*9, x/2, y/10*3, 800);
+		mdriver.tap(1, 540, 960, 500);
+		mdriver.tap(1, 540, 720, 500);
+		mdriver.tap(1, 540, 1480, 500);
+		mdriver.tap(1, 250, 1230, 500);
+	}
+		
 
 }

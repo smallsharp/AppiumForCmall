@@ -65,11 +65,15 @@ public class LoginPage {
 	public void login(String mobile, String password) {
 
 		try {
-						
-			e_my.click();// 点击：我的
-			
 			Helper.setDriver(driver);
-			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
+			
+			String firstActivity = driver.currentActivity();
+			
+			if (firstActivity.contains(ActivityList.HOME_ACTIVITY)) {
+				e_my.click();// 点击：我的
+			}
+			
+			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
 				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
 			
@@ -80,14 +84,57 @@ public class LoginPage {
 			Reporter.log("输入密码："+ password);
 			e_login.click();
 			
-			// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
-			if (!Helper.isActivityDisplayed(ActivityList.HOME_ACTIVITY)) {
-				assertEquals(driver.currentActivity(), ActivityList.HOME_ACTIVITY,"登录成功后，应该返回:HOME_ACTIVITY");
+			if (!Helper.waitActivity(firstActivity)) {
+				assertEquals(driver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 			assertTrue(false,"登录用例执行失败！");
+		}
+
+	}
+	
+	/**
+	 * 嵌套登录使用
+	 * @param mobile
+	 * @param password
+	 */
+	public void login2(String mobile, String password) {
+
+		try {
+			Helper.setDriver(driver);
+			
+			String firstActivity = driver.currentActivity();
+			
+			if (firstActivity.contains(ActivityList.HOME_ACTIVITY)) {
+				e_my.click();// 点击：我的
+			}
+			
+			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+			}
+			
+			MobileElement m_accout = driver.findElementById("com.play.android:id/tv_account");
+			m_accout.click();
+			
+			MobileElement m_moblie = driver.findElementById("com.play.android:id/et_account");
+			m_moblie.sendKeys(mobile);
+			Reporter.log("输入手机号："+ mobile);
+			
+			MobileElement m_password = driver.findElementById("com.play.android:id/et_password");
+			m_password.sendKeys(password);
+			Reporter.log("输入密码："+ password);
+			
+			MobileElement m_login = driver.findElementById("com.play.android:id/btn_login");
+			m_login.click();
+			
+			if (!Helper.waitActivity(firstActivity)) {
+				assertEquals(driver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 	}
@@ -100,7 +147,7 @@ public class LoginPage {
 			
 			e_my.click();// 点击：我的
 			Helper.setDriver(driver);
-			if (!Helper.isActivityDisplayed(ActivityList.LOGIN_ACTIVITY)) {
+			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
 				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
 			
