@@ -8,17 +8,14 @@
         <classes>
             <class name="top.play.pages.PlaySuite" > 
                 <methods>
-                	<parameter name="mobile" value="18521035133"></parameter>
-                	<parameter name="password" value="111111"></parameter>
-<!--                   	<include name="testLogin" description="测试登录"></include>
- -->                  	<include name="testCheck3DModelView" description="测试3d模型展示情况" ></include>
-<!--                   	<include name="testEdit3DModelView" description="编辑3d模型"></include>
- -->                </methods>
-             </class>      
+                       <include name="testCheck3DModelGoodsList" description="" />
+                       <include name="testCheck3DModelByColorAndGrade" />
+                </methods>
+             </class>  
         </classes>
+        
     </test>
-
     <listeners>
-    	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
     </listeners>
 </suite>

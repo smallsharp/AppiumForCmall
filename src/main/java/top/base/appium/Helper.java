@@ -6,19 +6,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
+import top.base.utils.LogUtil;
+import top.play.pages.ActivityList;
 
 public class Helper {
 
-	private static final Logger log = Logger.getLogger(Helper.class);
+	static LogUtil log = new LogUtil(Helper.class);
+
 	private static AndroidDriver<MobileElement> mdriver;
-	
+
 	public static AndroidDriver<MobileElement> getmDriver() {
 		return mdriver;
 	}
@@ -32,78 +34,56 @@ public class Helper {
 	 * @Description 动态等待activity出现
 	 * @Data 2017年5月3日
 	 * @return true or false
+	 * @throws InterruptedException
 	 */
 	public static boolean waitActivity(String activityName) {
-		boolean flag = false;
-		int i = 1;
-		while (i <= 20) {
+
+		for (int i = 0; i < 5; i++) {
+			if (activityName.contains(mdriver.currentActivity())) {
+				log.info("\n" + "Activity:" + activityName + " is Found!");
+				return true;
+			}
 			try {
-				if (activityName.contains(mdriver.currentActivity())) {
-					log.info(activityName + " Found!");
-					flag = true;
-					break;
-				} else {
-//					log.info(activityName + ",第" + i + "次等待，Not Found!");
-					i++;
-					Thread.sleep(1000);
-				}
-			} catch (Exception e) {
-				i++;
-				log.error(activityName + ",第" + i + "次等待，Not Found!");
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
 		}
-		return flag;
-	}
+		System.out.println("currentActivity:" + activityName);
 
-	static WebElement element = null;
+		return false;
+	}
 
 	/**
 	 * 
-	 * @Description 通过元素id等，查询多次，定位元素
-	 * @Data 2017年5月3日
-	 * @return WebElement
+	 * @param element
+	 * @return
+	 * @throws InterruptedException
 	 */
-	public static WebElement findElementById(String resourceId) throws InterruptedException {
-		int i = 1;
-		while (i <= 3) {
-			try {
-				// 如果找不到，会抛出异常
-				if ((element = mdriver.findElementById(resourceId)).isDisplayed()) {
-					log.info(resourceId + ",控件 found！");
-					break;
-				}
-			} catch (Exception e) {
-				log.error(resourceId + ",第" + i + "次等待，Not Found!");
-				i++;
+	public static boolean waitElement(MobileElement element) throws InterruptedException {
+		
+		for (int j = 0; j < 5; j++) {
+
+			log.info("\n" + "Waiting element to be displayed:" + element);
+
+			if (element.isDisplayed()) {
+				Thread.sleep(500);
+				log.info("\n" + element + " is Found");
+				return true;
 			}
 		}
-		return element;
+
+		return false;
+
 	}
-	
-	public static boolean isElementDisplayed(WebElement webElement) throws InterruptedException {
-		
-		boolean flag = false;
-		int i = 1;
-		while (i <= 3) {
-				if (webElement.isDisplayed()) {
-					log.info(webElement + ",控件 found！");
-					flag = true;
-					break;
-				} else{
-					log.info(webElement + ",控件 found！");
-					i++;
-				}
-		}
-		return flag;
-	}
-	
+
 	/***
-	* 切换WEB页面查找元素
-	*/
+	 * 切换WEB页面查找元素
+	 */
 	public static void switchToWebView() {
 
 		Set<String> ContextHandles = mdriver.getContextHandles();
-		System.out.println("ContextHandles:"+ContextHandles);
+		System.out.println("ContextHandles:" + ContextHandles);
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 				mdriver.context(contextName);
@@ -112,13 +92,12 @@ public class Helper {
 			}
 		}
 	}
-	
-	
+
 	public static void switchToNative() {
-		
+
 		Set<String> ContextHandles = mdriver.getContextHandles();
-		System.out.println("ContextHandles:"+ContextHandles);
-		for (String contextHandle:ContextHandles) {
+		System.out.println("ContextHandles:" + ContextHandles);
+		for (String contextHandle : ContextHandles) {
 			if (contextHandle.contains("NATIVE_APP")) {
 				mdriver.context(contextHandle);
 				System.out.println("切换到Navtive页面成功");
@@ -285,7 +264,7 @@ public class Helper {
 		}
 	}
 
-	public static void swipeUpUntilFind(String str){
+	public static void swipeUpUntilFind(String str) {
 
 		int width = mdriver.manage().window().getSize().width;
 		int height = mdriver.manage().window().getSize().height;
@@ -298,23 +277,52 @@ public class Helper {
 		}
 
 	}
-	
+
 	/**
 	 * 截图，将图片放在test-output\\pics_actul中，用于和test-output\\pic_expected对比
+	 * 
 	 * @param screenShotName
 	 */
 	public static void takeScreenShot(String screenShotName) {
 
-		String path = System.getProperty("user.dir") + "\\test-output\\pics_actul";
+		String path = "test-output\\screenshots";
+		
 		File screenShot = mdriver.getScreenshotAs(OutputType.FILE);
 
 		try {
-			FileUtils.copyFile(screenShot, new File(path + "\\" + screenShotName));
+			File destFile = new File(path+"\\" + screenShotName);
+			FileUtils.copyFile(screenShot, destFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println("截图成功："+screenShotName);
+
+		System.out.println("截图成功：" + screenShotName);
+	}
+
+	public static void backToHomeActivity() {
+		try {
+			if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+				return;
+			}
+			System.out.println("exec: back");
+
+			Thread.sleep(2000);
+			
+			for (int i = 0; i < 6; i++) {
+				if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+					return;
+				}
+				Thread.sleep(2500);
+				mdriver.pressKeyCode(AndroidKeyCode.BACK);
+			}
+
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
 	}
 
 }

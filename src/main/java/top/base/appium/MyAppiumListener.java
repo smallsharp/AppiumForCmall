@@ -9,110 +9,6 @@ import io.appium.java_client.events.api.general.AppiumWebDriverEventListener;
 
 public class MyAppiumListener implements AppiumWebDriverEventListener {
 
-	@Override
-	public void beforeNavigateTo(String url, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void afterNavigateTo(String url, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void afterNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void afterNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void afterNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-//		Reporter.log("准备点击--> " + splitElement(element),true);
-
-	}
-
-	@Override
-	public void afterClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		Reporter.log("点击--> " + splitElement(element),true);
-
-	}
-
-	@Override
-	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		Reporter.log("准备输入--> " + splitElement(element),true);
-
-	}
-
-	@Override
-	public void afterChangeValueOf(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void beforeScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void afterScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void onException(Throwable throwable, WebDriver driver) {
-		// TODO Auto-generated method stub
-
-	}
-	
 	// 获取操作的控件字符串
 	private String splitElement(WebElement element) {
 		// 用"->"分割，分成数组，取下标为1的
@@ -120,5 +16,110 @@ public class MyAppiumListener implements AppiumWebDriverEventListener {
 		String str = element.toString().split("-> ")[1];
 		return str.substring(0, str.length() - 1);
 	}
+	
+	
+	public void afterClickOn(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		Reporter.log("click--> " + splitElement(element),true);
+
+	}
+
+	public void afterChangeValueOf(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		Reporter.log(splitElement(element)+"：控件内容已经改变",true);
+
+	}
+
+
+	public void beforeNavigateTo(String url, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterNavigateTo(String url, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeNavigateBack(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterNavigateBack(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeNavigateForward(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterNavigateForward(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeNavigateRefresh(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterNavigateRefresh(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterFindBy(By by, WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeClickOn(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void beforeScript(String script, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void afterScript(String script, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void onException(Throwable throwable, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }

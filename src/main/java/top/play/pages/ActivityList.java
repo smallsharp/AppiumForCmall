@@ -9,12 +9,14 @@ public final class ActivityList {
 	/**
 	 * 主页面：定制、我的、智能图片
 	 */
-	public static final String HOME_ACTIVITY = "com.play.android.activity.main.HomeActivity";
+	public static final String HOME_ACTIVITY = ".activity.main.HomeActivity";
+
 	
 	/**
 	 * 登录界面
 	 */
 	public static final String LOGIN_ACTIVITY = "com.play.android.activity.member.LoginActivity";
+	
 	
 	
 	public static final String MODIFY_USER_INFO_ACTIVITY = "com.play.android.activity.ModifyUserInfoActivity";
@@ -28,7 +30,7 @@ public final class ActivityList {
 	/**
 	 * 3D模型界面
 	 */
-	public static final String GOODS_WEB3DVIEW_ACTIVITY = "com.play.android.activity.diyedit3d.GoodsWeb3dViewPagerActivity";
+	public static final String GOODS_WEB3DVIEW_ACTIVITY = ".activity.diyedit3d.GoodsWeb3dViewPagerActivity";
 	
 	
 	public static final String PRODUCT_LIST_ACTIVITY = "com.play.android.activity.product.ProductListActivity";

@@ -17,13 +17,13 @@
 
 	<dependencies>
 		<!-- appium 依赖的jar -->
-		<dependency>
-			<groupId>io.appium</groupId>
-			<artifactId>java-client</artifactId>
-			<version>4.1.2</version>
-		</dependency>
-
-		<dependency>
+<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+	    <dependency>
+    		<groupId>io.appium</groupId>
+    		<artifactId>java-client</artifactId>
+    		<version>4.1.2</version>
+	   </dependency>
+	   <dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.9.9</version>

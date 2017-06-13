@@ -32,10 +32,8 @@ public class ReponseUtil {
 				responseBean.setStatusCode(Integer.toString(httpResponse.getStatusLine().getStatusCode()));
 				responseBean.setBody(rs);
 				
-				log.info("\n" + "***************************返回开始**********************************" + "\n"
-						+ httpResponse.getStatusLine().getReasonPhrase() + "\n"
-						+ Integer.toString(httpResponse.getStatusLine().getStatusCode()) + "\n" + "Context" + rs + "\n"
-						+ "***************************返回结束**********************************");
+				log.info(httpResponse.getStatusLine().getReasonPhrase() + "\n"
+						+ Integer.toString(httpResponse.getStatusLine().getStatusCode()) + "\n" + "Context" + rs);
 
 				HeaderIterator iterator = httpResponse.headerIterator();
 				while (iterator.hasNext()) {

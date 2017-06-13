@@ -79,9 +79,9 @@ public class LoginPage {
 			
 			e_account.click();
 			e_molibe.sendKeys(mobile);
-			Reporter.log("输入手机号："+ mobile);
+			Reporter.log("输入手机号："+ mobile,true);
 			e_password.sendKeys(password);
-			Reporter.log("输入密码："+ password);
+			Reporter.log("输入密码："+ password,true);
 			e_login.click();
 			
 			if (!Helper.waitActivity(firstActivity)) {

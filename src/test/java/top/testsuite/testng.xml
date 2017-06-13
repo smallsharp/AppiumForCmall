@@ -4,8 +4,8 @@
 <suite name="All" preserve-order="true" allow-return-values="true">
 
 	<suite-files>
-		<suite-file path="testng_a.xml" />
-		<suite-file path="testng_b.xml" />
+		<suite-file path="testng_play1.xml" />
+		<suite-file path="testng_play2.xml" />
 	</suite-files>
 	
 	<!-- 监听器配置 -->

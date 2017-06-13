@@ -9,7 +9,7 @@ public class Constant {
 	/**
 	 * 实际截图的存放路径
 	 */
-	public static final String ACTUL_PATH = System.getProperty("user.dir")+"\\test-output\\pics_actul\\";
+	public static final String ACTUL_PATH = System.getProperty("user.dir")+"\\test-output\\screenshots\\";
 	
 	/**
 	 * 登录页面的预留图片

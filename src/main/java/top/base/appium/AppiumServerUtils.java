@@ -72,9 +72,9 @@ public class AppiumServerUtils {
 		builder.usingPort(port);
 		builder.withLogFile(logFile);
 		appiumService = AppiumDriverLocalService.buildService(builder);
-		appiumService.start();
 		if (appiumService == null || !appiumService.isRunning()) {
-			throw new RuntimeException("An appium server node is not started!");
+			appiumService.start();
+//			throw new RuntimeException("An appium server node is not started!");
 		}
 		
 		System.out.println("AppiumServer has started");

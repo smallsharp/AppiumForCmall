@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import top.base.appium.AppiumServerUtils;
 import top.base.appium.DriverFactory;
 import top.base.appium.TestNGListener;
 
@@ -24,7 +23,7 @@ public class PlaySuite {
 
 /*	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() {
-		AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		AppiumServerUtils.getInstance().startServer("192.168.101.201", 4723);
 		url = AppiumServerUtils.getInstance().getService().getUrl();
 	}*/
 
@@ -32,25 +31,23 @@ public class PlaySuite {
 	@BeforeClass
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
-		if (mdriver == null) {
-//			mdriver = DriverFactory.getInstance().initAndroidDriver(url);
-			mdriver = DriverFactory.getInstance().initAndroidDriver();
-		}
+//		mdriver = DriverFactory.getInstance().initAndroidDriver(url);
+		mdriver= DriverFactory.getInstance().initAndroidDriver();
 	}
 
 	@AfterClass
 	public void teardown() throws InterruptedException {
 
 		if (mdriver != null) {
-			mdriver.closeApp();
 //			CommandUtil.exec_shell("pm clear com.play.android");
+			mdriver.quit();
 		}
-		AppiumServerUtils.getInstance().stopServer();
-		Reporter.log("========== 测试用例执行完成，BYE BYE ==========", true);
 
+//		AppiumServerUtils.getInstance().stopServer();
+		Reporter.log("========== 测试用例执行完成，BYE BYE ==========", true);
 	}
 
-//	@Test(description = "通过账号密码登录")
+	@Test(description = "通过账号密码登录")
 	@Parameters({ "mobile", "password" }) // 参数名称需要和xml中对应
 	public void testLogin(String mobile, String password) throws InterruptedException {
 		LoginPage loginPage = new LoginPage(mdriver);
@@ -58,29 +55,18 @@ public class PlaySuite {
 		loginPage.login(mobile, password);
 	}
 
-	@Test(description = "3d模型展示")
-	public void testCheck3DModelView() throws InterruptedException {
-		DIYPage diyPage = new DIYPage(mdriver);
-		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 30 ,TimeUnit.SECONDS),diyPage);
-//		diyPage.check3DModelByColorAndGrade();
-		diyPage.check3DModelByGoodsSelector();
-//		diyPage.showAllGoods();
-	}
-	
-	@Test(description = "编辑3d模型")
-	public void testEdit3DModelView() throws InterruptedException {
+	@Test(description = "3d模型列表展示")
+	public void testCheck3DModelGoodsList() throws InterruptedException {
 		DIYPage diyPage = new DIYPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
-		diyPage.edit3DModel();
+		diyPage.check3DModelGoodsList();
 	}
 	
-	@Test
-	public void testSignIn() {
-		
-		LoginPage loginPage = new LoginPage(mdriver);
-		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20,TimeUnit.SECONDS), loginPage);
-		loginPage.signIn();
-
+	@Test(description = "3d模型展示-不同的颜色和等级")
+	public void testCheck3DModelByColorAndGrade() throws InterruptedException {
+		DIYPage diyPage = new DIYPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
+		diyPage.check3DModelByColorAndGrade();
 	}
 
 	@Test(description = "个人设置")

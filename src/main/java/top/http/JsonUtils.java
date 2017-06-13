@@ -22,7 +22,7 @@ public class JsonUtils {
 	public void test(){
 		
 		String url = "http://m.cmall.com/gdCategorySite/category/getHomeCategory";
-		Map<String, String> paramsMap = new HashMap<>();
+		Map<String, String> paramsMap = new HashMap<String, String>();
 		paramsMap.put("clientType", "H5");
 		paramsMap.put("abbr", "CN");
 		paramsMap.put("page", "index");
@@ -56,7 +56,7 @@ public class JsonUtils {
 	
 	public static void main(String[] args) {
 
-		Map<String, String> paramsMap = new HashMap<>();
+		Map<String, String> paramsMap = new HashMap<String, String>();
 		paramsMap.put("productId", "501");
 		JsonObject jsonObject = getJsonBydoGet("http://android.cmall.com/goodsSite/home/goodsList",paramsMap);
 		JsonObject result = (JsonObject) jsonObject.get("result");
