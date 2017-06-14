@@ -51,7 +51,6 @@ public class DIYPage {
 			m_productlist.get(m_productlist.size()-1).click();
 			
 			if (Helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
-		        Helper.slideUP();
 		        Helper.slideDown();
 				
 				m_tee.click();

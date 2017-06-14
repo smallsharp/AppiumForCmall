@@ -57,14 +57,14 @@ public class PlaySuite {
 
 	@Test(description = "3d模型列表展示")
 	public void testCheck3DModelGoodsList() throws InterruptedException {
-		DIYPage diyPage = new DIYPage(mdriver);
+		ModelPage diyPage = new ModelPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
 		diyPage.check3DModelGoodsList();
 	}
 	
 	@Test(description = "3d模型展示-不同的颜色和等级")
 	public void testCheck3DModelByColorAndGrade() throws InterruptedException {
-		DIYPage diyPage = new DIYPage(mdriver);
+		ModelPage diyPage = new ModelPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
 		diyPage.check3DModelByColorAndGrade();
 	}

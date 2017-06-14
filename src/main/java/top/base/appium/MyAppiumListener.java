@@ -19,15 +19,11 @@ public class MyAppiumListener implements AppiumWebDriverEventListener {
 	
 	
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		Reporter.log("click--> " + splitElement(element),true);
-
+//		Reporter.log("click--> " + splitElement(element),true);
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		Reporter.log(splitElement(element)+"：控件内容已经改变",true);
-
+//		Reporter.log(splitElement(element)+"：控件内容已经改变",true);
 	}
 
 

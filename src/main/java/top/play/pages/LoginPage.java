@@ -63,9 +63,10 @@ public class LoginPage {
 	 * @param password
 	 */
 	public void login(String mobile, String password) {
+		
+		Helper.setDriver(driver);
 
 		try {
-			Helper.setDriver(driver);
 			
 			String firstActivity = driver.currentActivity();
 			
@@ -101,9 +102,10 @@ public class LoginPage {
 	 * @param password
 	 */
 	public void login2(String mobile, String password) {
+		
+		Helper.setDriver(driver);
 
 		try {
-			Helper.setDriver(driver);
 			
 			String firstActivity = driver.currentActivity();
 			
@@ -119,15 +121,18 @@ public class LoginPage {
 			m_accout.click();
 			
 			MobileElement m_moblie = driver.findElementById("com.play.android:id/et_account");
-			m_moblie.sendKeys(mobile);
+//			m_moblie.sendKeys(mobile);
+			Helper.inputText(m_moblie, mobile);
 			Reporter.log("输入手机号："+ mobile);
 			
 			MobileElement m_password = driver.findElementById("com.play.android:id/et_password");
-			m_password.sendKeys(password);
+//			m_password.sendKeys(password);
+			Helper.inputText(m_password, password);
 			Reporter.log("输入密码："+ password);
 			
 			MobileElement m_login = driver.findElementById("com.play.android:id/btn_login");
-			m_login.click();
+//			m_login.click();
+			Helper.clickonElement(m_login);
 			
 			if (!Helper.waitActivity(firstActivity)) {
 				assertEquals(driver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);

@@ -14,40 +14,41 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AndroidFindBys;
 import top.base.appium.Helper;
 import top.base.utils.ImageUtil;
 import top.base.utils.LogUtil;
 import top.http.JsonUtils;
 
-public class DIYPage {
+public class ModelPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-	static LogUtil log = new LogUtil(DIYPage.class);
- 	public DIYPage() {
+	private static LogUtil log = new LogUtil(ModelPage.class);
+ 	public ModelPage() {
 	}
-	public DIYPage(AndroidDriver<MobileElement> driver) {
+	public ModelPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
 	}
 
 	/**
 	 * 定制 按钮
 	 */
-	@FindBy(id = "com.play.android:id/btn_diy")
+	@AndroidFindBy(id = "com.play.android:id/btn_diy")
 	private MobileElement m_btn_diy;
 	
-	@FindBy(id = "com.play.android:id/iv_item")
+	@AndroidFindBy(id = "com.play.android:id/iv_item")
 	private List<MobileElement> m_plate_list;
 
 	/**
 	 * 定制页面-产品list
 	 */
-	@FindBy(id = "com.play.android:id/sdv_image")
+	@AndroidFindBy(id = "com.play.android:id/sdv_image")
 	private List<MobileElement> m_sdv_image;
 
-//	@FindBy(className = "android.webkit.WebView")
-	@FindBy(className = "com.tencent.smtt.webkit.WebView")
+	@AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.play.android:id/rela_content\")")
 	private MobileElement m_tee_native;
-
+	
 	/**
 	 * 男装-TEE H5
 	 */
@@ -57,8 +58,7 @@ public class DIYPage {
 	/**
 	 * 3D模型 Navtive
 	 */
-//	@FindBy(className = "android.webkit.WebView")
-	@FindBy(className = "com.tencent.smtt.webkit.WebView")
+	@AndroidFindBy(id="com.play.android:id/rela_webview_parent")
 	private MobileElement m_3dModel_native;
 
 	/**
@@ -70,37 +70,37 @@ public class DIYPage {
 	/**
 	 * 颜色选择器
 	 */
-	@FindBy(id="com.play.android:id/tv_color_select_enter")
+	@AndroidFindBy(id="com.play.android:id/tv_color_select_enter")
 	private MobileElement m_color_selector;
 	
 	/**
 	 * 档次List
 	 */
-	@FindBy(id="com.play.android:id/tv_sku_name")
+	@AndroidFindBy(id="com.play.android:id/tv_sku_name")
 	private List<MobileElement> m_gradeList;
 	
 	/**
 	 * 颜色List
 	 */
-	@FindBy(id="com.play.android:id/sdv_sku_image")
+	@AndroidFindBy(id="com.play.android:id/sdv_sku_image")
 	private List<MobileElement> m_color_List;
 	
 	/**
 	 * 确定按钮：档次和颜色选择页面
 	 */
-	@FindBy(id="com.play.android:id/tv_sure")
+	@AndroidFindBy(id="com.play.android:id/tv_sure")
 	private MobileElement m_btn_sure;
 
 	/**
 	 * 3D模型 切换选择
 	 */
-	@FindBy(id = "com.play.android:id/iv_good")
+	@AndroidFindBy(id = "com.play.android:id/iv_good")
 	private List<MobileElement> m_goods_selector;
 
 	/**
 	 * 去购买 按钮
 	 */
-	@FindBy(id = "com.play.android:id/btn_buy")
+	@AndroidFindBy(id = "com.play.android:id/btn_buy")
 	private MobileElement m_btn_buy;
 
 	/**

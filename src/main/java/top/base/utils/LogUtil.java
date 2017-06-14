@@ -7,7 +7,6 @@ public class LogUtil {
 
 	private final Class<?> clazz;
 	private Logger logger;
-
 	
 	public LogUtil(Class<?> clazz) {
 		this.clazz = clazz;
