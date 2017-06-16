@@ -42,11 +42,11 @@ public class Helper {
 	 */
 	public static boolean waitActivity(String activityName) {
 		
-		log.info("\n"+"Waiting activity to appear ==> " + "(" + activityName + ")");
+		log.info("\n"+"[Activity] Waiting activity to appear ==> " + "(" + activityName + ")");
 
 		for (int i = 0; i < 5; i++) {
 			if (activityName.contains(mdriver.currentActivity())) {
-				log.info("\n" + "Found activity ==> "+ "(" + activityName + ")");
+				log.info("\n" + "[Activity] Found activity ==> "+ "(" + activityName + ")");
 				return true;
 			}
 			try {
@@ -55,7 +55,7 @@ public class Helper {
 				e.printStackTrace();
 			}
 		}
-		log.info("\n"+"ActivityNotFound:" + "(" + activityName + ")" +"\n"+"CurrentActivity is:" + "(" + mdriver.currentActivity() + ")");
+		log.info("\n"+"[Activity] ActivityNotFound:" + "(" + activityName + ")" +"\n"+"CurrentActivity is:" + "(" + mdriver.currentActivity() + ")");
 		return false;
 	}
 
@@ -69,20 +69,19 @@ public class Helper {
 		
 		for (int j = 0; j < 3; j++) {
 
-			log.info("\n" + "Waiting element to appear ==> " + "(" + splitElement(element) + ")");
+			log.info("\n" + "[Element] Waiting element to appear ==> " + "(" + splitElement(element) + ")");
 
 			if (element.isDisplayed()) {
-				log.info("\n"+"Found element ==> " +  "(" + splitElement(element) + ")");
+				log.info("\n"+"[Element] Found element ==> " +  "(" + splitElement(element) + ")");
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				return true;
 			}
 		}
-		log.info("\n" + "Failed to locate element ==> " + "(" + splitElement(element) + ")");
+		log.info("\n" + "[Element] Failed to locate element ==> " + "(" + splitElement(element) + ")");
 		return false;
 	}
 	
@@ -110,7 +109,7 @@ public class Helper {
 	 * @param element
 	 */
 	public static void clickonElement(MobileElement element){
-		log.info("\n"+"click on element ==> " + "(" + splitElement(element) + ")" );
+		log.info("\n"+"[Element] click on element ==> " + "(" + splitElement(element) + ")" );
 		element.click();
 	}
 	
@@ -120,7 +119,7 @@ public class Helper {
 	 * @param text
 	 */
 	public static void inputText(MobileElement element,CharSequence... text){
-		log.info("\n"+"input text to element ==> " + "(" + splitElement(element) + ")");
+		log.info("\n"+"[Element] input text to element ==> " + "(" + splitElement(element) + ")");
 		element.sendKeys(text);
 	}
 	
@@ -232,21 +231,19 @@ public class Helper {
 
 	}
 	
-	public static boolean swipeUp(String str) {
+	public static boolean swipe_up_until_find(String str) {
 
-		int width = mdriver.manage().window().getSize().width;
-		int height = mdriver.manage().window().getSize().height;
+		int x = mdriver.manage().window().getSize().width;
+		int y = mdriver.manage().window().getSize().height;
 
 		for (int i = 0; i < 10; i++) {
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			mdriver.swipe(width / 2, height * 2 / 4, width / 2, height * 1 / 4, 500);
+			
 			if (mdriver.getPageSource().contains(str)) {
 				return true;
 			}
+
+			mdriver.swipe(x / 2, y * 2 / 4, x / 2, y * 1 / 4, 1000);
+			
 		}
 		return false;
 	}

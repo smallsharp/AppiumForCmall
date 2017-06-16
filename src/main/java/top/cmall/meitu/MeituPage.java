@@ -68,7 +68,7 @@ public class MeituPage {
 				assertTrue(false);
 			}
 
-			if (!Helper.swipeUp("3D3D")) {
+			if (!Helper.swipe_up_until_find("3D3D")) {
 				assertTrue(false, "没有找到3D");
 			}
 
