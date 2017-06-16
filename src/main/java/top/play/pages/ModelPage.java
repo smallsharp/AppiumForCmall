@@ -7,7 +7,10 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.lang3.ObjectUtils.Null;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.google.gson.JsonArray;
@@ -15,18 +18,20 @@ import com.google.gson.JsonObject;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AndroidFindBys;
 import top.base.appium.Helper;
+import top.base.http.JsonUtils;
 import top.base.utils.ImageUtil;
 import top.base.utils.LogUtil;
-import top.http.JsonUtils;
 
 public class ModelPage {
 
 	private AndroidDriver<MobileElement> mdriver;
+	
 	private static LogUtil log = new LogUtil(ModelPage.class);
+	
  	public ModelPage() {
 	}
+ 	
 	public ModelPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
 	}
@@ -110,10 +115,7 @@ public class ModelPage {
 	public void goto3DModelFromHome()  {
 		
 		log.info("exec:goto3DModelFromHome");
-		
-		mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		Helper.setDriver(mdriver);
-
+//		Helper.setDriver(mdriver);
 		try {
 			
 			if (!Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
@@ -129,7 +131,7 @@ public class ModelPage {
 
 			// 进入男装二级目录，包含：TEE，边框TEE，Polo衫等…
 			if (!Helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.PRODUCT_CLASSIFITION_ACTIVITY,"没有打开：男装的二级目录");
+				assertEquals(mdriver.currentActivity(), ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
 			}
 			
 			if (!Helper.waitElement(m_tee_native)) {
@@ -147,25 +149,24 @@ public class ModelPage {
 				loginPage.login2("18521035133", "111111");	
 				Thread.sleep(2000);
 				mdriver.tap(1, x/2, height/6 + y, 500);
-
 			}
 			
 			if (!Helper.waitActivity(ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.GOODS_WEB3DVIEW_ACTIVITY,
-						"没有打开GoodsWeb3dViewPagerActivity页面");
+				assertEquals(mdriver.currentActivity(), ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
 			}
 			
 			if (!Helper.waitElement(m_3dModel_native)) {
 				assertTrue(false, "3DModel is not displayed");
 			}
 			
-		} catch (Exception e) {
-			Helper.takeScreenShot("goto3DModelFromHome_error.jpg");
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-			assertTrue(false,"执行过程出现异常！");
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			Helper.takeScreenShot("goto3DModelFromHome_error.jpg");
+			assertTrue(false,"occurred error while running!");
 		}
-		
-		
 	}
 
 	/**
@@ -176,9 +177,6 @@ public class ModelPage {
 		
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelByColorAndGrade");
-		Helper.setDriver(mdriver);
-		mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
 		try {
 			int x = m_3dModel_native.getLocation().x;// 控件的左上角的x坐标
 			int y = m_3dModel_native.getLocation().y;// 控件的左上角的y坐标						
@@ -228,11 +226,14 @@ public class ModelPage {
 				}
 			}
 			
-		} catch (Exception e) {
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-			Helper.takeScreenShot("check3DModelByColorAndGrade_error.jpg");
-			assertTrue(false,"执行过程出现异常！");
-		} 
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			Helper.takeScreenShot("check3DModelByColorAndGrade.jpg");
+			assertTrue(false,"occurred error while running!");
+		}
 
 	}
 	
@@ -241,12 +242,11 @@ public class ModelPage {
 	 * 
 	 * @throws InterruptedException
 	 */
-	public void check3DModelGoodsList() throws InterruptedException{
+	public void check3DModelGoodsList() {
 		
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelGoodsList");
-		Helper.setDriver(mdriver);
-		mdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
 		try {
 			
 			Map<String, String> paramsMap = new HashMap<String, String>();
@@ -261,18 +261,13 @@ public class ModelPage {
 				if (i < 5) {
 					System.out.println("i:"+i);
 					m_goods_selector.get(i).click();
-
 				}else {
 					System.out.println("i:"+i);
-					
 					int x1 = m_goods_selector.get(3).getLocation().x;
 					int y1 = m_goods_selector.get(3).getLocation().y;
 					int x2 = m_goods_selector.get(4).getLocation().x;
 					int y2 = m_goods_selector.get(4).getLocation().y;
-					
 					mdriver.swipe(x2, y2, x1-20, y1, 500);
-					
-					System.out.println("swipe ~~~~");
 					m_goods_selector.get(4).click();
 				}
 
@@ -281,9 +276,13 @@ public class ModelPage {
 				}
 			}
 			
-		} catch (Exception e) {
-			Helper.takeScreenShot("check3DModelGoodsList_error.jpg");
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			Helper.takeScreenShot("check3DModelGoodsList.jpg");
+			assertTrue(false,"occurred error while running!");
 		}
 	}
 

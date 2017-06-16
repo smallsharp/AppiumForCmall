@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
+import org.eclipse.jetty.util.statistic.SampleStatistic;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -20,9 +21,12 @@ public class Helper {
 	static LogUtil log = new LogUtil(Helper.class);
 
 	private static AndroidDriver<MobileElement> mdriver;
-
-	public static AndroidDriver<MobileElement> getmDriver() {
-		return mdriver;
+	
+	public Helper(AndroidDriver<MobileElement> mdriver){
+		Helper.mdriver = mdriver;
+	}
+	
+	public Helper(){
 	}
 
 	public static void setDriver(AndroidDriver<MobileElement> mdriver) {
@@ -46,7 +50,7 @@ public class Helper {
 				return true;
 			}
 			try {
-				Thread.sleep(100);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -61,17 +65,42 @@ public class Helper {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public static boolean waitElement(MobileElement element) throws InterruptedException {
+	public static boolean waitElement(MobileElement element)  {
 		
-		for (int j = 0; j < 5; j++) {
+		for (int j = 0; j < 3; j++) {
 
 			log.info("\n" + "Waiting element to appear ==> " + "(" + splitElement(element) + ")");
 
 			if (element.isDisplayed()) {
 				log.info("\n"+"Found element ==> " +  "(" + splitElement(element) + ")");
-				Thread.sleep(500);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				return true;
 			}
+		}
+		log.info("\n" + "Failed to locate element ==> " + "(" + splitElement(element) + ")");
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @param activityName
+	 * @param element
+	 * @return
+	 * 
+	 */
+	public static boolean waitElement(String activityName,MobileElement element) {
+		
+		if (waitActivity(activityName)) {
+			
+			if (waitElement(element)) {
+				return true;
+			}
+			
 		}
 		return false;
 	}
@@ -104,6 +133,10 @@ public class Helper {
 		mdriver.pressKeyCode(androidkeycode);
 	}
 	
+	public static MobileElement findElementById(String id){
+		return mdriver.findElementById(id);
+	}
+	
 	/***
 	 * 切换WEB页面查找元素WEBVIEW、 NATIVE_APP
 	 */
@@ -114,7 +147,7 @@ public class Helper {
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 				mdriver.context(contextName);
-				log.info("\n"+"Swtich to Webview success :" + contextName);
+				log.info("\n"+"SwitchToWebView Success :" + contextName);
 				break;
 			}
 		}
@@ -139,7 +172,7 @@ public class Helper {
 	 * @param desc名
 	 * @return View
 	 */
-	public static MobileElement getViewbyUidesc(String name) {
+	public MobileElement getViewbyUidesc(String name) {
 		return mdriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
 	}
 
@@ -149,7 +182,7 @@ public class Helper {
 	 * @param text名
 	 * @return View
 	 */
-	public static MobileElement getViewbyUitext(String name) {
+	public MobileElement getViewbyUitext(String name) {
 		return mdriver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
 	}
 	
@@ -171,24 +204,6 @@ public class Helper {
 			e.printStackTrace();
 		}
 		log.info("\n" + "截图成功：" + screenShotName);
-	}
-
-	/***
-	 * 下滑1/4屏幕
-	 */
-	public static void slideDown() {
-		int x = mdriver.manage().window().getSize().width;
-		int y = mdriver.manage().window().getSize().height;
-		mdriver.swipe(x / 2, y * 3 / 10, x / 2, y * 7 / 10, 0);
-	}
-
-	/***
-	 * 左滑1/2屏幕
-	 */
-	public void slideLeft() {
-		int x = mdriver.manage().window().getSize().width;
-		int y = mdriver.manage().window().getSize().height;
-		mdriver.swipe(x / 4 * 3, y / 2, x / 4 * 1, y / 2, 0);
 	}
 
 	/***
@@ -215,6 +230,25 @@ public class Helper {
 			}
 		}
 
+	}
+	
+	public static boolean swipeUp(String str) {
+
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
+
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			mdriver.swipe(width / 2, height * 2 / 4, width / 2, height * 1 / 4, 500);
+			if (mdriver.getPageSource().contains(str)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 
@@ -250,4 +284,10 @@ public class Helper {
 		String str = element.toString().split("-> ")[1];
 		return str.substring(0, str.length() - 1);
 	}
+
+	public static void slideDown() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

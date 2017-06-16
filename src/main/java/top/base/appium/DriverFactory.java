@@ -81,10 +81,8 @@ public class DriverFactory {
 		
 		if (mdriver == null) {
 			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
-/*			appPackage = pro.getValue("appPackage");
-			appActivity = pro.getValue("appActivity");*/
 			deviceName = pro.getValue("deviceName_meizu");
-
+			
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
 			dc.setCapability("resetKeyboard", "True"); // 重置输入法
@@ -105,7 +103,44 @@ public class DriverFactory {
 				e.printStackTrace();
 			}
 
-//			checkEnvironment();
+			// 注册MyDriverListener监听事件
+			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
+			// 全局等待20秒
+			mdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+						
+			Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
+		}
+		return mdriver;
+	}
+	
+	
+	public AndroidDriver<MobileElement> initMeituDriver() {
+		
+		String deviceName = null;
+		
+		if (mdriver == null) {
+			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
+			deviceName = pro.getValue("deviceName_meizu");
+			
+			DesiredCapabilities dc = new DesiredCapabilities();
+			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
+			dc.setCapability("resetKeyboard", "True"); // 重置输入法
+			dc.setCapability("noReset", true); // 不需要再次安装
+			dc.setCapability("platformName", "Android");
+			dc.setCapability("deviceName", deviceName);
+			dc.setCapability("appPackage", "com.meitu.wheecam");
+			dc.setCapability("appActivity", "com.meitu.wheecam.ui.MainActivity");
+			
+			File classPath = new File(System.getProperty("user.dir"));
+			File app = new File(classPath, "apps/meitu.apk"); // 指定app的存放目录
+			dc.setCapability("app", app.getAbsolutePath());
+
+			try {
+				mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723"+"/wd/hub"), dc);
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
 			// 全局等待20秒

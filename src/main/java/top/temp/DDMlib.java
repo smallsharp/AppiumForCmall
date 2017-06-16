@@ -4,9 +4,6 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.imageio.ImageIO;
 import com.android.ddmlib.AdbCommandRejectedException;
 import com.android.ddmlib.AndroidDebugBridge;
@@ -22,68 +19,44 @@ import com.android.ddmlib.TimeoutException;
  */
 
 public class DDMlib {
-
-	public static IDevice device;
-
+	
+	IDevice device;
+	
 	public static void main(String[] args) {
-
-		AndroidDebugBridge.init(false); // 很重要
-		device = getDevice();
+		DDMlib ddMlib = new DDMlib();
+		ddMlib.test();
+	}
+	
+	
+	public void test(){
+		
+		device = this.getDevice();
 		System.out.println(device.getSerialNumber());
 		System.out.println(device.isOnline());
-		System.out.println(device.isOffline());
-
-		AndroidDebugBridge.init(false); //
-		DDMlib screenshot = new DDMlib();
-
-		for (int i = 0; i < 10; i++) {
-			Date date = new Date();
-			SimpleDateFormat df = new SimpleDateFormat("MM-dd-HH-mm-ss");
-			String nowTime = df.format(date);
-			screenshot.getScreenShot(device, "Robotium" + nowTime);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		System.out.println(device.getState());
 
 	}
 
-	private static IDevice getDevice() {
-		IDevice device = null;
+	private IDevice getDevice() {
+		
+		AndroidDebugBridge.init(false);
 		AndroidDebugBridge bridge = AndroidDebugBridge.createBridge();
-		waitDevicesList(bridge);
 		try {
-
-			IDevice devices[] = bridge.getDevices();
-			if (devices.length >= 0) {
-				device = devices[0];
+			Thread.sleep(1000);
+			//Calling getDevices() right after createBridge(String, boolean) will generally result in an empty list.
+			if (bridge.hasInitialDeviceList()) {
+				IDevice devices[] = bridge.getDevices();
+				if (devices.length >= 0) {
+					device = devices[0];
+				}
+				return device;
 			}
-
-		} catch (Exception e) {
-			System.out.println("没有检测到Android设备");
+			System.out.println("没有检测到设备");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 
-		return device;
-
-	}
-
-	private static void waitDevicesList(AndroidDebugBridge bridge) {
-
-		int count = 0;
-		while (bridge.hasInitialDeviceList() == false) {
-			try {
-				Thread.sleep(500);
-				count++;
-			} catch (InterruptedException e) {
-			}
-			if (count > 60) {
-				System.err.print("等待获取设备超时");
-				break;
-			}
-		}
+		return null;
 	}
 
 	private BufferedImage image = null;
@@ -93,13 +66,10 @@ public class DDMlib {
 		try {
 			rawScreen = device.getScreenshot();
 		} catch (TimeoutException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (AdbCommandRejectedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (rawScreen != null) {

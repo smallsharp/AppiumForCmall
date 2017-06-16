@@ -13,6 +13,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import top.base.appium.DriverFactory;
+import top.base.appium.Helper;
 import top.base.appium.TestNGListener;
 
 @Listeners(TestNGListener.class)
@@ -33,6 +34,7 @@ public class PlaySuite {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 //		mdriver = DriverFactory.getInstance().initAndroidDriver(url);
 		mdriver= DriverFactory.getInstance().initAndroidDriver();
+		Helper.setDriver(mdriver);
 	}
 
 	@AfterClass
@@ -57,16 +59,16 @@ public class PlaySuite {
 
 	@Test(description = "3d模型列表展示")
 	public void testCheck3DModelGoodsList() throws InterruptedException {
-		ModelPage diyPage = new ModelPage(mdriver);
-		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
-		diyPage.check3DModelGoodsList();
+		ModelPage modelPage = new ModelPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),modelPage);
+		modelPage.check3DModelGoodsList();
 	}
 	
 	@Test(description = "3d模型展示-不同的颜色和等级")
 	public void testCheck3DModelByColorAndGrade() throws InterruptedException {
-		ModelPage diyPage = new ModelPage(mdriver);
-		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),diyPage);
-		diyPage.check3DModelByColorAndGrade();
+		ModelPage modelPage = new ModelPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),modelPage);
+		modelPage.check3DModelByColorAndGrade();
 	}
 
 	@Test(description = "个人设置")

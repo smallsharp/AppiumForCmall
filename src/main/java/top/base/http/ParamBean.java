@@ -1,4 +1,4 @@
-package top.http;
+package top.base.http;
 
 /**
  * 传入参数的bean文件

@@ -2,6 +2,7 @@ package top.play.pages;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+import java.util.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
@@ -17,18 +18,18 @@ import top.base.appium.Helper;
  */
 public class LoginPage {
 	
-	private AndroidDriver<MobileElement> driver;
-	
+	private AndroidDriver<MobileElement> mdriver;
+		
 	public LoginPage() {
 		// 这个空的构造方式是必须要的,init 页面需要
 	}
 	
 	public LoginPage(AndroidDriver<MobileElement> driver) {
-		this.driver = driver;
+		this.mdriver = driver;
 	}
 	
 	public void setDriver(AndroidDriver<MobileElement> driver) {
-		this.driver = driver;
+		this.mdriver = driver;
 	}
 	
 	@FindBy(id = "com.play.android:id/btn_jump")
@@ -64,18 +65,14 @@ public class LoginPage {
 	 */
 	public void login(String mobile, String password) {
 		
-		Helper.setDriver(driver);
-
 		try {
-			
-			String firstActivity = driver.currentActivity();
-			
+			String firstActivity = mdriver.currentActivity();
 			if (firstActivity.contains(ActivityList.HOME_ACTIVITY)) {
 				e_my.click();// 点击：我的
 			}
 			
 			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+				assertEquals(mdriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
 			
 			e_account.click();
@@ -86,12 +83,15 @@ public class LoginPage {
 			e_login.click();
 			
 			if (!Helper.waitActivity(firstActivity)) {
-				assertEquals(driver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
+				assertEquals(mdriver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
 			}
 
-		} catch (Exception e) {
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-			assertTrue(false,"登录用例执行失败！");
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			assertTrue(false,"occurred error while running!");
 		}
 
 	}
@@ -103,73 +103,45 @@ public class LoginPage {
 	 */
 	public void login2(String mobile, String password) {
 		
-		Helper.setDriver(driver);
-
 		try {
 			
-			String firstActivity = driver.currentActivity();
+			String previousActivity = mdriver.currentActivity();
 			
-			if (firstActivity.contains(ActivityList.HOME_ACTIVITY)) {
+			if (previousActivity.contains(ActivityList.HOME_ACTIVITY)) {
 				e_my.click();// 点击：我的
 			}
-			
+
 			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+				assertEquals(mdriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
 			}
 			
-			MobileElement m_accout = driver.findElementById("com.play.android:id/tv_account");
+			MobileElement m_accout = mdriver.findElementById("com.play.android:id/tv_account");
 			m_accout.click();
 			
-			MobileElement m_moblie = driver.findElementById("com.play.android:id/et_account");
-//			m_moblie.sendKeys(mobile);
+			MobileElement m_moblie = mdriver.findElementById("com.play.android:id/et_account");
+			
 			Helper.inputText(m_moblie, mobile);
-			Reporter.log("输入手机号："+ mobile);
+			Reporter.log("输入手机号："+ mobile,true);
 			
-			MobileElement m_password = driver.findElementById("com.play.android:id/et_password");
-//			m_password.sendKeys(password);
+			MobileElement m_password = mdriver.findElementById("com.play.android:id/et_password");
 			Helper.inputText(m_password, password);
-			Reporter.log("输入密码："+ password);
+			Reporter.log("输入密码："+ password,true);
 			
-			MobileElement m_login = driver.findElementById("com.play.android:id/btn_login");
-//			m_login.click();
+			MobileElement m_login = mdriver.findElementById("com.play.android:id/btn_login");
 			Helper.clickonElement(m_login);
 			
-			if (!Helper.waitActivity(firstActivity)) {
-				assertEquals(driver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
+			if (!Helper.waitActivity(previousActivity)) {
+				assertEquals(mdriver.currentActivity(), previousActivity,"登录成功后，应该返回:"+previousActivity);
 			}
 
-		} catch (Exception e) {
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			assertTrue(false,"occurred error while running!");
 		}
 
 	}
 	
-	
-	
-	public void signIn(){
-		
-		try {
-			
-			e_my.click();// 点击：我的
-			Helper.setDriver(driver);
-			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(driver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
-			}
-			
-			tv_sign_in.click();
-			// 已经勾选，应该为True
-			System.out.println("Shoule be true:"+cb_confrim.getAttribute("checked"));
-
-			cb_confrim.click();
-			// 去掉勾选，应该为False
-			System.out.println("Shoule be false:"+cb_confrim.getAttribute("checked"));
-
-			Thread.sleep(2000);
-			
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
 }

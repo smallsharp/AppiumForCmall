@@ -62,7 +62,7 @@ public class TestNGListener extends TestListenerAdapter {
 		String screenShotName = tr.getMethod().getMethodName() + "_"
 				+ getCurrentDateTime() + ".jpg";
 		
-		Helper.takeScreenShot(screenShotName);
+//		Helper.takeScreenShot(screenShotName);
 		
 		Reporter.log("\n"+"<img src=" + "test-output\\screenshots\\"+screenShotName + " /img>", true);// 将截图显示在报告中
 	}
