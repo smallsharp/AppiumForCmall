@@ -34,7 +34,12 @@ public class DDMlib {
 		System.out.println(device.getSerialNumber());
 		System.out.println(device.isOnline());
 		System.out.println(device.getState());
-
+		// 结合 adb shell cat /system/build.prop 的key使用
+		device.getProperties();
+		System.out.println(device.getProperty("ro.product.brand"));
+		System.out.println(device.getProperty("ro.product.cpu.abi"));
+		System.out.println(device.getProperty("ro.product.cpu.abi2"));
+		System.out.println(device.getProperty("dalvik.vm.heapsize"));
 	}
 
 	private IDevice getDevice() {

@@ -27,7 +27,7 @@ public class MeituSuite {
 	}
 
 	@AfterClass
-	public void teardown() throws InterruptedException {
+	public void teardown() {
 
 		if (mdriver != null) {
 			mdriver.quit();
@@ -36,12 +36,31 @@ public class MeituSuite {
 	}
 
 	
-	@Test
-	public void test(){
-		MeituPage meituPage = new MeituPage(mdriver);
+	@Test(priority=10)
+	public void test_goto3DModel(){
 		
+		MeituPage meituPage = new MeituPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 10 ,TimeUnit.SECONDS), meituPage);
 		meituPage.goto3DModel();
+//		meituPage.goto3DModel_by_xpath();
+	}
+	
+	@Test(priority=20)
+	public void test_checkModel_WithoutEdit(){
+		
+		MeituPage meituPage = new MeituPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 10 ,TimeUnit.SECONDS), meituPage);
+		meituPage.checkModel_WithoutEdit();
+		
+	}
+	
+	@Test(priority=30)
+	public void test_checkModel_WithEdit(){
+		
+		MeituPage meituPage = new MeituPage(mdriver);
+		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 10 ,TimeUnit.SECONDS), meituPage);
+		meituPage.checkModel_WithEdit();
+		
 	}
 
 }

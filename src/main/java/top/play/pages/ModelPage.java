@@ -173,7 +173,7 @@ public class ModelPage {
 	 * 通过切换模型的档次 和 颜色，查看模型的展示
 	 * @throws InterruptedException 
 	 */
-	public void check3DModelByColorAndGrade() throws InterruptedException {
+	public void check3DModelByColorAndGrade() {
 		
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelByColorAndGrade");

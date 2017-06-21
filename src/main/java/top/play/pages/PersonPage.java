@@ -39,7 +39,7 @@ public class PersonPage {
 
 		if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
-			Helper.swipeUpUntilFind("退出登录");
+//			Helper.swipeUpUntilFind("退出登录");
 			e_logout.click();
 			e_quit_yes.click();
 			e_my.click();

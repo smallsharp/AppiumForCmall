@@ -4,6 +4,8 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
 import io.appium.java_client.MobileElement;
@@ -130,9 +132,14 @@ public class DriverFactory {
 			dc.setCapability("deviceName", deviceName);
 			dc.setCapability("appPackage", "com.meitu.wheecam");
 			dc.setCapability("appActivity", "com.meitu.wheecam.ui.MainActivity");
+			dc.setCapability("recreateChromeDriverSessions", true);
+/*			
+			 ChromeOptions options2 = new ChromeOptions();
+             options2.setExperimentalOption("androidProcess", "WEBVIEW_com.meitu.wheecam");
+             dc.setCapability(ChromeOptions.CAPABILITY, options2);*/
 			
 			File classPath = new File(System.getProperty("user.dir"));
-			File app = new File(classPath, "apps/meitu.apk"); // 指定app的存放目录
+			File app = new File(classPath, "apps/meiyin.apk"); // 指定app的存放目录
 			dc.setCapability("app", app.getAbsolutePath());
 
 			try {
@@ -143,8 +150,6 @@ public class DriverFactory {
 
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
-			// 全局等待20秒
-			mdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 						
 			Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
 		}

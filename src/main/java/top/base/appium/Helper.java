@@ -2,14 +2,13 @@ package top.base.appium;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
-import org.eclipse.jetty.util.statistic.SampleStatistic;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import com.android.ddmlib.AndroidDebugBridge;
+import com.android.ddmlib.IDevice;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -25,9 +24,6 @@ public class Helper {
 	public Helper(AndroidDriver<MobileElement> mdriver){
 		Helper.mdriver = mdriver;
 	}
-	
-	public Helper(){
-	}
 
 	public static void setDriver(AndroidDriver<MobileElement> mdriver) {
 		Helper.mdriver = mdriver;
@@ -42,20 +38,21 @@ public class Helper {
 	 */
 	public static boolean waitActivity(String activityName) {
 		
-		log.info("\n"+"[Activity] Waiting activity to appear ==> " + "(" + activityName + ")");
-
-		for (int i = 0; i < 5; i++) {
-			if (activityName.contains(mdriver.currentActivity())) {
-				log.info("\n" + "[Activity] Found activity ==> "+ "(" + activityName + ")");
-				return true;
+		log.info("\n"+"[Activity] Waiting activity ==> " + "(" + activityName + ")");
+		try {
+			for (int i = 0; i < 10; i++) {
+				Thread.sleep(500);
+				if (activityName.contains(mdriver.currentActivity())) {
+					log.info("\n" + "[Activity] Found activity ==> " + "(" + activityName + ")");
+					return true;
+				}
 			}
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			Thread.sleep(500);
+			log.info("\n"+"[Activity] ActivityNotFound:" + "(" + activityName + ")" +"\n"+"CurrentActivity is:" + "(" + mdriver.currentActivity() + ")");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
-		log.info("\n"+"[Activity] ActivityNotFound:" + "(" + activityName + ")" +"\n"+"CurrentActivity is:" + "(" + mdriver.currentActivity() + ")");
 		return false;
 	}
 
@@ -69,7 +66,7 @@ public class Helper {
 		
 		for (int j = 0; j < 3; j++) {
 
-			log.info("\n" + "[Element] Waiting element to appear ==> " + "(" + splitElement(element) + ")");
+			log.info("\n" + "[Element] Waiting element ==> " + "(" + splitElement(element) + ")");
 
 			if (element.isDisplayed()) {
 				log.info("\n"+"[Element] Found element ==> " +  "(" + splitElement(element) + ")");
@@ -81,7 +78,7 @@ public class Helper {
 				return true;
 			}
 		}
-		log.info("\n" + "[Element] Failed to locate element ==> " + "(" + splitElement(element) + ")");
+		log.info("\n" + "[Element] ElementNotFound ==> " + "(" + splitElement(element) + ")");
 		return false;
 	}
 	
@@ -119,7 +116,7 @@ public class Helper {
 	 * @param text
 	 */
 	public static void inputText(MobileElement element,CharSequence... text){
-		log.info("\n"+"[Element] input text to element ==> " + "(" + splitElement(element) + ")");
+		log.info("\n"+"[Element] input text ==> " + "(" + splitElement(element) + ")");
 		element.sendKeys(text);
 	}
 	
@@ -132,24 +129,24 @@ public class Helper {
 		mdriver.pressKeyCode(androidkeycode);
 	}
 	
-	public static MobileElement findElementById(String id){
-		return mdriver.findElementById(id);
-	}
-	
 	/***
 	 * 切换WEB页面查找元素WEBVIEW、 NATIVE_APP
 	 */
-	public static void switchToWebView() {
+	public static void context_to_webview() {
 
 		Set<String> ContextHandles = mdriver.getContextHandles();
 		log.info("\n"+"All ContextHandles :" + ContextHandles);
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 				mdriver.context(contextName);
-				log.info("\n"+"SwitchToWebView Success :" + contextName);
+				log.info("\n"+"[Webview] context_to_webview success :" + contextName);
 				break;
 			}
 		}
+	}
+	
+	public static void context_to_native(){
+		mdriver.context("NATIVE_APP");
 	}
 
 	/***
@@ -171,7 +168,7 @@ public class Helper {
 	 * @param desc名
 	 * @return View
 	 */
-	public MobileElement getViewbyUidesc(String name) {
+	public static MobileElement findElementByDesc(String name) {
 		return mdriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
 	}
 
@@ -181,7 +178,7 @@ public class Helper {
 	 * @param text名
 	 * @return View
 	 */
-	public MobileElement getViewbyUitext(String name) {
+	public static MobileElement findElementByText(String name) {
 		return mdriver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
 	}
 	
@@ -193,7 +190,6 @@ public class Helper {
 	public static void takeScreenShot(String screenShotName) {
 
 		String path = "test-output\\screenshots\\";
-		
 		File screenShot = mdriver.getScreenshotAs(OutputType.FILE);
 
 		try {
@@ -217,38 +213,53 @@ public class Helper {
 		mdriver.swipe(x / 4 * 3, y / 10 * i, x / 4 * 2, y / 10 * i, 0);
 	}
 
-	public static void swipeUpUntilFind(String str) {
+	/**
+	 * 向上滑动1/3屏幕高度
+	 */
+	public static void swipeUp() {
 
 		int width = mdriver.manage().window().getSize().width;
 		int height = mdriver.manage().window().getSize().height;
-
-		for (int i = 0; i < 5; i++) {
-			mdriver.swipe(width / 2, height * 7 / 10, width / 2, height * 3 / 10, 500);
-			if (mdriver.getPageSource().contains(str)) {
-				break;
-			}
+		mdriver.swipe(width / 2, height * 2 / 3, width / 2, height * 1 / 3, 1000);
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-
 	}
 	
-	public static boolean swipe_up_until_find(String str) {
-
-		int x = mdriver.manage().window().getSize().width;
-		int y = mdriver.manage().window().getSize().height;
-
-		for (int i = 0; i < 10; i++) {
-			
-			if (mdriver.getPageSource().contains(str)) {
-				return true;
-			}
-
-			mdriver.swipe(x / 2, y * 2 / 4, x / 2, y * 1 / 4, 1000);
-			
+	/**
+	 * 滑动到指定元素高度并点击，需要在webview下执行
+	 * @param element
+	 */
+	public static void scrollAndClick(MobileElement element) {
+		int elementPosition = element.getLocation().getY();
+		String js = String.format("window.scroll(0, %s)", elementPosition);
+		((JavascriptExecutor) mdriver).executeScript(js);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return false;
+		element.click();
+	}
+	
+	/**
+	 * 滑动到指定元素高度，需要在webview下执行
+	 * @param element
+	 */
+	public static void scrollToElement(MobileElement element) {
+		
+		int elementPosition = element.getLocation().getY();
+		String js = String.format("window.scroll(0, %s)", elementPosition);
+		mdriver.executeScript(js);
 	}
 
-
+	/**
+	 * 回到主页，适用：Play
+	 */
 	public static void backToHomeActivity() {
 		
 		try {
@@ -256,9 +267,7 @@ public class Helper {
 			if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
 				return;
 			}
-			
 			log.info("\n" + "Run：backToHomeActivity");
-
 			for (int i = 0; i < 6; i++) {
 				
 				if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
@@ -273,6 +282,29 @@ public class Helper {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * 返回指定页面
+	 */
+	public static void backToActivity(String ActivityName) {
+		
+		try {
+			if (ActivityName.contains(mdriver.currentActivity())) {
+				return;
+			}
+			
+			for (int i = 0; i < 6; i++) {
+				if (ActivityName.contains(mdriver.currentActivity())) {
+					return;
+				}
+				Thread.sleep(2500);
+				pressKeyCode(AndroidKeyCode.BACK);
+			}
+
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	// 获取操作的控件字符串
 	private static String splitElement(MobileElement element) {
@@ -281,10 +313,157 @@ public class Helper {
 		String str = element.toString().split("-> ")[1];
 		return str.substring(0, str.length() - 1);
 	}
-
-	public static void slideDown() {
-		// TODO Auto-generated method stub
+	
+	public static void tap_StartBuilt(){
 		
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
+		System.out.println("width:"+width);
+		System.out.println("height:"+height);
+
+		if (height==1280) {
+			mdriver.tap(1, width / 2, height / 1280 * 1250, 500);
+			return;
+		}
+		
+		if (height==1776) {
+			mdriver.tap(1, width / 2, height / 1776 * 1710, 500);
+			return;
+		}
+		
+		if (height==1920) {
+			mdriver.tap(1, width / 2, height / 1920 * 1880, 500);
+			return;
+		}
 	}
+	
+	public static void tap_White(){
+		
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
+		if (height==1280) {
+			mdriver.tap(1, width / 720 * 92, height / 1280 * 850, 500);
+			return;
+		}
+		
+		if (height==1920) {
+			mdriver.tap(1, width / 100 * 13, height / 80 * 53, 500);
+			return;
+		}
+		if (height==1776 && width==1080) {
+			mdriver.tap(1, width / 1080 * 138, height / 1776 * 1126, 500);
+			return;
+		}
+	}
+	
+	public static void tap_S(){
+		
+		int width = mdriver.manage().window().getSize().width;
+		int height = mdriver.manage().window().getSize().height;
+		
+		if (height==1280) {
+			mdriver.tap(1, width / 720 * 92, height / 1280 * 980, 500);
+			return;
+		}
+		
+		if (height==1920) {
+			mdriver.tap(1, width / 100 * 13, height / 30 * 23, 500);
+			return;
+		}
+		
+		if (height==1776 && width==1080) {
+			mdriver.tap(1, width / 1080 * 138, height / 1776 * 1328, 500);
+			return;
+		}
+	}
+	
+	public static boolean isPageLoaded(){
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) mdriver;
+		String status = (String) jsExecutor.executeScript("var status=document.readyState;return status");
+		if (status.contains("complete")) {
+			return true;
+		}
+		
+		int i = 0;
+		while (!status.contains("complete")) {
+			i++;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (i>10) {
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * 等待
+	 * @param millis
+	 */
+	public static void pause(long millis){
+		log.info("执行了等待");
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 等待
+	 * @param millis
+	 */
+	public static void pause_default_time(){
+		pause(2000);
+	}
+	
+	public static int getDeviceWidth(){
+		int width = mdriver.manage().window().getSize().width;
+		return width;
+	}
+	
+	public static int getDeviceHeight(){
+		int height = mdriver.manage().window().getSize().height;
+		return height;
+	}
+	
+	static IDevice device;
+	private static IDevice getDevice() {
+		
+		AndroidDebugBridge.init(false);
+		AndroidDebugBridge bridge = AndroidDebugBridge.createBridge();
+		try {
+			Thread.sleep(1000);
+			//Calling getDevices() right after createBridge(String, boolean) will generally result in an empty list.
+			if (bridge.hasInitialDeviceList()) {
+				IDevice devices[] = bridge.getDevices();
+				if (devices.length >= 0) {
+					device = devices[0];
+				}
+				return device;
+			}
+			System.out.println("没有检测到设备");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+	
+	
+	public static String getDeviceName(){
+		
+		if (device == null) {
+			device = getDevice();
+		}
+		String brand =device.getProperty("ro.product.brand");
+		String name = device.getSerialNumber();
+		return brand +"_"+ name;
+	}
+	
 	
 }

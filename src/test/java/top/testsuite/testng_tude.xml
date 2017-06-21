@@ -6,7 +6,9 @@
     <test name="测试登录退出" preserver-order="true" >
 
         <classes>
-            <class name="top.tude.pages.TestSuite_Tude"> 
+            <class name="top.tude.pages.TestSuite_Tude1"> 
+            <class name="top.tude.pages.TestSuite_Tude2"> 
+                
                 <parameter name="mobile" value="18521035133"></parameter>
                 <parameter name="password" value="111111"></parameter>
                 <methods>
