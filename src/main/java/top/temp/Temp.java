@@ -17,6 +17,7 @@ public class Temp {
 		File imageB = new File(Constant.actul_path,"man_tee_act2.png");
 		
 		ImageUtil.getSamePercentFrom(imageA, imageB);*/
+		
 		try {
 			
 			String shoot = "adb shell screencap -p /sdcard/screen2.png";
