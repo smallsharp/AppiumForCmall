@@ -13,7 +13,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import top.base.utils.LogUtil;
-import top.play.pages.ActivityList;
+import top.play.pages.Play_ActivityList;
 
 public class Helper {
 
@@ -264,13 +264,13 @@ public class Helper {
 		
 		try {
 			
-			if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+			if (Play_ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
 				return;
 			}
 			log.info("\n" + "Run：backToHomeActivity");
 			for (int i = 0; i < 6; i++) {
 				
-				if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+				if (Play_ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
 					return;
 				}
 				Thread.sleep(2500);

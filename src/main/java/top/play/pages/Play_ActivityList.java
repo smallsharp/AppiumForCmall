@@ -1,6 +1,6 @@
 package top.play.pages;
 
-public final class ActivityList {
+public final class Play_ActivityList {
 	
 	public static final String SPLASH_ACTIVITY = ".activity.SplashActivity";
 	

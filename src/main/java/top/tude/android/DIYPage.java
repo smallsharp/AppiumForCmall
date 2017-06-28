@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import io.appium.java_client.android.AndroidDriver;
 import top.base.appium.DriverFactory;
 import top.base.appium.Helper;
-import top.play.pages.ActivityList;
+import top.play.pages.Play_ActivityList;
 
 public class DIYPage {
 	
@@ -44,13 +44,13 @@ public class DIYPage {
 	private WebElement m_thirt;// 短袖
 	
 	public void buyMenWear(){
-		if (Helper.waitActivity(ActivityList.VIDEO_ACTIVITY)) {
+		if (Helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
-		if(Helper.waitActivity(ActivityList.HOME_ACTIVITY)){
+		if(Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)){
 			m_productlist.get(m_productlist.size()-1).click();
 			
-			if (Helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+			if (Helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
 				m_tee.click();
 				
 //				Assist.pageShift();

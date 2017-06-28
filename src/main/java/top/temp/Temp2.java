@@ -1,6 +1,6 @@
 package top.temp;
 
-import top.play.pages.ActivityList;
+import top.play.pages.Play_ActivityList;
 
 public class Temp2 {
 	
@@ -9,7 +9,7 @@ public class Temp2 {
 		for (int i = 0; i < 6; i++) {
 			
 			System.out.println(i+":hhhh");
-			if (ActivityList.HOME_ACTIVITY.contains(".activity.main.HomeActivity")) {
+			if (Play_ActivityList.HOME_ACTIVITY.contains(".activity.main.HomeActivity")) {
 			}
 			
 			System.out.println("2222222222");
@@ -17,7 +17,7 @@ public class Temp2 {
 		}
 		
 		String string = "com.play.android.activity.member.LoginActivity";
-		System.out.println(string.equals(ActivityList.LOGIN_ACTIVITY));
+		System.out.println(string.equals(Play_ActivityList.LOGIN_ACTIVITY));
 	}
 
 }

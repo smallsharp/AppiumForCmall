@@ -6,7 +6,7 @@
     <test name="测试3D模型展示">
 
         <classes>
-            <class name="top.play.pages.PlaySuite" > 
+            <class name="top.base.appium.Test" > 
                 <methods>
                        <include name="testCheck3DModelGoodsList" description="" />
                        <include name="testCheck3DModelByColorAndGrade" />

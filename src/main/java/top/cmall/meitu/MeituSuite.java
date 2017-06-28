@@ -11,7 +11,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import top.base.appium.DriverFactory;
-import top.base.appium.Helper;
 import top.base.appium.Helper2;
 import top.base.appium.TestNGListener;
 
@@ -19,14 +18,12 @@ import top.base.appium.TestNGListener;
 public class MeituSuite {
 
 	private AndroidDriver<MobileElement> mdriver = null;
-	Helper2 helper;
+	private Helper2 helper;
 
 	@BeforeClass
 	public void setup() {
-		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
+		Reporter.log("========== 正在准备测试环境，请稍后 ==========", true);
 		mdriver= DriverFactory.getInstance().initMeituDriver();
-		helper = new Helper2(mdriver);
-		Helper.setDriver(mdriver);
 	}
 
 	@AfterClass

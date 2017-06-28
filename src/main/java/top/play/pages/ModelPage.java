@@ -118,9 +118,9 @@ public class ModelPage {
 //		Helper.setDriver(mdriver);
 		try {
 			
-			if (!Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
+			if (!Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 				Helper.backToHomeActivity();
-				assertEquals(mdriver.currentActivity(), ActivityList.HOME_ACTIVITY);
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.HOME_ACTIVITY);
 			}
 			
 			if (!(m_sdv_image.size() > 0)) {
@@ -130,8 +130,8 @@ public class ModelPage {
 			m_sdv_image.get(1).click();
 
 			// 进入男装二级目录，包含：TEE，边框TEE，Polo衫等…
-			if (!Helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
+			if (!Helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
 			}
 			
 			if (!Helper.waitElement(m_tee_native)) {
@@ -143,7 +143,7 @@ public class ModelPage {
 			int height = m_tee_native.getSize().getHeight();
 			mdriver.tap(1, x/2, height/6 + y, 500);
 			
-			if (Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
+			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				
 				LoginPage loginPage = new LoginPage(mdriver);
 				loginPage.login2("18521035133", "111111");	
@@ -151,8 +151,8 @@ public class ModelPage {
 				mdriver.tap(1, x/2, height/6 + y, 500);
 			}
 			
-			if (!Helper.waitActivity(ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
+			if (!Helper.waitActivity(Play_ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
 			}
 			
 			if (!Helper.waitElement(m_3dModel_native)) {

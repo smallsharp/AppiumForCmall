@@ -67,12 +67,12 @@ public class LoginPage {
 		
 		try {
 			String firstActivity = mdriver.currentActivity();
-			if (firstActivity.contains(ActivityList.HOME_ACTIVITY)) {
+			if (firstActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
 				e_my.click();// 点击：我的
 			}
 			
-			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+			if (!Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.LOGIN_ACTIVITY);
 			}
 			
 			e_account.click();
@@ -107,12 +107,12 @@ public class LoginPage {
 			
 			String previousActivity = mdriver.currentActivity();
 			
-			if (previousActivity.contains(ActivityList.HOME_ACTIVITY)) {
+			if (previousActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
 				e_my.click();// 点击：我的
 			}
 
-			if (!Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
-				assertEquals(mdriver.currentActivity(), ActivityList.LOGIN_ACTIVITY);
+			if (!Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.LOGIN_ACTIVITY);
 			}
 			
 			MobileElement m_accout = mdriver.findElementById("com.play.android:id/tv_account");

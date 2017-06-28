@@ -51,21 +51,21 @@ public class PlaySuite {
 
 	@Test(description = "通过账号密码登录")
 	@Parameters({ "mobile", "password" }) // 参数名称需要和xml中对应
-	public void testLogin(String mobile, String password) throws InterruptedException {
+	public void testLogin(String mobile, String password) {
 		LoginPage loginPage = new LoginPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS), loginPage);
 		loginPage.login(mobile, password);
 	}
 
 	@Test(description = "3d模型列表展示")
-	public void testCheck3DModelGoodsList() throws InterruptedException {
+	public void testCheck3DModelGoodsList() {
 		ModelPage modelPage = new ModelPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),modelPage);
 		modelPage.check3DModelGoodsList();
 	}
 	
 	@Test(description = "3d模型展示-不同的颜色和等级")
-	public void testCheck3DModelByColorAndGrade() throws InterruptedException {
+	public void testCheck3DModelByColorAndGrade() {
 		ModelPage modelPage = new ModelPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS),modelPage);
 		modelPage.check3DModelByColorAndGrade();

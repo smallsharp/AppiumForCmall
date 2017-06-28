@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import top.base.appium.Helper;
-import top.play.pages.ActivityList;
+import top.play.pages.Play_ActivityList;
 
 /**
  * PO模式
@@ -41,20 +41,20 @@ public class LoginPage {
 
 		boolean result = false;
 
-		if (Helper.waitActivity(ActivityList.VIDEO_ACTIVITY)) {
+		if (Helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
 
-		if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
+		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
-			if (Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
+			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				// 点击：账号密码登录
 				e_account.click();
 				e_molibe.sendKeys(mobile);
 				e_password.sendKeys(password);
 				e_login.click();
 				// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
-				if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
+				if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

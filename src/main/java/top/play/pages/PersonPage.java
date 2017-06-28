@@ -37,13 +37,13 @@ public class PersonPage {
 		
 		boolean result = false;
 
-		if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
+		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 //			Helper.swipeUpUntilFind("退出登录");
 			e_logout.click();
 			e_quit_yes.click();
 			e_my.click();
-			if (Helper.waitActivity(ActivityList.LOGIN_ACTIVITY)) {
+			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				result = true;
 			}
 		}
@@ -56,7 +56,7 @@ public class PersonPage {
 	public void add_Delivery_Address(){
 		boolean result = false;
 
-		if (Helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
+		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_btn_address.click();
 		}
