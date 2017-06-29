@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- 
+	1.多个类的时候，只需要写一个BeforeSuite 和 AfterSuite，
+	2.如果是多个test标签，suite中会在每个test中 执行BeforeTest 和 AfterTest
+ -->
+<suite name="测试testNg 各个标签，已经多类同时进行的顺序" preserve-order="true" >
+    
+    <test name="test1" >
+        <classes>
+            <class name="top.temp.TestNgDemo2"></class>
+            <class name="top.temp.BaseDemo"/> 
+        </classes>
+    </test>
+    
+    <test name="test2">
+        <classes>
+            <class name="top.temp.TestNgDemo2"></class>
+            <class name="top.temp.BaseDemo"/> 
+        </classes>
+    </test>
+</suite>
