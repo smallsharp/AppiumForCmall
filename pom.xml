@@ -92,7 +92,8 @@
 					<source>1.7</source> 
 					<target>1.7</target> 
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/java/top/testsuite/testng_play.xml</suiteXmlFile>
+				   <!-- <suiteXmlFile>res/${xmlFileName}</suiteXmlFile> -->
+						<suiteXmlFile>src/test/java/test-suite/testng_play.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					 <properties>
                         <property>

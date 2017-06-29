@@ -6,7 +6,7 @@
     <test name="测试登录" preserve-order="true">
 
         <classes>
-            <class name="top.testcases.TestCase_Model" > 
+            <class name="com.cmall.testcases.TestCase_Model" > 
                 <methods>
                 <parameter name="mobile" value="18521035133"></parameter>
                 <parameter name="password" value="111111"></parameter>
@@ -20,13 +20,14 @@
     
     <test name="测试退出">
     	<classes>
-    		<class name="top.testcases.TestCase_Personal">
+    		<class name="com.cmall.testcases.TestCase_Personal">
     			<methods>
     				<include name="testLogout"></include>
     			</methods>
     		</class>
     	</classes>
     </test>
+    
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
