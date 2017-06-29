@@ -32,8 +32,6 @@ public class PersonModifyPage {
 	@FindBy(id="com.tude.android:id/btn_save")
 	private WebElement e_save;// 个人设置-保存
 	
-	
-	
 	/**
 	 * 修改个人信息
 	 */

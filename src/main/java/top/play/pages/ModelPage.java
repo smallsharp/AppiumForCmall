@@ -8,9 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.lang3.ObjectUtils.Null;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.google.gson.JsonArray;
@@ -115,7 +112,6 @@ public class ModelPage {
 	public void goto3DModelFromHome()  {
 		
 		log.info("exec:goto3DModelFromHome");
-//		Helper.setDriver(mdriver);
 		try {
 			
 			if (!Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {

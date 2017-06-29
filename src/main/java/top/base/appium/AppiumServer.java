@@ -15,6 +15,11 @@ public class AppiumServer {
 //		killTask("node.exe");
 	}
 
+	/**
+	 * 
+	 * @param port 默认4723，--bootstrap-port 默认4724，--chromedriver-port：默认9515
+	 * @param udid
+	 */
 	public void runServer(int port, String udid) {
 		int bpport = port + 1;
 		int chromeport = port + 4792;
@@ -24,7 +29,7 @@ public class AppiumServer {
 		try {
 			Process process = Runtime.getRuntime().exec(cmd);
 			int value= process.waitFor();
-			System.out.println("process.waitFor():"+value);
+//			System.out.println("process.waitFor():"+value);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
@@ -70,6 +75,9 @@ public class AppiumServer {
 		return process;
 	}
 	
+	/**
+	 * 读取数据
+	 */
 	private void getRuntimeData(){
 		
 		Process process = runCommand2("adb devices");

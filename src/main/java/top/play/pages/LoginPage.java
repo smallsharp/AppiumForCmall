@@ -10,6 +10,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import top.base.appium.Helper;
+import top.base.appium.Helper2;
 
 /**
  * PO模式：登录页面
@@ -19,6 +20,7 @@ import top.base.appium.Helper;
 public class LoginPage {
 	
 	private AndroidDriver<MobileElement> mdriver;
+	private Helper2 helper;
 		
 	public LoginPage() {
 		// 这个空的构造方式是必须要的,init 页面需要
@@ -26,10 +28,8 @@ public class LoginPage {
 	
 	public LoginPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
-	}
-	
-	public void setDriver(AndroidDriver<MobileElement> driver) {
-		this.mdriver = driver;
+		helper = new Helper2(driver);
+		System.out.println("L helper:"+helper);
 	}
 	
 	@FindBy(id = "com.play.android:id/btn_jump")
@@ -83,6 +83,46 @@ public class LoginPage {
 			e_login.click();
 			
 			if (!Helper.waitActivity(firstActivity)) {
+				assertEquals(mdriver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
+			}
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+			assertTrue(false,"failed to locate element!");
+		} catch (Exception e){
+			e.printStackTrace();
+			assertTrue(false,"occurred error while running!");
+		}
+
+	}
+	
+	
+	/**
+	 * 通过：手机号，密码登录
+	 * 
+	 * @param mobile
+	 * @param password
+	 */
+	public void login_help(String mobile, String password) {
+		
+		try {
+			String firstActivity = mdriver.currentActivity();
+			if (firstActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
+				e_my.click();// 点击：我的
+			}
+			
+			if (!helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+				assertEquals(mdriver.currentActivity(), Play_ActivityList.LOGIN_ACTIVITY);
+			}
+			
+			e_account.click();
+			e_molibe.sendKeys(mobile);
+			Reporter.log("输入手机号："+ mobile,true);
+			e_password.sendKeys(password);
+			Reporter.log("输入密码："+ password,true);
+			e_login.click();
+			
+			if (!helper.waitActivity(firstActivity)) {
 				assertEquals(mdriver.currentActivity(), firstActivity,"登录成功后，应该返回:"+firstActivity);
 			}
 

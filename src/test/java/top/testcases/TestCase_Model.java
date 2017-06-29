@@ -1,52 +1,47 @@
-package top.play.pages;
+package top.testcases;
 
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import top.base.appium.DriverFactory;
-import top.base.appium.Helper;
 import top.base.appium.TestNGListener;
+import top.play.pages.BaseCase;
+import top.play.pages.LoginPage;
+import top.play.pages.ModelPage;
+import top.play.pages.PersonModifyPage;
+import top.play.pages.PersonPage;
 
 @Listeners(TestNGListener.class)
-public class PlaySuite {
+public class TestCase_Model extends BaseCase{
 
-	private AndroidDriver<MobileElement> mdriver = null;
-	private URL url;
-
-/*	@BeforeClass(alwaysRun = true)
-	public void startAppiumServer() {
-		AppiumServerUtils.getInstance().startServer("192.168.101.201", 4723);
-		url = AppiumServerUtils.getInstance().getService().getUrl();
-	}*/
-
-//	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
-	@BeforeClass
-	public void setup() {
-		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
-//		mdriver = DriverFactory.getInstance().initAndroidDriver(url);
-		mdriver= DriverFactory.getInstance().initAndroidDriver();
-		Helper.setDriver(mdriver);
-	}
-
-	@AfterClass
-	public void teardown() throws InterruptedException {
-
-		if (mdriver != null) {
-//			CommandUtil.exec_shell("pm clear com.play.android");
-			mdriver.quit();
+	@BeforeSuite
+	public void BeforeSuite() {
+		System.out.println("Before Suite");
+		if (mdriver == null) {
+			mdriver = BaseCase.setup();
 		}
+	}
+	
+	@AfterSuite
+	public void AfterSuite() {
+		System.out.println("After Suite");
+	}
+	
+	@BeforeClass
+	public void setup2() {
+		System.out.println("Before Class");
 
-//		AppiumServerUtils.getInstance().stopServer();
-		Reporter.log("========== 测试用例执行完成，BYE BYE ==========", true);
+	}
+	
+	@AfterClass
+	public void teardown2() {
+		System.out.println("After Class");
 	}
 
 	@Test(description = "通过账号密码登录")
@@ -54,7 +49,7 @@ public class PlaySuite {
 	public void testLogin(String mobile, String password) {
 		LoginPage loginPage = new LoginPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS), loginPage);
-		loginPage.login(mobile, password);
+		loginPage.login_help(mobile, password);
 	}
 
 	@Test(description = "3d模型列表展示")

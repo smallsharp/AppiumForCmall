@@ -1,10 +1,9 @@
-package top.temp;
+package top.base.appium;
 
 import java.util.ArrayList;
 import java.util.List;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
-import com.thoughtworks.selenium.Wait;
 
 
 /**

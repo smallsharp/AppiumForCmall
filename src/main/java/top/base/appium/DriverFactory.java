@@ -54,11 +54,11 @@ public class DriverFactory {
 			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
 			dc.setCapability("resetKeyboard", "True"); // 重置输入法
 			dc.setCapability("browserName", "");
-			// dc.setCapability("noReset", true); // 不需要再次安装
+//			dc.setCapability("noReset", true); // 不需要再次安装
 			dc.setCapability("noSign", "True");
 			dc.setCapability("platformName", "Android");
 			dc.setCapability("deviceName", deviceName);
-//			dc1.setCapability("platformVersion", "5.0");
+//			dc.setCapability("platformVersion", "5.0");
 			dc.setCapability("appPackage", "com.play.android");
 			dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
 			dc.setCapability("app", app.getAbsolutePath());
@@ -76,19 +76,13 @@ public class DriverFactory {
 	
 	
 	public AndroidDriver<MobileElement> initAndroidDriver() {
-		
-		String deviceName = null;
-		
+		System.out.println("初始化前driver："+mdriver);
 		if (mdriver == null) {
-			PropertyUtil pro = new PropertyUtil("/app.properties"); // 这里需要加个/表示类的根目录,从配置中取数据
-			deviceName = pro.getValue("deviceName_meizu");
-			
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
 			dc.setCapability("resetKeyboard", "True"); // 重置输入法
-			dc.setCapability("noReset", false); // 不需要再次安装
 			dc.setCapability("platformName", "Android");
-			dc.setCapability("deviceName", deviceName);
+			dc.setCapability("deviceName", "022TAS7N51009853");
 			dc.setCapability("appPackage", "com.play.android");
 			dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
 			
@@ -105,10 +99,11 @@ public class DriverFactory {
 
 			// 注册MyDriverListener监听事件
 			mdriver = EventFiringWebDriverFactory.getEventFiringWebDriver(mdriver, new MyAppiumListener());
-			// 全局等待20秒
-			mdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+//			mdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 						
 			Reporter.log("========== 环境准备完毕，测试即将开始 ==========", true);
+			System.out.println("初始化后driver:" + mdriver);
 		}
 		return mdriver;
 	}

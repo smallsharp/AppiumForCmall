@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.likai</groupId>
-	<artifactId>AppiumForEclipse</artifactId>
+	<artifactId>AppiumForCmall</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Appium</name>
 	<url>http://maven.apache.org</url>
@@ -26,8 +26,7 @@
 	   <dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.9</version>
-			<scope>test</scope>
+			<version>LATEST</version>
 		</dependency>
 		<!-- reportng 关联 testng -->
 		<dependency>
@@ -95,6 +94,16 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/java/top/testsuite/testng_play.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					 <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter</value>
+                        </property>
+                    </properties>
 				</configuration>
 			</plugin>
 		</plugins>

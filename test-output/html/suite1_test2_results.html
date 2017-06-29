@@ -3,106 +3,76 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - 测试修改个人信息</title>
+  <title>Test Results Report - 测试退出</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>测试修改个人信息</h1>
+<h1>测试退出</h1>
 <p>
-  Test duration: 34.816s
+  Test duration: 25.694s
 </p>
 
 
 
-
-
   <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">top.cases.TestSuite</td>
+        <td colspan="3" class="group">top.testcases.TestCase_Personal</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="登录">testLogin</span>
+                  <span class="description" title="退出登录">testLogout</span>
       </td>
   <td class="duration">
-    22.639s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"18521035133", "111111"</span><br />
-    
-            <div class="testOutput">
-                        【准备点击】:id: com.tude.android:id/btn_jump
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_jump
-                                <br>
-                                【准备点击】:id: com.tude.android:id/btn_profile
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_profile
-                                <br>
-                                【准备点击】:id: com.tude.android:id/tv_account
-                                <br>
-                                【开始点击】:id: com.tude.android:id/tv_account
-                                <br>
-                                【准备改变】:id: com.tude.android:id/et_account的数值
-                                <br>
-                                【控件】id: com.tude.android:id/et_account的数值已改变
-                                <br>
-                                【准备改变】:id: com.tude.android:id/et_password的数值
-                                <br>
-                                【控件】id: com.tude.android:id/et_password的数值已改变
-                                <br>
-                                【准备点击】:id: com.tude.android:id/btn_login
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_login
-                                <br>
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="个人设置">testModifyPersonalInfo</span>
-      </td>
-  <td class="duration">
-    9.539s
+    0.505s
   </td>
   <td class="result">
         
     
-            <div class="testOutput">
-                        【准备点击】:id: com.tude.android:id/btn_profile
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_profile
-                                <br>
-                                【准备点击】:id: com.tude.android:id/btn_profile_setting
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_profile_setting
-                                <br>
-                                【准备点击】:id: com.tude.android:id/tv_gender
-                                <br>
-                                【开始点击】:id: com.tude.android:id/tv_gender
-                                <br>
-                                【准备点击】:id: com.tude.android:id/tv_male
-                                <br>
-                                【开始点击】:id: com.tude.android:id/tv_male
-                                <br>
-                                【准备点击】:id: com.tude.android:id/btn_save
-                                <br>
-                                【开始点击】:id: com.tude.android:id/btn_save
-                                <br>
-                  </div>
-    
+        
 
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 退出登录失败… expected [true] but found [false]</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:93)<br />
+              org.testng.Assert.failNotEquals(Assert.java:512)<br />
+              org.testng.Assert.assertTrue(Assert.java:41)<br />
+              top.play.pages.PersonPage.logout(PersonPage.java:69)<br />
+              top.testcases.TestCase_Personal.testLogout(TestCase_Personal.java:21)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:661)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+              org.testng.TestRunner.run(TestRunner.java:602)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:289)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1226)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1144)<br />
+              org.testng.TestNG.run(TestNG.java:1115)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br />
+                </div>
       </td>
 </tr>
       </table>
+
+
   
 </body>
 </html>
