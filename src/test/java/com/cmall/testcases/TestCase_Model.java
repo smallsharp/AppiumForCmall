@@ -26,7 +26,7 @@ public class TestCase_Model extends BaseCase{
 	public void BeforeSuite() {
 		System.out.println("Before Suite");
 		if (mdriver == null) {
-			mdriver = BaseCase.setup();
+			mdriver = new BaseCase().setup();
 		}
 	}
 	
@@ -79,12 +79,6 @@ public class TestCase_Model extends BaseCase{
 		PersonPage personPage = PageFactory.initElements(mdriver, PersonPage.class);
 		personPage.add_Delivery_Address();
 
-	}
-
-	@Test(description = "退出登录")
-	public void testLogout() {
-		PersonPage personPage = PageFactory.initElements(mdriver, PersonPage.class);
-		personPage.logout();
 	}
 
 }

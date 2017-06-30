@@ -15,6 +15,7 @@ import io.appium.java_client.service.local.flags.ServerArgument;
 public class AppiumServerUtils {
 	
 	private static AppiumServerUtils appiumServerUtils;
+	private  AppiumDriverLocalService appiumService;
 	
 	public static AppiumServerUtils getInstance() {
 		if (appiumServerUtils == null) {
@@ -28,13 +29,9 @@ public class AppiumServerUtils {
 		return appiumServerUtils;
 	}
 
-	
-	private  AppiumDriverLocalService appiumService;
-	
 	public  AppiumDriverLocalService getService() {
 		return appiumService;
 	}
-
 
 	/**
 	 * 开启默认的AppiumServer，默认使用4723端口
@@ -76,7 +73,6 @@ public class AppiumServerUtils {
 			appiumService.start();
 //			throw new RuntimeException("An appium server node is not started!");
 		}
-		
 		System.out.println("AppiumServer has started");
 
 	}
@@ -113,7 +109,6 @@ public class AppiumServerUtils {
 	}
 	
 	public void stopServer() {
-		
 		if (appiumService != null) {
 			appiumService.stop();
 			System.out.println("AppiumServer has stoped");

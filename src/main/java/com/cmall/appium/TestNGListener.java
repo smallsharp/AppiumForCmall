@@ -55,6 +55,7 @@ public class TestNGListener extends TestListenerAdapter {
 	 * @Description 获取截图，存在/screenshots目录下
 	 * @Data 2017年5月3日
 	 */
+	@SuppressWarnings("unused")
 	private void takeScreenShot(ITestResult tr) {
 		
 		// 代码设置关闭escape-output

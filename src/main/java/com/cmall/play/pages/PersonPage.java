@@ -1,5 +1,6 @@
 package com.cmall.play.pages;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
@@ -18,7 +19,7 @@ import io.appium.java_client.android.AndroidDriver;
  */
 public class PersonPage {
 	
-	private AndroidDriver<MobileElement> driver;
+	private AndroidDriver<MobileElement> mDriver;
 	private Helper2 helper;
 
 	@FindBy(id = "com.play.android:id/btn_profile")
@@ -39,12 +40,12 @@ public class PersonPage {
 	
 	public PersonPage() {
 		if (helper == null) {
-			helper = new Helper2(driver);
+			helper = new Helper2(mDriver);
 		}
 	}
 	
 	public PersonPage(AndroidDriver<MobileElement> driver) {
-		this.driver = driver;
+		this.mDriver = driver;
 		helper = new Helper2(driver);
 		System.out.println("P helper:"+helper);
 	}
@@ -55,20 +56,17 @@ public class PersonPage {
 	public void logout() {
 		
 		boolean result = false;
-
-		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+		String firstActivity = mDriver.currentActivity();
+		if (firstActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			helper.swipeUp();
 			e_logout.click();
 			e_quit_yes.click();
-			e_my.click();
-			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+			if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 				result = true;
 			}
 		}
-		
-		assertTrue(result,"退出登录失败…");
-
+		assertEquals(result, true);
 	}
 	
 	

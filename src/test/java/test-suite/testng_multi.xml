@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Play" preserve-order="true" >
+    
+    <test name="测试登录" preserve-order="true">
+        <classes>
+            <class name="com.cmall.testcases.TestMulti" /> 
+        </classes>
+    </test>
+    
+    <test name="测试退出">
+    </test>
+    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    </listeners>
+</suite>

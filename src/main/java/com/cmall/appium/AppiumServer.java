@@ -18,25 +18,26 @@ public class AppiumServer {
 	/**
 	 * 
 	 * @param port 默认4723，--bootstrap-port 默认4724，--chromedriver-port：默认9515
-	 * @param udid
+	 * @param deviceName
 	 */
-	public void runServer(int port, String udid) {
+	public void startServer(int port, String deviceName) {
+		
 		int bpport = port + 1;
 		int chromeport = port + 4792;
-		// 多设备server端需要手动指定每台设备的udid,安卓无线连接下就是设备的ip:port..
+
 		String cmd = "appium.cmd -p " + port + " -bp " + bpport + " --session-override --chromedriver-port "
-				+ chromeport + " -U " + udid + " >c://" + port + ".txt";
+				+ chromeport + " -U " + deviceName + " >c://" + port + ".txt";
 		try {
 			Process process = Runtime.getRuntime().exec(cmd);
-			int value= process.waitFor();
+			process.waitFor();
+//			int value= process.waitFor();
 //			System.out.println("process.waitFor():"+value);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		log.info(" Appium Server in running :" + udid +" "+ port);
+		log.info(" Appium Server in running on (device)" + deviceName +" (port) "+ port);
 
 	}
 	
@@ -44,6 +45,7 @@ public class AppiumServer {
 	 * kill 进程
 	 * @param taskname
 	 */
+	@SuppressWarnings("unused")
 	private void killTask(String taskname) {
 		String cmd = "taskkill /F /im " + taskname;
 		runCommand(cmd);
@@ -54,11 +56,13 @@ public class AppiumServer {
 	 * @param command
 	 */
 	private void runCommand(String command) {
+		
 		try {
 			Runtime.getRuntime().exec(command);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
 	/**
@@ -78,9 +82,9 @@ public class AppiumServer {
 	/**
 	 * 读取数据
 	 */
-	private void getRuntimeData(){
+	private void getRuntimeData(String command){
 		
-		Process process = runCommand2("adb devices");
+		Process process = runCommand2(command);
 		InputStream inputStream = process.getInputStream();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		
@@ -108,7 +112,7 @@ public class AppiumServer {
 	
 	public static void main(String[] args) {
 		AppiumServer as = new AppiumServer();
-		as.getRuntimeData();
+		as.getRuntimeData("adb devices");
 	}
 
 }

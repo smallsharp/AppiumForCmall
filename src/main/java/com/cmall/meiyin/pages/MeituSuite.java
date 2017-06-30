@@ -21,11 +21,11 @@ public class MeituSuite {
 
 	private AndroidDriver<MobileElement> mdriver = null;
 	private Helper2 helper;
-
+	DriverFactory dfactory;
 	@BeforeClass
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，请稍后 ==========", true);
-		mdriver= DriverFactory.getInstance().initMeituDriver();
+		mdriver= dfactory.initMeituDriver();
 	}
 
 	@AfterClass
