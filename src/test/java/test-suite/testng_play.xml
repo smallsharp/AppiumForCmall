@@ -6,11 +6,11 @@
     <test name="测试登录" preserve-order="true">
 
         <classes>
-            <class name="com.cmall.testcases.TestCase_Model" > 
+            <class name="com.cmall.testcases.Test_Login" > 
                 <methods>
                 <parameter name="mobile" value="18521035133"></parameter>
                 <parameter name="password" value="111111"></parameter>
-                	<include name="testLogin"></include>
+                	<include name="testlogin"></include>
                     <exclude name="testCheck3DModelGoodsList" />
                     <exclude name="testCheck3DModelByColorAndGrade" />
                 </methods>
@@ -20,7 +20,7 @@
     
     <test name="测试退出">
     	<classes>
-    		<class name="com.cmall.testcases.TestCase_Personal">
+    		<class name="com.cmall.testcases.Test_Logout">
     			<methods>
     				<include name="testLogout"></include>
     			</methods>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="测试退出"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.925">
+  <properties />
+  
+  
+            <testcase name="testLogout" time="5.925" classname="com.cmall.testcases.Test_Logout" />
+      
+</testsuite>

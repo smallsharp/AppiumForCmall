@@ -4,7 +4,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.cmall.appium.DriverFactory;
+import com.cmall.appium.TestManage;
 import com.cmall.appium.Helper;
 import com.cmall.play.pages.Play_ActivityList;
 
@@ -13,7 +13,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class DIYPage {
 	
 	AndroidDriver<WebElement> mdriver;
-	
+	private Helper helper;
 	// 跳过
 	@FindBy(id = "com.tude.android:id/btn_jump")
 	private WebElement e_skipVideo;
@@ -46,13 +46,13 @@ public class DIYPage {
 	private WebElement m_thirt;// 短袖
 	
 	public void buyMenWear(){
-		if (Helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
+		if (helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
-		if(Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)){
+		if(helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)){
 			m_productlist.get(m_productlist.size()-1).click();
 			
-			if (Helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+			if (helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
 				m_tee.click();
 				
 //				Assist.pageShift();

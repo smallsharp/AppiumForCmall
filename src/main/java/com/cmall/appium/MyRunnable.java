@@ -1,10 +1,7 @@
 package com.cmall.appium;
 
-import org.apache.log4j.Logger;
-
+import com.cmall.http.LogUtil;
 import com.cmall.testcases.TestCase;
-import com.cmall.testcases.TestCase_login;
-import com.cmall.testcases.TestCase_logout;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -16,48 +13,28 @@ import io.appium.java_client.android.AndroidDriver;
  */
 public class MyRunnable implements Runnable {
 	
-	Logger log = Logger.getLogger(MyRunnable.class);
-	AppiumServer appiumServer = new AppiumServer();
-	
-	int port;
-	String deviceName;
-	AndroidDriver<MobileElement> mDriver;
-	
+	LogUtil log = new LogUtil(MyRunnable.class);
+	AndroidDriver<MobileElement> mdriver;
 	TestCase testCase;
 	
 	public MyRunnable() {
 		
 	}
 	
-	public MyRunnable(AndroidDriver<MobileElement> mDriver , TestCase testCase) {
-		this.mDriver = mDriver;
+	public MyRunnable(AndroidDriver<MobileElement> mdriver , TestCase testCase) {
+		this.mdriver = mdriver;
 		this.testCase = testCase;
 	}
 	
-	public MyRunnable(AndroidDriver<MobileElement> mDriver) {
-		this.mDriver = mDriver;
-	}
-
-	public MyRunnable(int port, String deviceName) {
-		this.port = port;
-		this.deviceName = deviceName;
-	}
-	String mobile = "18521035133";
-	String password = "111111";
 	@Override
 	public void run() {
 		try {
-			log.info("开始执行run方法："+Thread.currentThread().getName());
-	/*		TestCase_login login = new TestCase_login(mDriver);
-			login.testLogin(mobile, password);
-			TestCase_logout logout = new TestCase_logout(mDriver);*/
-			//logout.testLogout();
-//			testCase.setDriver(mDriver);
-			testCase.exe();
+			log.info("开始执行run方法："+ Thread.currentThread().getName());
+			testCase.runCase();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			log.info("run 方法执行结束："+Thread.currentThread().getName());
+			log.info("run 方法执行结束："+ Thread.currentThread().getName());
 		}
 	}
 }

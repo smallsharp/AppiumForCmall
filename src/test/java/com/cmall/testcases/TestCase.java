@@ -5,7 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public interface TestCase {
 	
-	public void exe();
+	public void runCase();
 	
 	public void setDriver(AndroidDriver<MobileElement> mdriver);
 

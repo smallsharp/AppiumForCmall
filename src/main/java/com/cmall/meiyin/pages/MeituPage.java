@@ -7,12 +7,10 @@ import java.io.File;
 import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
-
 import com.cmall.appium.Helper;
 import com.cmall.play.pages.Constant;
 import com.cmall.utils.ImageUtil;
 import com.cmall.utils.LogUtil;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -20,7 +18,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class MeituPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-
+	private Helper helper;
 	private static LogUtil log = new LogUtil(MeituPage.class);
 
 	public MeituPage() {
@@ -28,6 +26,7 @@ public class MeituPage {
 
 	public MeituPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
+		helper = new Helper(mdriver);
 	}
 
 	/**
@@ -94,58 +93,58 @@ public class MeituPage {
 
 		try {
 			
-			if (Helper.waitActivity(ActivityList_MeiYin.MainActivity)) {
-				Helper.clickonElement(m_entrance);
+			if (helper.waitActivity(ActivityList_MeiYin.MainActivity)) {
+				helper.clickonElement(m_entrance);
 			}
 			
-			if (Helper.waitActivity(ActivityList_MeiYin.MeiYinHomeActivity)) {
+			if (helper.waitActivity(ActivityList_MeiYin.MeiYinHomeActivity)) {
 				try {
 					if (m_ad_close.isDisplayed()) {
-						Helper.clickonElement(m_ad_close);
+						helper.clickonElement(m_ad_close);
 					}
 				} catch (NoSuchElementException e) {
 					log.info("此时页面中不含有广告~");
 				}
 			}
 
-			if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinHomeActivity)) {
-				Helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
+			if (!helper.waitActivity(ActivityList_MeiYin.MeiYinHomeActivity)) {
+				helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
 			}
 			
 			// 点击 3D3D
-			Helper.pause(1000);
-			int width = Helper.getDeviceWidth();
-			int height = Helper.getDeviceHeight();
+			helper.pause(1000);
+			int width = helper.getDeviceWidth();
+			int height = helper.getDeviceHeight();
 			mdriver.tap(1, width / 2, height / 10 * 8, 500);
-			if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinGoodsDetailActivity)) {
+			if (!helper.waitActivity(ActivityList_MeiYin.MeiYinGoodsDetailActivity)) {
 				mdriver.tap(1, width / 2, height / 10 * 8, 500);
-				Helper.pause_default_time();
+				helper.pause_default_time();
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.MeiYinGoodsDetailActivity);
 			}
 			
 			// 点击：开始定制
 			Thread.sleep(1000);
-			Helper.tap_StartBuilt();
-			if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinWebViewActivity)) {
-				Helper.tap_StartBuilt();
-				Helper.pause_default_time();
+			helper.tap_StartBuilt();
+			if (!helper.waitActivity(ActivityList_MeiYin.MeiYinWebViewActivity)) {
+				helper.tap_StartBuilt();
+				helper.pause_default_time();
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.MeiYinWebViewActivity);
 			}
 			
 			// 点击：白色
 			Thread.sleep(1000);
-			Helper.tap_White();
+			helper.tap_White();
 
 			// 点击：S码
 			Thread.sleep(1000);
-			Helper.tap_S();
+			helper.tap_S();
 
 			// 再次点击：开始定制
 			Thread.sleep(1000);
-			Helper.tap_StartBuilt();
-			if (!Helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
-				Helper.tap_StartBuilt();
-				Helper.pause_default_time();
+			helper.tap_StartBuilt();
+			if (!helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
+				helper.tap_StartBuilt();
+				helper.pause_default_time();
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.DetailActivity);
 			}
 			
@@ -177,18 +176,18 @@ public class MeituPage {
 
 		try {
 			
-			if (!Helper.waitElement(ActivityList_MeiYin.MeiYinHomeActivity, m_home_page)) {
+			if (!helper.waitElement(ActivityList_MeiYin.MeiYinHomeActivity, m_home_page)) {
 				assertTrue(false);
 			}
 			
-			Helper.context_to_native();
+			helper.context_to_native();
 			log.info("\n"+"准备切换到webview");
 			mdriver.context("WEBVIEW_com.meitu.wheecam");
 //			Helper.context_to_webview();
 			log.info("\n"+"准备scroll");	
 //			Helper.scrollToElement(m_3d_3d);// 滑动到指定高度
-			Helper.scrollToElement(m_3d_3d);
-			Helper.context_to_native();
+			helper.scrollToElement(m_3d_3d);
+			helper.context_to_native();
 			
 			// 点击 3D3D
 			int width = mdriver.manage().window().getSize().width;
@@ -197,7 +196,7 @@ public class MeituPage {
 			
 			log.info("x:"+width+",y:"+height);
 			Thread.sleep(500);
-			if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinGoodsDetailActivity)) {
+			if (!helper.waitActivity(ActivityList_MeiYin.MeiYinGoodsDetailActivity)) {
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.MeiYinGoodsDetailActivity);
 			}
 			
@@ -209,7 +208,7 @@ public class MeituPage {
 
 			assertEquals(1, 2);
 
-			if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinWebViewActivity)) {
+			if (!helper.waitActivity(ActivityList_MeiYin.MeiYinWebViewActivity)) {
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.MeiYinWebViewActivity);
 			}
 			Thread.sleep(1000);
@@ -226,7 +225,7 @@ public class MeituPage {
 			// 再次点击：开始定制
 			mdriver.tap(1, width / 2, height / 100 * 98, 500);
 
-			if (!Helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
+			if (!helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
 				assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.DetailActivity);
 			}
 			
@@ -259,31 +258,31 @@ public class MeituPage {
 	 */
 	public void checkModel_WithoutEdit(){
 		
-		if (!Helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
-			Helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
+		if (!helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
+			helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
 			goto3DModel();
 		}
 		
-		String model_first_jpg = "model_first_withoutEdit_"+ Helper.getDeviceName()+".jpg";
-		Helper.takeScreenShot(model_first_jpg);
+		String model_first_jpg = "model_first_withoutEdit_"+ helper.getDeviceName()+".jpg";
+		helper.takeScreenShot(model_first_jpg);
 		BufferedImage image_model_first = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, model_first_jpg));
-		if (!Helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
+		if (!helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
 			assertEquals(mdriver.currentActivity(), "com.tude.android.demo_3d.sample.activities.DetailActivity");
 		}
 		
-		Helper.clickonElement(m_3dModel);
+		helper.clickonElement(m_3dModel);
 		
-		if (!Helper.waitElement(ActivityList_MeiYin.UCropEditActivity,m_complte_edit)) {
+		if (!helper.waitElement(ActivityList_MeiYin.UCropEditActivity,m_complte_edit)) {
 			assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.UCropEditActivity);
 		}
 		
-		Helper.clickonElement(m_complte_edit);
+		helper.clickonElement(m_complte_edit);
 		
-		if (!Helper.waitElement(ActivityList_MeiYin.DetailActivity,m_3dModel)) {
+		if (!helper.waitElement(ActivityList_MeiYin.DetailActivity,m_3dModel)) {
 			assertEquals(mdriver.currentActivity(), ActivityList_MeiYin.DetailActivity);
 		}
-		String model_second_jpg = "model_second_withoutEdit_"+ Helper.getDeviceName()+".jpg";
-		Helper.takeScreenShot(model_second_jpg);
+		String model_second_jpg = "model_second_withoutEdit_"+ helper.getDeviceName()+".jpg";
+		helper.takeScreenShot(model_second_jpg);
 		BufferedImage image_model_second = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH,model_second_jpg));
 		
 		assertTrue(ImageUtil.sameAs(image_model_first, image_model_second, 0.9));
@@ -294,44 +293,44 @@ public class MeituPage {
 	 */
 	public void checkModel_WithEdit(){
 		
-		if (!Helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
-			Helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
+		if (!helper.waitActivity(ActivityList_MeiYin.DetailActivity)) {
+			helper.backToActivity(ActivityList_MeiYin.MeiYinHomeActivity);
 			goto3DModel();
 		}
 		
-		String model_first_jpg = "model_first_withoutEdit_"+ Helper.getDeviceName() +".jpg";
-		Helper.takeScreenShot(model_first_jpg);
+		String model_first_jpg = "model_first_withoutEdit_"+ helper.getDeviceName() +".jpg";
+		helper.takeScreenShot(model_first_jpg);
 		BufferedImage image_model_first = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, model_first_jpg));
 		
-		if (!Helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
+		if (!helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
 			assertEquals(mdriver.currentActivity(), "com.tude.android.demo_3d.sample.activities.DetailActivity");
 		}
 		
-		Helper.clickonElement(m_3dModel);
+		helper.clickonElement(m_3dModel);
 		
-		if (!Helper.waitElement("com.tude.android.demo_3d.sample.activities.ucrop.UCropEditActivity",m_pic_entrance)) {
+		if (!helper.waitElement("com.tude.android.demo_3d.sample.activities.ucrop.UCropEditActivity",m_pic_entrance)) {
 			assertEquals(mdriver.currentActivity(), "com.tude.android.demo_3d.sample.activities.ucrop.UCropEditActivity");
 		}
 		
-		Helper.clickonElement(m_pic_entrance);
+		helper.clickonElement(m_pic_entrance);
 		
-		if (!Helper.waitActivity(ActivityList_MeiYin.MeiYinAlbumActivity)) {
+		if (!helper.waitActivity(ActivityList_MeiYin.MeiYinAlbumActivity)) {
 			
 		}
 		
-		Helper.clickonElement(m_pics_list.get(0));
+		helper.clickonElement(m_pics_list.get(0));
 		
-		if (!Helper.waitElement(ActivityList_MeiYin.UCropEditActivity, m_complte_edit)) {
+		if (!helper.waitElement(ActivityList_MeiYin.UCropEditActivity, m_complte_edit)) {
 			
 		}
 		
-		Helper.clickonElement(m_complte_edit);
+		helper.clickonElement(m_complte_edit);
 		
-		if (!Helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
+		if (!helper.waitElement("com.tude.android.demo_3d.sample.activities.DetailActivity",m_3dModel)) {
 			assertEquals(mdriver.currentActivity(), "com.tude.android.demo_3d.sample.activities.DetailActivity");
 		}
-		String model_second_jpg = "model_second_withEdit_"+Helper.getDeviceName()+".jpg";
-		Helper.takeScreenShot(model_second_jpg);
+		String model_second_jpg = "model_second_withEdit_"+helper.getDeviceName()+".jpg";
+		helper.takeScreenShot(model_second_jpg);
 		BufferedImage image_model_second = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH,model_second_jpg));
 		
 		ImageUtil.sameAs(image_model_first, image_model_second, 0.9);

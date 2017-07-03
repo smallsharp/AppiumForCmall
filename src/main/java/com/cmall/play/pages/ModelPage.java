@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
-
 import com.cmall.appium.Helper;
 import com.cmall.http.JsonUtils;
 import com.cmall.utils.ImageUtil;
@@ -24,7 +23,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class ModelPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-	
+	private Helper helper;
 	private static LogUtil log = new LogUtil(ModelPage.class);
 	
  	public ModelPage() {
@@ -32,6 +31,7 @@ public class ModelPage {
  	
 	public ModelPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
+		helper = new Helper(mdriver);
 	}
 
 	/**
@@ -115,8 +115,8 @@ public class ModelPage {
 		log.info("exec:goto3DModelFromHome");
 		try {
 			
-			if (!Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
-				Helper.backToHomeActivity();
+			if (!helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+				helper.backToHomeActivity();
 				assertEquals(mdriver.currentActivity(), Play_ActivityList.HOME_ACTIVITY);
 			}
 			
@@ -127,11 +127,11 @@ public class ModelPage {
 			m_sdv_image.get(1).click();
 
 			// 进入男装二级目录，包含：TEE，边框TEE，Polo衫等…
-			if (!Helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+			if (!helper.waitActivity(Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
 				assertEquals(mdriver.currentActivity(), Play_ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
 			}
 			
-			if (!Helper.waitElement(m_tee_native)) {
+			if (!helper.waitElement(m_tee_native)) {
 				assertTrue(false, "没有定位到：男装目录下的webview");
 			}
 			Thread.sleep(2000);
@@ -140,7 +140,7 @@ public class ModelPage {
 			int height = m_tee_native.getSize().getHeight();
 			mdriver.tap(1, x/2, height/6 + y, 500);
 			
-			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+			if (helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				
 				LoginPage loginPage = new LoginPage(mdriver);
 				loginPage.login2("18521035133", "111111");	
@@ -148,11 +148,11 @@ public class ModelPage {
 				mdriver.tap(1, x/2, height/6 + y, 500);
 			}
 			
-			if (!Helper.waitActivity(Play_ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
+			if (!helper.waitActivity(Play_ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
 				assertEquals(mdriver.currentActivity(), Play_ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
 			}
 			
-			if (!Helper.waitElement(m_3dModel_native)) {
+			if (!helper.waitElement(m_3dModel_native)) {
 				assertTrue(false, "3DModel is not displayed");
 			}
 			
@@ -161,7 +161,7 @@ public class ModelPage {
 			assertTrue(false,"failed to locate element!");
 		} catch (Exception e){
 			e.printStackTrace();
-			Helper.takeScreenShot("goto3DModelFromHome_error.jpg");
+			helper.takeScreenShot("goto3DModelFromHome_error.jpg");
 			assertTrue(false,"occurred error while running!");
 		}
 	}
@@ -198,13 +198,13 @@ public class ModelPage {
 
 					if (j == 0) {
 						String previousJPG = "previous_color_"+i+".jpg";
-						Helper.takeScreenShot(previousJPG);
+						helper.takeScreenShot(previousJPG);
 						previousImage = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, previousJPG));
 						previousCut = ImageUtil.getSubImage(previousImage, x, y, w, h);
 					}
 					
 					String jpg = "grade_"+j+"_color_"+i+".jpg";
-					Helper.takeScreenShot(jpg);
+					helper.takeScreenShot(jpg);
 					
 					BufferedImage laterimage = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, jpg));
 					BufferedImage laterimageCut = ImageUtil.getSubImage(laterimage, x, y, w, h);// 第二张局部截图
@@ -228,7 +228,7 @@ public class ModelPage {
 			assertTrue(false,"failed to locate element!");
 		} catch (Exception e){
 			e.printStackTrace();
-			Helper.takeScreenShot("check3DModelByColorAndGrade.jpg");
+			helper.takeScreenShot("check3DModelByColorAndGrade.jpg");
 			assertTrue(false,"occurred error while running!");
 		}
 
@@ -243,7 +243,6 @@ public class ModelPage {
 		
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelGoodsList");
-		
 		try {
 			
 			Map<String, String> paramsMap = new HashMap<String, String>();
@@ -278,7 +277,7 @@ public class ModelPage {
 			assertTrue(false,"failed to locate element!");
 		} catch (Exception e){
 			e.printStackTrace();
-			Helper.takeScreenShot("check3DModelGoodsList.jpg");
+			helper.takeScreenShot("check3DModelGoodsList.jpg");
 			assertTrue(false,"occurred error while running!");
 		}
 	}

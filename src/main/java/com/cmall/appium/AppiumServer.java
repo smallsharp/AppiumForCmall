@@ -42,10 +42,16 @@ public class AppiumServer {
 	}
 	
 	/**
+	 * 停止服务
+	 */
+	public void stopServer() {
+		killTask("node.exe");
+	}
+	
+	/**
 	 * kill 进程
 	 * @param taskname
 	 */
-	@SuppressWarnings("unused")
 	private void killTask(String taskname) {
 		String cmd = "taskkill /F /im " + taskname;
 		runCommand(cmd);
@@ -56,13 +62,11 @@ public class AppiumServer {
 	 * @param command
 	 */
 	private void runCommand(String command) {
-		
 		try {
 			Runtime.getRuntime().exec(command);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	/**
@@ -83,14 +87,12 @@ public class AppiumServer {
 	 * 读取数据
 	 */
 	private void getRuntimeData(String command){
-		
 		Process process = runCommand2(command);
 		InputStream inputStream = process.getInputStream();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		
 		String line;
 		StringBuffer sb = new StringBuffer();
-		
 		try {
 			while ((line = reader.readLine()) != null) {
 			sb.append(line+"\n");	
@@ -110,6 +112,10 @@ public class AppiumServer {
 		}
 	}
 	
+	/**
+	 * 测试
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		AppiumServer as = new AppiumServer();
 		as.getRuntimeData("adb devices");

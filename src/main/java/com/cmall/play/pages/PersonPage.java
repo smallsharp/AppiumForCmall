@@ -2,13 +2,9 @@ package com.cmall.play.pages;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.cmall.appium.Helper;
-import com.cmall.appium.Helper2;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -20,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class PersonPage {
 	
 	private AndroidDriver<MobileElement> mDriver;
-	private Helper2 helper;
+	private Helper helper;
 
 	@FindBy(id = "com.play.android:id/btn_profile")
 	private WebElement e_my;// 我的
@@ -40,14 +36,13 @@ public class PersonPage {
 	
 	public PersonPage() {
 		if (helper == null) {
-			helper = new Helper2(mDriver);
+			helper = new Helper(mDriver);
 		}
 	}
 	
 	public PersonPage(AndroidDriver<MobileElement> driver) {
 		this.mDriver = driver;
-		helper = new Helper2(driver);
-		System.out.println("P helper:"+helper);
+		helper = new Helper(driver);
 	}
 
 	/**
@@ -73,7 +68,7 @@ public class PersonPage {
 	public void add_Delivery_Address(){
 		boolean result = false;
 
-		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+		if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_btn_address.click();
 		}

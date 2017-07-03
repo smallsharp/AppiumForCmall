@@ -8,8 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.cmall.appium.DriverFactory;
-import com.cmall.appium.Helper2;
+import com.cmall.appium.TestManage;
+import com.cmall.appium.Helper;
 import com.cmall.appium.TestNGListener;
 
 import io.appium.java_client.MobileElement;
@@ -20,12 +20,12 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class MeituSuite {
 
 	private AndroidDriver<MobileElement> mdriver = null;
-	private Helper2 helper;
-	DriverFactory dfactory;
+	private Helper helper;
+	TestManage dfactory;
 	@BeforeClass
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，请稍后 ==========", true);
-		mdriver= dfactory.initMeituDriver();
+		mdriver= dfactory.initAndroidDriver(4723, "");
 	}
 
 	@AfterClass

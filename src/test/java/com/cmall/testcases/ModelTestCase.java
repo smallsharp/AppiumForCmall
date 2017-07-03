@@ -20,7 +20,7 @@ import com.cmall.play.pages.PersonPage;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 @Listeners(TestNGListener.class)
-public class TestCase_Model extends BaseCase{
+public class ModelTestCase extends BaseCase{
 
 	@BeforeSuite
 	public void BeforeSuite() {
@@ -51,7 +51,7 @@ public class TestCase_Model extends BaseCase{
 	public void testLogin(String mobile, String password) {
 		LoginPage loginPage = new LoginPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS), loginPage);
-		loginPage.login_help(mobile, password);
+		loginPage.login(mobile, password);
 	}
 
 	@Test(description = "3d模型列表展示")

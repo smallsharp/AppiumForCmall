@@ -3,10 +3,15 @@ package com.cmall.play.pages;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.cmall.appium.Helper;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
 public class PersonModifyPage {
+	
+	private AndroidDriver<MobileElement> mdriver;
+	private Helper helper;
 	
 	@FindBy(id = "com.tude.android:id/btn_profile")
 	private WebElement e_my;// 我的
@@ -32,20 +37,29 @@ public class PersonModifyPage {
 	@FindBy(id="com.tude.android:id/btn_save")
 	private WebElement e_save;// 个人设置-保存
 	
+	public PersonModifyPage() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public PersonModifyPage(AndroidDriver<MobileElement> mdriver) {
+		this.mdriver = mdriver;
+		helper = new Helper(mdriver);
+	}
+	
 	/**
 	 * 修改个人信息
 	 */
 	public void modifyPersonInfo(){
 		boolean result = false;
 
-		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+		if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_profile_setting.click();
-			if (Helper.waitActivity(Play_ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
+			if (helper.waitActivity(Play_ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
 				e_gender.click();
 				e_male.click();
 				e_save.click();
-				if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+				if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

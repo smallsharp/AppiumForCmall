@@ -13,6 +13,7 @@ import com.cmall.play.pages.Play_ActivityList;
  *
  */
 public class LoginPage {
+	private Helper helper;
 	// 跳过
 	@FindBy(id = "com.tude.android:id/btn_jump")
 	private WebElement e_skipVideo;
@@ -41,20 +42,20 @@ public class LoginPage {
 
 		boolean result = false;
 
-		if (Helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
+		if (helper.waitActivity(Play_ActivityList.VIDEO_ACTIVITY)) {
 			e_skipVideo.click();
 		}
 
-		if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+		if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
-			if (Helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
+			if (helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				// 点击：账号密码登录
 				e_account.click();
 				e_molibe.sendKeys(mobile);
 				e_password.sendKeys(password);
 				e_login.click();
 				// 登录成功Activity：LOGIN_ACTIVITY-->HOME_ACTIVITY
-				if (Helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+				if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

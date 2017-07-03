@@ -78,7 +78,7 @@ public class Multidevice {
 		public void testLogin(String mobile, String password) {
 			LoginPage loginPage = new LoginPage(mDriver);
 			PageFactory.initElements(new AppiumFieldDecorator(mDriver, 20 ,TimeUnit.SECONDS), loginPage);
-			loginPage.login_help(mobile, password);
+			loginPage.login(mobile, password);
 		}
 
 	}

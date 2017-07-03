@@ -7,7 +7,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class BaseCase {
 	
 	protected static AndroidDriver<MobileElement> mdriver = null;
-	DriverFactory driverFactory = null;
+	TestManage driverFactory = null;
 
 	public void startAppiumServer() {
 /*		AppiumServerUtils.getInstance().startServer("192.168.101.201", 4723);
@@ -17,7 +17,7 @@ public class BaseCase {
 	public AndroidDriver<MobileElement> setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 //		mdriver = DriverFactory.getInstance().initAndroidDriver(url);
-		mdriver= driverFactory.initAndroidDriver();
+		mdriver= driverFactory.initAndroidDriver(4723, "");
 		return mdriver;
 		
 	}
