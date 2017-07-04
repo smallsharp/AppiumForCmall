@@ -42,16 +42,16 @@ public class Helper {
 	 */
 	public boolean waitActivity(String activityName) {
 
-		log.info("\n" + "[Activity] Waiting activity ==> " + "(" + activityName + ")");
+		log.info("[Activity] Waiting activity ==> " + "(" + activityName + ")");
 		try {
 			for (int i = 0; i < 20; i++) {
 				Thread.sleep(500);
 				if (activityName.contains(mdriver.currentActivity())) {
-					log.info("\n" + "[Activity] Found activity ==> " + "(" + activityName + ")");
+					log.info("[Activity] Found activity ==> " + "(" + activityName + ")");
 					return true;
 				}
 			}
-			log.error("\n" + "[ActivityNotFound]:" + "(" + activityName + ")" + "\n" + "CurrentActivity is:"
+			log.error("[ActivityNotFound]:" + "(" + activityName + ")" + "\n" + "CurrentActivity is:"
 					+ "(" + mdriver.currentActivity() + ")");
 
 		} catch (Exception e) {
@@ -68,10 +68,10 @@ public class Helper {
 
 		for (int j = 0; j < 3; j++) {
 
-			log.info("\n" + "[Element] Waiting element ==> " + "(" + splitElement(mobileElement) + ")");
+			log.info("[Element] Waiting element ==> " + "(" + splitElement(mobileElement) + ")");
 
 			if (mobileElement.isDisplayed()) {
-				log.info("\n" + "[Element]" + "(" + splitElement(mobileElement) + ")" + " Found");
+				log.info("[Element]" + "(" + splitElement(mobileElement) + ")" + " Found");
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
@@ -80,7 +80,7 @@ public class Helper {
 				return true;
 			}
 		}
-		log.error("\n" + "[Element] ElementNotFound ==> " + "(" + splitElement(mobileElement) + ")");
+		log.error("[Element] ElementNotFound ==> " + "(" + splitElement(mobileElement) + ")");
 		return false;
 	}
 
@@ -107,7 +107,7 @@ public class Helper {
 	 * @param element
 	 */
 	public void clickonElement(MobileElement mobileElement) {
-		log.info("\n" + "[Element] click on element ==> " + "(" + splitElement(mobileElement) + ")");
+		log.info("[Element] click on element ==> " + "(" + splitElement(mobileElement) + ")");
 		mobileElement.click();
 	}
 
@@ -118,7 +118,7 @@ public class Helper {
 	 * @param text
 	 */
 	public void inputText(MobileElement mobileElement, CharSequence... text) {
-		log.info("\n" + "[Element] input text ==> " + "(" + splitElement(mobileElement) + ")");
+		log.info("[Element] input text ==> " + "(" + splitElement(mobileElement) + ")");
 		mobileElement.sendKeys(text);
 	}
 
@@ -128,7 +128,7 @@ public class Helper {
 	 * @param androidkeycode
 	 */
 	public void pressKeyCode(int androidkeycode) {
-		log.info("\n" + "Press AndroidKeyCode ==> " + androidkeycode);
+		log.info("Press AndroidKeyCode ==> " + androidkeycode);
 		mdriver.pressKeyCode(androidkeycode);
 	}
 
@@ -138,11 +138,11 @@ public class Helper {
 	public void context_to_webview() {
 
 		Set<String> ContextHandles = mdriver.getContextHandles();
-		log.info("\n" + "All ContextHandles :" + ContextHandles);
+		log.info("All ContextHandles :" + ContextHandles);
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
 				mdriver.context(contextName);
-				log.info("\n" + "[Webview] context_to_webview success :" + contextName);
+				log.info("[Webview] context_to_webview success :" + contextName);
 				break;
 			}
 		}
@@ -201,7 +201,7 @@ public class Helper {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		log.info("\n" + "截图成功：" + screenShotName);
+		log.info("截图成功：" + screenShotName);
 	}
 
 	/***

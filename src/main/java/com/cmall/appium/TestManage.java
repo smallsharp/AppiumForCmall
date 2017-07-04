@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.cmall.http.LogUtil;
 import com.cmall.testcases.TestCase;
@@ -18,19 +20,26 @@ import io.appium.java_client.events.EventFiringWebDriverFactory;
  *
  */
 public class TestManage {
+	
 	private LogUtil log = new LogUtil(TestManage.class);
 	private  AndroidDriver<MobileElement> mdriver;
 	private AppiumServer appiumServer;
 	
-	private static TestManage manage = null;
+	private static TestManage instance = null;
 	private TestManage() {
 		System.out.println("a new manage!");
 	}
-	public static TestManage getInstance() {
-		if(manage == null) {
-			manage = new TestManage();
+	public static synchronized TestManage getInstance() {
+		if(instance != null) {
+			
+		}else {
+			synchronized (TestManage.class) {
+				if (instance == null ) {
+					instance = new TestManage();
+				}
+			}
 		}
-		return manage;
+		return instance;
 	}
 	
 
@@ -65,12 +74,13 @@ public class TestManage {
 	}
 	
 	/**
-	 * 适用于多设备初始化
-	 * @param port
-	 * @param deviceName
+	 * 适用于多设备初始化AndroidDriver
+	 * @param port 端口号
+	 * @param deviceName 设备名称
 	 * @return AndroidDriver
 	 */
 	public AndroidDriver<MobileElement> initAndroidDriver(int port, String deviceName) {
+		
 		log.info("init AndroidDriver with:" + deviceName);
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
@@ -101,6 +111,7 @@ public class TestManage {
 	 * 3.如果连接设备过多，可能等待初始化的时间会长
 	 */
 	public void startServer_And_BuildDriver(){
+		log.info("开始执行：startServer_And_BuildDriver()");
 		List<String> devicesList = DDMlibUtil.getDeviceNames();
 		if (devicesList.size() < 1) {
 			log.error("没有发现设备连接，请重新插拔手机设备后，重试！");
@@ -109,8 +120,11 @@ public class TestManage {
 		AndroidDriver_List = new ArrayList<AndroidDriver<MobileElement>>();
 		int port = 4723;
 		for (String driverName : devicesList) {
+			log.info(devicesList.size()+"");
 			appiumServer = new AppiumServer();
+			log.info("appiumServer:"+appiumServer);
 			appiumServer.startServer(port, driverName);
+			log.info("服务启动成功："+ driverName + " " + port);
 			mdriver = initAndroidDriver(port,driverName);
 			AndroidDriver_List.add(mdriver);
 			port = port + 2;
@@ -123,19 +137,25 @@ public class TestManage {
 	 * 开始多线程,执行MyRunnable中的run方法
 	 */
 	public void startTest(TestCase testCase) {
+		log.info("开始执行：startTest");
 		Thread thread = null;
+	    Vector<Thread> threads = new Vector<Thread>();  
 		for (int i = 0; i < AndroidDriver_List.size(); i++) {
 			testCase.setDriver(AndroidDriver_List.get(i));
-			MyRunnable runnable = new MyRunnable(AndroidDriver_List.get(i) , testCase);
+			MyRunnable runnable = new MyRunnable(testCase);
 			thread = new Thread(runnable);
 			thread.start();// 自动调用 MyRunnable 中的run方法
+			threads.add(thread);
 		}
-		try {
-			thread.join(); // 等待所有子线程执行结束
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		for (Thread iThread : threads) {
+			try {
+				iThread.join();// 等待所有子线程执行完毕
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		log.info("startTest：执行完毕！");
+		log.info("所有子线程任务：执行完毕！");
 	}
 	
 	/**

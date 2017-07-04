@@ -12,7 +12,8 @@ public class AppiumServer {
 	Logger log = Logger.getLogger(AppiumServer.class);
 
 	public AppiumServer() {
-//		killTask("node.exe");
+		killTask("node.exe");
+		log.info("a new appiumServer");
 	}
 
 	/**
@@ -22,14 +23,16 @@ public class AppiumServer {
 	 */
 	public void startServer(int port, String deviceName) {
 		
+		log.info("startServer with " + deviceName +" "+ port);
 		int bpport = port + 1;
 		int chromeport = port + 4792;
-
-		String cmd = "appium.cmd -p " + port + " -bp " + bpport + " --session-override --chromedriver-port "
+		String ip = "127.0.0.1";
+		String cmd = "appium.cmd -a "+ ip +" -p " + port + " -bp " + bpport + " --session-override --chromedriver-port "
 				+ chromeport + " -U " + deviceName + " >c://" + port + ".txt";
 		try {
 			Process process = Runtime.getRuntime().exec(cmd);
-			process.waitFor();
+			Thread.sleep(3000);
+//			process.waitFor();
 //			int value= process.waitFor();
 //			System.out.println("process.waitFor():"+value);
 		} catch (IOException e) {
@@ -37,8 +40,7 @@ public class AppiumServer {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		log.info(" Appium Server in running on (device)" + deviceName +" (port) "+ port);
-
+		log.info("Appium Server in running on " + deviceName +" "+ port);
 	}
 	
 	/**

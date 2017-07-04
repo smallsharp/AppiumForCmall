@@ -6,7 +6,7 @@
     <test name="测试登录" preserve-order="true">
 
         <classes>
-            <class name="com.cmall.testcases.Test_Login" > 
+            <class name="com.cmall.test.Test_Login" > 
                 <methods>
                 <parameter name="mobile" value="18521035133"></parameter>
                 <parameter name="password" value="111111"></parameter>
@@ -20,7 +20,7 @@
     
     <test name="测试退出">
     	<classes>
-    		<class name="com.cmall.testcases.Test_Logout">
+    		<class name="com.cmall.test.Test_Logout">
     			<methods>
     				<include name="testLogout"></include>
     			</methods>

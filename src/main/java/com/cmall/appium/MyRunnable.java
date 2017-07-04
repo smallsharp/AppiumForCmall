@@ -21,8 +21,7 @@ public class MyRunnable implements Runnable {
 		
 	}
 	
-	public MyRunnable(AndroidDriver<MobileElement> mdriver , TestCase testCase) {
-		this.mdriver = mdriver;
+	public MyRunnable(TestCase testCase) {
 		this.testCase = testCase;
 	}
 	

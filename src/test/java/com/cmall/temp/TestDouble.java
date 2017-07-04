@@ -119,7 +119,7 @@ public class TestDouble {
 		dc.setCapability("app", app.getAbsolutePath());
 
 		try {
-			mdriver = new AndroidDriver<MobileElement>(new URL("http://192.168.101.227:" + port + "/wd/hub"), dc);
+			mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:" + port + "/wd/hub"), dc);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

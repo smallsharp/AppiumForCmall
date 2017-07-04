@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="测试登录"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.317">
+  <properties />
+  
+  
+            <testcase name="testlogin" time="14.317" classname="com.cmall.test.Test_Login" />
+      
+</testsuite>

@@ -3,10 +3,10 @@ package com.cmall.play.pages;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import java.util.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.cmall.appium.Helper;
+import com.cmall.http.LogUtil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -19,6 +19,7 @@ public class LoginPage {
 	
 	private AndroidDriver<MobileElement> mdriver;
 	private Helper helper;
+	private LogUtil log = new LogUtil(LoginPage.class);
 
 	public LoginPage() {
 		// 这个空的构造方式是必须要的,init 页面需要
@@ -30,22 +31,22 @@ public class LoginPage {
 	}
 
 	@FindBy(id = "com.play.android:id/btn_jump")
-	private WebElement e_skipVideo; // 跳过
+	private MobileElement e_skipVideo; // 跳过
 
 	@AndroidFindBy(id = "com.play.android:id/btn_profile")
-	private WebElement e_my; // 我的
+	private MobileElement e_my; // 我的
 
 	@FindBy(id = "com.play.android:id/tv_account")
-	private WebElement e_account; // 账号密码登录
+	private MobileElement e_account; // 账号密码登录
 
 	@FindBy(id = "com.play.android:id/et_account")
-	private WebElement e_molibe; // 手机号
+	private MobileElement e_molibe; // 手机号
 
 	@FindBy(id = "com.play.android:id/et_password")
-	private WebElement e_password; // 密码
+	private MobileElement e_password; // 密码
 
 	@FindBy(id = "com.play.android:id/btn_login")
-	private WebElement e_login; // 登录
+	private MobileElement e_login; // 登录
 
 	@FindBy(id = "com.play.android:id/tv_sign_in")
 	private MobileElement tv_sign_in;
@@ -62,6 +63,7 @@ public class LoginPage {
 	public void login(String mobile, String password) {
 
 		try {
+			
 			String previousActivity = mdriver.currentActivity();
 			if (previousActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
 				e_my.click();// 点击：我的
@@ -73,9 +75,12 @@ public class LoginPage {
 
 			e_account.click();
 			e_molibe.sendKeys(mobile);
-			Reporter.log("输入手机号：" + mobile, true);
+//			Reporter.log("输入手机号：" + mobile, true);
+			log.info("输入手机号：" + mobile);
 			e_password.sendKeys(password);
-			Reporter.log("输入密码：" + password, true);
+//			Reporter.log("输入密码：" + password, true);
+			log.info("输入密码：" + password);
+
 			e_login.click();
 
 			if (!helper.waitActivity(previousActivity)) {
@@ -100,10 +105,10 @@ public class LoginPage {
 	public void login2(String mobile, String password) {
 
 		try {
-			
 			String previousActivity = mdriver.currentActivity();
 			if (previousActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
-				e_my.click();// 点击：我的
+				MobileElement m_my = mdriver.findElementById("com.play.android:id/btn_profile");
+				m_my.click();
 			}
 
 			if (!helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
