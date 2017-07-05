@@ -1,4 +1,4 @@
-package com.cmall.test;
+package com.cmall.appium;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -14,6 +14,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class DriverFactory {
 	
 	private static LogUtil log = new LogUtil(DriverFactory.class);
+	private static final String URL = "127.0.0.1";
 
 	public static AndroidDriver<MobileElement> initDriver(int port, String deviceName) {
 
@@ -32,9 +33,9 @@ public class DriverFactory {
 		File classPath = new File(System.getProperty("user.dir"));
 		File app = new File(classPath, "apps/play-debug.apk"); // 指定app的存放目录
 		dc.setCapability("app", app.getAbsolutePath());
-
+		
 		try {
-			mdriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:" + port + "/wd/hub"), dc);
+			mdriver = new AndroidDriver<MobileElement>(new URL("http://" + URL + ":" + port + "/wd/hub"), dc);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

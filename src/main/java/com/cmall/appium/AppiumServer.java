@@ -4,16 +4,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
 import org.apache.log4j.Logger;
 
+
+/**
+ * Appium 服务端
+ * @author cm
+ *
+ */
 public class AppiumServer {
 
 	Logger log = Logger.getLogger(AppiumServer.class);
+	Process p = null;
 
 	public AppiumServer() {
 		killTask("node.exe");
-		log.info("a new appiumServer");
+		log.info("kill node.exe and produce a new appiumServer");
 	}
 
 	/**
@@ -28,26 +34,26 @@ public class AppiumServer {
 		int chromeport = port + 4792;
 		String ip = "127.0.0.1";
 		String cmd = "appium.cmd -a "+ ip +" -p " + port + " -bp " + bpport + " --session-override --chromedriver-port "
-				+ chromeport + " -U " + deviceName + " >c://" + port + ".txt";
+				+ chromeport + " -U " + deviceName + " >c://" + deviceName + ".txt";
+		log.info(cmd);
 		try {
-			Process process = Runtime.getRuntime().exec(cmd);
+			p = runCommand2(cmd);
 			Thread.sleep(3000);
-//			process.waitFor();
-//			int value= process.waitFor();
-//			System.out.println("process.waitFor():"+value);
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
+		} finally {
+			log.info("Appium Server in running on " + deviceName +" "+ port);
 		}
-		log.info("Appium Server in running on " + deviceName +" "+ port);
 	}
 	
 	/**
 	 * 停止服务
 	 */
 	public void stopServer() {
-		killTask("node.exe");
+//		killTask("node.exe");
+		if(p!=null) {
+			p.destroy();
+		}
 	}
 	
 	/**

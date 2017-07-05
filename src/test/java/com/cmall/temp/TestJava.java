@@ -9,11 +9,9 @@ public class TestJava {
 	}
 	
 	void test(){
-		per = new Person("li", 20);
-//		System.out.println(per);
-		per = new Person("zhang", 22);
-		System.out.println(per);
-
+//		per = new Person();
+		Car car = new Car();
+		car.tell();
 	}
 }
 
@@ -22,11 +20,40 @@ class Person{
 	
 	private String name;
 	private int age;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 	
+	public Person() {
+		System.out.println("a new person name is "+ name + ",age:"+age);
+	}
+
 	public Person(String name,int age) {
-		// TODO Auto-generated constructor stub
 		this.name = name;
 		this.age = age;
-		System.out.println("a new person:"+ name + ",age:"+age);
+		System.out.println("a new person name is"+ name + ",age:"+age);
 	}
+}
+
+class Car {
+	
+	Person per = new Person();
+	public void tell() {
+		System.out.println(per.getName());
+		System.out.println(per.getAge());
+	}
+	
 }

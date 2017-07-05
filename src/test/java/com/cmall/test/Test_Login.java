@@ -9,14 +9,13 @@ import com.cmall.testcases.LoginTestcase;
 import com.cmall.testcases.TestCase;
 
 /**
- * 测试多设备
+ * 尝试启动服务，和执行测试分离，结果不理想！
  * @author cm
  *
  */
 public class Test_Login {
 	
 	LogUtil log = new LogUtil(Test_Login.class);
-//	TestManage manage = TestManage.getInstance();
 	TestManage2 manage = new TestManage2();
 	
 	@BeforeSuite

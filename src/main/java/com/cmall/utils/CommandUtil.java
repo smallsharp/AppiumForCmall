@@ -13,12 +13,24 @@ import java.io.InputStreamReader;
 public class CommandUtil {
 	
 	public static Process exec_cmd(String command) {
-//		return process("adb " + command);
+
 		return process(command);
 	}
 
 	public static Process exec_shell(String command) {
 		return process("adb shell " + command);
+	}
+	
+	private static Process process(String command) {
+		
+		Process ps = null;
+		try {
+			ps = Runtime.getRuntime().exec(command);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return ps;
 	}
 
 	public static BufferedReader shellOut(Process ps) {
@@ -51,15 +63,4 @@ public class CommandUtil {
 		return sb.toString().trim();
 	}
 
-	private static Process process(String command) {
-		
-		Process ps = null;
-		try {
-			ps = Runtime.getRuntime().exec(command);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return ps;
-	}
 }
