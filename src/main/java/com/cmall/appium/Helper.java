@@ -55,6 +55,7 @@ public class Helper {
 					+ "(" + mdriver.currentActivity() + ")");
 
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return false;
 	}
@@ -96,7 +97,6 @@ public class Helper {
 			if (waitElement(mobileElement)) {
 				return true;
 			}
-
 		}
 		return false;
 	}
@@ -130,6 +130,13 @@ public class Helper {
 	public void pressKeyCode(int androidkeycode) {
 		log.info("Press AndroidKeyCode ==> " + androidkeycode);
 		mdriver.pressKeyCode(androidkeycode);
+	}
+	
+	
+	public String getCurrentActivity() {
+		String current  = mdriver.currentActivity();
+		log.info("Current Activity:"+current);
+		return current;
 	}
 
 	/***

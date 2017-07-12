@@ -42,5 +42,5 @@ public class DriverFactory {
 		log.info("initDriver ok on " + deviceName + " " + port);
 		return mdriver;
 	}
-
+	
 }

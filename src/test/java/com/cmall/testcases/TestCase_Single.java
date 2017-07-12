@@ -6,23 +6,25 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.cmall.appium.TestManage2;
+import com.cmall.appium.DriverFactory;
 import com.cmall.appium.TestNGListener;
 import com.cmall.play.pages.LoginPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-
+/**
+ * 单线程
+ * @author cm
+ *
+ */
 @Listeners(TestNGListener.class)
 public class TestCase_Single{
     static AndroidDriver<MobileElement> mdriver = null;
-	TestManage2 manage = null;
 	
 	@BeforeSuite
 	public void setup() {
 		System.out.println("Before");
-		manage = new TestManage2();
-		mdriver= manage.initAndroidDriver(4723, "022TAS7N51009853");
+		mdriver= DriverFactory.initDriver(4723, "022TAS7N51009853");
 	}
 
 	@Test(description = "退出登录")

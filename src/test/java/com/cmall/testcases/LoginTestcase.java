@@ -4,11 +4,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import com.cmall.http.LogUtil;
 import com.cmall.play.pages.LoginPage;
+import com.cmall.utils.PropertyUtil;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class LoginTestcase implements TestCase {
+public class LoginTestcase implements ITestCase {
 	
 	LogUtil log = new LogUtil(LoginTestcase.class);
 	private AndroidDriver<MobileElement> mdriver;
@@ -16,11 +18,9 @@ public class LoginTestcase implements TestCase {
 	@Override
 	public void runCase() {
 		log.info("runCase:loginTestCase");
-		String mobile = "18521035133";
-		String password = "111111";
 		LoginPage loginPage = new LoginPage(mdriver);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS), loginPage);
-		loginPage.login(mobile, password);
+		loginPage.login(PropertyUtil.getString("mobile"), PropertyUtil.getString("password"));
 	}
 
 	@Override

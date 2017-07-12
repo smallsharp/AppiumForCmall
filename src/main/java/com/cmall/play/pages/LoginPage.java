@@ -34,7 +34,7 @@ public class LoginPage {
 	private MobileElement e_skipVideo; // 跳过
 
 	@AndroidFindBy(id = "com.play.android:id/btn_profile")
-	private MobileElement e_my; // 我的
+	private MobileElement m_my; // 我的
 
 	@FindBy(id = "com.play.android:id/tv_account")
 	private MobileElement e_account; // 账号密码登录
@@ -64,34 +64,31 @@ public class LoginPage {
 
 		try {
 			
-			String previousActivity = mdriver.currentActivity();
+			String previousActivity = helper.getCurrentActivity();
 			if (previousActivity.contains(Play_ActivityList.HOME_ACTIVITY)) {
-				e_my.click();// 点击：我的
+				helper.clickonElement(m_my);
 			}
 
 			if (!helper.waitActivity(Play_ActivityList.LOGIN_ACTIVITY)) {
 				assertEquals(mdriver.currentActivity(), Play_ActivityList.LOGIN_ACTIVITY);
 			}
 
-			e_account.click();
-			e_molibe.sendKeys(mobile);
+			helper.clickonElement(e_account);
+			helper.inputText(e_molibe, mobile);
 //			Reporter.log("输入手机号：" + mobile, true);
 			log.info("输入手机号：" + mobile);
-			e_password.sendKeys(password);
+			helper.inputText(e_password, password);
 //			Reporter.log("输入密码：" + password, true);
 			log.info("输入密码：" + password);
-
-			e_login.click();
+			helper.clickonElement(e_login);
 
 			if (!helper.waitActivity(previousActivity)) {
 				assertEquals(mdriver.currentActivity(), previousActivity, "登录成功后，应该返回:" + previousActivity);
 			}
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-			assertTrue(false, "failed to locate element!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			assertTrue(false, "occurred error while running!");
 		}
 
 	}

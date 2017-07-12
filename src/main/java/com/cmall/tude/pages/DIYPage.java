@@ -3,11 +3,8 @@ package com.cmall.tude.pages;
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.cmall.appium.TestManage;
 import com.cmall.appium.Helper;
 import com.cmall.play.pages.Play_ActivityList;
-
 import io.appium.java_client.android.AndroidDriver;
 
 public class DIYPage {

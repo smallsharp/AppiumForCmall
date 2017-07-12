@@ -1,7 +1,7 @@
 package com.cmall.appium;
 
 import com.cmall.http.LogUtil;
-import com.cmall.testcases.TestCase;
+import com.cmall.testcases.ITestCase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -15,13 +15,13 @@ public class MyRunnable implements Runnable {
 	
 	LogUtil log = new LogUtil(MyRunnable.class);
 	AndroidDriver<MobileElement> mdriver;
-	TestCase testCase;
+	ITestCase testCase;
 	
 	public MyRunnable() {
 		
 	}
 	
-	public MyRunnable(TestCase testCase) {
+	public MyRunnable(ITestCase testCase) {
 		this.testCase = testCase;
 	}
 	

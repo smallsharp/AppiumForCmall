@@ -6,14 +6,16 @@ import java.io.InputStream;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+/**
+ * 利用ResourceBundle读取资源配置文件
+ * @author cm
+ *
+ */
 public class PropertyUtil {
 
-	Properties prop = new Properties();
-
-	/**
-	 * @author tester_lee
-	 * @param file
-	 */
+	static Properties prop = new Properties();
+	static ResourceBundle rb = ResourceBundle.getBundle("apple");
+	
 	public PropertyUtil(String filePath) {
 
 		InputStream in = null;
@@ -41,27 +43,33 @@ public class PropertyUtil {
 
 	}
 
+
 	/**
-	 * 
+	 * 通过Properties 获取value
 	 * @param key
-	 * @return value
+	 * @return
 	 */
-	public String getValue(String key) {
-
-		String value = prop.getProperty(key);
-
-		return value;
-
+	public static String getValue(String key) {
+		return prop.getProperty(key);
 	}
+	
+	/**
+	 * 通过ResourceBundle 获取value
+	 * @param key
+	 * @return
+	 */
+	public static String getString(String key) {
+		return rb.getString(key);
+	}
+	
 
 	public static void main(String[] args) {
-
 //		PropertyUtil propertyTest = new PropertyUtil("/app.properties");// 这里需要加个/，表示类的根目录
-		ResourceBundle rb = ResourceBundle.getBundle("apple.properties");
 //		String s1 = propertyTest.getValue("deviceName_meizu");
-		String s2 = rb.getString("deviceName_meizu");
 //		System.out.println(s1);
-		System.out.println(s2);
 
+		ResourceBundle rb = ResourceBundle.getBundle("apple");// 不需要加 文件后缀名
+		String s2 = rb.getString("password");
+		System.out.println(s2);
 	}
 }

@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Vector;
 
 import com.cmall.http.LogUtil;
-import com.cmall.testcases.TestCase;
+import com.cmall.testcases.ITestCase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
- * 测试多设备 副本 最原始的写法
+ * 测试多设备
  * 
  * @author cm
  *
@@ -19,7 +19,7 @@ public class MultideviceManage {
 	LogUtil log = new LogUtil(MultideviceManage.class);
 	List<String> list = DDMlibUtil.getDeviceNames();
 
-	public void runTestCase(TestCase testcase) {
+	public void runTestCase(ITestCase testcase) {
 		Vector<Thread> threads = new Vector<Thread>();
 		log.info("一共检测到设备：" + list.size() + "台");
 		for (int i = 0; i < list.size(); i++) {
@@ -51,26 +51,8 @@ public class MultideviceManage {
 
 		private int port;
 		private String deviceName;
-		private TestCase testcase;
+		private ITestCase testcase;
 		private AndroidDriver<MobileElement> mdriver;
-
-		public MyRunnable() {
-		}
-
-		public MyRunnable(TestCase testcase) {
-			this.testcase = testcase;
-		}
-
-		public MyRunnable(int port, String deviceName) {
-			this.port = port;
-			this.deviceName = deviceName;
-		}
-
-		public MyRunnable(int port, String deviceName, TestCase testcase) {
-			this.port = port;
-			this.deviceName = deviceName;
-			this.testcase = testcase;
-		}
 
 		@Override
 		public void run() {
@@ -89,6 +71,19 @@ public class MultideviceManage {
 				appiumServer.stopServer();
 				log.info("执行结束：" + deviceName);
 			}
+		}
+		
+		public MyRunnable() {
+		}
+
+		public MyRunnable(ITestCase testcase) {
+			this.testcase = testcase;
+		}
+
+		public MyRunnable(int port, String deviceName, ITestCase testcase) {
+			this.port = port;
+			this.deviceName = deviceName;
+			this.testcase = testcase;
 		}
 	}
 
