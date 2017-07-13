@@ -29,8 +29,8 @@ public class ModelPage {
  	public ModelPage() {
 	}
  	
-	public ModelPage(AndroidDriver<MobileElement> driver) {
-		this.mdriver = driver;
+	public ModelPage(AndroidDriver<MobileElement> mdriver) {
+		this.mdriver = mdriver;
 		helper = new Helper(mdriver);
 	}
 
@@ -168,7 +168,7 @@ public class ModelPage {
 
 	/**
 	 * 通过切换模型的档次 和 颜色，查看模型的展示
-	 * @throws InterruptedException 
+	 * 
 	 */
 	public void check3DModelByColorAndGrade() {
 		
@@ -237,14 +237,12 @@ public class ModelPage {
 	/**
 	 * 遍历3D模型页面所有商品
 	 * 
-	 * @throws InterruptedException
 	 */
 	public void check3DModelGoodsList() {
 		
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelGoodsList");
 		try {
-			
 			Map<String, String> paramsMap = new HashMap<String, String>();
 			paramsMap.put("productId", "501");
 			JsonObject jsonObject = JsonUtils.getJsonBydoGet("http://android.cmall.com/goodsSite/home/goodsList",paramsMap);
@@ -252,8 +250,7 @@ public class ModelPage {
 			JsonArray pageItems = result.get("pageItems").getAsJsonArray();
 			System.out.println("pageItems.size():"+pageItems.size());
 			
-			for (int i = 0; i < 1; i++) {
-				
+			for (int i = 0; i < 1; i++) {// 测试用
 				if (i < 5) {
 					System.out.println("i:"+i);
 					m_goods_selector.get(i).click();
@@ -272,12 +269,9 @@ public class ModelPage {
 				}
 			}
 			
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-			assertTrue(false,"failed to locate element!");
 		} catch (Exception e){
-			e.printStackTrace();
 			helper.takeScreenShot("check3DModelGoodsList.jpg");
+			e.printStackTrace();
 			assertTrue(false,"occurred error while running!");
 		}
 	}

@@ -7,7 +7,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class LogoutTestcase implements ITestCase{
+public class TestCase_logout implements ITestCase{
 	
 	AndroidDriver<MobileElement> mdriver;
 

@@ -49,6 +49,9 @@ public class HttpClientUtil {
 			CookieStore cookieStore) {
 
 		HttpGet httpget = null;
+		if (paramsMap == null) {
+			entitys = null;
+		}
 		entitys = getFormEntity(paramsMap);
 
 		try {
@@ -186,10 +189,13 @@ public class HttpClientUtil {
 			f = s;
 		}
 		List<NameValuePair> paramsList = new ArrayList<NameValuePair>();
-		Set<String> keySet = paramsMap.keySet();
-		for (String key : keySet) {
-			paramsList.add(new BasicNameValuePair(key, paramsMap.get(key)));
+		if (paramsMap != null) {
+			Set<String> keySet = paramsMap.keySet();
+			for (String key : keySet) {
+				paramsList.add(new BasicNameValuePair(key, paramsMap.get(key)));
+			}
 		}
+		
 		UrlEncodedFormEntity entitys = new UrlEncodedFormEntity(paramsList, f);
 		return entitys;
 	}

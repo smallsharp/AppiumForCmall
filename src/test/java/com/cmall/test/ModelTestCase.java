@@ -1,4 +1,4 @@
-package com.cmall.testcases;
+package com.cmall.test;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;

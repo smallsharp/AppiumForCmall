@@ -31,9 +31,6 @@ public class ReponseUtil {
 				responseBean.setStatus(httpResponse.getStatusLine().getReasonPhrase());
 				responseBean.setStatusCode(Integer.toString(httpResponse.getStatusLine().getStatusCode()));
 				responseBean.setBody(rs);
-				
-				log.info(httpResponse.getStatusLine().getReasonPhrase() + "\n"
-						+ Integer.toString(httpResponse.getStatusLine().getStatusCode()) + "\n" + "Context" + rs);
 
 				HeaderIterator iterator = httpResponse.headerIterator();
 				while (iterator.hasNext()) {

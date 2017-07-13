@@ -39,7 +39,9 @@ public class JsonUtils {
 		
 		JsonObject subResult = result.get(0).getAsJsonObject();
 		System.out.println(subResult.get("name"));
-		
+
+		String url2 = "http://android.cmall.com/goodsSite/home/goodsList?productId=501";
+		System.out.println(getJsonBydoGet(url2, null));
 
 
 	}
@@ -56,12 +58,15 @@ public class JsonUtils {
 	
 	public static void main(String[] args) {
 
-		Map<String, String> paramsMap = new HashMap<String, String>();
+/*		Map<String, String> paramsMap = new HashMap<String, String>();
 		paramsMap.put("productId", "501");
 		JsonObject jsonObject = getJsonBydoGet("http://android.cmall.com/goodsSite/home/goodsList",paramsMap);
 		JsonObject result = (JsonObject) jsonObject.get("result");
 		JsonArray pageItems = result.get("pageItems").getAsJsonArray();
-		System.out.println(pageItems.size());
+		System.out.println(pageItems.size());*/
+		
+		String url2 = "http://android.cmall.com/goodsSite/home/goodsList?productId=501";
+		System.out.println(getJsonBydoGet(url2, null));
 	}
 
 }

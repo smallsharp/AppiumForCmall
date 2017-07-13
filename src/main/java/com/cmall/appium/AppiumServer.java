@@ -38,7 +38,7 @@ public class AppiumServer {
 		log.info(cmd);
 		try {
 			p = runCommand2(cmd);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {

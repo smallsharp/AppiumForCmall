@@ -2,7 +2,6 @@ package com.cmall.appium;
 
 import java.util.List;
 import java.util.Vector;
-
 import com.cmall.http.LogUtil;
 import com.cmall.testcases.ITestCase;
 import io.appium.java_client.MobileElement;
@@ -44,22 +43,20 @@ public class MultideviceManage {
 
 		log.info("所有线程任务，全部执行完毕！");
 	}
-
+	
 	AppiumServer appiumServer = new AppiumServer();
 
 	class MyRunnable implements Runnable {
-
 		private int port;
 		private String deviceName;
 		private ITestCase testcase;
 		private AndroidDriver<MobileElement> mdriver;
-
 		@Override
 		public void run() {
 			try {
 				// 启动Appium服务器
 				appiumServer.startServer(port, deviceName);
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				// 初始化driver
 				mdriver = DriverFactory.initDriver(port, deviceName);
 				testcase.setDriver(mdriver);
@@ -86,5 +83,6 @@ public class MultideviceManage {
 			this.testcase = testcase;
 		}
 	}
+	
 
 }
