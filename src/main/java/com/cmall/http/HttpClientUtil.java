@@ -32,7 +32,7 @@ import org.apache.http.util.EntityUtils;
 
 public class HttpClientUtil {
 
-	private static Charset s = Consts.UTF_8;
+	private static Charset utf_8 = Consts.UTF_8;
 	// 请求实体
 	private static UrlEncodedFormEntity entitys = null;
 
@@ -49,9 +49,6 @@ public class HttpClientUtil {
 			CookieStore cookieStore) {
 
 		HttpGet httpget = null;
-		if (paramsMap == null) {
-			entitys = null;
-		}
 		entitys = getFormEntity(paramsMap);
 
 		try {
@@ -85,11 +82,9 @@ public class HttpClientUtil {
 			CloseableHttpClient httpclient, CookieStore cookieStore) {
 
 		HttpPost httppost = new HttpPost(url);
-
 		if (cookieStore != null) {
 			httppost.setHeader("Cookie", "JSESSIONID=" + cookieStore.getCookies().get(0).getValue().trim());
 		}
-
 		// 请求实体
 		entitys = getFormEntity(paramsMap);
 		httppost.setEntity(entitys);
@@ -161,11 +156,9 @@ public class HttpClientUtil {
 			if (cookieStore != null) {
 				httpdelete.setHeader("Cookie", "JSESSIONID=" + cookieStore.getCookies().get(0).getValue().trim());
 			}
-
 			// 执行get请求，返回response服务器响应对象, 其中包含了状态信息和服务器返回的数据
 			CloseableHttpResponse httpResponse = httpclient.execute(httpdelete);
 			return httpResponse;
-
 		} catch (ParseException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -186,7 +179,7 @@ public class HttpClientUtil {
 		if (ucode.equals("")) {
 			f = Consts.UTF_8;
 		} else {
-			f = s;
+			f = utf_8;
 		}
 		List<NameValuePair> paramsList = new ArrayList<NameValuePair>();
 		if (paramsMap != null) {

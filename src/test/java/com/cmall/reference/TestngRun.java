@@ -1,4 +1,4 @@
-package com.cmall.temp;
+package com.cmall.reference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,18 +9,18 @@ import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 /**
- * TestNg 用代码执行testNg的几种方式
+ * 代码 运行testNg
  * @author cm
  *
  */
-public class TestngRunByJava {
+public class TestngRun {
 	
 	@Test
 	public void show() {
 		System.out.println("show ~~~~");
 	}
 	
-	
+
 /*	public static void main(String[] args) {
 		TestNG testNG = new TestNG();
 		testNG.setTestClasses(new Class[] {Demo.class});

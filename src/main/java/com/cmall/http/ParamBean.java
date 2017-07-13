@@ -12,10 +12,8 @@ public class ParamBean {
 	String password;
 	String expResu;// 期望结果
 	String actResu;// 实际结果
-	
 	String pass;// 是否通过
 	String desc;// 描述
-
 	
 	public ParamBean() {
 	}
@@ -44,8 +42,6 @@ public class ParamBean {
 		this.password = password;
 	}
 	
-	
-	
 	public String getExpResu() {
 		return expResu;
 	}
@@ -59,7 +55,6 @@ public class ParamBean {
 	public void setActResu(String actResu) {
 		this.actResu = actResu;
 	}
-
 	
 	@Override
 	public String toString() {
@@ -80,6 +75,5 @@ public class ParamBean {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	
 	
 }

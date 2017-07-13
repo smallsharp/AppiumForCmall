@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.cmall.appium.Helper;
-import com.cmall.http.LogUtil;
+import com.cmall.utils.LogUtil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;

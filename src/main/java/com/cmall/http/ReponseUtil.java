@@ -4,6 +4,7 @@ import org.apache.http.HeaderIterator;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
+import com.cmall.utils.LogUtil;
 
 /**
  * 将从服务端返回的response结果解析为ResponseBean对象

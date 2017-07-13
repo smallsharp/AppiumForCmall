@@ -14,7 +14,6 @@ public  class ResponseBean {
 	public String contentType;
 	public String body;
 	
-	
 	public String getStatus() {
 		return status;
 	}
@@ -39,7 +38,6 @@ public  class ResponseBean {
 	public void setBody(String body) {
 		this.body = body;
 	}
-	
 	
 	@Override
 	public String toString() {

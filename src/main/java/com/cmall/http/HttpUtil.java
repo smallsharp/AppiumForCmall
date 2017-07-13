@@ -1,4 +1,4 @@
-package com.cmall.temp;
+package com.cmall.http;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -233,14 +233,14 @@ public class HttpUtil {
     
     @Test  
     public void testSendHttpPost1() {  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpPost("http://localhost:8089/test/send?username=test01&password=123456");  
         System.out.println("reponse content:" + responseContent);  
     }  
       
     @Test  
     public void testSendHttpPost2() {  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpPost("http://localhost:8089/test/send", "username=test01&password=123456");  
         System.out.println("reponse content:" + responseContent);  
     }  
@@ -250,7 +250,7 @@ public class HttpUtil {
         Map<String, String> maps = new HashMap<String, String>();  
         maps.put("username", "test01");  
         maps.put("password", "123456");  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpPost("http://localhost:8089/test/send", maps);  
         System.out.println("reponse content:" + responseContent);  
     }  
@@ -262,21 +262,21 @@ public class HttpUtil {
         List<File> fileLists = new ArrayList<File>();  
         fileLists.add(new File("D://test//httpclient//1.png"));  
         fileLists.add(new File("D://test//httpclient//1.txt"));  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpPost("http://localhost:8089/test/sendpost/file", maps, fileLists);  
         System.out.println("reponse content:" + responseContent);  
     }  
   
     @Test  
     public void testSendHttpGet() {  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpGet("http://localhost:8089/test/send?username=test01&password=123456");  
         System.out.println("reponse content:" + responseContent);  
     }  
       
     @Test  
     public void testSendHttpsGet() {  
-        String responseContent = HttpClientUtil.getInstance()  
+        String responseContent = HttpUtil.getInstance()  
                 .sendHttpsGet("https://www.baidu.com");  
         System.out.println("reponse content:" + responseContent);  
     }  

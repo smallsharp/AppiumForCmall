@@ -1,4 +1,4 @@
-package com.cmall.temp;
+package com.cmall.reference;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -3,11 +3,8 @@ package com.cmall.appium;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import com.cmall.http.LogUtil;
-
+import com.cmall.utils.LogUtil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 

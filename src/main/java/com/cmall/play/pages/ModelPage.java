@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.cmall.appium.Helper;
-import com.cmall.http.JsonUtils;
+import com.cmall.http.HttpUtils;
 import com.cmall.utils.ImageUtil;
 import com.cmall.utils.LogUtil;
 import com.google.gson.JsonArray;
@@ -243,9 +243,12 @@ public class ModelPage {
 		this.goto3DModelFromHome();
 		log.info("exec:check3DModelGoodsList");
 		try {
+			String url = "http://android.cmall.com/goodsSite/home/goodsList";
 			Map<String, String> paramsMap = new HashMap<String, String>();
 			paramsMap.put("productId", "501");
-			JsonObject jsonObject = JsonUtils.getJsonBydoGet("http://android.cmall.com/goodsSite/home/goodsList",paramsMap);
+			String response = HttpUtils.sendHttpGet(url, paramsMap);
+//			JsonObject jsonObject = HttpUtils.getJsonBydoGet(url,paramsMap);
+			JsonObject jsonObject = HttpUtils.getJson(response);
 			JsonObject result = (JsonObject) jsonObject.get("result");
 			JsonArray pageItems = result.get("pageItems").getAsJsonArray();
 			System.out.println("pageItems.size():"+pageItems.size());

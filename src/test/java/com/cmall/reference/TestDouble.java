@@ -1,4 +1,4 @@
-package com.cmall.temp;
+package com.cmall.reference;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -15,7 +15,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
- * 测试多设备
+ * 测试多设备-原始版本
  * @author cm
  *
  */
