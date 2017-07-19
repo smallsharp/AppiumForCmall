@@ -8,7 +8,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.cmall.appium.AppiumServerUtils;
+import com.cmall.appium.AppiumServerUtil;
 import com.cmall.appium.TestNGListener;
 import com.cmall.play.pages.LoginPage;
 import com.cmall.play.pages.PersonPage;
@@ -44,7 +44,7 @@ public class TestSuite_Tude{
 			mdriver.closeApp();
 			CommandUtil.exec_shell("pm clear com.play.android");
 		}
-		AppiumServerUtils.getInstance().stopServer();
+//		AppiumServerUtil.getInstance().stopServer();
 		Reporter.log("========== 测试执行完成，清理测试环境通过 ==========", true);
 
 	}

@@ -1,0 +1,140 @@
+2017-07-14 04:20:00:595 - info: [Appium] Welcome to Appium v1.6.5
+2017-07-14 04:20:00:597 - info: [Appium] Non-default server args:
+2017-07-14 04:20:00:598 - info: [Appium]   address: 127.0.0.1
+2017-07-14 04:20:00:599 - info: [Appium]   port: 4725
+2017-07-14 04:20:00:599 - info: [Appium]   log: D:\workspace\AppiumForCmall\log\Thread-11500005993140.log
+2017-07-14 04:20:00:659 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4725
+2017-07-14 04:20:00:816 - info: [HTTP] --> GET /wd/hub/status {}
+2017-07-14 04:20:00:819 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-07-14 04:20:00:823 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-07-14 04:20:00:829 - info: [HTTP] <-- GET /wd/hub/status 200 10 ms - 83 
+2017-07-14 04:20:04:481 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"80c20e99","resetKeyboard":true}}
+2017-07-14 04:20:04:482 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"80c20e99","resetKeyboard":true},null,null]
+2017-07-14 04:20:04:482 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1500006004482 (12:20:04 GMT+0800 (中国标准时间))
+2017-07-14 04:20:04:484 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-07-14 04:20:04:484 - info: [Appium] Capabilities:
+2017-07-14 04:20:04:486 - info: [Appium]   appPackage: 'com.play.android'
+2017-07-14 04:20:04:486 - info: [Appium]   appActivity: 'com.play.android.activity.SplashActivity'
+2017-07-14 04:20:04:487 - info: [Appium]   app: 'D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk'
+2017-07-14 04:20:04:487 - info: [Appium]   noset: false
+2017-07-14 04:20:04:487 - info: [Appium]   unicodeKeyboard: true
+2017-07-14 04:20:04:487 - info: [Appium]   platformName: 'Android'
+2017-07-14 04:20:04:487 - info: [Appium]   deviceName: '80c20e99'
+2017-07-14 04:20:04:487 - info: [Appium]   resetKeyboard: true
+2017-07-14 04:20:04:489 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-07-14 04:20:04:505 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: noset.
+2017-07-14 04:20:04:507 - info: [BaseDriver] Session created with session id: 25c03bea-0ba4-48e4-a98c-93ff8347dc7d
+2017-07-14 04:20:04:509 - info: [debug] [AndroidDriver] Getting Java version
+2017-07-14 04:20:04:681 - info: [AndroidDriver] Java version is: 1.8.0_131
+2017-07-14 04:20:04:686 - info: [ADB] Checking whether adb is present
+2017-07-14 04:20:04:689 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-07-14 04:20:04:689 - info: [AndroidDriver] Retrieving device list
+2017-07-14 04:20:04:690 - info: [debug] [ADB] Trying to find a connected android device
+2017-07-14 04:20:04:691 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:04:733 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:04:733 - info: [AndroidDriver] Using device: 85GBBMA2353T
+2017-07-14 04:20:04:734 - info: [ADB] Checking whether adb is present
+2017-07-14 04:20:04:737 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-07-14 04:20:04:738 - info: [debug] [ADB] Setting device id to 85GBBMA2353T
+2017-07-14 04:20:04:740 - info: [BaseDriver] Using local app 'D:\workspace\AppiumForCmall\apps\play-debug.apk'
+2017-07-14 04:20:04:740 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-07-14 04:20:04:742 - info: [AndroidDriver] Starting Android session
+2017-07-14 04:20:04:747 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","wait-for-device"]
+2017-07-14 04:20:04:788 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:04:820 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:04:820 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","echo","ping"]
+2017-07-14 04:20:04:894 - info: [debug] [Logcat] Starting logcat capture
+2017-07-14 04:20:04:969 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-07-14 04:20:04:970 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-07-14 04:20:04:971 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-07-14 04:20:06:626 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:06:656 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:06:658 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","get","secure","default_input_method"]
+2017-07-14 04:20:07:384 - info: [debug] [AndroidDriver] Unsetting previous IME com.iflytek.inputmethod/.FlyIME
+2017-07-14 04:20:07:384 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-07-14 04:20:07:384 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:07:418 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:07:418 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-07-14 04:20:08:144 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:08:178 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:08:178 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-07-14 04:20:08:946 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-07-14 04:20:08:947 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-07-14 04:20:08:947 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:09:445 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:09:445 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","io.appium.settings"]
+2017-07-14 04:20:10:460 - info: [debug] [ADB] App is not installed
+2017-07-14 04:20:10:460 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\io.appium.settings\\app\\build\\outputs\\apk\\settings_apk-debug.apk"]
+2017-07-14 04:20:11:657 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:11:688 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:11:688 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.sdk"]
+2017-07-14 04:20:11:739 - info: [debug] [ADB] Device API level: 22
+2017-07-14 04:20:11:740 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:11:770 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:11:770 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","package","io.appium.settings"]
+2017-07-14 04:20:11:835 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-07-14 04:20:11:836 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-07-14 04:20:12:615 - info: [debug] [ADB] Device API level: 22
+2017-07-14 04:20:12:615 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:12:648 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:12:648 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","put","secure","mock_location","1"]
+2017-07-14 04:20:13:304 - info: [ADB] Getting device platform version
+2017-07-14 04:20:13:304 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:13:334 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:13:334 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.release"]
+2017-07-14 04:20:13:378 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:13:408 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:13:409 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","wm","size"]
+2017-07-14 04:20:14:086 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:14:124 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:14:126 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.model"]
+2017-07-14 04:20:14:203 - info: [debug] [ADB] Current device property 'ro.product.model': MX5
+2017-07-14 04:20:14:204 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:14:241 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:14:242 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.manufacturer"]
+2017-07-14 04:20:14:317 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Meizu
+2017-07-14 04:20:14:478 - info: [AndroidDriver] Remote apk path is /data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk
+2017-07-14 04:20:14:479 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:14:512 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:14:512 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ls","/data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk"]
+2017-07-14 04:20:14:555 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-07-14 04:20:14:555 - info: [debug] [ADB] Getting install status for com.play.android
+2017-07-14 04:20:14:555 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:14:585 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:14:585 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","com.play.android"]
+2017-07-14 04:20:15:072 - info: [debug] [ADB] App is installed
+2017-07-14 04:20:15:073 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-07-14 04:20:15:073 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-07-14 04:20:15:074 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:15:104 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:15:104 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-07-14 04:20:15:780 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:15:810 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:15:811 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","clear","com.play.android"]
+2017-07-14 04:20:16:351 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workspace\AppiumForCmall\apps\play-debug.apk null C:\Users\cm\AppData\Local\Temp\com.play.android
+2017-07-14 04:20:16:351 - info: [debug] [ADB] Extracting strings for language: default
+2017-07-14 04:20:16:352 - info: [debug] [ADB] Device API level: 22
+2017-07-14 04:20:16:353 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:16:391 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:16:391 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","persist.sys.language"]
+2017-07-14 04:20:16:475 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-07-14 04:20:18:053 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-07-14 04:20:18:058 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","C:\\Users\\cm\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-07-14 04:20:18:117 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-07-14 04:20:18:119 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-07-14 04:20:18:121 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","forward","tcp:4724","tcp:4724"]
+2017-07-14 04:20:18:132 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-07-14 04:20:18:132 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-07-14 04:20:18:133 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-07-14 04:20:18:133 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-07-14 04:20:18:134 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-07-14 04:20:18:230 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-07-14 04:20:18:231 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-07-14 04:20:18:232 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 04:20:18:262 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 04:20:18:263 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ps"]
+2017-07-14 04:20:18:382 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-07-14 04:20:18:382 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-07-14 04:20:18:383 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","85GBBMA2353T","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-07-14 04:20:18:952 - error: [UiAutomator] UiAutomator exited unexpectedly with code 0, signal null
+2017-07-14 04:20:18:952 - info: [debug] [UiAutomator] Moving to state 'stopped'

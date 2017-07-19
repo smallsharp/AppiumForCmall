@@ -6,16 +6,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import org.apache.log4j.Logger;
 
-
 /**
  * Appium 服务端
+ * 
  * @author cm
  *
  */
 public class AppiumServer {
 
 	Logger log = Logger.getLogger(AppiumServer.class);
-	Process p = null;
+	Process proc = null;
 
 	public AppiumServer() {
 		killTask("node.exe");
@@ -24,40 +24,53 @@ public class AppiumServer {
 
 	/**
 	 * 
-	 * @param port 默认4723，--bootstrap-port 默认4724，--chromedriver-port：默认9515
+	 * @param port
+	 *            默认4723，--bootstrap-port 默认4724，--chromedriver-port：默认9515
 	 * @param deviceName
 	 */
-	public void startServer(int port, String deviceName) {
-		
-		log.info("startServer with " + deviceName +" "+ port);
+	public void startServer(String ip, int port, String deviceName) {
+
+		String kill = "taskkill /F /im node.exe";
+		runCommand2(kill);
+
+		log.info("start to launch server on " + ip + " " + port + " " + deviceName);
 		int bpport = port + 1;
 		int chromeport = port + 4792;
-		String ip = "127.0.0.1";
-		String cmd = "appium.cmd -a "+ ip +" -p " + port + " -bp " + bpport + " --session-override --chromedriver-port "
-				+ chromeport + " -U " + deviceName + " >c://" + deviceName + ".txt";
-		log.info(cmd);
+		String launch = "appium.cmd -a " + ip + " -p " + port + " -bp " + bpport
+				+ " --session-override --chromedriver-port " + chromeport + " -U " + deviceName + " >c://" + deviceName
+				+ ".txt";
+		log.info(launch);
 		try {
-			p = runCommand2(cmd);
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
+			proc = runCommand2(launch);
+			InputStream input = proc.getInputStream();
+			InputStreamReader reader = new InputStreamReader(input);
+			BufferedReader br = new BufferedReader(reader);
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+			int exitVal = 100;
+			exitVal = proc.waitFor();
+			System.out.println("Process exitValue: " + exitVal);
+		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			log.info("Appium Server in running on " + deviceName +" "+ port);
 		}
+		log.info("Appium Server is running on "+ip+" "+port+" "+deviceName);
 	}
-	
+
 	/**
 	 * 停止服务
 	 */
 	public void stopServer() {
-//		killTask("node.exe");
-		if(p!=null) {
-			p.destroy();
+		// killTask("node.exe");
+		if (proc != null) {
+			proc.destroy();
 		}
 	}
-	
+
 	/**
 	 * kill 进程
+	 * 
 	 * @param taskname
 	 */
 	private void killTask(String taskname) {
@@ -67,6 +80,7 @@ public class AppiumServer {
 
 	/**
 	 * 执行外部命令
+	 * 
 	 * @param command
 	 */
 	private void runCommand(String command) {
@@ -76,9 +90,10 @@ public class AppiumServer {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 执行外部命令
+	 * 
 	 * @param command
 	 */
 	private Process runCommand2(String command) {
@@ -90,21 +105,22 @@ public class AppiumServer {
 		}
 		return process;
 	}
-	
+
 	/**
 	 * 读取数据
 	 */
-	private void getRuntimeData(String command){
+	@SuppressWarnings("unused")
+	private void getRuntimeData(String command) {
 		Process process = runCommand2(command);
 		InputStream inputStream = process.getInputStream();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-		
+
 		String line;
 		StringBuffer sb = new StringBuffer();
 		try {
 			while ((line = reader.readLine()) != null) {
-			sb.append(line+"\n");	
-			process.waitFor();
+				sb.append(line + "\n");
+				process.waitFor();
 			}
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
@@ -119,14 +135,37 @@ public class AppiumServer {
 			}
 		}
 	}
-	
-	/**
-	 * 测试
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		AppiumServer as = new AppiumServer();
-		as.getRuntimeData("adb devices");
+
+	public void test() {
+
+		String find = "tasklist | findstr node.exe";
+		String kill = "taskkill /F /im node.exe";
+		// getRuntimeData(find);
+		String launchServer = "appium.cmd -a " + "127.0.0.1" + " -p " + 4723 + " -bp " + 4724
+				+ " --session-override --chromedriver-port " + 9515 + " -U " + "80c20e99" + " >c://" + "80c20e99"
+				+ ".txt";
+
+		runCommand2(kill);
+		Process proc = runCommand2(launchServer);
+		InputStream input = proc.getInputStream();
+		InputStreamReader reader = new InputStreamReader(input);
+		BufferedReader br = new BufferedReader(reader);
+		String line = null;
+		System.out.println("~~~~");
+		try {
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+			System.out.println("");
+			int exitVal = 100;
+			exitVal = proc.waitFor();
+			System.out.println("Process exitValue: " + exitVal);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

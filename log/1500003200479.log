@@ -1,0 +1,745 @@
+2017-07-14 03:33:26:892 - info: [Appium] Welcome to Appium v1.6.5
+2017-07-14 03:33:26:894 - info: [Appium] Non-default server args:
+2017-07-14 03:33:26:895 - info: [Appium]   port: 4725
+2017-07-14 03:33:26:895 - info: [Appium]   log: D:\workspace\AppiumForCmall\log\1500003200479.log
+2017-07-14 03:33:26:964 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4725
+2017-07-14 03:33:27:062 - info: [HTTP] --> GET /wd/hub/status {}
+2017-07-14 03:33:27:064 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-07-14 03:33:27:069 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-07-14 03:33:27:074 - info: [HTTP] <-- GET /wd/hub/status 200 10 ms - 83 
+2017-07-14 03:33:30:704 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"80c20e99","resetKeyboard":true}}
+2017-07-14 03:33:30:705 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"80c20e99","resetKeyboard":true},null,null]
+2017-07-14 03:33:30:705 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1500003210705 (11:33:30 GMT+0800 (中国标准时间))
+2017-07-14 03:33:30:707 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-07-14 03:33:30:707 - info: [Appium] Capabilities:
+2017-07-14 03:33:30:709 - info: [Appium]   appPackage: 'com.play.android'
+2017-07-14 03:33:30:709 - info: [Appium]   appActivity: 'com.play.android.activity.SplashActivity'
+2017-07-14 03:33:30:709 - info: [Appium]   app: 'D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk'
+2017-07-14 03:33:30:709 - info: [Appium]   noset: false
+2017-07-14 03:33:30:710 - info: [Appium]   unicodeKeyboard: true
+2017-07-14 03:33:30:710 - info: [Appium]   platformName: 'Android'
+2017-07-14 03:33:30:710 - info: [Appium]   deviceName: '80c20e99'
+2017-07-14 03:33:30:710 - info: [Appium]   resetKeyboard: true
+2017-07-14 03:33:30:711 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-07-14 03:33:30:722 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: noset.
+2017-07-14 03:33:30:724 - info: [BaseDriver] Session created with session id: 05b94d64-21a6-4523-91ca-0f59d267b364
+2017-07-14 03:33:30:725 - info: [debug] [AndroidDriver] Getting Java version
+2017-07-14 03:33:30:946 - info: [AndroidDriver] Java version is: 1.8.0_131
+2017-07-14 03:33:30:951 - info: [ADB] Checking whether adb is present
+2017-07-14 03:33:30:956 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-07-14 03:33:30:956 - info: [AndroidDriver] Retrieving device list
+2017-07-14 03:33:30:957 - info: [debug] [ADB] Trying to find a connected android device
+2017-07-14 03:33:30:959 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:30:998 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:31:000 - info: [AndroidDriver] Using device: 85GBBMA2353T
+2017-07-14 03:33:31:001 - info: [ADB] Checking whether adb is present
+2017-07-14 03:33:31:007 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-07-14 03:33:31:008 - info: [debug] [ADB] Setting device id to 85GBBMA2353T
+2017-07-14 03:33:31:009 - info: [BaseDriver] Using local app 'D:\workspace\AppiumForCmall\apps\play-debug.apk'
+2017-07-14 03:33:31:009 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-07-14 03:33:31:011 - info: [AndroidDriver] Starting Android session
+2017-07-14 03:33:31:016 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","wait-for-device"]
+2017-07-14 03:33:31:071 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:31:115 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:31:116 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","echo","ping"]
+2017-07-14 03:33:31:183 - info: [debug] [Logcat] Starting logcat capture
+2017-07-14 03:33:31:253 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-07-14 03:33:31:254 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-07-14 03:33:31:255 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-07-14 03:33:33:823 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:33:855 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:33:856 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","get","secure","default_input_method"]
+2017-07-14 03:33:34:564 - info: [debug] [AndroidDriver] Unsetting previous IME com.iflytek.inputmethod/.FlyIME
+2017-07-14 03:33:34:564 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-07-14 03:33:34:564 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:34:593 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:34:594 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-07-14 03:33:35:317 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:35:348 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:35:349 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-07-14 03:33:36:326 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-07-14 03:33:36:327 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-07-14 03:33:36:328 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:36:356 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:36:357 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","io.appium.settings"]
+2017-07-14 03:33:36:963 - info: [debug] [ADB] App is not installed
+2017-07-14 03:33:36:965 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\io.appium.settings\\app\\build\\outputs\\apk\\settings_apk-debug.apk"]
+2017-07-14 03:33:37:821 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:37:850 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:37:850 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.sdk"]
+2017-07-14 03:33:37:890 - info: [debug] [ADB] Device API level: 22
+2017-07-14 03:33:37:891 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:37:918 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:37:919 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","package","io.appium.settings"]
+2017-07-14 03:33:37:982 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-07-14 03:33:37:982 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-07-14 03:33:38:900 - info: [debug] [ADB] Device API level: 22
+2017-07-14 03:33:38:901 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:38:932 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:38:933 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","settings","put","secure","mock_location","1"]
+2017-07-14 03:33:39:635 - info: [ADB] Getting device platform version
+2017-07-14 03:33:39:635 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:39:663 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:39:664 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.build.version.release"]
+2017-07-14 03:33:39:719 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:39:748 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:39:749 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","wm","size"]
+2017-07-14 03:33:40:428 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:40:469 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:40:470 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.model"]
+2017-07-14 03:33:40:529 - info: [debug] [ADB] Current device property 'ro.product.model': MX5
+2017-07-14 03:33:40:530 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:40:572 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:40:572 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","ro.product.manufacturer"]
+2017-07-14 03:33:40:638 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Meizu
+2017-07-14 03:33:40:812 - info: [AndroidDriver] Remote apk path is /data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk
+2017-07-14 03:33:40:813 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:40:848 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:40:848 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ls","/data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk"]
+2017-07-14 03:33:40:947 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-07-14 03:33:40:948 - info: [debug] [ADB] Getting install status for com.play.android
+2017-07-14 03:33:40:948 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:40:988 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:40:988 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","list","packages","com.play.android"]
+2017-07-14 03:33:41:581 - info: [debug] [ADB] App is installed
+2017-07-14 03:33:41:582 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-07-14 03:33:41:582 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-07-14 03:33:41:583 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:41:638 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:41:639 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","force-stop","com.play.android"]
+2017-07-14 03:33:42:365 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:42:397 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:42:398 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","pm","clear","com.play.android"]
+2017-07-14 03:33:42:911 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workspace\AppiumForCmall\apps\play-debug.apk null C:\Users\cm\AppData\Local\Temp\com.play.android
+2017-07-14 03:33:42:911 - info: [debug] [ADB] Extracting strings for language: default
+2017-07-14 03:33:42:912 - info: [debug] [ADB] Device API level: 22
+2017-07-14 03:33:42:912 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:42:954 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:42:954 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","getprop","persist.sys.language"]
+2017-07-14 03:33:43:013 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-07-14 03:33:44:467 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-07-14 03:33:44:473 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","C:\\Users\\cm\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-07-14 03:33:44:567 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-07-14 03:33:44:569 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-07-14 03:33:44:570 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","forward","tcp:4724","tcp:4724"]
+2017-07-14 03:33:44:580 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-07-14 03:33:44:581 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-07-14 03:33:44:581 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-07-14 03:33:44:581 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-07-14 03:33:44:582 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","push","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-07-14 03:33:44:663 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-07-14 03:33:44:664 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-07-14 03:33:44:667 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:44:707 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:44:708 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","ps"]
+2017-07-14 03:33:44:844 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-07-14 03:33:44:845 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-07-14 03:33:44:845 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","85GBBMA2353T","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-07-14 03:33:46:352 - info: [debug] [UiAutomator] Moving to state 'online'
+2017-07-14 03:33:46:358 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-07-14 03:33:46:359 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:46:369 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-07-14 03:33:46:369 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-07-14 03:33:46:369 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-07-14 03:33:46:389 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:46:389 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window"]
+2017-07-14 03:33:46:445 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-07-14 03:33:46:446 - info: [debug] [ADB] Device API level: 22
+2017-07-14 03:33:46:447 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:46:475 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:46:475 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","am","start","-W","-n","com.play.android/com.play.android.activity.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-07-14 03:33:48:970 - info: [Appium] New AndroidDriver session created successfully, session 05b94d64-21a6-4523-91ca-0f59d267b364 added to master session list
+2017-07-14 03:33:48:971 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1500003228971 (11:33:48 GMT+0800 (中国标准时间))
+2017-07-14 03:33:48:971 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"80c20e99","resetKeyboard":true},"appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"85GBBMA2353T","resetKeyboard":true,"deviceUDID":"85GBBMA2353T","platformVersion":"5.1","deviceScreenSize":"1080x1920","deviceModel":"MX5","deviceManufacturer":"Meizu"}
+2017-07-14 03:33:48:973 - info: [HTTP] <-- POST /wd/hub/session 200 18268 ms - 927 
+2017-07-14 03:33:49:223 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:33:49:227 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:49:229 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:33:49:229 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:49:257 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:49:258 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:33:49:323 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-07-14 03:33:49:324 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 100 ms - 101 
+2017-07-14 03:33:49:330 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:49:331 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:49:332 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:49:332 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:49:333 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:49:338 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:49:339 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:49:339 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:49:340 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 1 ms - 84 
+2017-07-14 03:33:49:343 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/btn_profile"}
+2017-07-14 03:33:49:344 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_profile","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:49:344 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:49:345 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:49:346 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:49:349 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-07-14 03:33:49:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-07-14 03:33:49:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:49:357 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:49:358 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_profile' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:49:358 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:49:358 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:49:358 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:49:358 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:49:415 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:49:415 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:50:020 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"1"}]}
+2017-07-14 03:33:50:025 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:50:026 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"1"}]
+2017-07-14 03:33:50:027 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 683 ms - 89 
+2017-07-14 03:33:50:050 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:50:050 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:051 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:50:051 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:50:052 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:50:058 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:50:058 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:059 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:50:059 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:50:060 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:50:064 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:50:065 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:066 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:50:067 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 3 ms - 84 
+2017-07-14 03:33:50:072 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/btn_profile"}
+2017-07-14 03:33:50:073 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_profile","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:074 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:50:074 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:50:074 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:50:075 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-07-14 03:33:50:081 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-07-14 03:33:50:081 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:50:081 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:50:081 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_profile' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:50:082 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:50:082 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:50:082 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:50:082 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:50:418 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:50:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-07-14 03:33:50:810 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"2"}]}
+2017-07-14 03:33:50:811 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:50:811 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"2"}]
+2017-07-14 03:33:50:812 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 739 ms - 89 
+2017-07-14 03:33:50:818 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:50:819 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:819 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:50:820 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:50:821 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:50:827 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/2/click {"id":"2"}
+2017-07-14 03:33:50:827 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["2","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:50:828 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-07-14 03:33:50:835 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-07-14 03:33:50:836 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:50:836 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-07-14 03:33:54:023 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-07-14 03:33:54:023 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:54:025 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-07-14 03:33:54:026 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/2/click 200 3198 ms - 76 
+2017-07-14 03:33:54:531 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:33:54:531 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:532 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:33:54:532 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:33:54:562 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:33:54:562 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:33:54:738 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:33:54:739 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 208 ms - 104 
+2017-07-14 03:33:54:742 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:54:743 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:743 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:54:743 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:54:746 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:54:748 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:54:748 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:750 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:54:750 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:33:54:754 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/tv_account"}
+2017-07-14 03:33:54:755 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/tv_account","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:756 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:54:756 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:54:756 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:54:757 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/tv_account' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:760 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:761 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:54:761 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:771 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:54:771 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:865 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"3"}]}
+2017-07-14 03:33:54:865 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:54:866 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"3"}]
+2017-07-14 03:33:54:867 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 113 ms - 89 
+2017-07-14 03:33:54:873 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:54:873 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:873 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:54:874 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:54:874 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:54:877 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:54:878 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:878 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:54:879 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:54:880 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:54:883 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:54:883 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:884 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:54:884 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:33:54:897 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/tv_account"}
+2017-07-14 03:33:54:898 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/tv_account","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:898 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:54:898 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:54:898 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:54:898 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-07-14 03:33:54:904 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-07-14 03:33:54:904 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/tv_account' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:54:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:924 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:54:924 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/tv_account]
+2017-07-14 03:33:54:945 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"4"}]}
+2017-07-14 03:33:54:946 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:54:946 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"4"}]
+2017-07-14 03:33:54:947 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 50 ms - 89 
+2017-07-14 03:33:54:950 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:54:951 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:951 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:54:951 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:54:956 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 6 ms - 76 
+2017-07-14 03:33:54:959 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/4/click {"id":"4"}
+2017-07-14 03:33:54:960 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:54:961 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-07-14 03:33:54:964 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-07-14 03:33:54:965 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:54:966 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-07-14 03:33:55:126 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-07-14 03:33:55:126 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:55:127 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-07-14 03:33:55:128 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/4/click 200 168 ms - 76 
+2017-07-14 03:33:55:133 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:55:134 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:134 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:55:135 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:55:136 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:55:140 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:55:140 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:141 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:55:141 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:33:55:145 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/et_account"}
+2017-07-14 03:33:55:145 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_account","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:146 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:55:146 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:55:146 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:55:147 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-07-14 03:33:55:150 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-07-14 03:33:55:150 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:55:150 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:55:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_account' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:55:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:153 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:55:153 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:895 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:55:896 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:934 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"5"}]}
+2017-07-14 03:33:55:935 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:55:935 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"5"}]
+2017-07-14 03:33:55:936 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 791 ms - 89 
+2017-07-14 03:33:55:941 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:55:941 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:942 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:55:942 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:55:943 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:55:945 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:33:55:946 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:946 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:33:55:947 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:55:948 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:33:55:951 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:33:55:951 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:953 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:33:55:954 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 3 ms - 84 
+2017-07-14 03:33:55:957 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/et_account"}
+2017-07-14 03:33:55:958 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_account","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:55:958 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:55:959 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:33:55:959 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:33:55:959 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-07-14 03:33:55:962 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-07-14 03:33:55:962 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:55:963 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:33:55:963 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_account' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:33:55:964 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:964 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:55:964 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:33:55:964 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] [APPIUM-UIAUTO] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.an
+2017-07-14 03:33:55:965 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] droid:id/et_account][/APPIUM-UIAUTO]
+2017-07-14 03:33:56:001 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:33:56:002 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_account]
+2017-07-14 03:33:56:016 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"6"}]}
+2017-07-14 03:33:56:016 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:33:56:017 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"6"}]
+2017-07-14 03:33:56:018 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 60 ms - 89 
+2017-07-14 03:33:56:022 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:33:56:023 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:56:024 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:33:56:026 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:33:56:032 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 9 ms - 76 
+2017-07-14 03:33:56:037 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/6/value {"id":"6","value":["18521035133"]}
+2017-07-14 03:33:56:037 - info: [debug] [MJSONWP] Calling AppiumDriver.setValue() with args: [["18521035133"],"6","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:33:56:039 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"18521035133","replace":false,"unicodeKeyboard":true}}
+2017-07-14 03:33:56:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"18521035133","replace":false,"unicodeKeyboard":true}}
+2017-07-14 03:33:56:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:33:56:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2017-07-14 03:33:56:043 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using element passed in: 6
+2017-07-14 03:33:56:059 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Attempting to clear using UiObject.clearText().
+2017-07-14 03:33:58:600 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Text remains after clearing, but it appears to be hint text.
+2017-07-14 03:33:58:627 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Text not cleared. Assuming remainder is hint text.
+2017-07-14 03:33:58:632 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 18521035133
+2017-07-14 03:34:01:262 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-07-14 03:34:01:263 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:01:263 - info: [debug] [MJSONWP] Responding to client with driver.setValue() result: true
+2017-07-14 03:34:01:264 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/6/value 200 5227 ms - 76 
+2017-07-14 03:34:01:268 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:34:01:269 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:271 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:34:01:273 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:01:274 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 5 ms - 76 
+2017-07-14 03:34:01:278 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:34:01:278 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:280 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:34:01:281 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:34:01:283 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/et_password"}
+2017-07-14 03:34:01:284 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_password","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:284 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:01:284 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:01:284 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:34:01:284 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-07-14 03:34:01:288 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_password' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:34:01:289 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:823 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:34:01:823 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:930 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"7"}]}
+2017-07-14 03:34:01:930 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:01:931 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"7"}]
+2017-07-14 03:34:01:931 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 648 ms - 89 
+2017-07-14 03:34:01:935 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:34:01:935 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:936 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:34:01:938 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:01:938 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 4 ms - 76 
+2017-07-14 03:34:01:942 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:34:01:942 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:943 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:34:01:944 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:01:945 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:34:01:947 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:34:01:948 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:948 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:34:01:950 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:34:01:953 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/et_password"}
+2017-07-14 03:34:01:953 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_password","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:01:953 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:01:954 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:01:954 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:34:01:954 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-07-14 03:34:01:957 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-07-14 03:34:01:957 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:01:957 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:34:01:958 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_password' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:34:01:958 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:958 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:958 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:34:01:958 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:01:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:34:01:974 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_password]
+2017-07-14 03:34:02:003 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"8"}]}
+2017-07-14 03:34:02:004 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:02:005 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"8"}]
+2017-07-14 03:34:02:005 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 52 ms - 89 
+2017-07-14 03:34:02:009 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:34:02:009 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:02:009 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:34:02:011 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:02:011 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 3 ms - 76 
+2017-07-14 03:34:02:025 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/8/value {"id":"8","value":["111111"]}
+2017-07-14 03:34:02:026 - info: [debug] [MJSONWP] Calling AppiumDriver.setValue() with args: [["111111"],"8","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:02:027 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:setText","params":{"elementId":"8","text":"111111","replace":false,"unicodeKeyboard":true}}
+2017-07-14 03:34:02:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"8","text":"111111","replace":false,"unicodeKeyboard":true}}
+2017-07-14 03:34:02:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:02:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2017-07-14 03:34:02:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using element passed in: 8
+2017-07-14 03:34:02:049 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Attempting to clear using UiObject.clearText().
+2017-07-14 03:34:04:393 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 111111
+2017-07-14 03:34:07:018 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-07-14 03:34:07:018 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:07:019 - info: [debug] [MJSONWP] Responding to client with driver.setValue() result: true
+2017-07-14 03:34:07:019 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/8/value 200 4994 ms - 76 
+2017-07-14 03:34:07:023 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:34:07:023 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:023 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:34:07:024 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:07:024 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 1 ms - 76 
+2017-07-14 03:34:07:027 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:34:07:028 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:028 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:34:07:029 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 1 ms - 84 
+2017-07-14 03:34:07:031 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/btn_login"}
+2017-07-14 03:34:07:032 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_login","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:032 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:07:032 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:07:032 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:34:07:033 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-07-14 03:34:07:036 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-07-14 03:34:07:036 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:07:036 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:34:07:036 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_login' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:34:07:037 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:037 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:037 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:34:07:037 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:682 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:34:07:683 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:700 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"9"}]}
+2017-07-14 03:34:07:700 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:07:701 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"9"}]
+2017-07-14 03:34:07:701 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 670 ms - 89 
+2017-07-14 03:34:07:703 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:34:07:704 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:704 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:34:07:704 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:07:705 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 1 ms - 76 
+2017-07-14 03:34:07:708 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":0}
+2017-07-14 03:34:07:708 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:708 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-07-14 03:34:07:709 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:07:709 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 1 ms - 76 
+2017-07-14 03:34:07:714 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context {}
+2017-07-14 03:34:07:714 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:715 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-07-14 03:34:07:716 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/context 200 2 ms - 84 
+2017-07-14 03:34:07:719 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements {"using":"id","value":"com.play.android:id/btn_login"}
+2017-07-14 03:34:07:719 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_login","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:719 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:07:720 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-07-14 03:34:07:720 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-07-14 03:34:07:720 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_login' using 'ID' with the contextId: '' multiple: true
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-07-14 03:34:07:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:732 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-07-14 03:34:07:732 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_login]
+2017-07-14 03:34:07:749 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":[{"ELEMENT":"10"}]}
+2017-07-14 03:34:07:749 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:07:751 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"10"}]
+2017-07-14 03:34:07:751 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/elements 200 32 ms - 90 
+2017-07-14 03:34:07:755 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts {"type":"implicit","ms":20000}
+2017-07-14 03:34:07:756 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:756 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-07-14 03:34:07:756 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-07-14 03:34:07:757 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/timeouts 200 2 ms - 76 
+2017-07-14 03:34:07:759 - info: [HTTP] --> POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/10/click {"id":"10"}
+2017-07-14 03:34:07:760 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["10","05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:07:760 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+2017-07-14 03:34:07:764 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+2017-07-14 03:34:07:764 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-07-14 03:34:07:764 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-07-14 03:34:07:884 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
+2017-07-14 03:34:07:884 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-07-14 03:34:07:890 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-07-14 03:34:07:892 - info: [HTTP] <-- POST /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/element/10/click 200 131 ms - 76 
+2017-07-14 03:34:08:395 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:08:396 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:08:396 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:08:396 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:08:428 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:08:429 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:08:498 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:08:499 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 103 ms - 104 
+2017-07-14 03:34:09:000 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:09:001 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:09:001 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:09:001 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:09:044 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:09:044 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:09:132 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:09:133 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 132 ms - 104 
+2017-07-14 03:34:09:636 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:09:636 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:09:637 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:09:637 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:09:668 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:09:668 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:09:733 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:09:734 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 98 ms - 104 
+2017-07-14 03:34:10:237 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:10:238 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:10:238 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:10:239 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:10:266 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:10:267 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:10:338 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:10:339 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 101 ms - 104 
+2017-07-14 03:34:10:843 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:10:844 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:10:844 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:10:844 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:10:874 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:10:874 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:10:947 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:10:948 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 105 ms - 104 
+2017-07-14 03:34:11:452 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:11:453 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:11:453 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:11:453 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:11:484 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:11:484 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:11:553 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:11:553 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 101 ms - 104 
+2017-07-14 03:34:12:057 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:12:057 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:12:058 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:12:058 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:12:093 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:12:093 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:12:168 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:12:169 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 112 ms - 104 
+2017-07-14 03:34:12:671 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:12:671 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:12:672 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:12:672 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:12:702 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:12:702 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:12:786 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:12:787 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 116 ms - 104 
+2017-07-14 03:34:13:291 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:13:292 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:13:292 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:13:292 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:13:370 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:13:371 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:13:464 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:13:465 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 174 ms - 104 
+2017-07-14 03:34:13:967 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:13:968 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:13:968 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:13:969 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:14:000 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:14:000 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:14:065 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:14:065 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 98 ms - 104 
+2017-07-14 03:34:14:568 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:14:568 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:14:569 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:14:569 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:14:598 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:14:598 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:14:669 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:14:670 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 102 ms - 104 
+2017-07-14 03:34:15:173 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:15:173 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:15:174 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:15:174 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:15:207 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:15:207 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:15:288 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:15:289 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 116 ms - 104 
+2017-07-14 03:34:15:792 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:15:792 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:15:793 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:15:793 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:15:823 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:15:823 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:15:916 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:15:917 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 125 ms - 104 
+2017-07-14 03:34:16:419 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:16:420 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:16:420 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:16:421 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:16:451 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:16:451 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:16:539 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:16:540 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 120 ms - 104 
+2017-07-14 03:34:17:044 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:17:044 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:17:045 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:17:045 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:17:076 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:17:076 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:17:143 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:17:144 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 99 ms - 104 
+2017-07-14 03:34:17:651 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:17:652 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:17:652 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:17:653 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:17:693 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:17:693 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:17:776 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:17:777 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 126 ms - 104 
+2017-07-14 03:34:18:282 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:18:284 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:18:285 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:18:285 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:18:315 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:18:316 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:18:377 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:18:380 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 97 ms - 104 
+2017-07-14 03:34:18:883 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:18:883 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:18:884 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:18:884 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:18:913 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:18:914 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:18:978 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:18:979 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 96 ms - 104 
+2017-07-14 03:34:19:481 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:19:482 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:19:482 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:19:482 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:19:513 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:19:513 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:19:574 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:19:575 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 93 ms - 104 
+2017-07-14 03:34:20:077 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:20:077 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:20:077 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:20:078 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:20:107 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:20:107 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:20:173 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:20:174 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 97 ms - 104 
+2017-07-14 03:34:20:183 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:20:184 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:20:184 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:20:184 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:20:224 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:20:224 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:20:300 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:20:301 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 117 ms - 104 
+2017-07-14 03:34:20:304 - info: [HTTP] --> GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity {}
+2017-07-14 03:34:20:304 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["05b94d64-21a6-4523-91ca-0f59d267b364"]
+2017-07-14 03:34:20:305 - info: [debug] [ADB] Getting focused package and activity
+2017-07-14 03:34:20:305 - info: [debug] [ADB] Getting connected devices...
+2017-07-14 03:34:20:342 - info: [debug] [ADB] 2 device(s) connected
+2017-07-14 03:34:20:343 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","85GBBMA2353T","shell","dumpsys","window","windows"]
+2017-07-14 03:34:20:412 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-07-14 03:34:20:412 - info: [HTTP] <-- GET /wd/hub/session/05b94d64-21a6-4523-91ca-0f59d267b364/appium/device/current_activity 200 108 ms - 104 

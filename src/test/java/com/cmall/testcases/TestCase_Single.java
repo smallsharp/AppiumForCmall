@@ -6,7 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.cmall.appium.DriverFactory;
+import com.cmall.appium.DriverProduce;
 import com.cmall.appium.TestNGListener;
 import com.cmall.play.pages.LoginPage;
 import io.appium.java_client.MobileElement;
@@ -24,7 +24,7 @@ public class TestCase_Single{
 	@BeforeSuite
 	public void setup() {
 		System.out.println("Before");
-		mdriver= DriverFactory.initDriver(4723, "022TAS7N51009853");
+		mdriver= DriverProduce.initDriver("",4723, "022TAS7N51009853");
 	}
 
 	@Test(description = "退出登录")

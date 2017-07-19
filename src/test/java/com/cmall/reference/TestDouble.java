@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 import com.cmall.appium.AppiumServer;
-import com.cmall.appium.DDMlibUtil;
+import com.cmall.utils.DDMlibUtil;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -75,7 +75,7 @@ public class TestDouble {
 		public void run() {
 			try {
 				System.out.println("执行:run "+Thread.currentThread().getName());
-				appiumServer.startServer(port, udid);
+				appiumServer.startServer("",port, udid);
 				Thread.sleep(2000);
 				mDriver = initDriver(port,udid);
 				testCase();

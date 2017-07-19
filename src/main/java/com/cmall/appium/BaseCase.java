@@ -16,7 +16,7 @@ public class BaseCase {
 	public AndroidDriver<MobileElement> setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 //		mdriver = DriverFactory.getInstance().initAndroidDriver(url);
-		mdriver= DriverFactory.initDriver(4723, "022TAS7N51009853");
+		mdriver= DriverProduce.initDriver("127.0.0.1",4723, "022TAS7N51009853");
 		return mdriver;
 		
 	}

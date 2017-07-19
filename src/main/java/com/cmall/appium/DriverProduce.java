@@ -8,31 +8,29 @@ import com.cmall.utils.LogUtil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class DriverFactory {
+public class DriverProduce {
 	
-	private static LogUtil log = new LogUtil(DriverFactory.class);
-	private static final String URL = "127.0.0.1";
+	private static LogUtil log = new LogUtil(DriverProduce.class);
+	private static AndroidDriver<MobileElement> mdriver = null;
 
-	public static AndroidDriver<MobileElement> initDriver(int port, String deviceName) {
+	public static AndroidDriver<MobileElement> initDriver(String ip, int port, String deviceName) {
 
 		log.info("initDriver on " + deviceName + " " + port);
-		AndroidDriver<MobileElement> mdriver = null;
-
+		
 		DesiredCapabilities dc = new DesiredCapabilities();
-		dc.setCapability("unicodeKeyboard", "True"); // 支持中文输入
-		dc.setCapability("resetKeyboard", "True"); // 重置输入法
+		File classPath = new File(System.getProperty("user.dir"));
+		File app = new File(classPath, "apps/play-debug.apk"); // 指定app的存放目录
+		dc.setCapability("app", app.getAbsolutePath());
+		dc.setCapability("unicodeKeyboard", true); // 支持中文输入
+//		dc.setCapability("resetKeyboard", true); // 重置输入法
 		dc.setCapability("platformName", "Android");
 		dc.setCapability("noset", false);
 		dc.setCapability("deviceName", deviceName);
 		dc.setCapability("appPackage", "com.play.android");
 		dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
 
-		File classPath = new File(System.getProperty("user.dir"));
-		File app = new File(classPath, "apps/play-debug.apk"); // 指定app的存放目录
-		dc.setCapability("app", app.getAbsolutePath());
-		
 		try {
-			mdriver = new AndroidDriver<MobileElement>(new URL("http://" + URL + ":" + port + "/wd/hub"), dc);
+			mdriver = new AndroidDriver<MobileElement>(new URL("http://" + ip + ":" + port + "/wd/hub"), dc);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
