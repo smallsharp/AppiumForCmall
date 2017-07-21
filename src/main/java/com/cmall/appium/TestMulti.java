@@ -17,7 +17,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class TestMulti {
 
 	LogUtil log = new LogUtil(TestMulti.class);
-	List<String> list = DDMlibUtil.getDeviceNames();
+	List<String> list = DDMlibUtil.getSerialNumber();
 
 	public void runTestCase(ITestCase testcase) {
 		Vector<Thread> threads = new Vector<Thread>();

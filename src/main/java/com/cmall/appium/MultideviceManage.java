@@ -18,7 +18,7 @@ public class MultideviceManage {
 
 	LogUtil log = new LogUtil(MultideviceManage.class);
 	AppiumServer appiumServer = new AppiumServer();
-	List<String> list = DDMlibUtil.getDeviceNames();
+	List<String> list = DDMlibUtil.getSerialNumber();
 
 	public void runTestCase(ITestCase testcase) {
 		Vector<Thread> threads = new Vector<Thread>();

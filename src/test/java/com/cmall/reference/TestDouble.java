@@ -40,7 +40,7 @@ public class TestDouble {
 	
 	@Test
 	public void testMethod_two(){
-		List<String> list = DDMlibUtil.getDeviceNames();
+		List<String> list = DDMlibUtil.getSerialNumber();
 		int port = 4723;
 		for (int i = 0; i < list.size(); i++) {
 			new Thread(new MyRunnable(port, list.get(i))).start();

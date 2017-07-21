@@ -12,9 +12,21 @@ import com.android.ddmlib.IDevice;
  * @author lee
  *
  */
-public class DDMlibUtil {
+public class DDMlib {
 	
 //	private static AndroidDebugBridge adb;
+	
+	private static DDMlib instance;
+	public static synchronized DDMlib getInstance() {
+		if (instance == null) {
+			instance = new DDMlib();
+		}
+		return instance;
+	}
+	
+	private DDMlib() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public void init() {
 		AndroidDebugBridge.init(false);
@@ -29,9 +41,7 @@ public class DDMlibUtil {
 	 * 
 	 * @return
 	 */
-	public static List<String> getSerialNumber() {
-		AndroidDebugBridge.terminate();
-		AndroidDebugBridge.init(false);
+	public List<String> getSerialNumber() {
 		List<String> list = new ArrayList<>();
 		AndroidDebugBridge adb = null;
 		if (adb == null) {
@@ -51,9 +61,8 @@ public class DDMlibUtil {
 	 * 
 	 * @return
 	 */
-	public static List<IDevice> getIDeviceNames() {
-		AndroidDebugBridge.terminate();
-		AndroidDebugBridge.init(false);
+	public List<IDevice> getIDeviceNames() {
+
 		List<IDevice> list = new ArrayList<>();
 		AndroidDebugBridge adb = null;
 		if (adb == null) {
@@ -74,7 +83,7 @@ public class DDMlibUtil {
 	 * @param
 	 * @return
 	 */
-	private static boolean waitForDevice(AndroidDebugBridge bridge) {
+	private boolean waitForDevice(AndroidDebugBridge bridge) {
 
 		if (bridge == null) {
 			bridge = AndroidDebugBridge.createBridge();
@@ -110,7 +119,7 @@ public class DDMlibUtil {
 			}
 
 			if (!adb.isConnected()) {
-				System.out.println("Couldn't connect to ADB server");
+				System.err.println("Couldn't connect to ADB server");
 				return;
 			}
 
@@ -141,7 +150,7 @@ public class DDMlibUtil {
 	 * 
 	 * @return
 	 */
-	public static IDevice getFirstDevice() {
+	public IDevice getFirstDevice() {
 		AndroidDebugBridge adb = null;
 		if (adb == null) {
 			adb = AndroidDebugBridge.createBridge();
@@ -160,34 +169,12 @@ public class DDMlibUtil {
 	 */
 	@Test
 	public void test() {
-		DDMlibUtil ddMlibUtil = new DDMlibUtil();
-//		DDMlibUtil ddMlibUtil = DDMlibUtil.getInstance();
+		
+		DDMlib ddMlibUtil = DDMlib.getInstance();
 		ddMlibUtil.init();
 		
-		try {
-			ddMlibUtil.usingWaitLoop();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-//		String s = ddMlibUtil.getFirstDevice().getSerialNumber();
-//		System.out.println(s);
-		ddMlibUtil.finish();
-		
-/*		IDevice device = getFirstDevice();
-		System.out.println(device.getSerialNumber());
-		System.out.println(device.isOnline());
-		System.out.println(device.getState());
-		device.getProperties(); // 结合 adb shell cat /system/build.prop 的key使用
-		System.out.println(device.getProperty("ro.product.brand"));
-		System.out.println(device.getProperty("ro.product.cpu.abi"));
-		System.out.println(device.getProperty("dalvik.vm.heapsize"));*/
-	}
-
-	/**
-	 * 测试用
-	 */
-//	@Test
-	public void test2() {
+		String name = ddMlibUtil.getFirstDevice().getSerialNumber();
+		System.out.println(name);
 		
 		List<String> devices = getSerialNumber();
 		for (String device : devices) {
@@ -198,7 +185,12 @@ public class DDMlibUtil {
 		for (IDevice device : devices2) {
 			System.out.println(device);
 			System.out.println(device.getState());
+			System.out.println(device.isBootLoader());
 		}
+		
+		ddMlibUtil.finish();
+
 	}
+
 
 }

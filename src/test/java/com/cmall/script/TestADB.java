@@ -21,9 +21,9 @@ public class TestADB {
 
 	LogUtil log = new LogUtil(TestADB.class);
 
-//	@Test(description = "批量安装Android应用")
+	@Test(description = "批量安装Android应用")
 	public void testInstall() {
-		List<String> names = DDMlibUtil.getDeviceNames();
+		List<String> names = DDMlibUtil.getSerialNumber();
 		log.info("检测到设备总数：" + names.size() + " 台");
 
 		Runtime run = Runtime.getRuntime();
@@ -60,7 +60,7 @@ public class TestADB {
 		
 	}
 
-	// @Test
+	@Test
 	public void test() {
 
 		try {
@@ -71,7 +71,7 @@ public class TestADB {
 			BufferedReader br = new BufferedReader(reader);
 			String line = null;
 			StringBuffer sb = new StringBuffer();
-			System.out.println("<error></error>");
+
 			while ((line = br.readLine()) != null)
 				sb.append(line + "\n");
 			System.out.println(sb.toString());
