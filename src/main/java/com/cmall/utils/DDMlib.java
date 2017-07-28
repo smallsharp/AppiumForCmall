@@ -2,20 +2,22 @@ package com.cmall.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import org.testng.annotations.Test;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
 
 /**
  * 需要ddmlib.jar
- * 
+ * 获取实例getInstance()
+ * 使用前先 init(),使用完毕后需要finish()
  * @author lee
  *
  */
 public class DDMlib {
 	
-//	private static AndroidDebugBridge adb;
-	
+	private LogUtil log = new LogUtil(DDMlibUtil.class);
 	private static DDMlib instance;
 	public static synchronized DDMlib getInstance() {
 		if (instance == null) {
@@ -25,7 +27,6 @@ public class DDMlib {
 	}
 	
 	private DDMlib() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void init() {
@@ -77,19 +78,10 @@ public class DDMlib {
 		return list;
 	}
 
-	/**
-	 * it should be run firstly
-	 * 
-	 * @param
-	 * @return
-	 */
-	private boolean waitForDevice(AndroidDebugBridge bridge) {
+	private boolean waitForDevice(AndroidDebugBridge adb) {
 
-		if (bridge == null) {
-			bridge = AndroidDebugBridge.createBridge();
-		}
 		int count = 0;
-		while (!bridge.hasInitialDeviceList()) {
+		while (!adb.hasInitialDeviceList()) {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
@@ -105,9 +97,8 @@ public class DDMlib {
 	}
 	
 	
-	public void usingWaitLoop() throws Exception {
+	public void usingWaitLoop() {
 		AndroidDebugBridge adb = AndroidDebugBridge.createBridge();
-
 		try {
 			int trials = 10;
 			while (trials > 0) {
@@ -140,6 +131,8 @@ public class DDMlib {
 			for (IDevice device : adb.getDevices()) {
 				System.out.println("- " + device.getSerialNumber());
 			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		} finally {
 			AndroidDebugBridge.disconnectBridge();
 		}
@@ -150,15 +143,14 @@ public class DDMlib {
 	 * 
 	 * @return
 	 */
-	public IDevice getFirstDevice() {
-		AndroidDebugBridge adb = null;
-		if (adb == null) {
-			adb = AndroidDebugBridge.createBridge();
-		}
+	public IDevice getDevice() {
+		AndroidDebugBridge adb = AndroidDebugBridge.createBridge();
 		if (waitForDevice(adb)) {
 			IDevice devices[] = adb.getDevices();
 			if (devices.length > 0) {
 				return devices[0];
+			} else {
+				System.out.println("没有检测到Android设备！");
 			}
 		}
 		return null;
@@ -172,11 +164,32 @@ public class DDMlib {
 		
 		DDMlib ddMlibUtil = DDMlib.getInstance();
 		ddMlibUtil.init();
+	
+		IDevice dev = ddMlibUtil.getDevice();
 		
-		String name = ddMlibUtil.getFirstDevice().getSerialNumber();
-		System.out.println(name);
+		Map<String, String> map = dev.getProperties();// 获取所有build.prop 所有配置信息
 		
-		List<String> devices = getSerialNumber();
+/*		for(String key:map.keySet()) {
+			System.out.println(key + " --> "+map.get(key));
+		}*/
+		
+		String heapGrowth = dev.getProperty("dalvik.vm.heapgrowthlimit");
+		String heapStart = dev.getProperty("dalvik.vm.heapstartsize");
+		String productName = dev.getProperty("ro.product.name");
+		String version = dev.getProperty("ro.build.version.release");
+		String serialno = dev.getProperty("ro.serialno");
+		String sdkVersion = dev.getProperty("ro.build.version.sdk");
+		String cpu = dev.getProperty("ro.product.cpu.abilist");
+		
+		log.info(heapGrowth);
+		log.info(heapStart);
+		log.info(productName);
+		log.info(version);
+		log.info(serialno);
+		log.info(sdkVersion);
+		log.info(cpu);
+		
+/*		List<String> devices = getSerialNumber();
 		for (String device : devices) {
 			System.out.println(device);
 		}
@@ -186,11 +199,8 @@ public class DDMlib {
 			System.out.println(device);
 			System.out.println(device.getState());
 			System.out.println(device.isBootLoader());
-		}
-		
+		}*/
 		ddMlibUtil.finish();
-
 	}
-
 
 }
