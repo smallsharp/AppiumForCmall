@@ -10,16 +10,16 @@
 	
 	<!-- 监听器配置 -->
     <listeners>
-            <!-- 生成reporterNg 测试报告，需要添加的监听,
-            	或者在Eclipse-Window-Preference-testNg-Pre Defined Listeners 添加"org.uncommons.reportng.HTMLReporter" 
-            -->
-            <listener class-name="org.uncommons.reportng.HTMLReporter" />
-        
-            <!-- 监听用例的执行动作,这里添加监听,相关的方法会执行两次，不知道是不是testng的bug,所以把监听放到类中了 -->
-        	<!--  <listener class-name="top.base.listener.TestNGListener" /> -->
-        
-            <!-- 这个不需要 -->
-			<!-- 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
+         <!-- 生成reporterNg 测试报告，需要添加的监听,
+         	或者在Eclipse-Window-Preference-testNg-Pre Defined Listeners 添加"org.uncommons.reportng.HTMLReporter" 
+         -->
+         <listener class-name="org.uncommons.reportng.HTMLReporter" />
+     
+         <!-- 监听用例的执行动作,这里添加监听,相关的方法会执行两次，不知道是不是testng的bug,所以把监听放到类中了 -->
+     	 <!--  <listener class-name="top.base.listener.TestNGListener" /> -->
+     
+         <!-- 这个不需要 -->
+		 <!-- 	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
     </listeners>
 
 </suite>

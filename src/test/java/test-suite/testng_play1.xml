@@ -3,7 +3,7 @@
 
 <suite name="ModelTestCase01" preserve-order="true" >
     
-    <test name="ModelTestCase01" preserve-order="true">
+    <test name="切换商品，查看模型展示" preserve-order="true">
 
         <classes>
             <class name="com.cmall.test.ModelTestCase01" > 
