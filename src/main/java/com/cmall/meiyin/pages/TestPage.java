@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
 
-import com.cmall.appium.Helper;
+import com.cmall.appium.DriverHelper;
 import com.cmall.utils.LogUtil;
 
 import io.appium.java_client.MobileElement;
@@ -16,13 +16,13 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class TestPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-	private Helper helper;
+	private DriverHelper helper;
 	LogUtil log = new LogUtil(TestPage.class);
 
 	public TestPage() {
 	}
 
-	public TestPage(AndroidDriver<MobileElement> driver,Helper helper) {
+	public TestPage(AndroidDriver<MobileElement> driver,DriverHelper helper) {
 		this.mdriver = driver;
 		this.helper = helper;
 	}

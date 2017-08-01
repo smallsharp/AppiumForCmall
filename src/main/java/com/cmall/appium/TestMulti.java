@@ -9,7 +9,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
- * 利用AppiumDriverLocalService，测试多设备
+ * 利用AppiumDriverLocalService，测试多设备，失败，始终使用第一台设备
  * 
  * @author cm
  *

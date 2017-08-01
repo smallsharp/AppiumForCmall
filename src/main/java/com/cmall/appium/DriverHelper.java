@@ -2,6 +2,7 @@ package com.cmall.appium;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,7 +10,7 @@ import org.openqa.selenium.OutputType;
 import org.testng.Assert;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
-import com.cmall.play.pages.Play_ActivityList;
+import com.cmall.play.pages.ActivityList;
 import com.cmall.utils.LogUtil;
 
 import io.appium.java_client.MobileElement;
@@ -21,12 +22,12 @@ import io.appium.java_client.android.AndroidKeyCode;
  * @author cm
  *
  */
-public class Helper {
+public class DriverHelper {
 
-	LogUtil log = new LogUtil(Helper.class);
+	LogUtil log = new LogUtil(DriverHelper.class);
 	private AndroidDriver<MobileElement> mdriver;
 	
-	public Helper(AndroidDriver<MobileElement> mdriver) {
+	public DriverHelper(AndroidDriver<MobileElement> mdriver) {
 		this.mdriver = mdriver;
 	}
 
@@ -68,9 +69,7 @@ public class Helper {
 	public boolean waitElement(MobileElement mobileElement) {
 
 		for (int j = 0; j < 3; j++) {
-
 			log.info("[Element] Waiting element ==> " + "(" + splitElement(mobileElement) + ")");
-
 			if (mobileElement.isDisplayed()) {
 				log.info("[Element]" + "(" + splitElement(mobileElement) + ")" + " Found");
 				try {
@@ -181,6 +180,16 @@ public class Helper {
 	public MobileElement findElementByDesc(String name) {
 		return mdriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
 	}
+	
+	
+	public List<MobileElement> findElementsById(String id) {
+		return mdriver.findElementsById(id);
+	}
+	
+	public MobileElement findElementById(String id) {
+		return mdriver.findElementById(id);
+	}
+
 
 	/***
 	 * 根据UIautomator底层方法得到对应text的view
@@ -269,12 +278,12 @@ public class Helper {
 	public void backToHomeActivity() {
 
 		try {
-			if (Play_ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+			if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
 				return;
 			}
 			log.info("\n" + "Run：backToHomeActivity");
 			for (int i = 0; i < 6; i++) {
-				if (Play_ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+				if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
 					return;
 				}
 				Thread.sleep(2500);
@@ -423,6 +432,10 @@ public class Helper {
 	 */
 	public void pause_default_time() {
 		pause(2000);
+	}
+	
+	public void tap(int fingers, int x, int y, int duration) {
+		mdriver.tap(fingers, x, y, duration);
 	}
 
 	public int getDeviceWidth() {

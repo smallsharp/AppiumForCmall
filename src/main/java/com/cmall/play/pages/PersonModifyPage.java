@@ -3,7 +3,7 @@ package com.cmall.play.pages;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import com.cmall.appium.Helper;
+import com.cmall.appium.DriverHelper;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class PersonModifyPage {
 	
 	private AndroidDriver<MobileElement> mdriver;
-	private Helper helper;
+	private DriverHelper helper;
 	
 	@FindBy(id = "com.tude.android:id/btn_profile")
 	private WebElement e_my;// 我的
@@ -43,7 +43,7 @@ public class PersonModifyPage {
 	
 	public PersonModifyPage(AndroidDriver<MobileElement> mdriver) {
 		this.mdriver = mdriver;
-		helper = new Helper(mdriver);
+		helper = new DriverHelper(mdriver);
 	}
 	
 	/**
@@ -52,14 +52,14 @@ public class PersonModifyPage {
 	public void modifyPersonInfo(){
 		boolean result = false;
 
-		if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+		if (helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
 			e_my.click();
 			e_profile_setting.click();
-			if (helper.waitActivity(Play_ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
+			if (helper.waitActivity(ActivityList.MODIFY_USER_INFO_ACTIVITY)) {
 				e_gender.click();
 				e_male.click();
 				e_save.click();
-				if (helper.waitActivity(Play_ActivityList.HOME_ACTIVITY)) {
+				if (helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
 					result = true;
 				}
 			}

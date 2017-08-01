@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ModelTestCase02" preserve-order="true" >
+    
+    <test name="ModelTestCase02" preserve-order="true">
+
+        <classes>
+            <class name="com.cmall.test.ModelTestCase02" > 
+                <methods>
+            		<include name="testLogin"></include>
+            		<include name="testCheck3DModelByColor"></include>
+            	</methods>
+            </class>  
+        </classes>
+    </test>
+   
+</suite>

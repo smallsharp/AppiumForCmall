@@ -7,7 +7,7 @@ import java.io.File;
 import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
-import com.cmall.appium.Helper;
+import com.cmall.appium.DriverHelper;
 import com.cmall.play.pages.Constant;
 import com.cmall.utils.ImageUtil;
 import com.cmall.utils.LogUtil;
@@ -18,7 +18,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class MeituPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-	private Helper helper;
+	private DriverHelper helper;
 	private static LogUtil log = new LogUtil(MeituPage.class);
 
 	public MeituPage() {
@@ -26,7 +26,7 @@ public class MeituPage {
 
 	public MeituPage(AndroidDriver<MobileElement> driver) {
 		this.mdriver = driver;
-		helper = new Helper(mdriver);
+		helper = new DriverHelper(mdriver);
 	}
 
 	/**

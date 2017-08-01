@@ -22,13 +22,13 @@ public class AppiumServerUtil {
 	public AppiumServerUtil() {
 	}
 	
+
 	/**
-	 * 启动 AppiumServer
-	 * 
+	 * 启动AppiumServer
 	 * @param ipAddress
 	 * @param port
+	 * @param devicesName
 	 */
-
 	public void startServer(String ipAddress, int port,String devicesName) {
 		File folder = new File("log");
 		File logFile = null;
@@ -39,9 +39,7 @@ public class AppiumServerUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder();
-		
 /*		Map<String, String> map = new HashMap<>();
 		map.put("-U ", devicesName);
 		map.put("-S", "--session-override");
@@ -74,8 +72,6 @@ public class AppiumServerUtil {
 		}
 	}
 
-
-
 	/**
 	 * 
 	 * @param ipAddress
@@ -94,7 +90,6 @@ public class AppiumServerUtil {
 		if (appiumService == null || !appiumService.isRunning()) {
 			throw new RuntimeException("An appium server node is not started!");
 		}
-
 	}
 
 	/**

@@ -3,7 +3,6 @@ package com.cmall.utils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.testng.annotations.Test;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
@@ -140,20 +139,22 @@ public class DDMlib {
 
 	/**
 	 * 获取第一台连接的Android设备
-	 * 
+	 * 如果没有设备连接，会返回null
 	 * @return
 	 */
 	public IDevice getDevice() {
 		AndroidDebugBridge adb = AndroidDebugBridge.createBridge();
+		IDevice devices[] = null;
+		IDevice device = null;
 		if (waitForDevice(adb)) {
-			IDevice devices[] = adb.getDevices();
+			devices = adb.getDevices();
 			if (devices.length > 0) {
-				return devices[0];
-			} else {
-				System.out.println("没有检测到Android设备！");
+				device = devices[0];
+			}else {
+				return null;// 如果没有设备连接，会返回null
 			}
 		}
-		return null;
+		return device;
 	}
 
 	/**
@@ -165,29 +166,27 @@ public class DDMlib {
 		DDMlib ddMlibUtil = DDMlib.getInstance();
 		ddMlibUtil.init();
 	
-		IDevice dev = ddMlibUtil.getDevice();
+		IDevice device = ddMlibUtil.getDevice();
 		
-		Map<String, String> map = dev.getProperties();// 获取所有build.prop 所有配置信息
+		if (device == null) {
+			log.error("没有检测到Android设备！");
+			return;
+		}
 		
-/*		for(String key:map.keySet()) {
+		// 获取所有build.prop 所有配置信息
+		Map<String, String> map = device.getProperties();
+		
+		for(String key:map.keySet()) {
 			System.out.println(key + " --> "+map.get(key));
-		}*/
+		}
 		
-		String heapGrowth = dev.getProperty("dalvik.vm.heapgrowthlimit");
-		String heapStart = dev.getProperty("dalvik.vm.heapstartsize");
-		String productName = dev.getProperty("ro.product.name");
-		String version = dev.getProperty("ro.build.version.release");
-		String serialno = dev.getProperty("ro.serialno");
-		String sdkVersion = dev.getProperty("ro.build.version.sdk");
-		String cpu = dev.getProperty("ro.product.cpu.abilist");
-		
-		log.info(heapGrowth);
-		log.info(heapStart);
-		log.info(productName);
-		log.info(version);
-		log.info(serialno);
-		log.info(sdkVersion);
-		log.info(cpu);
+		log.info(device.getProperty("dalvik.vm.heapgrowthlimit"));
+		log.info(device.getProperty("dalvik.vm.heapstartsize"));
+		log.info(device.getProperty("ro.product.name"));
+		log.info(device.getProperty("ro.build.version.release"));
+		log.info(device.getProperty("ro.serialno"));
+		log.info(device.getProperty("ro.build.version.sdk"));
+		log.info(device.getProperty("ro.product.cpu.abilist"));
 		
 /*		List<String> devices = getSerialNumber();
 		for (String device : devices) {

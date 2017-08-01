@@ -1,6 +1,6 @@
 package com.cmall.play.pages;
 
-public final class Play_ActivityList {
+public final class ActivityList {
 	
 	public static final String SPLASH_ACTIVITY = ".activity.SplashActivity";
 	

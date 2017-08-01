@@ -8,14 +8,16 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.testng.annotations.Test;
-
 import com.cmall.utils.ExcelReader;
 import com.cmall.utils.LogUtil;
-
 import jxl.write.WriteException;
 
+/**
+ * Android 性能测试
+ * @author cm
+ *
+ */
 public class Performance {
 	LogUtil log = new LogUtil(Performance.class);
 	// 获取应用内存使用情况
@@ -46,10 +48,6 @@ public class Performance {
 	 */
 	public static double getUsageMemory(String packageName) {
 		String meminfo = getResponse(memUsage_cmd, packageName);
-		// String str = meminfo.substring(meminfo.indexOf("TOTAL:",
-		// 1),meminfo.indexOf("TOTAL SWAP"));
-		// TOTAL: 99090
-		// return str.split(":")[1].trim();
 		String str = meminfo.substring(meminfo.indexOf("TOTAL", 0), meminfo.indexOf("Objects", 0));
 		// TOTAL 59015 59200 8684 0 46604 38034 7985
 		String arr[] = str.split(" ");
