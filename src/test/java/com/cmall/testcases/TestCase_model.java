@@ -23,7 +23,7 @@ public class TestCase_model implements ITestCase{
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20 ,TimeUnit.SECONDS), loginPage);
 		PageFactory.initElements(new AppiumFieldDecorator(mdriver, 20,TimeUnit.SECONDS),modelPage);
 		loginPage.login(PropertyUtil.getString("mobile"), PropertyUtil.getString("password"));
-		modelPage.check3DModelGoodsList();
+//		modelPage.check3DModelGoodsList();
 	}
 
 	@Override

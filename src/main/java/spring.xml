@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+	<!-- PropertyPlaceholderConfigurer类中有个locations属性，接收的是一个数组，即我们可以在下面配好多个properties文件 -->
+	    <property name="locations">   
+	        <array>  
+	            <value>classpath:driver.properties</value>  
+	        </array>  
+	    </property>  
+	</bean>  
+
+	<!--从driver.properties中读取  -->
+	<bean id="driverFactory" class="com.cmall.reference.DriverFactory" init-method="initDriver" scope="prototype">
+		<property name="platformName" value="${platformName}"></property>
+		<property name="apkPath" value="${apkPath}"></property>
+		<property name="deviceName" value="${driverName}"></property>
+		<property name="appPackage" value="${appPackage}"></property>
+		<property name="appActivity" value="${appActivity}"></property>
+		<property name="ip" value="${ip}"></property>
+		<property name="port" value="${port}"></property>
+	</bean>
+	
+	<bean id="testcase_spring" class="com.cmall.reference.TestcaseSpring" scope="prototype">
+		<!-- EL表达式 -->
+		<property name="driver" value="#{driverFactory.driver}"></property>
+	</bean>
+
+</beans>

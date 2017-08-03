@@ -1,5 +1,7 @@
 package com.cmall.appium;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Vector;
 import com.cmall.testcases.ITestCase;
@@ -22,6 +24,9 @@ public class MultideviceManage {
 
 	public void runTestCase(ITestCase testcase) {
 		Vector<Thread> threads = new Vector<Thread>();
+		log.info("yes!!!!!!!!!!");
+		log.info("-------------------------------测试---------------------------------------");
+		
 		log.info("一共检测到设备：" + list.size() + "台");
 		for (int i = 0; i < list.size(); i++) {
 			log.info("第" + (i + 1) + "设备名称：" + list.get(i));
