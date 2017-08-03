@@ -289,7 +289,6 @@ public class DriverHelper {
 				Thread.sleep(2500);
 				pressKeyCode(AndroidKeyCode.BACK);
 			}
-
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -436,6 +435,10 @@ public class DriverHelper {
 	
 	public void tap(int fingers, int x, int y, int duration) {
 		mdriver.tap(fingers, x, y, duration);
+	}
+	
+	public void swipe(int startx, int starty, int endx, int endy, int duration) {
+		mdriver.swipe(startx, starty, endx, endy, duration);
 	}
 
 	public int getDeviceWidth() {

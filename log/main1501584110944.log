@@ -1,0 +1,1366 @@
+2017-08-01 10:41:57:841 - info: [Appium] Welcome to Appium v1.6.5
+2017-08-01 10:41:57:843 - info: [Appium] Non-default server args:
+2017-08-01 10:41:57:844 - info: [Appium]   address: 127.0.0.1
+2017-08-01 10:41:57:844 - info: [Appium]   log: D:\workspace\AppiumForCmall\log\main1501584110944.log
+2017-08-01 10:41:57:845 - info: [Appium]   defaultCapabilities: {
+2017-08-01 10:41:57:845 - info: [Appium]     deviceName: 127.0.0.1:62001
+2017-08-01 10:41:57:845 - info: [Appium]   }
+2017-08-01 10:41:57:846 - info: [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2017-08-01 10:41:57:848 - info: [Appium]   deviceName: '127.0.0.1:62001'
+2017-08-01 10:41:57:909 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2017-08-01 10:41:58:273 - info: [HTTP] --> GET /wd/hub/status {}
+2017-08-01 10:41:58:276 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-08-01 10:41:58:332 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
+2017-08-01 10:41:58:338 - info: [HTTP] <-- GET /wd/hub/status 200 62 ms - 83 
+2017-08-01 10:41:59:016 - info: [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"127.0.0.1:62001"}}
+2017-08-01 10:41:59:016 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"127.0.0.1:62001"},null,null]
+2017-08-01 10:41:59:017 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1501584119017 (18:41:59 GMT+0800 (中国标准时间))
+2017-08-01 10:41:59:020 - info: [Appium] Creating new AndroidDriver (v1.20.0) session
+2017-08-01 10:41:59:020 - info: [Appium] Capabilities:
+2017-08-01 10:41:59:021 - info: [Appium]   app: 'D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk'
+2017-08-01 10:41:59:021 - info: [Appium]   appPackage: 'com.play.android'
+2017-08-01 10:41:59:021 - info: [Appium]   appActivity: 'com.play.android.activity.SplashActivity'
+2017-08-01 10:41:59:021 - info: [Appium]   noset: false
+2017-08-01 10:41:59:021 - info: [Appium]   unicodeKeyboard: true
+2017-08-01 10:41:59:022 - info: [Appium]   platformName: 'Android'
+2017-08-01 10:41:59:022 - info: [Appium]   deviceName: '127.0.0.1:62001'
+2017-08-01 10:41:59:023 - info: [debug] [AndroidDriver] AndroidDriver version: 1.20.0
+2017-08-01 10:41:59:040 - warn: [BaseDriver] The following capabilities were provided, but are not recognized by appium: noset.
+2017-08-01 10:41:59:042 - info: [BaseDriver] Session created with session id: 32633889-0b47-4175-b23f-5bd6372f0e0e
+2017-08-01 10:41:59:044 - info: [debug] [AndroidDriver] Getting Java version
+2017-08-01 10:41:59:172 - info: [AndroidDriver] Java version is: 1.8.0_131
+2017-08-01 10:41:59:177 - info: [ADB] Checking whether adb is present
+2017-08-01 10:41:59:180 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-08-01 10:41:59:180 - info: [AndroidDriver] Retrieving device list
+2017-08-01 10:41:59:181 - info: [debug] [ADB] Trying to find a connected android device
+2017-08-01 10:41:59:182 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:41:59:397 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:41:59:397 - info: [AndroidDriver] Using device: 127.0.0.1:62001
+2017-08-01 10:41:59:398 - info: [ADB] Checking whether adb is present
+2017-08-01 10:41:59:401 - info: [ADB] Using adb.exe from D:\Android\AndroidSDK\platform-tools\adb.exe
+2017-08-01 10:41:59:402 - info: [debug] [ADB] Setting device id to 127.0.0.1:62001
+2017-08-01 10:41:59:402 - info: [BaseDriver] Using local app 'D:\workspace\AppiumForCmall\apps\play-debug.apk'
+2017-08-01 10:41:59:403 - info: [debug] [AndroidDriver] Checking whether app is actually present
+2017-08-01 10:41:59:404 - info: [AndroidDriver] Starting Android session
+2017-08-01 10:41:59:407 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","wait-for-device"]
+2017-08-01 10:41:59:443 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:41:59:479 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:41:59:479 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","echo","ping"]
+2017-08-01 10:41:59:570 - info: [debug] [Logcat] Starting logcat capture
+2017-08-01 10:41:59:599 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2017-08-01 10:41:59:599 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2017-08-01 10:41:59:600 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk"]
+2017-08-01 10:42:00:320 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:00:352 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:00:353 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","settings","get","secure","default_input_method"]
+2017-08-01 10:42:00:940 - info: [debug] [AndroidDriver] Unsetting previous IME io.appium.android.ime/.UnicodeIME
+2017-08-01 10:42:00:941 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2017-08-01 10:42:00:941 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:00:976 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:00:977 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","ime","enable","io.appium.android.ime/.UnicodeIME"]
+2017-08-01 10:42:01:552 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:01:590 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:01:590 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","ime","set","io.appium.android.ime/.UnicodeIME"]
+2017-08-01 10:42:02:163 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2017-08-01 10:42:02:164 - info: [debug] [ADB] Getting install status for io.appium.settings
+2017-08-01 10:42:02:166 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:02:201 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:02:201 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","pm","list","packages","io.appium.settings"]
+2017-08-01 10:42:02:835 - info: [debug] [ADB] App is installed
+2017-08-01 10:42:02:837 - info: [debug] [ADB] Getting package info for io.appium.settings
+2017-08-01 10:42:02:837 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:02:848 - info: [ADB] Checking whether aapt is present
+2017-08-01 10:42:02:858 - info: [ADB] Using aapt.exe from D:\Android\AndroidSDK\build-tools\23.0.3\aapt.exe
+2017-08-01 10:42:02:931 - warn: [ADB] Cannot read version codes of D:\nodejs\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
+2017-08-01 10:42:02:933 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:02:951 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:02:952 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","package","io.appium.settings"]
+2017-08-01 10:42:02:984 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:02:984 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","getprop","ro.build.version.sdk"]
+2017-08-01 10:42:03:075 - info: [debug] [ADB] Device API level: 19
+2017-08-01 10:42:03:076 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:03:130 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:03:132 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","package","io.appium.settings"]
+2017-08-01 10:42:03:196 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2017-08-01 10:42:03:197 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","install","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
+2017-08-01 10:42:03:967 - info: [debug] [ADB] Device API level: 19
+2017-08-01 10:42:03:968 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:04:002 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:04:002 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","settings","put","secure","mock_location","1"]
+2017-08-01 10:42:04:606 - info: [ADB] Getting device platform version
+2017-08-01 10:42:04:606 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:04:661 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:04:662 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","getprop","ro.build.version.release"]
+2017-08-01 10:42:04:712 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:04:764 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:04:764 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","wm","size"]
+2017-08-01 10:42:05:368 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:05:409 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:05:410 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","getprop","ro.product.model"]
+2017-08-01 10:42:05:471 - info: [debug] [ADB] Current device property 'ro.product.model': Redmi 3
+2017-08-01 10:42:05:471 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:05:508 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:05:509 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","getprop","ro.product.manufacturer"]
+2017-08-01 10:42:05:560 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Xiaomi
+2017-08-01 10:42:05:721 - info: [AndroidDriver] Remote apk path is /data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk
+2017-08-01 10:42:05:722 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:05:760 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:05:763 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","ls","/data/local/tmp/15d3311f063b134c1cf121d1019c9163.apk"]
+2017-08-01 10:42:05:803 - info: [debug] [AndroidDriver] Checking if app is installed
+2017-08-01 10:42:05:805 - info: [debug] [ADB] Getting install status for com.play.android
+2017-08-01 10:42:05:806 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:05:840 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:05:842 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","pm","list","packages","com.play.android"]
+2017-08-01 10:42:06:447 - info: [debug] [ADB] App is installed
+2017-08-01 10:42:06:449 - info: [AndroidDriver] Apk is already on remote and installed, resetting
+2017-08-01 10:42:06:450 - info: [debug] [AndroidDriver] Running fast reset (stop and clear)
+2017-08-01 10:42:06:451 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:06:492 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:06:498 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","am","force-stop","com.play.android"]
+2017-08-01 10:42:07:078 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:07:120 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:07:121 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","pm","clear","com.play.android"]
+2017-08-01 10:42:07:739 - info: [debug] [AndroidDriver] Extracting strings from apk D:\workspace\AppiumForCmall\apps\play-debug.apk null C:\Users\cm\AppData\Local\Temp\com.play.android
+2017-08-01 10:42:07:739 - info: [debug] [ADB] Extracting strings for language: default
+2017-08-01 10:42:07:740 - info: [debug] [ADB] Device API level: 19
+2017-08-01 10:42:07:741 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:07:780 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:07:781 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","getprop","persist.sys.language"]
+2017-08-01 10:42:07:844 - info: [debug] [ADB] Current device property 'persist.sys.language': zh
+2017-08-01 10:42:09:009 - info: [debug] [ADB] Reading strings from converted strings.json
+2017-08-01 10:42:09:015 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","push","C:\\Users\\cm\\AppData\\Local\\Temp\\com.play.android\\strings.json","/data/local/tmp"]
+2017-08-01 10:42:09:068 - info: [debug] [AndroidBootstrap] Watching for bootstrap disconnect
+2017-08-01 10:42:09:070 - info: [debug] [ADB] Forwarding system: 4724 to device: 4724
+2017-08-01 10:42:09:071 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","forward","tcp:4724","tcp:4724"]
+2017-08-01 10:42:09:081 - info: [debug] [UiAutomator] Starting UiAutomator
+2017-08-01 10:42:09:081 - info: [debug] [UiAutomator] Moving to state 'starting'
+2017-08-01 10:42:09:081 - info: [debug] [UiAutomator] Parsing uiautomator jar
+2017-08-01 10:42:09:082 - info: [debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+2017-08-01 10:42:09:083 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","push","D:\\nodejs\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
+2017-08-01 10:42:09:139 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-08-01 10:42:09:140 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-08-01 10:42:09:140 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:09:172 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:09:173 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","ps"]
+2017-08-01 10:42:09:219 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-08-01 10:42:09:220 - info: [debug] [UiAutomator] Starting UIAutomator
+2017-08-01 10:42:09:221 - info: [debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","127.0.0.1:62001","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.play.android","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+2017-08-01 10:42:09:609 - info: [debug] [UiAutomator] Moving to state 'online'
+2017-08-01 10:42:09:614 - info: [AndroidBootstrap] Android bootstrap socket is now connected
+2017-08-01 10:42:09:615 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:09:626 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+2017-08-01 10:42:09:626 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+2017-08-01 10:42:09:628 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+2017-08-01 10:42:09:649 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:09:650 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window"]
+2017-08-01 10:42:09:692 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2017-08-01 10:42:09:696 - info: [debug] [ADB] Device API level: 19
+2017-08-01 10:42:09:697 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:09:730 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:09:732 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","am","start","-W","-n","com.play.android/com.play.android.activity.SplashActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+2017-08-01 10:42:12:387 - info: [Appium] New AndroidDriver session created successfully, session 32633889-0b47-4175-b23f-5bd6372f0e0e added to master session list
+2017-08-01 10:42:12:388 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1501584132388 (18:42:12 GMT+0800 (中国标准时间))
+2017-08-01 10:42:12:388 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"127.0.0.1:62001"},"app":"D:\\workspace\\AppiumForCmall\\apps\\play-debug.apk","appPackage":"com.play.android","appActivity":"com.play.android.activity.SplashActivity","noset":false,"unicodeKeyboard":true,"platformName":"Android","deviceName":"127.0.0.1:62001","deviceUDID":"127.0.0.1:62001","platformVersion":"4.4.2","deviceScreenSize":"720x1280","deviceModel":"Redmi 3","deviceManufacturer":"Xiaomi"}
+2017-08-01 10:42:12:390 - info: [HTTP] <-- POST /wd/hub/session 200 13374 ms - 904 
+2017-08-01 10:42:12:590 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:12:593 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:12:595 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:12:595 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:12:630 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:12:630 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:12:685 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-08-01 10:42:12:686 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 96 ms - 101 
+2017-08-01 10:42:12:694 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:12:695 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:12:696 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:12:697 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:12:698 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 4 ms - 76 
+2017-08-01 10:42:12:708 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:12:708 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:12:710 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:12:711 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:12:715 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/btn_profile"}
+2017-08-01 10:42:12:715 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_profile","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:12:716 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:12:717 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:12:717 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:12:720 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-08-01 10:42:12:723 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-08-01 10:42:12:723 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:12:724 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:12:724 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_profile' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:12:724 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:12:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:12:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:12:725 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:12:880 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:12:882 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_profile' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:12:883 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:12:883 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:12:883 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:12:884 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:13:919 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:13:920 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:13:942 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"1"}],"status":0}
+2017-08-01 10:42:13:942 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:13:944 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"1"}]
+2017-08-01 10:42:13:945 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 1230 ms - 89 
+2017-08-01 10:42:13:952 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:13:952 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:13:953 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:13:954 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:13:955 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 3 ms - 76 
+2017-08-01 10:42:13:960 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:13:960 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:13:961 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:13:962 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:13:963 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:13:966 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:13:967 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:13:968 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:13:968 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:13:972 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/btn_profile"}
+2017-08-01 10:42:13:972 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_profile","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:13:973 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:13:973 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:13:974 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:13:974 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-08-01 10:42:13:976 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_profile","context":"","multiple":true}}
+2017-08-01 10:42:13:976 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:13:977 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:13:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_profile' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:13:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:13:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:13:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:13:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:13:991 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:13:992 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_profile]
+2017-08-01 10:42:14:040 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"2"}],"status":0}
+2017-08-01 10:42:14:040 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:14:041 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"2"}]
+2017-08-01 10:42:14:042 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 70 ms - 89 
+2017-08-01 10:42:14:045 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:14:046 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:047 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:14:047 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:14:048 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:14:052 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/2/click {"id":"2"}
+2017-08-01 10:42:14:053 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["2","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:054 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-08-01 10:42:14:056 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-08-01 10:42:14:056 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:14:056 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-08-01 10:42:14:345 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:14:346 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-08-01 10:42:14:349 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/2/click 200 294 ms - 76 
+2017-08-01 10:42:14:349 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:14:850 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:14:850 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:852 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:14:852 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:14:893 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:14:894 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:14:956 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.member.LoginActivity"
+2017-08-01 10:42:14:957 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 107 ms - 104 
+2017-08-01 10:42:14:962 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:14:962 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:963 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:14:964 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:14:964 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:14:969 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:14:969 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:970 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:14:971 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:14:975 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/tv_account"}
+2017-08-01 10:42:14:976 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/tv_account","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:14:976 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:14:976 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:14:977 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:14:977 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-08-01 10:42:14:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-08-01 10:42:14:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:14:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:14:979 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/tv_account' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:14:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:14:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:14:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:14:980 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:391 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:15:391 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:430 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:15:430 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"3"}]
+2017-08-01 10:42:15:431 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 455 ms - 89 
+2017-08-01 10:42:15:431 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"3"}],"status":0}
+2017-08-01 10:42:15:435 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:15:435 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:436 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:15:436 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:15:437 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 1 ms - 76 
+2017-08-01 10:42:15:441 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:15:443 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:443 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:15:444 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:15:452 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 10 ms - 76 
+2017-08-01 10:42:15:456 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:15:456 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:457 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:15:458 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:15:462 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/tv_account"}
+2017-08-01 10:42:15:463 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/tv_account","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:465 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:15:465 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:15:465 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:15:466 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/tv_account","context":"","multiple":true}}
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/tv_account' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:469 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:470 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:15:470 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:501 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:15:502 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/tv_account]
+2017-08-01 10:42:15:512 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:15:513 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"4"}]
+2017-08-01 10:42:15:514 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 51 ms - 89 
+2017-08-01 10:42:15:514 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"4"}],"status":0}
+2017-08-01 10:42:15:518 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:15:518 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:519 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:15:519 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:15:520 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:15:522 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/4/click {"id":"4"}
+2017-08-01 10:42:15:523 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:524 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-08-01 10:42:15:527 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-08-01 10:42:15:528 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:15:528 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-08-01 10:42:15:676 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:15:677 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-08-01 10:42:15:678 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/4/click 200 155 ms - 76 
+2017-08-01 10:42:15:678 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:15:682 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:15:682 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:683 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:15:683 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:15:684 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:15:687 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:15:688 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:690 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:15:691 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:15:694 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/et_account"}
+2017-08-01 10:42:15:694 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_account","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:15:695 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:15:695 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:15:695 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:15:697 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-08-01 10:42:15:701 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-08-01 10:42:15:701 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:15:701 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:15:702 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_account' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:15:702 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:15:702 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:15:702 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:15:702 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:16:329 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:16:329 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:16:835 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:16:836 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"5"}]
+2017-08-01 10:42:16:838 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 1142 ms - 89 
+2017-08-01 10:42:16:839 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"5"}],"status":0}
+2017-08-01 10:42:16:841 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:16:841 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:16:842 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:16:842 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:16:843 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:16:847 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:16:847 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:16:847 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:16:848 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:16:849 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:16:854 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:16:855 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:16:856 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:16:858 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:16:860 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/et_account"}
+2017-08-01 10:42:16:861 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_account","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:16:861 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:16:861 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:16:861 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:16:862 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-08-01 10:42:16:864 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_account","context":"","multiple":true}}
+2017-08-01 10:42:16:864 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:16:866 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:16:869 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_account' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:16:869 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:16:869 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:16:869 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:16:869 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:16:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:16:905 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_account]
+2017-08-01 10:42:17:004 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:17:005 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"6"}]
+2017-08-01 10:42:17:006 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 145 ms - 89 
+2017-08-01 10:42:17:006 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"6"}],"status":0}
+2017-08-01 10:42:17:010 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:17:010 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:17:011 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:17:012 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:17:013 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:17:016 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/6/value {"id":"6","value":["18521035133"]}
+2017-08-01 10:42:17:017 - info: [debug] [MJSONWP] Calling AppiumDriver.setValue() with args: [["18521035133"],"6","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:17:018 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"18521035133","replace":false,"unicodeKeyboard":true}}
+2017-08-01 10:42:17:020 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"18521035133","replace":false,"unicodeKeyboard":true}}
+2017-08-01 10:42:17:021 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:17:021 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2017-08-01 10:42:17:021 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using element passed in: 6
+2017-08-01 10:42:17:031 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Attempting to clear using UiObject.clearText().
+2017-08-01 10:42:19:371 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Text remains after clearing, but it appears to be hint text.
+2017-08-01 10:42:19:376 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Text not cleared. Assuming remainder is hint text.
+2017-08-01 10:42:19:376 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 18521035133
+2017-08-01 10:42:21:784 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:21:785 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:21:785 - info: [debug] [MJSONWP] Responding to client with driver.setValue() result: true
+2017-08-01 10:42:21:786 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/6/value 200 4770 ms - 76 
+2017-08-01 10:42:21:791 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:21:791 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:21:792 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:21:792 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:21:794 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:21:800 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:21:801 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:21:802 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:21:803 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:21:808 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/et_password"}
+2017-08-01 10:42:21:808 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_password","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:21:809 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:21:809 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:21:809 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:21:810 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-08-01 10:42:21:814 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-08-01 10:42:21:815 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:21:815 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:21:815 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_password' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:21:818 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:21:818 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:21:818 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:21:818 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:314 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:22:314 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:325 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"7"}],"status":0}
+2017-08-01 10:42:22:326 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:22:326 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"7"}]
+2017-08-01 10:42:22:327 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 519 ms - 89 
+2017-08-01 10:42:22:330 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:22:331 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:331 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:22:332 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:22:332 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:22:336 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:22:337 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:337 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:22:337 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:22:338 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 1 ms - 76 
+2017-08-01 10:42:22:341 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:22:342 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:342 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:22:343 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 1 ms - 84 
+2017-08-01 10:42:22:345 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/et_password"}
+2017-08-01 10:42:22:346 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/et_password","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:346 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:22:346 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:22:346 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:22:346 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-08-01 10:42:22:350 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/et_password","context":"","multiple":true}}
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/et_password' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:22:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:376 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:22:376 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/et_password]
+2017-08-01 10:42:22:428 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:22:428 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"8"}]
+2017-08-01 10:42:22:429 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 83 ms - 89 
+2017-08-01 10:42:22:429 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"8"}],"status":0}
+2017-08-01 10:42:22:433 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:22:434 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:435 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:22:435 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:22:436 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:22:439 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/8/value {"id":"8","value":["111111"]}
+2017-08-01 10:42:22:440 - info: [debug] [MJSONWP] Calling AppiumDriver.setValue() with args: [["111111"],"8","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:22:441 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:setText","params":{"elementId":"8","text":"111111","replace":false,"unicodeKeyboard":true}}
+2017-08-01 10:42:22:443 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"8","text":"111111","replace":false,"unicodeKeyboard":true}}
+2017-08-01 10:42:22:444 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:22:444 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: setText
+2017-08-01 10:42:22:444 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using element passed in: 8
+2017-08-01 10:42:22:449 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Attempting to clear using UiObject.clearText().
+2017-08-01 10:42:24:756 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Sending plain text to element: 111111
+2017-08-01 10:42:27:075 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:27:075 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:27:077 - info: [debug] [MJSONWP] Responding to client with driver.setValue() result: true
+2017-08-01 10:42:27:078 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/8/value 200 4638 ms - 76 
+2017-08-01 10:42:27:082 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:27:082 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:083 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:27:084 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:27:084 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:27:087 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:27:088 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:090 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:27:091 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:27:095 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/btn_login"}
+2017-08-01 10:42:27:096 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_login","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:096 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:27:097 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:27:097 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:27:097 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-08-01 10:42:27:099 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-08-01 10:42:27:100 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:27:100 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:27:100 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_login' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:27:100 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:101 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:101 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:27:101 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:608 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:27:608 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:616 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:27:617 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"9"}]
+2017-08-01 10:42:27:618 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 522 ms - 89 
+2017-08-01 10:42:27:618 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"9"}],"status":0}
+2017-08-01 10:42:27:622 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:27:623 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:623 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:27:623 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:27:624 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:27:627 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:27:627 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:628 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:27:629 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:27:629 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:27:634 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:27:634 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:638 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:27:639 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 4 ms - 84 
+2017-08-01 10:42:27:642 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/btn_login"}
+2017-08-01 10:42:27:642 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/btn_login","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:643 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:27:643 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:27:644 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:27:644 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-08-01 10:42:27:646 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/btn_login","context":"","multiple":true}}
+2017-08-01 10:42:27:647 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:27:647 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:27:648 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/btn_login' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:27:648 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:648 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:648 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:27:649 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:694 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:27:695 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/btn_login]
+2017-08-01 10:42:27:713 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:27:714 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"10"}]
+2017-08-01 10:42:27:715 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 73 ms - 90 
+2017-08-01 10:42:27:715 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"10"}],"status":0}
+2017-08-01 10:42:27:718 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:27:718 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:719 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:27:719 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:27:720 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:27:723 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/10/click {"id":"10"}
+2017-08-01 10:42:27:723 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["10","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:27:725 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+2017-08-01 10:42:27:728 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+2017-08-01 10:42:27:728 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:27:729 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-08-01 10:42:27:856 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:27:857 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:27:857 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-08-01 10:42:27:858 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/10/click 200 135 ms - 76 
+2017-08-01 10:42:28:363 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:28:363 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:364 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:28:364 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:28:412 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:28:413 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:28:494 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-08-01 10:42:28:495 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 132 ms - 101 
+2017-08-01 10:42:28:560 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:28:561 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:562 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:28:562 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:28:631 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:28:631 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:28:690 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.main.HomeActivity"
+2017-08-01 10:42:28:691 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 130 ms - 101 
+2017-08-01 10:42:28:695 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:28:695 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:696 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:28:696 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:28:698 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:28:704 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:28:704 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:705 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:28:708 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:28:713 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/sdv_image"}
+2017-08-01 10:42:28:714 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/sdv_image","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:732 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:28:734 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:28:735 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:28:737 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-08-01 10:42:28:753 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-08-01 10:42:28:753 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:28:753 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:28:753 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:28:753 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:754 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:754 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:28:754 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:782 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:28:783 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:831 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (2)
+2017-08-01 10:42:28:831 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=2, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:850 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:28:851 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"11"},{"ELEMENT":"12"}]
+2017-08-01 10:42:28:851 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 138 ms - 107 
+2017-08-01 10:42:28:852 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"11"},{"ELEMENT":"12"}],"status":0}
+2017-08-01 10:42:28:859 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:28:860 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:861 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:28:862 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:28:864 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 4 ms - 76 
+2017-08-01 10:42:28:868 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:28:868 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:869 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:28:869 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:28:870 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:28:876 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:28:876 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:877 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:28:878 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:28:883 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/sdv_image"}
+2017-08-01 10:42:28:884 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/sdv_image","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:884 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:28:884 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:28:884 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:28:885 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-08-01 10:42:28:888 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/sdv_image","context":"","multiple":true}}
+2017-08-01 10:42:28:888 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:28:888 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:28:889 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/sdv_image' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:28:890 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:891 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:891 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:28:891 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:915 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:28:915 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:943 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (2)
+2017-08-01 10:42:28:943 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=2, RESOURCE_ID=com.play.android:id/sdv_image]
+2017-08-01 10:42:28:950 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"13"},{"ELEMENT":"14"}],"status":0}
+2017-08-01 10:42:28:950 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:28:954 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"13"},{"ELEMENT":"14"}]
+2017-08-01 10:42:28:956 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 72 ms - 107 
+2017-08-01 10:42:28:962 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:28:962 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:963 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:28:963 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:28:964 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 1 ms - 76 
+2017-08-01 10:42:28:967 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/14/click {"id":"14"}
+2017-08-01 10:42:28:967 - info: [debug] [MJSONWP] Calling AppiumDriver.click() with args: ["14","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:28:969 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"14"}}
+2017-08-01 10:42:28:971 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"14"}}
+2017-08-01 10:42:28:971 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:28:971 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+2017-08-01 10:42:29:115 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:29:115 - info: [debug] [MJSONWP] Responding to client with driver.click() result: true
+2017-08-01 10:42:29:116 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/14/click 200 149 ms - 76 
+2017-08-01 10:42:29:116 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:29:622 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:29:623 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:29:625 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:29:625 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:29:671 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:29:672 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:29:735 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.product.ProductClassifitionActivity"
+2017-08-01 10:42:29:737 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 113 ms - 119 
+2017-08-01 10:42:29:740 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:29:741 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:29:741 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:29:742 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:29:744 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 3 ms - 76 
+2017-08-01 10:42:29:747 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:29:748 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:29:749 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:29:750 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:29:753 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:29:754 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:29:755 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:29:755 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:29:755 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:29:756 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:29:761 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:29:761 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:29:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:29:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:29:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:29:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:29:762 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:29:763 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:29:763 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:29:763 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:29:892 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:29:892 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:30:598 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"15"}],"status":0}
+2017-08-01 10:42:30:598 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:30:599 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"15"}]
+2017-08-01 10:42:30:600 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 846 ms - 90 
+2017-08-01 10:42:30:604 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:30:605 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:30:609 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:30:609 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:30:610 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 5 ms - 76 
+2017-08-01 10:42:30:621 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:30:625 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:30:627 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:30:628 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:30:630 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 8 ms - 76 
+2017-08-01 10:42:30:636 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:30:637 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:30:638 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:30:639 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:30:643 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:30:643 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:30:644 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:30:645 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:30:645 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:30:646 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:30:649 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:30:649 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:30:650 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:30:651 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:30:651 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:084 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:31:085 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:102 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"16"}],"status":0}
+2017-08-01 10:42:31:102 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:31:103 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"16"}]
+2017-08-01 10:42:31:104 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 461 ms - 90 
+2017-08-01 10:42:31:113 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:31:114 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:114 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:31:120 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:31:120 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 7 ms - 76 
+2017-08-01 10:42:31:126 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/16/displayed {}
+2017-08-01 10:42:31:126 - info: [debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["16","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:128 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"16"}}
+2017-08-01 10:42:31:132 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"16"}}
+2017-08-01 10:42:31:133 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:31:133 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+2017-08-01 10:42:31:143 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:31:144 - info: [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
+2017-08-01 10:42:31:145 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/16/displayed 200 19 ms - 76 
+2017-08-01 10:42:31:146 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":"true","status":0}
+2017-08-01 10:42:31:149 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:31:150 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:151 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:31:152 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:31:152 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 3 ms - 76 
+2017-08-01 10:42:31:155 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:31:156 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:157 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:31:158 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:31:161 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:31:162 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:162 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:31:163 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:31:163 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:31:163 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:31:174 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:31:174 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:175 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:176 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:31:176 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:183 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:31:183 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:31:204 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:31:205 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"17"}]
+2017-08-01 10:42:31:206 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 44 ms - 90 
+2017-08-01 10:42:31:206 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"17"}],"status":0}
+2017-08-01 10:42:31:211 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:31:211 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:31:212 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:31:213 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:31:217 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 5 ms - 76 
+2017-08-01 10:42:34:222 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:34:222 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:223 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:34:223 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:224 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:34:227 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:34:227 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:228 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:34:229 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:34:234 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:34:235 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:236 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:236 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:236 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:34:237 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:241 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:242 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:242 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:34:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:34:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:34:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:34:244 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:244 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:244 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:34:244 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:247 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:34:247 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:257 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:258 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"18"}]
+2017-08-01 10:42:34:259 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 25 ms - 90 
+2017-08-01 10:42:34:260 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"18"}],"status":0}
+2017-08-01 10:42:34:263 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:34:264 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:265 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:34:266 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:267 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 3 ms - 76 
+2017-08-01 10:42:34:271 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/18/location {}
+2017-08-01 10:42:34:272 - info: [debug] [MJSONWP] Calling AppiumDriver.getLocation() with args: ["18","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:273 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getLocation","params":{"elementId":"18"}}
+2017-08-01 10:42:34:277 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getLocation","params":{"elementId":"18"}}
+2017-08-01 10:42:34:279 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:279 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getLocation
+2017-08-01 10:42:34:281 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:283 - info: [debug] [MJSONWP] Responding to client with driver.getLocation() result: {"y":106,"x":0}
+2017-08-01 10:42:34:283 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/18/location 200 12 ms - 87 
+2017-08-01 10:42:34:284 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":{"y":106,"x":0},"status":0}
+2017-08-01 10:42:34:288 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:34:288 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:289 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:34:290 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:291 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:34:294 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:34:294 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:295 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:34:296 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:34:299 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:34:300 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:300 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:300 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:301 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:34:301 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:303 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:304 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:304 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:34:305 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:34:305 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:34:305 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:34:305 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:305 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:306 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:34:306 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:308 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:34:310 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:335 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"19"}],"status":0}
+2017-08-01 10:42:34:335 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:336 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"19"}]
+2017-08-01 10:42:34:336 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 37 ms - 90 
+2017-08-01 10:42:34:340 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:34:340 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:340 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:34:341 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:343 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:34:345 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/19/location {}
+2017-08-01 10:42:34:345 - info: [debug] [MJSONWP] Calling AppiumDriver.getLocation() with args: ["19","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:346 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getLocation","params":{"elementId":"19"}}
+2017-08-01 10:42:34:347 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getLocation","params":{"elementId":"19"}}
+2017-08-01 10:42:34:348 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:348 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getLocation
+2017-08-01 10:42:34:354 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":{"y":106,"x":0},"status":0}
+2017-08-01 10:42:34:354 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:355 - info: [debug] [MJSONWP] Responding to client with driver.getLocation() result: {"y":106,"x":0}
+2017-08-01 10:42:34:356 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/19/location 200 10 ms - 87 
+2017-08-01 10:42:34:358 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:34:359 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:359 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:34:360 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:360 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:34:363 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:34:363 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:364 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:34:365 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:34:368 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"-android uiautomator","value":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")"}
+2017-08-01 10:42:34:368 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["-android uiautomator","new UiSelector().resourceId(\"com.play.android:id/rela_content\")","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:369 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:369 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:34:369 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:34:369 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:371 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"-android uiautomator","selector":"new UiSelector().resourceId(\"com.play.android:id/rela_content\")","context":"","multiple":true}}
+2017-08-01 10:42:34:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:34:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'new UiSelector().resourceId("com.play.android:id/rela_content")' using 'ANDROID_UIAUTOMATOR' with the contextId: '' multiple: true
+2017-08-01 10:42:34:372 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Parsing selector: new UiSelector().resourceId("com.play.android:id/rela_content")
+2017-08-01 10:42:34:373 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] UiSelector coerce type: class java.lang.String arg: "com.play.android:id/rela_content"
+2017-08-01 10:42:34:373 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:373 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:373 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:34:374 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:377 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:34:378 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_content]
+2017-08-01 10:42:34:406 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:407 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"20"}]
+2017-08-01 10:42:34:407 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 39 ms - 90 
+2017-08-01 10:42:34:408 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"20"}],"status":0}
+2017-08-01 10:42:34:411 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:34:411 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:412 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:34:412 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:34:413 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:34:416 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/20/size {}
+2017-08-01 10:42:34:416 - info: [debug] [MJSONWP] Calling AppiumDriver.getSize() with args: ["20","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:417 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getSize","params":{"elementId":"20"}}
+2017-08-01 10:42:34:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getSize","params":{"elementId":"20"}}
+2017-08-01 10:42:34:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:419 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getSize
+2017-08-01 10:42:34:432 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:433 - info: [debug] [MJSONWP] Responding to client with driver.getSize() result: {"height":1174,"width":720}
+2017-08-01 10:42:34:434 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/20/size 200 18 ms - 99 
+2017-08-01 10:42:34:434 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":{"height":1174,"width":720},"status":0}
+2017-08-01 10:42:34:440 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/touch/perform {"actions":[{"action":"press","options":{"x":0,"y":301}},{"action":"wait","options":{"ms":500}},{"action":"release","options":{}}]}
+2017-08-01 10:42:34:440 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"press","options":{"x":0,"y":301}},{"action":"wait","options":{"ms":500}},{"action":"release","options":{}}],"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:34:448 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:touchDown","params":{"x":0,"y":301}}
+2017-08-01 10:42:34:452 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:touchDown","params":{"x":0,"y":301}}
+2017-08-01 10:42:34:454 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:454 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: touchDown
+2017-08-01 10:42:34:458 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][720,1280]
+2017-08-01 10:42:34:458 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Performing TouchDown using element? false x: 360, y: 301
+2017-08-01 10:42:34:464 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:468 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:34:969 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:touchUp","params":{"x":0,"y":301}}
+2017-08-01 10:42:34:972 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:touchUp","params":{"x":0,"y":301}}
+2017-08-01 10:42:34:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:34:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: touchUp
+2017-08-01 10:42:34:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][720,1280]
+2017-08-01 10:42:34:973 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Performing TouchUp using element? false x: 360, y: 301
+2017-08-01 10:42:34:973 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:34:974 - info: [debug] [MJSONWP] Responding to client with driver.performTouch() result: null
+2017-08-01 10:42:34:974 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/touch/perform 200 534 ms - 76 
+2017-08-01 10:42:34:977 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:35:478 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity {}
+2017-08-01 10:42:35:478 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentActivity() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:35:479 - info: [debug] [ADB] Getting focused package and activity
+2017-08-01 10:42:35:479 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:35:526 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:35:527 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","window","windows"]
+2017-08-01 10:42:35:594 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentActivity() result: ".activity.diyedit3d.GoodsWeb3dViewPagerActivity"
+2017-08-01 10:42:35:595 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/current_activity 200 117 ms - 121 
+2017-08-01 10:42:35:605 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:35:606 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:35:606 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:35:609 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:35:610 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 5 ms - 76 
+2017-08-01 10:42:35:615 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:35:616 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:35:618 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:35:618 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 3 ms - 84 
+2017-08-01 10:42:35:623 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:35:624 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:35:624 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:35:624 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:35:625 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:35:625 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:35:629 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:35:629 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:35:629 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:35:629 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:35:630 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:35:630 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:35:630 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:35:630 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:35:913 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:35:913 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:35:913 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:35:913 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:35:914 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:35:914 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:36:453 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:36:456 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:36:458 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 834 ms - 74 
+2017-08-01 10:42:36:458 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:36:962 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:36:962 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:36:963 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:36:964 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:36:969 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:36:970 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:36:971 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:36:971 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:36:971 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:36:972 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:36:993 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:36:993 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:37:026 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:37:026 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:37:026 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:027 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:027 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:37:027 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:37:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:37:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:028 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:37:029 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:037 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:37:039 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:37:042 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 71 ms - 74 
+2017-08-01 10:42:37:042 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:37:554 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:37:554 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:37:555 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:37:557 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:37:566 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:37:566 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:37:567 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:37:567 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:37:567 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:37:568 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:37:573 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:37:573 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:37:574 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:660 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:37:660 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:37:660 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:660 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:661 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:37:661 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:37:968 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:37:971 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:37:974 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 406 ms - 74 
+2017-08-01 10:42:37:975 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:38:477 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:38:478 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:38:481 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:38:482 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 4 ms - 84 
+2017-08-01 10:42:38:500 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:38:501 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:38:502 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:38:502 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:38:502 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:38:502 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:38:507 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:509 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:38:510 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:526 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:38:526 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:38:527 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:527 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:527 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:38:527 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:38:543 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:38:543 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:38:544 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:38:544 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 44 ms - 74 
+2017-08-01 10:42:39:047 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:39:048 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:39:049 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:39:050 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:39:052 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:39:053 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:39:054 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:39:054 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:39:054 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:39:054 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:39:060 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:39:070 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:082 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:39:083 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:39:083 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:39:084 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 31 ms - 74 
+2017-08-01 10:42:39:587 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:39:588 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:39:588 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:39:590 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:39:595 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:39:595 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:39:597 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:39:597 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:39:597 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:39:597 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:39:601 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:39:601 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:39:602 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:612 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:39:612 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:39:612 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:612 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:612 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:39:613 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:39:619 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:39:619 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:39:620 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 25 ms - 74 
+2017-08-01 10:42:39:620 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:40:123 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:40:125 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:40:126 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:40:127 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 4 ms - 84 
+2017-08-01 10:42:40:130 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:40:131 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:40:131 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:40:131 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:40:132 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:40:132 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:40:135 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:150 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+2017-08-01 10:42:40:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:40:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:40:151 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:162 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[],"status":0}
+2017-08-01 10:42:40:163 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:40:163 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: []
+2017-08-01 10:42:40:165 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 34 ms - 74 
+2017-08-01 10:42:40:668 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:40:669 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:40:669 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:40:670 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 1 ms - 84 
+2017-08-01 10:42:40:674 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:40:678 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:40:679 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:40:679 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:40:679 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:40:680 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:40:687 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:40:687 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:40:687 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:40:690 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:40:691 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:691 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:40:691 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:40:691 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:41:584 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:41:585 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:210 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:42:211 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"21"}]
+2017-08-01 10:42:42:211 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 1537 ms - 90 
+2017-08-01 10:42:42:212 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"21"}],"status":0}
+2017-08-01 10:42:42:219 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:42:219 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:220 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:42:220 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:42:221 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:42:224 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:42:225 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:225 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:42:226 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:42:226 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:42:231 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:42:231 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:232 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:42:233 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 2 ms - 84 
+2017-08-01 10:42:42:238 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:42:238 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:238 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:42:239 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:42:239 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:42:239 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:243 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:42:244 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:42:265 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:274 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"22"}],"status":0}
+2017-08-01 10:42:42:274 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:42:275 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"22"}]
+2017-08-01 10:42:42:276 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 38 ms - 90 
+2017-08-01 10:42:42:283 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:42:284 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:284 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:42:285 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:42:285 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:42:290 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/22/displayed {}
+2017-08-01 10:42:42:290 - info: [debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["22","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:291 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"22"}}
+2017-08-01 10:42:42:294 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"22"}}
+2017-08-01 10:42:42:294 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:42:294 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+2017-08-01 10:42:42:303 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":"true","status":0}
+2017-08-01 10:42:42:303 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:42:303 - info: [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
+2017-08-01 10:42:42:304 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/element/22/displayed 200 14 ms - 76 
+2017-08-01 10:42:42:307 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":0}
+2017-08-01 10:42:42:307 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:308 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-08-01 10:42:42:308 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:42:309 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:42:312 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context {}
+2017-08-01 10:42:42:313 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:313 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-08-01 10:42:42:314 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/context 200 1 ms - 84 
+2017-08-01 10:42:42:321 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements {"using":"id","value":"com.play.android:id/rela_webview_parent"}
+2017-08-01 10:42:42:322 - info: [debug] [MJSONWP] Calling AppiumDriver.findElements() with args: ["id","com.play.android:id/rela_webview_parent","32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:322 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:42:323 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2017-08-01 10:42:42:323 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-08-01 10:42:42:323 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.play.android:id/rela_webview_parent","context":"","multiple":true}}
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'com.play.android:id/rela_webview_parent' using 'ID' with the contextId: '' multiple: true
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements selector:UiSelector[RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:327 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (0)
+2017-08-01 10:42:42:328 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=0, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:334 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Element[] is null: (1)
+2017-08-01 10:42:42:335 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] getElements tmp selector:UiSelector[INSTANCE=1, RESOURCE_ID=com.play.android:id/rela_webview_parent]
+2017-08-01 10:42:42:349 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:42:350 - info: [debug] [MJSONWP] Responding to client with driver.findElements() result: [{"ELEMENT":"23"}]
+2017-08-01 10:42:42:350 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/elements 200 29 ms - 90 
+2017-08-01 10:42:42:351 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":[{"ELEMENT":"23"}],"status":0}
+2017-08-01 10:42:42:353 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts {"type":"implicit","ms":20000}
+2017-08-01 10:42:42:354 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",20000,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:42:354 - info: [debug] [BaseDriver] Set implicit wait to 20000ms
+2017-08-01 10:42:42:355 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-08-01 10:42:42:355 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/timeouts 200 2 ms - 76 
+2017-08-01 10:42:43:359 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/press_keycode {"keycode":4}
+2017-08-01 10:42:43:359 - info: [debug] [MJSONWP] Calling AppiumDriver.pressKeyCode() with args: [4,null,null,null,"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:43:360 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"pressKeyCode","params":{"keycode":4,"metastate":null}}
+2017-08-01 10:42:43:364 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"pressKeyCode","params":{"keycode":4,"metastate":null}}
+2017-08-01 10:42:43:364 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:43:364 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: pressKeyCode
+2017-08-01 10:42:43:380 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:43:380 - info: [debug] [MJSONWP] Responding to client with driver.pressKeyCode() result: true
+2017-08-01 10:42:43:381 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/appium/device/press_keycode 200 22 ms - 76 
+2017-08-01 10:42:43:381 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":true,"status":0}
+2017-08-01 10:42:43:385 - info: [HTTP] --> POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/touch/perform {"actions":[{"action":"press","options":{"x":0,"y":693}},{"action":"wait","options":{"ms":500}},{"action":"release","options":{}}]}
+2017-08-01 10:42:43:385 - info: [debug] [MJSONWP] Calling AppiumDriver.performTouch() with args: [[{"action":"press","options":{"x":0,"y":693}},{"action":"wait","options":{"ms":500}},{"action":"release","options":{}}],"32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:43:387 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:touchDown","params":{"x":0,"y":693}}
+2017-08-01 10:42:43:390 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:touchDown","params":{"x":0,"y":693}}
+2017-08-01 10:42:43:390 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+2017-08-01 10:42:43:390 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: touchDown
+2017-08-01 10:42:43:392 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:43:394 - info: [HTTP] <-- POST /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/touch/perform 500 9 ms - 154 
+2017-08-01 10:42:43:394 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Display bounds: [0,0][720,1280]
+2017-08-01 10:42:43:395 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Performing TouchDown using element? false x: 360, y: 693
+2017-08-01 10:42:43:395 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":"Failed to execute touch event","status":13}
+2017-08-01 10:42:43:417 - info: [HTTP] --> GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/screenshot {}
+2017-08-01 10:42:43:418 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:43:421 - info: [debug] [ADB] Device API level: 19
+2017-08-01 10:42:43:423 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:43:498 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:43:498 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","/system/bin/rm","/data/local/tmp/screenshot.png;","/system/bin/screencap","-p","/data/local/tmp/screenshot.png"]
+2017-08-01 10:42:44:069 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","pull","/data/local/tmp/screenshot.png","C:\\Users\\cm\\AppData\\Local\\Temp\\appium11771-5328-11l9hiw.zi2ylxflxr.png"]
+2017-08-01 10:42:44:499 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:44:536 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:44:537 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","dumpsys","input"]
+2017-08-01 10:42:44:854 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAAAtAAAAUACAYAAABuzmU9AACAAElEQVR4AezBe3hd5X3g++9vrbXXvktb2rJkIYHFTciAHHDBNo4NGJhpYjKHNpB7eErC5GnhZNqnTc4Jk/QPhTZ92smkadJzGiWhDaWkubp52nBinEamYLCxjSUwt0gYQ8DGlmTJW9ra0l639z1ZSfeMRmODLWxjrPfzkZ6eHo1xWunp6aGnpwfj9NLT00NPTw/G6aWnp4eenh6M00tPTw89PT0Yp5eenh5e7ujAOL10vPwyL3d0YJxe7r3tNo7GwjAMwzAMwzCMY2ZhGIZhGIZhGMYxszDedh5//HFeffVVjNPL448/zquvvophGIZhnEzfm5piy8wMxlvH4d89+uijHDx4kBrHcairq+OSSy6hpaWF47Fr1y6GhobwfZ+WlhZWrVpFoVDgjTzxxBMEQcBVV13FkYyMjPDaa68xMjLCypUrqa+vZyF66KGHuP766zn77LPZv38/27Zt49JLL6Wrq4uaKIp48MEHyWazXHvttRyLXbt2MTQ0hO/7tLS0sGrVKgqFAkeza9cuhoaG8H2flpYWVq1aRaFQYKF66KGHuP766zn77LPZvn07w8PD3Hjjjdi2zWxbtmyhXC6zfv16jsWuXbsYGhrC931aWlpYtWoVhUKBo9m1axdDQ0P4vk9LSwurVq2iUChwptu/fz/btm3j0ksvpauri5ooinjwwQfJZrNce+21nAi7du1iaGgI3/dpaWlh1apVFAoFjmbXrl0MDQ3h+z4tLS2sWrWKQqHAQrB9+3aGh4e58cYbsW2b2bZs2UK5XGb9+vWcCLt27WJoaAjf92lpaWHVqlUUCgWOZteuXQwNDeH7Pi0tLaxatYpCocBC8bWJCZ7zfWpcEVptm/dks3S5LifbUBDwtOcxGATcls9zluPwer5TLtM3M0NFKZa6Lh+vq6PdcTgT/ev0NA9OT3MwDCnYNr+RTPKRfJ6kCLF/LJdZlUqxNp3mVBkKAp72...
+2017-08-01 10:42:44:871 - info: [HTTP] <-- GET /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e/screenshot 200 1453 ms - 801690 
+2017-08-01 10:42:44:965 - info: [HTTP] --> DELETE /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e {}
+2017-08-01 10:42:44:966 - info: [debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["32633889-0b47-4175-b23f-5bd6372f0e0e"]
+2017-08-01 10:42:44:966 - info: [debug] [BaseDriver] Event 'quitSessionRequested' logged at 1501584164966 (18:42:44 GMT+0800 (中国标准时间))
+2017-08-01 10:42:44:968 - info: [debug] [AndroidDriver] Shutting down Android driver
+2017-08-01 10:42:44:970 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:45:015 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:45:016 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","am","force-stop","com.play.android"]
+2017-08-01 10:42:45:752 - info: [debug] [ADB] Pressing the HOME button
+2017-08-01 10:42:45:753 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:45:805 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:45:806 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","input","keyevent",3]
+2017-08-01 10:42:47:113 - info: [debug] [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
+2017-08-01 10:42:47:116 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+2017-08-01 10:42:47:117 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+2017-08-01 10:42:47:117 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"value":"OK, shutting down","status":0}
+2017-08-01 10:42:47:117 - info: [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
+2017-08-01 10:42:47:118 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
+2017-08-01 10:42:47:118 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
+2017-08-01 10:42:47:118 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+2017-08-01 10:42:47:118 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+2017-08-01 10:42:47:118 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+2017-08-01 10:42:47:119 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
+2017-08-01 10:42:47:119 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
+2017-08-01 10:42:47:122 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=
+2017-08-01 10:42:47:122 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] Test results for WatcherResultPrinter=.
+2017-08-01 10:42:47:123 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] Time: 37.531
+2017-08-01 10:42:47:123 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] OK (1 test)
+2017-08-01 10:42:47:124 - info: [debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: -1
+2017-08-01 10:42:47:125 - info: [debug] [AndroidBootstrap] Received command result from bootstrap
+2017-08-01 10:42:47:127 - info: [debug] [UiAutomator] Shutting down UiAutomator
+2017-08-01 10:42:47:127 - info: [debug] [UiAutomator] Moving to state 'stopping'
+2017-08-01 10:42:47:133 - info: [debug] [UiAutomator] UiAutomator shut down normally
+2017-08-01 10:42:47:133 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2017-08-01 10:42:47:133 - info: [debug] [ADB] Attempting to kill all uiautomator processes
+2017-08-01 10:42:47:134 - info: [debug] [ADB] Getting all processes with uiautomator
+2017-08-01 10:42:47:134 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:47:196 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:47:196 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","ps"]
+2017-08-01 10:42:47:317 - info: [ADB] No uiautomator process found to kill, continuing...
+2017-08-01 10:42:47:317 - info: [debug] [UiAutomator] Moving to state 'stopped'
+2017-08-01 10:42:47:318 - info: [debug] [Logcat] Stopping logcat capture
+2017-08-01 10:42:47:330 - info: [debug] [ADB] Getting connected devices...
+2017-08-01 10:42:47:379 - info: [debug] [ADB] 1 device(s) connected
+2017-08-01 10:42:47:380 - info: [debug] [ADB] Running 'D:\Android\AndroidSDK\platform-tools\adb.exe' with args: ["-P",5037,"-s","127.0.0.1:62001","shell","am","force-stop","io.appium.unlock"]
+2017-08-01 10:42:48:130 - info: [debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+2017-08-01 10:42:48:131 - info: [Appium] Removing session 32633889-0b47-4175-b23f-5bd6372f0e0e from our master session list
+2017-08-01 10:42:48:131 - info: [debug] [BaseDriver] Event 'quitSessionFinished' logged at 1501584168131 (18:42:48 GMT+0800 (中国标准时间))
+2017-08-01 10:42:48:132 - info: [debug] [MJSONWP] Received response: null
+2017-08-01 10:42:48:132 - info: [debug] [MJSONWP] But deleting session, so not returning
+2017-08-01 10:42:48:132 - info: [debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
+2017-08-01 10:42:48:134 - info: [HTTP] <-- DELETE /wd/hub/session/32633889-0b47-4175-b23f-5bd6372f0e0e 200 3168 ms - 76 

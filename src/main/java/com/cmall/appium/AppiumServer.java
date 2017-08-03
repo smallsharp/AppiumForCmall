@@ -138,7 +138,7 @@ public class AppiumServer {
 
 	public void test() {
 
-		String find = "tasklist | findstr node.exe";
+//		String find = "tasklist | findstr node.exe";
 		String kill = "taskkill /F /im node.exe";
 		// getRuntimeData(find);
 		String launchServer = "appium.cmd -a " + "127.0.0.1" + " -p " + 4723 + " -bp " + 4724

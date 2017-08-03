@@ -45,7 +45,7 @@ public class TestMulti {
 		log.info("所有线程任务，全部执行完毕！");
 	}
 	
-	AppiumServerUtil appiumServer = new AppiumServerUtil();
+	AppiumServer2 appiumServer = new AppiumServer2();
 
 	class MyRunnable implements Runnable {
 		private int port;

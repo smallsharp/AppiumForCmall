@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class DriverProduce {
 	
 	private static LogUtil log = new LogUtil(DriverProduce.class);
-	private static AndroidDriver<MobileElement> mdriver = null;
+	private static AndroidDriver<MobileElement> mdriver;
 
 	public static AndroidDriver<MobileElement> initDriver(String ip, int port, String deviceName) {
 

@@ -4,25 +4,21 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import com.cmall.appium.DriverHelper;
-import com.cmall.http.HttpUtils;
 import com.cmall.utils.ImageUtil;
 import com.cmall.utils.LogUtil;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class ModelPage {
 
 	private AndroidDriver<MobileElement> mdriver;
-	private DriverHelper helper;
+	private DriverHelper dHelper;
 	private LogUtil log = new LogUtil(ModelPage.class);
 
 	public ModelPage() {
@@ -30,11 +26,11 @@ public class ModelPage {
 
 	public ModelPage(AndroidDriver<MobileElement> mdriver) {
 		this.mdriver = mdriver;
-		helper = new DriverHelper(mdriver);
+		dHelper = new DriverHelper(mdriver);
 	}
 
 	public ModelPage(DriverHelper helper) {
-		this.helper = helper;
+		this.dHelper = helper;
 	}
 
 	/**
@@ -42,9 +38,6 @@ public class ModelPage {
 	 */
 	@AndroidFindBy(id = "com.play.android:id/btn_diy")
 	private MobileElement m_btn_diy;
-
-	@AndroidFindBy(id = "com.play.android:id/iv_item")
-	private List<MobileElement> m_plate_list;
 
 	/**
 	 * 定制页面-产品list
@@ -72,6 +65,12 @@ public class ModelPage {
 	 */
 	@FindBy(xpath = "//*[@id='canvas_3d']")
 	private MobileElement m_3dModel_h5;
+	
+	/**
+	 * 3D模型页面，商品列表
+	 */
+	@FindBy(id="com.play.android:id/iv_good")
+	private List<MobileElement> m_iv_goods;
 
 	/**
 	 * 颜色选择器
@@ -117,11 +116,7 @@ public class ModelPage {
 
 		log.info("exec:goto3DModelFromHome");
 		try {
-			if (!helper.waitActivity(ActivityList.HOME_ACTIVITY)) {
-				helper.backToHomeActivity();
-				assertEquals(helper.getCurrentActivity(), ActivityList.HOME_ACTIVITY);
-			}
-
+			log.info("current activity:"+dHelper.getCurrentActivity());
 			if (!(m_sdv_image.size() >= 1)) {
 				assertTrue(false, "首页产品List，没有加载成功");
 			}
@@ -129,33 +124,52 @@ public class ModelPage {
 			m_sdv_image.get(1).click();
 
 			// 进入男装二级目录，包含：TEE，边框TEE，Polo衫等…
-			if (!helper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
-				assertEquals(helper.getCurrentActivity(), ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
+			if (!dHelper.waitActivity(ActivityList.PRODUCT_CLASSIFITION_ACTIVITY)) {
+				assertEquals(dHelper.getCurrentActivity(), ActivityList.PRODUCT_CLASSIFITION_ACTIVITY);
 			}
 
-			if (!helper.waitElement(m_tee_native)) {
+			if (!dHelper.waitElement(m_tee_native)) {
 				assertTrue(false, "没有定位到：男装目录下的webview");
 			}
 			Thread.sleep(2000);
 			int x = m_tee_native.getLocation().getX();
 			int y = m_tee_native.getLocation().getY();
 			int height = m_tee_native.getSize().getHeight();
-
-			if (FLAG == 1) {
-				helper.tap(1, x / 2, height / 6 + y, 500);
-			} else if (FLAG == 2) {
-				helper.tap(1, x / 2, height / 2 + y, 500);
+			
+			for (int i = 1; i < 10; i++) {
+				log.info("i:" + i );
+				dHelper.pause(500);// 防止tap出错
+				switch (i) {
+				case 1:
+					dHelper.tap(1, x / 2, height / 6 + y, 500);
+					break;
+				case 2:
+					dHelper.tap(1, x / 2, height / 2 + y, 500);
+					break;
+				case 3:
+					dHelper.tap(1, x / 2, height / 6 * 5 + y, 500);
+					break;
+				default:
+					dHelper.swipe(x / 2, height/3 * 2, x / 2, height/3 * 1, 1000);
+					dHelper.pause(500);
+					dHelper.tap(1, x / 2, height / 6 * 5 + y, 500);
+					break;
+				}
+				
+				if (!dHelper.waitActivity(ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
+					assertEquals(dHelper.getCurrentActivity(), ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
+				}
+				if (!dHelper.waitElement(m_3dModel_native)) {
+					assertTrue(false, "3DModel is not displayed");
+				}
+				dHelper.pause(1000);
+				dHelper.pressKeyCode(AndroidKeyCode.BACK);
 			}
 
-			if (!helper.waitActivity(ActivityList.GOODS_WEB3DVIEW_ACTIVITY)) {
-				assertEquals(helper.getCurrentActivity(), ActivityList.GOODS_WEB3DVIEW_ACTIVITY);
-			}
-			if (!helper.waitElement(m_3dModel_native)) {
-				assertTrue(false, "3DModel is not displayed");
-			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-			helper.takeScreenShot("goto3DModelFromHome_error.jpg");
+			dHelper.takeScreenShot("goto3DModelFromHome_error.jpg");
 		}
 	}
 
@@ -165,18 +179,10 @@ public class ModelPage {
 	 */
 	public void check3DModelGoodsList() {
 
-		this.goto3DModelFromHome(1);
+		this.goto3DModelFromHome(4);
 		log.info("exec:check3DModelGoodsList");
 		try {
-			String url = "http://android.cmall.com/goodsSite/home/goodsList";
-			Map<String, String> paramsMap = new HashMap<String, String>();
-			paramsMap.put("productId", "501");
-			String response = HttpUtils.sendHttpGet(url, paramsMap);
-			JsonObject jsonObject = HttpUtils.getJson(response);
-			JsonObject result = (JsonObject) jsonObject.get("result");
-			JsonArray pageItems = result.get("pageItems").getAsJsonArray();
-			log.info("pageItems.size():" + pageItems.size());
-			int length = pageItems.size();
+			int length = m_iv_goods.size();
 			if (length >= 5) {
 				for (int i = 0; i < 5; i++) { // 测试用
 					m_goods_selector.get(i).click();
@@ -193,23 +199,16 @@ public class ModelPage {
 				}
 			}
 
-			/*
-			 * for (int i = 0; i < pageItems.size(); i++) {// 测试用 if (i < 5) {
-			 * System.out.println("i:"+i); m_goods_selector.get(i).click(); }else {
-			 * System.out.println("i:"+i); int x1 = m_goods_selector.get(3).getLocation().x;
-			 * int y1 = m_goods_selector.get(3).getLocation().y; int x2 =
-			 * m_goods_selector.get(4).getLocation().x; int y2 =
-			 * m_goods_selector.get(4).getLocation().y; mdriver.swipe(x2, y2, x1-20, y1,
-			 * 500); m_goods_selector.get(4).click(); }
-			 * 
-			 * if (!m_3dModel_native.isDisplayed()) { assertTrue(false,
-			 * "切换第"+i+"个Goods,模型未加载出来"); } }
-			 */
+/*			int x1 = m_goods_selector.get(3).getLocation().x;
+			int y1 = m_goods_selector.get(3).getLocation().y;
+			int x2 = m_goods_selector.get(4).getLocation().x;
+			int y2 = m_goods_selector.get(4).getLocation().y;
+			mdriver.swipe(x2, y2, x1 - 20, y1, 500);
+			m_goods_selector.get(4).click();*/
 
 		} catch (Exception e) {
-			helper.takeScreenShot("check3DModelGoodsList.jpg");
+			dHelper.takeScreenShot("check3DModelGoodsList.jpg");
 			e.printStackTrace();
-			assertTrue(false, "occurred error while running!");
 		}
 	}
 
@@ -222,34 +221,34 @@ public class ModelPage {
 		this.goto3DModelFromHome(2);
 		log.info("run:check3DModelByColor");
 		try {
-			m_color_selector.click();// 点击颜色选择
+			m_color_selector.click(); // 点击颜色选择
 			int colorSize = m_color_List.size();
 			log.debug("颜色一共有：" + colorSize + " 个");
 
 			for (int i = 0; i < colorSize; i++) {
 				m_color_List.get(i).click(); // 点击第一个颜色
-				m_btn_sure.click();// 点击确定
+				m_btn_sure.click(); // 点击确定
 
 				if (!m_3dModel_native.isDisplayed()) {
 					assertTrue(false, "切换模型后，模型没有加载出来");
 				}
 
 				if (i < colorSize - 1) {
-					m_color_selector.click();// 点击颜色选择
+					m_color_selector.click(); // 点击颜色选择
 				}
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			helper.takeScreenShot("check3DModelByColorAndGrade.jpg");
+			dHelper.takeScreenShot("check3DModelByColorAndGrade.jpg");
 			assertTrue(false, "occurred error while running!");
 		}
 
 	}
 
-	public void check3DModelByColorAndGrade2() {
+	public void check3DModelByColor2() {
 
-		this.goto3DModelFromHome(2);
+		this.goto3DModelFromHome(4);
 		log.info("exec:check3DModelByColorAndGrade");
 		try {
 			int x = m_3dModel_native.getLocation().x;// 控件的左上角的x坐标
@@ -276,13 +275,13 @@ public class ModelPage {
 
 					if (j == 0) {
 						String previousJPG = "previous_color_" + i + ".jpg";
-						helper.takeScreenShot(previousJPG);
+						dHelper.takeScreenShot(previousJPG);
 						previousImage = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, previousJPG));
 						previousCut = ImageUtil.getSubImage(previousImage, x, y, w, h);
 					}
 
 					String jpg = "grade_" + j + "_color_" + i + ".jpg";
-					helper.takeScreenShot(jpg);
+					dHelper.takeScreenShot(jpg);
 
 					BufferedImage laterimage = ImageUtil.getImageFromFile(new File(Constant.ACTUL_PATH, jpg));
 					BufferedImage laterimageCut = ImageUtil.getSubImage(laterimage, x, y, w, h);// 第二张局部截图
@@ -303,10 +302,15 @@ public class ModelPage {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			helper.takeScreenShot("check3DModelByColorAndGrade.jpg");
-			assertTrue(false, "occurred error while running!");
+			dHelper.takeScreenShot("check3DModelByColorAndGrade.jpg");
 		}
 
+	}
+	
+	
+	public void test() {
+		
+		this.goto3DModelFromHome(1);
 	}
 
 }

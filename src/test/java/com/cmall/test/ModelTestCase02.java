@@ -6,9 +6,8 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import com.cmall.appium.AppiumServerUtil;
+import com.cmall.appium.AppiumServer2;
 import com.cmall.appium.DriverProduce;
-import com.cmall.appium.IBaseCase;
 import com.cmall.play.pages.LoginPage;
 import com.cmall.play.pages.ModelPage;
 import io.appium.java_client.MobileElement;
@@ -23,7 +22,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class ModelTestCase02 implements IBaseCase{
 	
 	private AndroidDriver<MobileElement> mdriver;
-	private AppiumServerUtil appiumSvr = new AppiumServerUtil();
+	private AppiumServer2 appiumSvr = new AppiumServer2();
 	private String ip = "127.0.0.1";
 	private int port = 4723;
 	private String deviceName = "127.0.0.1:62001";

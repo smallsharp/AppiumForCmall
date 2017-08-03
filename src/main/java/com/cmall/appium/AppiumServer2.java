@@ -14,12 +14,12 @@ import io.appium.java_client.service.local.flags.ServerArgument;
  * @author lee
  *
  */
-public class AppiumServerUtil {
+public class AppiumServer2 {
 
 	private AppiumDriverLocalService appiumService;
-	private LogUtil log = new LogUtil(AppiumServerUtil.class);
+	private LogUtil log = new LogUtil(AppiumServer2.class);
 
-	public AppiumServerUtil() {
+	public AppiumServer2() {
 	}
 	
 

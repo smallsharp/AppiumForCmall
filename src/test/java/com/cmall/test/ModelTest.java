@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.cmall.appium.BaseCase;
+
 import com.cmall.appium.TestNGListener;
 import com.cmall.play.pages.LoginPage;
 import com.cmall.play.pages.ModelPage;

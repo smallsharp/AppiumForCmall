@@ -16,6 +16,10 @@ public class LogUtil {
 	public void info(String message) {
 		logger.info(message);
 	}
+	
+	public void info(String tag,String message) {
+		logger.info(tag + message);
+	}
 
 	public void debug(String message) {
 		logger.debug(message);
