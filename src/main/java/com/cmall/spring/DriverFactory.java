@@ -1,4 +1,4 @@
-package com.cmall.reference;
+package com.cmall.spring;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -62,10 +62,12 @@ public class DriverFactory {
 		this.port = port;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "DriverFactory [platformName=" + platformName + ", deviceName=" + deviceName + ", appPackage="
-				+ appPackage + ", appActivity=" + appActivity + ", ip=" + ip + ", port=" + port + "]";
+		return "DriverFactory [apkPath=" + apkPath + ", platformName=" + platformName + ", deviceName=" + deviceName
+				+ ", appPackage=" + appPackage + ", appActivity=" + appActivity + ", ip=" + ip + ", port=" + port + "]";
 	}
 
 	public AndroidDriver<MobileElement> initDriver() {

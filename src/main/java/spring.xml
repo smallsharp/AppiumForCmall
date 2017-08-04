@@ -13,8 +13,8 @@
 	    </property>  
 	</bean>  
 
-	<!--从driver.properties中读取  -->
-	<bean id="driverFactory" class="com.cmall.reference.DriverFactory" init-method="initDriver" scope="prototype">
+	<!--通过以上配置，可以从driver.properties中读取对应的数据  -->
+	<bean id="driverFactory" class="com.cmall.spring.DriverFactory" init-method="initDriver">
 		<property name="platformName" value="${platformName}"></property>
 		<property name="apkPath" value="${apkPath}"></property>
 		<property name="deviceName" value="${driverName}"></property>
@@ -24,7 +24,12 @@
 		<property name="port" value="${port}"></property>
 	</bean>
 	
-	<bean id="testcase_spring" class="com.cmall.reference.TestcaseSpring" scope="prototype">
+	<bean id="action_one" class="com.cmall.spring.ActionOne" scope="prototype">
+		<!-- EL表达式 -->
+		<property name="driver" value="#{driverFactory.driver}"></property>
+	</bean>
+	
+	<bean id="action_two" class="com.cmall.spring.ActionTwo" scope="prototype">
 		<!-- EL表达式 -->
 		<property name="driver" value="#{driverFactory.driver}"></property>
 	</bean>

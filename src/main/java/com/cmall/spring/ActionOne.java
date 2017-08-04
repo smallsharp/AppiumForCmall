@@ -1,18 +1,20 @@
-package com.cmall.reference;
+package com.cmall.spring;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 
-public class TestcaseSpring {
+public class ActionOne implements IAction , IAction2 {
 	
 	private AndroidDriver<MobileElement> driver;
 	
+	@Override
 	public void setDriver(AndroidDriver<MobileElement> mdriver) {
 		this.driver = mdriver;
 	}
 
-	public void dotest(){
+	@Override
+	public void doTest() {
 		System.out.println("-------开始测试-------");
 		try {
 			Thread.sleep(1000);
@@ -27,6 +29,11 @@ public class TestcaseSpring {
 	}
 	
 	
-	
 
+
+	public void doTest2() {
+		
+		
+	}
+	
 }

@@ -1,4 +1,4 @@
-package com.cmall.reference;
+package com.cmall.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,8 +15,12 @@ public class TestMain {
 	@Test
 	public void test() {
 		ac = new ClassPathXmlApplicationContext("spring.xml");
-		TestcaseSpring testcase = (TestcaseSpring) ac.getBean("testcase_spring");
-		testcase.dotest();
+		ac.getBean("action_one" , IAction.class).doTest();
+	}
+	
+	private void runTest(IAction action) {
+		
+		action.doTest();
 	}
 
 }
