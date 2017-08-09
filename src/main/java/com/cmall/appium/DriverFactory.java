@@ -10,9 +10,9 @@ import com.cmall.utils.LogUtil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class DriverProduce {
+public class DriverFactory {
 	
-	private static LogUtil log = new LogUtil(DriverProduce.class);
+	private static LogUtil log = new LogUtil(DriverFactory.class);
 	private static AndroidDriver<MobileElement> mdriver;
 
 	public static AndroidDriver<MobileElement> initDriver(String ip, int port, String deviceName) {

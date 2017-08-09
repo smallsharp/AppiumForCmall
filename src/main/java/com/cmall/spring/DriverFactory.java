@@ -5,17 +5,20 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
- * a demo for "夜神模拟器" 相机,使用spring 依赖注入
+ * driver
  * @author cm
  *
  */
 public class DriverFactory {
-	
+	private static Logger log = Logger.getLogger(DriverFactory.class);
 	private AndroidDriver<MobileElement> driver;
 	private String apkPath;
 	private String platformName;
@@ -62,11 +65,9 @@ public class DriverFactory {
 		this.port = port;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return "DriverFactory [apkPath=" + apkPath + ", platformName=" + platformName + ", deviceName=" + deviceName
+		return "[apkPath=" + apkPath + ", platformName=" + platformName + ", deviceName=" + deviceName
 				+ ", appPackage=" + appPackage + ", appActivity=" + appActivity + ", ip=" + ip + ", port=" + port + "]";
 	}
 
@@ -76,7 +77,7 @@ public class DriverFactory {
 		System.out.println(this.toString());
 		
 		Map<String, String> map = new HashMap<>();
-		File app = new File("apps/play-debug.apk"); // 指定app的存放目录
+		File app = new File(apkPath); // 指定app的存放目录
 		map.put("app", app.getAbsolutePath());
 		map.put("platformName", platformName);
 		map.put("deviceName", deviceName);
@@ -86,12 +87,37 @@ public class DriverFactory {
 		DesiredCapabilities dct = new DesiredCapabilities(map);
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://" +ip+ ":" + port +"/wd/hub"), dct);
+			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		System.out.println("------------ init ok ---------------");
 
 		return driver;
+	}
+	
+	
+	public static AndroidDriver<MobileElement> initDriver(String ip, int port, String deviceName) {
+
+		log.info("initDriver on " + deviceName + " " + port);
+		
+		DesiredCapabilities dc = new DesiredCapabilities();
+		File app = new File("apps/play-debug.apk"); // 指定app的存放目录
+		dc.setCapability("app", app.getAbsolutePath());
+		dc.setCapability("unicodeKeyboard", true); // 支持中文输入
+		dc.setCapability("platformName", "Android");
+		dc.setCapability("deviceName", deviceName);
+		dc.setCapability("appPackage", "com.play.android");
+		dc.setCapability("appActivity", "com.play.android.activity.SplashActivity");
+		AndroidDriver<MobileElement> mdriver = null;
+
+		try {
+			mdriver = new AndroidDriver<MobileElement>(new URL("http://" + ip + ":" + port + "/wd/hub"), dc);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		log.info("initDriver ok on " + deviceName + " " + port);
+		return mdriver;
 	}
 
 }

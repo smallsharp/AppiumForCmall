@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.cmall.appium.DriverProduce;
+import com.cmall.appium.DriverFactory;
 import com.cmall.appium.DriverHelper;
 import com.cmall.appium.TestNGListener;
 import io.appium.java_client.MobileElement;
@@ -22,7 +22,7 @@ public class MeituSuite {
 	@BeforeClass
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，请稍后 ==========", true);
-		mdriver= DriverProduce.initDriver("",4723, "022TAS7N51009853");
+		mdriver= DriverFactory.initDriver("",4723, "022TAS7N51009853");
 	}
 
 	@AfterClass

@@ -9,11 +9,12 @@
 	    <property name="locations">   
 	        <array>  
 	            <value>classpath:driver.properties</value>  
+	            <value>classpath:id.properties</value>  
 	        </array>  
 	    </property>  
 	</bean>  
 
-	<!--通过以上配置，可以从driver.properties中读取对应的数据  -->
+	<!--通过以上配置，可以从driver.properties中读取对应的数据 ,initDriver使用 -->
 	<bean id="driverFactory" class="com.cmall.spring.DriverFactory" init-method="initDriver">
 		<property name="platformName" value="${platformName}"></property>
 		<property name="apkPath" value="${apkPath}"></property>
@@ -24,14 +25,15 @@
 		<property name="port" value="${port}"></property>
 	</bean>
 	
-	<bean id="action_one" class="com.cmall.spring.ActionOne" scope="prototype">
-		<!-- EL表达式 -->
+	<!-- DriverHelper实例，测试中替代AndroidDriver使用，在其基础上添加一些日志 -->
+	<bean id="driver_helper" class="com.cmall.spring.DriverHelper">
+		<!-- 通过EL表达式，获取com.cmall.spring.DriverFactory中initDriver的返回值  -->
 		<property name="driver" value="#{driverFactory.driver}"></property>
 	</bean>
 	
-	<bean id="action_two" class="com.cmall.spring.ActionTwo" scope="prototype">
-		<!-- EL表达式 -->
-		<property name="driver" value="#{driverFactory.driver}"></property>
+	<bean id="action_one" class="com.cmall.spring.ActionOne" >
+		<!-- 引用DriverHelper实例 -->
+		<property name="dHelper" ref="driver_helper"></property>
 	</bean>
 
 </beans>

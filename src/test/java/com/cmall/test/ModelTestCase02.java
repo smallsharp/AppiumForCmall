@@ -7,7 +7,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import com.cmall.appium.AppiumServer2;
-import com.cmall.appium.DriverProduce;
+import com.cmall.appium.DriverFactory;
 import com.cmall.play.pages.LoginPage;
 import com.cmall.play.pages.ModelPage;
 import io.appium.java_client.MobileElement;
@@ -31,7 +31,7 @@ public class ModelTestCase02 implements IBaseCase{
 	public void setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		appiumSvr.startServer(ip, port, deviceName);
-		mdriver = DriverProduce.initDriver(ip, port, deviceName);
+		mdriver = DriverFactory.initDriver(ip, port, deviceName);
 	}
 
 	@AfterSuite

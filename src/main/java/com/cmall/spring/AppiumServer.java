@@ -1,4 +1,4 @@
-package com.cmall.appium;
+package com.cmall.spring;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,8 +14,8 @@ import org.apache.log4j.Logger;
  */
 public class AppiumServer {
 
-	Logger log = Logger.getLogger(AppiumServer.class);
-	Process proc = null;
+	private Logger log = Logger.getLogger(AppiumServer.class);
+	private Process proc = null;
 
 	public AppiumServer() {
 		killTask("node.exe");
@@ -35,22 +35,25 @@ public class AppiumServer {
 		log.info("start to launch server on " + ip + " " + port + " " + deviceName);
 		int bpport = port + 1;
 		int chromeport = port + 4792;
-		String launch = "appium.cmd -a " + ip + " -p " + port + " -bp " + bpport
-				+ " --session-override --chromedriver-port " + chromeport + " -U " + deviceName + " >c://" + deviceName
-				+ ".txt";
-		log.info(launch);
+		String launch_cmd = "appium.cmd -a " + ip + " -p " + port + " -bp " + bpport
+				+ " --session-override --chromedriver-port " + chromeport + " -U " + deviceName;
+		log.info(launch_cmd);
 		try {
-			proc = runCommand2(launch);
+			proc = runCommand2(launch_cmd);
 			InputStream input = proc.getInputStream();
 			InputStreamReader reader = new InputStreamReader(input);
 			BufferedReader br = new BufferedReader(reader);
+			StringBuffer sb = new StringBuffer();
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
+				sb.append(line);
 			}
+			System.out.println(sb);
+			proc.waitFor();
 			int exitVal = 100;
-			exitVal = proc.waitFor();
-			System.out.println("Process exitValue: " + exitVal);
+//			exitVal = proc.waitFor();
+			Thread.sleep(5000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

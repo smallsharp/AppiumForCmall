@@ -1,17 +1,18 @@
-package com.cmall.appium;
+package com.cmall.spring;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.testng.Assert;
 import com.android.ddmlib.AndroidDebugBridge;
 import com.android.ddmlib.IDevice;
 import com.cmall.play.pages.ActivityList;
+import com.cmall.utils.LogUtil;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -23,15 +24,18 @@ import io.appium.java_client.android.AndroidKeyCode;
  */
 public class DriverHelper {
 
-	private Logger log = Logger.getLogger(DriverHelper.class);
-	private AndroidDriver<MobileElement> mdriver;
+	private LogUtil log = new LogUtil(DriverHelper.class);
+	private AndroidDriver<MobileElement> driver;
+	public DriverHelper() {
+		
+	}
 	
 	public DriverHelper(AndroidDriver<MobileElement> mdriver) {
-		this.mdriver = mdriver;
+		this.driver = mdriver;
 	}
 
 	public void setDriver(AndroidDriver<MobileElement> mdriver) {
-		this.mdriver = mdriver;
+		this.driver = mdriver;
 	}
 
 	/**
@@ -46,13 +50,13 @@ public class DriverHelper {
 		try {
 			for (int i = 0; i < 20; i++) {
 				Thread.sleep(500);
-				if (activityName.contains(mdriver.currentActivity())) {
+				if (activityName.contains(driver.currentActivity())) {
 					log.info("[Activity] Found activity ==> " + "(" + activityName + ")");
 					return true;
 				}
 			}
 			log.error("[ActivityNotFound]:" + "(" + activityName + ")" + "\n" + "CurrentActivity is:"
-					+ "(" + mdriver.currentActivity() + ")");
+					+ "(" + driver.currentActivity() + ")");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -101,10 +105,9 @@ public class DriverHelper {
 
 	/**
 	 * 点击
-	 * 
 	 * @param element
 	 */
-	public void clickonElement(MobileElement mobileElement) {
+	public void clickonElement(MobileElement mobileElement) { 
 		log.info("[Element] click on element ==> " + "(" + splitElement(mobileElement) + ")");
 		mobileElement.click();
 	}
@@ -115,7 +118,7 @@ public class DriverHelper {
 	 * @param element
 	 * @param text
 	 */
-	public void inputText(MobileElement mobileElement, CharSequence... text) {
+	public void sendKeys(MobileElement mobileElement, CharSequence... text) {
 		log.info("[Element] input text ==> " + "(" + splitElement(mobileElement) + ")");
 		mobileElement.sendKeys(text);
 	}
@@ -127,12 +130,12 @@ public class DriverHelper {
 	 */
 	public void pressKeyCode(int androidkeycode) {
 		log.info("Press AndroidKeyCode ==> " + androidkeycode);
-		mdriver.pressKeyCode(androidkeycode);
+		driver.pressKeyCode(androidkeycode);
 	}
 	
 	
 	public String getCurrentActivity() {
-		String current  = mdriver.currentActivity();
+		String current  = driver.currentActivity();
 		log.info("Current Activity:"+current);
 		return current;
 	}
@@ -142,11 +145,11 @@ public class DriverHelper {
 	 */
 	public void context_to_webview() {
 
-		Set<String> ContextHandles = mdriver.getContextHandles();
+		Set<String> ContextHandles = driver.getContextHandles();
 		log.info("All ContextHandles :" + ContextHandles);
 		for (String contextName : ContextHandles) {
 			if (contextName.contains("WEBVIEW") || contextName.contains("webview")) {
-				mdriver.context(contextName);
+				driver.context(contextName);
 				log.info("[Webview] context_to_webview success :" + contextName);
 				break;
 			}
@@ -154,7 +157,7 @@ public class DriverHelper {
 	}
 
 	public void context_to_native() {
-		mdriver.context("NATIVE_APP");
+		driver.context("NATIVE_APP");
 	}
 
 	/***
@@ -163,7 +166,7 @@ public class DriverHelper {
 	 * @return 是否正常
 	 */
 	public boolean checkNet() {
-		String text = mdriver.getConnection().toString();
+		String text = driver.getConnection().toString();
 		if (text.contains("Data: true"))
 			return true;
 		else
@@ -177,16 +180,20 @@ public class DriverHelper {
 	 * @return View
 	 */
 	public MobileElement findElementByDesc(String name) {
-		return mdriver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
+		return driver.findElementByAndroidUIAutomator("new UiSelector().descriptionContains(\"" + name + "\")");
 	}
 	
 	
 	public List<MobileElement> findElementsById(String id) {
-		return mdriver.findElementsById(id);
+		return driver.findElementsById(id);
 	}
 	
 	public MobileElement findElementById(String id) {
-		return mdriver.findElementById(id);
+		return driver.findElementById(id);
+	}
+	
+	public MobileElement findElementByName(String name) {
+		return driver.findElementByName(name);
 	}
 
 
@@ -197,7 +204,7 @@ public class DriverHelper {
 	 * @return View
 	 */
 	public MobileElement findElementByText(String name) {
-		return mdriver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
+		return driver.findElementByAndroidUIAutomator("new UiSelector().textContains(\"" + name + "\")");
 	}
 
 	/**
@@ -208,7 +215,7 @@ public class DriverHelper {
 	public void takeScreenShot(String screenShotName) {
 
 		String path = "test-output\\screenshots\\";
-		File screenShot = mdriver.getScreenshotAs(OutputType.FILE);
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 
 		try {
 			File destFile = new File(path + screenShotName);
@@ -226,9 +233,9 @@ public class DriverHelper {
 	 */
 	public void slideLeft(int i) {
 		Assert.assertFalse(i <= 0 || i >= 100, "左滑宽度传入错误");
-		int x = mdriver.manage().window().getSize().width;
-		int y = mdriver.manage().window().getSize().height;
-		mdriver.swipe(x / 4 * 3, y / 10 * i, x / 4 * 2, y / 10 * i, 0);
+		int x = driver.manage().window().getSize().width;
+		int y = driver.manage().window().getSize().height;
+		driver.swipe(x / 4 * 3, y / 10 * i, x / 4 * 2, y / 10 * i, 0);
 	}
 
 	/**
@@ -236,9 +243,9 @@ public class DriverHelper {
 	 */
 	public void swipeUp() {
 
-		int width = mdriver.manage().window().getSize().width;
-		int height = mdriver.manage().window().getSize().height;
-		mdriver.swipe(width / 2, height * 2 / 3, width / 2, height * 1 / 3, 1000);
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width / 2, height * 2 / 3, width / 2, height * 1 / 3, 1000);
 		pause(1000);
 	}
 
@@ -250,7 +257,7 @@ public class DriverHelper {
 	public void scrollAndClick(MobileElement element) {
 		int elementPosition = element.getLocation().getY();
 		String js = String.format("window.scroll(0, %s)", elementPosition);
-		((JavascriptExecutor) mdriver).executeScript(js);
+		((JavascriptExecutor) driver).executeScript(js);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -268,7 +275,7 @@ public class DriverHelper {
 
 		int elementPosition = mobileElement.getLocation().getY();
 		String js = String.format("window.scroll(0, %s)", elementPosition);
-		mdriver.executeScript(js);
+		driver.executeScript(js);
 	}
 
 	/**
@@ -277,12 +284,12 @@ public class DriverHelper {
 	public void backToHomeActivity() {
 
 		try {
-			if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+			if (ActivityList.HOME_ACTIVITY.equals(driver.currentActivity())) {
 				return;
 			}
 			log.info("\n" + "Run：backToHomeActivity");
 			for (int i = 0; i < 6; i++) {
-				if (ActivityList.HOME_ACTIVITY.equals(mdriver.currentActivity())) {
+				if (ActivityList.HOME_ACTIVITY.equals(driver.currentActivity())) {
 					return;
 				}
 				Thread.sleep(2500);
@@ -299,12 +306,12 @@ public class DriverHelper {
 	public void backToActivity(String ActivityName) {
 
 		try {
-			if (ActivityName.contains(mdriver.currentActivity())) {
+			if (ActivityName.contains(driver.currentActivity())) {
 				return;
 			}
 
 			for (int i = 0; i < 6; i++) {
-				if (ActivityName.contains(mdriver.currentActivity())) {
+				if (ActivityName.contains(driver.currentActivity())) {
 					return;
 				}
 				Thread.sleep(2500);
@@ -327,68 +334,68 @@ public class DriverHelper {
 
 	public void tap_StartBuilt() {
 
-		int width = mdriver.manage().window().getSize().width;
-		int height = mdriver.manage().window().getSize().height;
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
 		System.out.println("width:" + width);
 		System.out.println("height:" + height);
 
 		if (height == 1280) {
-			mdriver.tap(1, width / 2, height / 1280 * 1250, 500);
+			driver.tap(1, width / 2, height / 1280 * 1250, 500);
 			return;
 		}
 
 		if (height == 1776) {
-			mdriver.tap(1, width / 2, height / 1776 * 1710, 500);
+			driver.tap(1, width / 2, height / 1776 * 1710, 500);
 			return;
 		}
 
 		if (height == 1920) {
-			mdriver.tap(1, width / 2, height / 1920 * 1880, 500);
+			driver.tap(1, width / 2, height / 1920 * 1880, 500);
 			return;
 		}
 	}
 
 	public void tap_White() {
 
-		int width = mdriver.manage().window().getSize().width;
-		int height = mdriver.manage().window().getSize().height;
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
 		if (height == 1280) {
-			mdriver.tap(1, width / 720 * 92, height / 1280 * 850, 500);
+			driver.tap(1, width / 720 * 92, height / 1280 * 850, 500);
 			return;
 		}
 
 		if (height == 1920) {
-			mdriver.tap(1, width / 100 * 13, height / 80 * 53, 500);
+			driver.tap(1, width / 100 * 13, height / 80 * 53, 500);
 			return;
 		}
 		if (height == 1776 && width == 1080) {
-			mdriver.tap(1, width / 1080 * 138, height / 1776 * 1126, 500);
+			driver.tap(1, width / 1080 * 138, height / 1776 * 1126, 500);
 			return;
 		}
 	}
 
 	public void tap_S() {
 
-		int width = mdriver.manage().window().getSize().width;
-		int height = mdriver.manage().window().getSize().height;
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
 		if (height == 1280) {
-			mdriver.tap(1, width / 720 * 92, height / 1280 * 980, 500);
+			driver.tap(1, width / 720 * 92, height / 1280 * 980, 500);
 			return;
 		}
 
 		if (height == 1920) {
-			mdriver.tap(1, width / 100 * 13, height / 30 * 23, 500);
+			driver.tap(1, width / 100 * 13, height / 30 * 23, 500);
 			return;
 		}
 
 		if (height == 1776 && width == 1080) {
-			mdriver.tap(1, width / 1080 * 138, height / 1776 * 1328, 500);
+			driver.tap(1, width / 1080 * 138, height / 1776 * 1328, 500);
 			return;
 		}
 	}
 
 	public boolean isPageLoaded() {
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) mdriver;
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		String status = (String) jsExecutor.executeScript("var status=document.readyState;return status");
 		if (status.contains("complete")) {
 			return true;
@@ -433,20 +440,20 @@ public class DriverHelper {
 	}
 	
 	public void tap(int fingers, int x, int y, int duration) {
-		mdriver.tap(fingers, x, y, duration);
+		driver.tap(fingers, x, y, duration);
 	}
 	
 	public void swipe(int startx, int starty, int endx, int endy, int duration) {
-		mdriver.swipe(startx, starty, endx, endy, duration);
+		driver.swipe(startx, starty, endx, endy, duration);
 	}
 
 	public int getDeviceWidth() {
-		int width = mdriver.manage().window().getSize().width;
+		int width = driver.manage().window().getSize().width;
 		return width;
 	}
 
 	public int getDeviceHeight() {
-		int height = mdriver.manage().window().getSize().height;
+		int height = driver.manage().window().getSize().height;
 		return height;
 	}
 

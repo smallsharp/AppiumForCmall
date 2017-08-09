@@ -62,7 +62,7 @@ public class TestMulti {
 				appiumServer.startServer(ip, port, deviceName);
 				Thread.sleep(3000);
 				// 初始化driver
-				mdriver = DriverProduce.initDriver(ip,port, deviceName);
+				mdriver = DriverFactory.initDriver(ip,port, deviceName);
 				testcase.setDriver(mdriver);
 				// 执行测试用例
 				testcase.runCase();

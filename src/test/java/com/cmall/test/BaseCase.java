@@ -5,7 +5,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.cmall.appium.AppiumServer2;
-import com.cmall.appium.DriverProduce;
+import com.cmall.appium.DriverFactory;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -22,7 +22,7 @@ public class BaseCase {
 	public AndroidDriver<MobileElement> setup() {
 		Reporter.log("========== 正在准备测试环境，预计20s，请稍后 ==========", true);
 		appiumSvr.startServer(ip, port,deviceName);
-		mdriver = DriverProduce.initDriver(ip, port, deviceName);
+		mdriver = DriverFactory.initDriver(ip, port, deviceName);
 		return mdriver;
 	}
 

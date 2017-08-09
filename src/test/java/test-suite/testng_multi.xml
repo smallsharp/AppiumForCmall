@@ -5,7 +5,7 @@
     
     <test name="测试登录" preserve-order="true">
         <classes>
-            <class name="com.cmall.testcases.TestMulti" /> 
+            <class name="com.cmall.test.Test_login" /> 
         </classes>
     </test>
     
