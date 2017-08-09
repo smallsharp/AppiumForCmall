@@ -3,7 +3,7 @@ package com.cmall.spring;
 import static org.testng.Assert.assertEquals;
 import org.apache.log4j.Logger;
 
-public class ActionOne implements IActionOne {
+public class ActionOne {
 	
 	private Logger log = Logger.getLogger(ActionOne.class);
 	private DriverHelper dHelper;

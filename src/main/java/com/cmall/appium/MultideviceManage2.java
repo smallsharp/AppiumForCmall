@@ -1,4 +1,4 @@
-package com.cmall.spring;
+package com.cmall.appium;
 
 import java.util.List;
 import java.util.Vector;
@@ -9,14 +9,14 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
- * 结合Spring，测试多设备
+ * 利用AppiumDriverLocalService，测试多设备，失败，始终使用第一台设备
  * 
  * @author cm
  *
  */
-public class TestMulti {
+public class MultideviceManage2 {
 
-	LogUtil log = new LogUtil(TestMulti.class);
+	LogUtil log = new LogUtil(MultideviceManage2.class);
 	List<String> list = DDMlibUtil.getSerialNumber();
 
 	public void runTestCase(ITestCase testcase) {
@@ -45,7 +45,7 @@ public class TestMulti {
 		log.info("所有线程任务，全部执行完毕！");
 	}
 	
-	AppiumServer appiumServer = new AppiumServer();
+	AppiumServer2 appiumServer = new AppiumServer2();
 
 	class MyRunnable implements Runnable {
 		private int port;
@@ -62,7 +62,7 @@ public class TestMulti {
 				appiumServer.startServer(ip, port, deviceName);
 				Thread.sleep(3000);
 				// 初始化driver
-//				mdriver = DriverFactory.initDriver();
+				mdriver = DriverFactory.initDriver(ip,port, deviceName);
 				testcase.setDriver(mdriver);
 				// 执行测试用例
 				testcase.runCase();

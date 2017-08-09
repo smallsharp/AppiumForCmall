@@ -22,7 +22,7 @@ public class TestMain {
 	
 	public void test() {
 		ac = new ClassPathXmlApplicationContext("spring.xml");
-		IActionOne one = (ActionOne) ac.getBean("action_one");
+		ActionOne one = (ActionOne) ac.getBean("action_one");
 		one.login();
 		one.logout();
  	}

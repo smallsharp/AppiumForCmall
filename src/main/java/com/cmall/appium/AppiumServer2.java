@@ -22,7 +22,6 @@ public class AppiumServer2 {
 	public AppiumServer2() {
 	}
 	
-
 	/**
 	 * 启动AppiumServer
 	 * @param ipAddress

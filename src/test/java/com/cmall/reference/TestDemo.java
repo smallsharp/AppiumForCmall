@@ -47,8 +47,8 @@ public class TestDemo {
 	public void test() throws InterruptedException {
 		System.out.println("test：开始执行");
 		Thread.sleep(2000);
-		MobileElement btn = mdriver.findElementById("com.android.camera:id/shutter_button");
-		btn.click();
+		MobileElement shutter_button = mdriver.findElementById("com.android.camera:id/shutter_button");
+		shutter_button.click();
 		mdriver.pressKeyCode(AndroidKeyCode.HOME);
 		Thread.sleep(2000);
 		System.out.println("test: 执行完成");

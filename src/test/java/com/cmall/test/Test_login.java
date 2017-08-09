@@ -2,7 +2,7 @@ package com.cmall.test;
 
 import org.testng.annotations.Test;
 import com.cmall.appium.MultideviceManage;
-import com.cmall.appium.TestMulti;
+import com.cmall.appium.MultideviceManage2;
 import com.cmall.testcases.ITestCase;
 import com.cmall.testcases.TestCase_login;
 
@@ -13,18 +13,17 @@ public class Test_login {
 	@Test
 	public void testMultiDevice(){
 		ITestCase loginTestCase = new TestCase_login();
-//		ITestCase testcase = TestCaseFactory.getInstance("com.cmall.testcases.LoginTestcase");
 		m.runTestCase(loginTestCase);
 	}
 	
 	
 	
-/*	// 利用TestMulti 测试多设备，经测试AppiumServer不支持多设备，始终使用第一个设备
+	// 利用TestMulti 测试多设备，经测试AppiumServer不支持多设备，始终使用第一个设备
 	@Test
 	public void test2() {
-		TestMulti mu = new TestMulti();
+		MultideviceManage2 m2 = new MultideviceManage2();
 		ITestCase loginTestCase = new TestCase_login();
-		mu.runTestCase(loginTestCase);
-	}*/
+		m2.runTestCase(loginTestCase);
+	}
 
 }

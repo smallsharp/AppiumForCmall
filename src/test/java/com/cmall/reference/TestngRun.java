@@ -9,7 +9,7 @@ import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 /**
- * 代码 运行testNg
+ * 代码 运行testNg的几种方式
  * @author cm
  *
  */
